@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_salary_rule_form_inherit" model="ir.ui.view">
+            <field name="name">hr.salary.rul.form.inherit</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"/>
+            <field name="arch" type="xml">
+
+                <field name="active" position="after">
+                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                </field>
+                <field name="appears_on_payslip" position="after">
+                    <field name="appears_on_payslip_batch"/>
+                    <field name="background_color" widget="color"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="hr_salary_rule_category_form_inherit" model="ir.ui.view">
+            <field name="name">hr.salary.rul.category.form.inherit</field>
+            <field name="model">hr.salary.rule.category</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_category_form"/>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="appears_on_payslip_batch"/>
+                    <field name="background_color" widget="color"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

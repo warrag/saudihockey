@@ -1,0 +1,104 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_penalty_tree">
+            <field name="name">penalty.penalty.tree</field>
+            <field name="model">penalty.penalty</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Name" />
+                    <field name="violation_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_penalty_form">
+            <field name="name">penalty.penalty.form</field>
+            <field name="model">penalty.penalty</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" name="name_label" string="Penalty" />
+                            <h1>
+                                <field name="name" required="1" />
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="violation_id" placeholder="" required="1"
+                                    string="Violation Type" />
+                                <field name="company_id" groups="base.group_multi_company"
+                                    options="{'no_create': True}" />
+                            </group>
+                        </group>
+
+
+                        <notebook>
+                            <page string="Stages">
+                                <field name="stage_ids" nolabel="1">
+                                    <tree>
+                                        <field name="penalty_id" />
+                                        <field name="name" />
+                                        <field name="warning" />
+                                        <field name="salary_deduction" />
+                                        <field name="deduction_type"
+                                            attrs="{'invisible':[('salary_deduction','=',False)],'required':[('salary_deduction','=',True)]}" />
+                                        <field name="deduct_amount"
+                                            attrs="{'invisible':[('salary_deduction','=',False)],'required':[('salary_deduction','=',True)]}" />
+                                        <field name="salary_type"
+                                            attrs="{'invisible':[('salary_deduction','=',False)],'required':[('salary_deduction','=',True)]}" />
+                                        <field name="allowance_ids" widget="many2many_tags"
+                                            attrs="{'invisible':[('salary_type','!=','selected_allowance')],'required':[('salary_type','=','selected_allowance')]}" />
+                                        <field name="contract_termination" />
+                                        <field name="without_eos" />
+                                    </tree>
+                                    <form>
+                                        <div class="oe_title">
+                                            <label for="name" name="name_label" string="Stage Name" />
+                                            <h1>
+                                                <field name="name" placeholder="" required="1" />
+                                            </h1>
+                                        </div>
+                                        <group>
+                                            <field name="warning" />
+                                            <label for="contract_termination" style="width:300px"/>
+                                            <div>
+                                                <div class="o_row">
+                                                    <field name="contract_termination" class="oe_inline" nolabel="1" />
+                                                </div>
+                                            </div>
+                                            <field name="without_eos" />
+                                            <field name="one_time" />
+                                            <field name="salary_deduction" />
+                                            <field name="deduction_type"
+                                                attrs="{'invisible':[('salary_deduction','=',False)],'required':[('salary_deduction','=',True)]}" />
+                                            <field name="deduct_amount"
+                                                attrs="{'invisible':[('salary_deduction','=',False)],'required':[('salary_deduction','=',True)]}" />
+                                            <field name="salary_type"
+                                                attrs="{'invisible':[('salary_deduction','=',False)],'required':[('salary_deduction','=',True)]}" />
+                                            <field name="allowance_ids" widget="many2many_tags"
+                                                attrs="{'invisible':[('salary_type','!=','selected_allowance')],'required':[('salary_type','=','selected_allowance')]}" />
+
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_penalty" model="ir.actions.act_window">
+            <field name="name">Penalties</field>
+            <field name="res_model">penalty.penalty</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Penalties" id="menu_penalties"
+            parent="plustech_hr_employee_penalty.penalties_configuration"
+            action="action_penalty" sequence="21" />
+
+    </data>
+</odoo>

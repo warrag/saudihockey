@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_work_initiation,hr.work.initiation,model_hr_work_initiation,base.group_user,1,1,1,1
+access_duty_commencement_type,duty.commencement.type,model_duty_commencement_type,,1,1,1,1
+access_hr_work_initiation_approvals,hr.work.initiation.approvals,model_hr_work_initiation_approvals,,1,1,1,1

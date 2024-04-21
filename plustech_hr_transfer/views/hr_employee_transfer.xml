@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+    <data>
+        <record id="employee_department_transfer_form_view" model="ir.ui.view">
+            <field name="name">hr.employee.transfer.form.view</field>
+            <field name="model">hr.employee.transfer</field>
+            <field name="arch" type="xml">
+                <form string="Employee Department Transfer" edit="false">
+                    <header>
+                        <button name="hr_approve_btn" string="Approve" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'hr_approval')]}" groups="hr.group_hr_manager"/>
+                        <button name="new_manager_approve_btn" string="Approve" type="object" class="oe_highlight"
+                                attrs="{'invisible': ['|' ,('state', '!=', 'new_manager_approval'), ('new_manager', '=', False)]}"/>
+                        <button name="approve_btn" string="Approve" type="object" class="oe_highlight"
+                                attrs="{'invisible': ['|' ,('state', '!=', 'submit'), ('current_manager', '=', False)]}"/>
+                        <button name="refuse_btn" string="Refuse" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'submit') , ('state', '!=', 'new_manager_approval') ,('state', '!=', 'hr_approval')]}"/>
+                        <button name="submit_btn" string="Submit" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,approve,refuse"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group attrs="{'readonly': [('state', '=', 'new_manager_approval')]}">
+                                <field name="employee_id" required="1"/>
+                                <field name="employee_number" force_save="1"/>
+                                <field name="job_id" force_save="1"/>
+                                <field name="department_id" force_save="1"/>
+                                <field name="manager_id" force_save="1"/>
+                                <field name="current_manager" invisible="1"/>
+                                <field name="new_manager" invisible="1"/>
+                                <field name="transfer_type" invisible="1"/>
+                                <field name="analytic_account_id" invisible="1"/>
+                            </group>
+                            <group attrs="{'readonly': [('state', '=', 'new_manager_approval')]}">
+                                <field name="request_date" force_save="1"/>
+                                <field name="new_department_id" force_save="1"
+                                attrs="{'invisible': [('transfer_type', '!=', 'department')],
+                                'required': [('transfer_type', '=', 'department')]}"/>
+                                <!--                                <field name="new_manager_id" force_save="1"/>-->
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="employee_department_transfer_tree_view" model="ir.ui.view">
+            <field name="name">hr employee transfer form</field>
+            <field name="model">hr.employee.transfer</field>
+            <field name="arch" type="xml">
+                <tree string="_tree">
+                    <field name="employee_id"/>
+                    <field name="employee_number"/>
+                    <field name="department_id"/>
+                    <field name="manager_id"/>
+                    <field name="job_id"/>
+                    <field name="request_date"/>
+                    <field name="state" widget="badge"
+                           decoration-danger="state == 'refuse'"
+                           decoration-success="state == 'approve'"
+                           decoration-info="state == 'submit'"
+                           decoration-warning="state == 'hr_approval'"
+                           decoration-primary="state == 'submit'"
+                           decoration-muted="state == 'draft'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_employee_department_transfer" model="ir.actions.act_window">
+            <field name="name">Department Transfer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.transfer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_transfer_type': 'department'}</field>
+            <field name="domain">[('transfer_type','=', 'department')]</field>
+             <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('employee_department_transfer_tree_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('employee_department_transfer_form_view')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a Department transfer
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="menu_employee_transfer"
+                parent="hr.menu_hr_root"
+                name="Transfers"
+                groups="hr.group_hr_user"/>
+
+        <menuitem id="menu_department_transfer"
+                  name="Department Transfer"
+                  parent="menu_employee_transfer"
+                  action="action_employee_department_transfer"
+                  sequence="1"/>
+
+        <!--    work location transfer    -->
+
+        <record id="employee_work_transfer_form_view" model="ir.ui.view">
+            <field name="name">hr.work.location.transfer.form.view</field>
+            <field name="model">hr.employee.transfer</field>
+            <field name="arch" type="xml">
+                <form string="Employee Work Location Transfer" edit="false">
+                    <header>
+                        <button name="hr_approve_btn" string="Approve" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'hr_approval')]}" groups="hr.group_hr_manager"/>
+                        <button name="new_manager_approve_btn" string="Approve" type="object" class="oe_highlight"
+                                attrs="{'invisible': ['|' ,('state', '!=', 'new_manager_approval'), ('new_manager', '=', False)]}"/>
+                        <button name="approve_btn" string="Approve" type="object" class="oe_highlight"
+                                attrs="{'invisible': ['|' ,('state', '!=', 'submit'), ('current_manager', '=', False)]}"/>
+                        <button name="refuse_btn" string="Refuse" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'submit') , ('state', '!=', 'new_manager_approval') ,('state', '!=', 'hr_approval')]}"/>
+                        <button name="submit_btn" string="Submit" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,approve,refuse"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group attrs="{'readonly': [('state', '=', 'new_manager_approval')]}">
+                                <field name="employee_id" required="1"/>
+                                <field name="employee_number" force_save="1"/>
+                                <field name="job_id" force_save="1"/>
+                                <field name="department_id" force_save="1"/>
+                                <field name="previous_location_id" force_save="1" readonly="1"
+                                       attrs="{'invisible': [('transfer_type', '!=', 'location')]}"/>
+                                <field name="manager_id" force_save="1"/>
+                                <field name="current_manager" invisible="1"/>
+                                <field name="new_manager" invisible="1"/>
+                                <field name="transfer_type" invisible="1"/>
+                                <field name="analytic_account_id" invisible="1"/>
+                            </group>
+                            <group attrs="{'readonly': [('state', '=', 'new_manager_approval')]}">
+                                <field name="request_date" force_save="1"/>
+                                <field name="new_location_id" force_save="1" attrs="{'invisible': [('transfer_type', '!=', 'location')],
+                                'required': [('transfer_type', '=', 'location')]}"/>
+                                <!--                                <field name="new_manager_id" force_save="1"/>-->
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="employee_work_location_transfer_tree_view" model="ir.ui.view">
+            <field name="name">hr employee Work Location form</field>
+            <field name="model">hr.employee.transfer</field>
+            <field name="arch" type="xml">
+                <tree string="_tree">
+                    <field name="employee_id"/>
+                    <field name="employee_number"/>
+                    <field name="department_id"/>
+                    <field name="manager_id"/>
+                    <field name="job_id"/>
+                    <field name="request_date"/>
+                    <field name="state" widget="badge"
+                           decoration-danger="state == 'refuse'"
+                           decoration-success="state == 'approve'"
+                           decoration-info="state == 'submit'"
+                           decoration-warning="state == 'hr_approval'"
+                           decoration-primary="state == 'submit'"
+                           decoration-muted="state == 'draft'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_employee_location_transfer" model="ir.actions.act_window">
+            <field name="name">Work Location Transfer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.transfer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_transfer_type': 'location'}</field>
+            <field name="domain">[('transfer_type','=', 'location')]</field>
+             <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('employee_work_location_transfer_tree_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('employee_work_transfer_form_view')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a Department transfer
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="menu_location_transfer"
+                  name="Work Location Transfer"
+                  parent="menu_employee_transfer"
+                  action="action_employee_location_transfer"
+                  sequence="2"/>
+
+
+    </data>
+</odoo>
+

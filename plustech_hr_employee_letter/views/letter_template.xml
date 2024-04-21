@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="letter_letter_form_view" model="ir.ui.view">
+            <field name="name">letter.letter</field>
+            <field name="model">letter.letter</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="categ_id" required="1" options="{'no_create': True, 'no_open':False}" readonly="1"/>
+                                <field name="model_id" required="1" invisible="1"/>
+                                <field name="need_approval" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field name="version" readonly="1"/>
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="report_xml_id" required="1" readonly="1" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Content" invisible="1">
+                                <field name="body" widget="html" options="{'style-inline': true}"/>
+                            </page>
+                              <page string="Fields">
+                                <field name="field_ids">
+                                    <tree editable="bottom" create="0" delete="0">
+                                        <field name="name"/>
+                                        <field name="technical_name" invisible=""/>
+                                        <field name="default_value"/>
+                                        <field name="fill_by"/>
+                                        <field name="required"/>
+                                        <field name="visible"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Stages" attrs="{'invisible':[('need_approval', '=', False)]}">
+                                <field name="stage_ids">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="stage_id"/>
+                                        <field name="approval"/>
+                                        <field name="user_ids" widget="many2many_tags" attrs="{'required':[('approval', 'not in', ('employee','direct_mg'))]}"/>
+                                        <field name="print"/>
+                                        <field name="readonly"/>
+                                        <field name="appear_on_report"/>
+                                        <field name="default_stage" optional="hide"/>
+                                        <field name="cancel_stage" optional="hide"/>
+                                        <field name="sent_notification" optional="hide"/>
+                                        <field name="activity_type_id" attrs="{'required': [('sent_notification', '=', True)],'invisible': [('sent_notification', '=', False)]}" optional="hide"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="letter_letter_tree" model="ir.ui.view">
+            <field name="name">letter.letter</field>
+            <field name="model">letter.letter</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Letter Name"/>
+                    <field name="categ_id"/>
+                    <field name="need_approval"/>
+                    <field name="categ_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="letter_template_action" model="ir.actions.act_window">
+            <field name="name">Letter Templates</field>
+            <field name="res_model">letter.letter</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

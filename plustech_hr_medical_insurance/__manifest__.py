@@ -1,0 +1,31 @@
+{
+    'name': "Plus Tech Employee Medical Insurance",
+    'version': '15.0.0.0.0',
+    'author': 'Plus Technology Team',
+    'company': 'Plus Technology',
+    'category': 'Human Resources/Medical Insurance',
+    'website': "www.plustech-it.com",
+    'summary': """employees medical insurance management""",
+    'description': """creates the insurance policy to be applied on a contract including medical insurance""",
+    'depends': ['base', 'plustech_hr_employee', 'purchase_requisition'],
+    # always loaded
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/request_sequance.xml',
+        'wizard/insurance_record_import_view.xml',
+        'views/insurance_policy.xml',
+        'views/insurance_request.xml',
+        'views/upgrade_request.xml',
+        'views/cancel_request.xml',
+        'views/hr_employee_view.xml',
+        'views/tmplates.xml',
+        'views/res_config_settings_views.xml',
+        'views/medical_insurance_record_view.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+    'license': 'LGPL-3',
+}
+# -*- coding: utf-8 -*-

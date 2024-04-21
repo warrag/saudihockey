@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+
+{
+    'name': 'Plus Tech HR Payroll',
+    'version': '15.1.1',
+    'author': 'Plus Technology Team',
+    'company': 'Plus Technology',
+    'category': 'Human Resources/Payroll',
+    'website': "www.plustech-it.com",
+    'description': """Payroll Management""",
+    'summary': """payroll localization""",
+    'depends': ['hr_payroll_account', 'plustech_hr_contract', 'plustech_hr_employee'],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'wizard/payslip_payment.xml',
+        'views/hr_payroll.xml',
+        'views/hr_payslip_view.xml',
+        'views/hr_payslip_batch.xml',
+        'views/hr_payroll_salary_rule.xml',
+        'views/hr_payroll_salary_structure.xml',
+        'views/hr_payroll_structure_type.xml',
+        'views/hr_employee_allowance.xml',
+        'views/hr_employee_gosi.xml',
+        'views/hr_contract.xml',
+        'data/batch_sequence.xml',
+        'data/hr_rules.xml',
+        'data/gosi_data.xml',
+        'data/allowance_data.xml',
+        'data/digits.xml',
+        'data/payroll_data.xml',
+        'views/res_config_settings.xml',
+        'reports/report_payslip_template.xml',
+        'reports/report.xml'
+
+    ],
+    'demo': [],
+    'images': [],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+    'license': 'LGPL-3',
+}

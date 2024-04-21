@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="contract_template_form">
+            <field name="name">contract.template.form</field>
+            <field name="model">hr.contract.template</field>
+            <field name="arch" type="xml">
+                <form string="Contract Templates">
+                    <sheet>
+
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" required="1"/>
+                            </h1>
+                            <group>
+                                <field name="model_id" required="1" options="{'no_create': True}"/>
+                            </group>
+                        </div>
+                        <notebook>
+                            <page string="Content">
+                                <field name="body" widget="html" options="{'style-inline': true}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="contract_template_tree">
+            <field name="name">contract.template.tree</field>
+            <field name="model">hr.contract.template</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Templates">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_contract_template_search" model="ir.ui.view">
+            <field name="name">contract.template.search</field>
+            <field name="model">hr.contract.template</field>
+            <field name="arch" type="xml">
+                <search string="Contract Templates">
+                    <field name="name" filter_domain="['|', '|', '|',('name','ilike',self)]" string="Templates"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_contract_template_tree_all">
+            <field name="name">Contract Templates</field>
+            <field name="res_model">hr.contract.template</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="contract_template_tree"/>
+            <field name="search_view_id" ref="view_contract_template_search"/>
+        </record>
+
+
+        <menuitem
+                id="menu_contract_templates"
+                name="Contract Print Template"
+                parent="hr_contract.menu_human_resources_configuration_contract"
+                action="action_contract_template_tree_all"
+                sequence="6"/>
+    </data>
+</odoo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.module.category" id="module_category_employee_requisition">
+        <field name="name">Employee Requisition</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="group_hr_employee_request_user" model="res.groups">
+        <field name="name">Employee</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field name="category_id" ref="module_category_employee_requisition" />
+    </record>
+    <record id="group_hr_employee_request_manager" model="res.groups">
+        <field name="name">Director of Financial and Administrative Affairs</field>
+        <field name="implied_ids" eval="[(4, ref('plustech_hr_employee_request.group_hr_employee_request_user'))]"/>
+        <field name="category_id" ref="module_category_employee_requisition" />
+    </record>
+
+
+    <record model="ir.rule" id="employee_request_comp_rule">
+        <field name="name">Employee Request multi-company</field>
+        <field name="model_id" ref="model_hr_employee_request" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+    <record model="ir.rule" id="employee_request_line_comp_rule">
+        <field name="name">Employee Request Line multi-company</field>
+        <field name="model_id" ref="model_hr_employee_request_line" />
+        <field name="global" eval="True" />
+        <field name="domain_force">
+            ['|',('company_id','=',False),('company_id', 'in', company_ids)]
+        </field>
+    </record>
+    <record id="hr_employee_request_followers_rule" model="ir.rule">
+        <field name="name">Follow employee Request</field>
+        <field name="model_id" ref="model_hr_employee_request" />
+        <field name="groups" eval="[(6,0, [ref('group_hr_employee_request_user')])]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+        <field name="domain_force">
+            ['|',('requested_by','=',user.id),
+                                        ('message_partner_ids', 'in',
+            [user.partner_id.id])]
+        </field>
+    </record>
+    <record id="hr_employee_request_rule" model="ir.rule">
+        <field name="name">Purchase Request User</field>
+        <field name="model_id" ref="model_hr_employee_request" />
+        <field name="groups" eval="[(6,0, [ref('group_hr_employee_request_user')])]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="domain_force">['|',('requested_by','=',user.id), ('employee_id.parent_id.user_id', '=', user.id)]</field>
+    </record>
+    <record id="hr_employee_request_manager_rule" model="ir.rule">
+        <field name="name">HR Employee Request Manager</field>
+        <field name="model_id" ref="model_hr_employee_request" />
+        <field name="groups" eval="[(6,0, [ref('group_hr_employee_request_manager')])]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+    <record id="hr_employee_request_line_followers_rule" model="ir.rule">
+        <field name="name">Follow HR Employee Request Line</field>
+        <field name="model_id" ref="model_hr_employee_request_line" />
+        <field name="groups" eval="[(6,0, [ref('group_hr_employee_request_user')])]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+        <field name="domain_force">
+            ['|',('request_id.requested_by','=',user.id),
+                                        ('request_id.message_partner_ids', 'in',
+            [user.partner_id.id])]
+        </field>
+    </record>
+    <record id="hr_employee_request_line_rule" model="ir.rule">
+        <field name="name">HR Employee Request Line User</field>
+        <field name="model_id" ref="model_hr_employee_request_line" />
+        <field name="groups" eval="[(6,0, [ref('group_hr_employee_request_user')])]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+        <field name="domain_force">[('request_id.requested_by','=',user.id)]</field>
+    </record>
+    <record id="hr_employee_request_line_manager_rule" model="ir.rule">
+        <field name="name">HR Employee Request Line Manager</field>
+        <field name="model_id" ref="model_hr_employee_request_line" />
+        <field name="groups" eval="[(6,0, [ref('group_hr_employee_request_manager')])]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_create" eval="True" />
+        <field name="perm_unlink" eval="True" />
+    </record>
+</odoo>

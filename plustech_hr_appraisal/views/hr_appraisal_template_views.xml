@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <menuitem name="Appraisals" id="menu_hr_appraisal_main" web_icon="plustech_hr_appraisal,static/description/icon.png"
+              sequence="200"/>
+    <menuitem name="Configuration"
+              id="menu_hr_appraisal_main_configuration"
+              parent="menu_hr_appraisal_main"
+              sequence="99"/>
+
+    <record model="ir.ui.view" id="view_hr_appraisal_template_form">
+        <field name="name">hr.appraisal.template</field>
+        <field name="model">hr.appraisal.template</field>
+        <field name="arch" type="xml">
+            <form string="Appraisal Templates" class="o_appraisal_form">
+                <sheet>
+
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                            attrs="{'invisible': [('active', '=', True)]}"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. non-supervisory template"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="objectives_percentage"/>
+                            <div>
+                                <field name="objectives_percentage" class="oe_inline" nolabel="1"/>
+                                <span class="o_form_label oe_inline">%</span>
+                            </div>
+                            <field name="type" invisible="1"/>
+                            <field name="min_objectives"/>
+                            <field name="max_objectives"/>
+                            <field name="deadline_reminder"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <label for="competencies_percentage"/>
+                            <div>
+                                <field name="competencies_percentage" class="oe_inline" nolabel="1"/>
+                                <span class="o_form_label oe_inline">%</span>
+                            </div>
+                            <field name="min_competencies"/>
+                            <field name="max_competencies"/>
+                            <field name="appraisal_weight_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                     <group name="reason" string="Description" colspan="12" col="1">
+                            <field name="description" placeholder="Description" widget="html"
+                                   class="oe-bordered-editor"
+                                   options="{'style-inline': true}" nolabel="1"/>
+                        </group>
+                    <notebook>
+                        <page string="Evaluation Scales" name="evaluation_scale">
+                            <field name="evaluation_escale_ids">
+                                <tree editable="bottom">
+                                    <field name="name" width="50px"/>
+                                    <field name="rate_from"/>
+                                    <field name="rate_to"/>
+                                </tree>
+                            </field>
+
+                        </page>
+
+                    </notebook>
+                    <field name="active" invisible="1"/>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hr_appraisal_template_tree">
+        <field name="name">hr.appraisal.template.tree</field>
+        <field name="model">hr.appraisal.template</field>
+        <field name="arch" type="xml">
+            <tree string="Appraisal Template" sample="1">
+                <field name="active" invisible="1"/>
+                <field name="name" string="Name"/>
+                <field name="objectives_percentage" />
+                <field name="competencies_percentage"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="open_view_hr_appraisal_template">
+        <field name="name">Appraisal Templates</field>
+        <field name="res_model">hr.appraisal.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_type' : 'supervisory'}</field>
+        <field name="domain">[('type', '=', 'supervisory')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+               Create new template
+            </p>
+            <p>
+               click her to create new appraisal template.
+            </p>
+        </field>
+    </record>
+<!--    <record model="ir.actions.act_window" id="open_non_supervisory_view_hr_appraisal_template">-->
+<!--        <field name="name">Non Supervisory Appraisal Templates</field>-->
+<!--        <field name="res_model">hr.appraisal.template</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--        <field name="context">{'default_type' : 'non_supervisory'}</field>-->
+<!--        <field name="domain">[('type', '=', 'non_supervisory')]</field>-->
+<!--        <field name="help" type="html">-->
+<!--            <p class="o_view_nocontent_smiling_face">-->
+<!--               Create new template-->
+<!--            </p>-->
+<!--            <p>-->
+<!--               click her to create new appraisal template.-->
+<!--            </p>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <menuitem name="Appraisal Templates"
+              parent="menu_hr_appraisal_main_configuration"
+              id="menu_open_supervisory_view_hr_appraisal_template"
+              action="open_view_hr_appraisal_template"
+              sequence="2"
+              groups="base.group_user"/>
+<!--    <menuitem name="Non Supervisory Appraisal Templates"-->
+<!--              parent="menu_hr_appraisal_main_configuration"-->
+<!--              id="menu_open_non_supervisoryview_hr_appraisal_template"-->
+<!--              action="open_non_supervisory_view_hr_appraisal_template"-->
+<!--              sequence="1"-->
+<!--              groups="base.group_user"/>-->
+
+<!--    weights-->
+    <record model="ir.ui.view" id="view_hr_appraisal_weight_tree">
+        <field name="name">hr.appraisal.weight.tree</field>
+        <field name="model">appraisal.weight</field>
+        <field name="arch" type="xml">
+            <tree string="Appraisal Weights" editable="bottom">
+                <field name="weight" string="Weight"  width="20px" required="1" class="text-left"/>
+                <field name="company_id" groups="base.group_multi_company" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="open_view_hr_appraisal_weight">
+        <field name="name">Weights</field>
+        <field name="res_model">appraisal.weight</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem name="Weights"
+              parent="menu_hr_appraisal_main_configuration"
+              id="menu_open_view_hr_appraisal_weight"
+              action="open_view_hr_appraisal_weight"
+              sequence="3"
+              groups="base.group_user"/>
+
+</odoo>

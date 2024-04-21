@@ -1,0 +1,1483 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_end_of_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 13:20+0000\n"
+"PO-Revision-Date: 2023-06-19 13:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.actions.report,print_report_name:plustech_hr_end_of_service.action_report_eos
+msgid "'End Of Service Clearance - %s' % (object.name)"
+msgstr "'مخالصة نهاية الخدمة - %s' % (object.name)"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid ") بأني قد استلمت من شركة"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.res_config_settings_eos_form
+msgid "<span class=\"fa fa-lg \" title=\"Month Type\"/>"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.res_config_settings_eos_form
+msgid ""
+"<span class=\"fa fa-lg \" title=\"default End of service salary structure "
+"...\" role=\"img\" aria-label=\"default End of service salary structure "
+"...\"/>"
+msgstr "هيكل رواتب نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "<span>Bank Loans</span>"
+msgstr "قروض النكية"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "<span>Custody</span>"
+msgstr "عهد عينية"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "<span>Day's</span>"
+msgstr "<span>ايام</span>"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid ""
+"<strong>إقرار مخالصة و براء ذمة<br/>Adoption of release and quittance\n"
+"                            </strong>"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid ""
+"<strong>مخالصة نهاية الخدمة</strong>\n"
+"                            <br/>\n"
+"                            <strong>END OF SERVICE CLEARANCE</strong>"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_needaction
+msgid "Action Needed"
+msgstr "بحاجة لإجراء"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ايقونة نوع النشاط"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Additions"
+msgstr "اضافات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__allowance_ids
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__eos_other_input__input_type__allowance
+msgid "Allowance"
+msgstr "العلاوة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__amount
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Annual leave balance"
+msgstr "رصيد الاجازة السنوية"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_attachment_count
+msgid "Attachment Count"
+msgstr "حساب المرفق"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__attendance_deduction
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Attendance Deduction"
+msgstr "حسم الغياب"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Available"
+msgstr "متاح"
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#, python-format
+msgid "Bank Loans"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Basic Salary"
+msgstr "الراتب الأساسي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__calculate_factor
+msgid "Calculation Factor"
+msgstr "عامل الحساب"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.actions.act_window,help:plustech_hr_end_of_service.action_end_service_reason_form
+msgid "Click to add a new EOS Reason."
+msgstr "اضغط لإضافة سبب نهاية خدمة جديد"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__company_id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__company_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "Company"
+msgstr "الشركة "
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__compensation_type
+msgid "Compensation Type"
+msgstr "نوع التعويض"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: plustech_hr_end_of_service
+#: model:ir.ui.menu,name:plustech_hr_end_of_service.menu_end_service_config
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__create_uid
+msgid "Created by"
+msgstr "منشأ بواسطة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__create_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__create_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__create_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__create_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__create_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__create_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__create_date
+msgid "Created on"
+msgstr "منشأ في"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__contract_id
+msgid "Current contract of the employee"
+msgstr "العقد الحالي للموظف"
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__custody
+#, python-format
+msgid "Custody"
+msgstr "عهد عينية"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__request_date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__number_of_days_from_join_date
+msgid "Days From Join Date"
+msgstr "الايام من تاريخ الانضمام"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_res_company__days_of_month
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_res_config_settings__days_of_month
+msgid "Days Of Month"
+msgstr "أيام الشهر"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__eos_other_input__input_type__deduction
+msgid "Deduction"
+msgstr "حسم"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Deductions"
+msgstr "الخصم"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__journal_id
+msgid "Default Journal"
+msgstr "دفتر اليومية الافتراضي"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Delay Hours"
+msgstr "ساعات التأخير"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__department_id
+msgid "Department"
+msgstr " القسم/الإدارة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__description
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__input_id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__input_id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__deserving
+msgid "Deserving"
+msgstr "الإستحقاق"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__display_name
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__display_name
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__display_name
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__display_name
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__display_name
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__display_name
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_of_service_reward__state__draft
+msgid "Draft"
+msgstr "المسودة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__eos_award
+msgid "EOS Award(Month)"
+msgstr "مكافأة نهاية الخدمة (بالشهر)"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_eos_other_input_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_eos_other_input_view_tree
+msgid "EOS Input"
+msgstr "مدخلات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_eos_other_input_view_tree
+msgid "EOS Input Name"
+msgstr "اسم المدخل"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.actions.act_window,name:plustech_hr_end_of_service.action_view_hr_eos_other_input
+#: model:ir.model,name:plustech_hr_end_of_service.model_eos_other_input
+#: model:ir.ui.menu,name:plustech_hr_end_of_service.eos_other_input
+msgid "EOS Other Input"
+msgstr "مدخلات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model:hr.salary.rule,name:plustech_hr_end_of_service.hr_salary_rule_eos_provision
+msgid "EOS Provisions"
+msgstr "مخصص نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_end_service_reason
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_end_service_reason_filter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_end_service_reason_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_end_service_reason_tree
+msgid "EOS Reason"
+msgstr "سبب نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.actions.act_window,name:plustech_hr_end_of_service.action_end_service_reason_form
+#: model:ir.ui.menu,name:plustech_hr_end_of_service.menu_action_hr_end_service_reason_form
+msgid "EOS Reasons"
+msgstr "أسباب نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_account_payment__eos_id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_payslip__eos_id
+#: model:ir.ui.menu,name:plustech_hr_end_of_service.end_of_service_request_menu
+msgid "EOS Request"
+msgstr "طلب نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__net_period_reward
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "EOS Reward"
+msgstr "مكافأة نهاية الخدمة "
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_reward_details
+msgid "EOS Reward details"
+msgstr "تفاصيل نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_eos_rules
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__rule_id
+msgid "EOS Rules"
+msgstr "قواعد نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#, python-format
+msgid "EOS for %s"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_hr_employee
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__employee_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__employee_number
+msgid "Employee Number"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_employee_resignation
+msgid "Employee Resignation"
+msgstr "إستقالة الموظف"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.actions.report,name:plustech_hr_end_of_service.action_report_eos
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__hr_payslip__payslip_type__eos
+#: model:ir.ui.menu,name:plustech_hr_end_of_service.eos_main_menu
+msgid "End Of Service"
+msgstr "نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "End Of Service Details"
+msgstr "معلومات نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_loan__eos_due
+msgid "End Of Service Dues"
+msgstr "مستحقات نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_eos_extra_deduction
+msgid "End Of Service Other Deductions"
+msgstr "حسومات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_eos_extra_dues
+msgid "End Of Service Other Dues"
+msgstr "اضافات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_service_reason__reason_type__end
+msgid "End of Contract"
+msgstr "نهاية العقد"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.res_config_settings_eos_form
+msgid "End of Service"
+msgstr "نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.actions.act_window,name:plustech_hr_end_of_service.end_of_service_award_action
+#: model:ir.model,name:plustech_hr_end_of_service.model_end_of_service_reward
+#: model:ir.ui.menu,name:plustech_hr_end_of_service.end_of_service_award_menu
+msgid "End of Service Reward"
+msgstr "مكافأة نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.res_config_settings_eos_form
+msgid "End of service Reward"
+msgstr "مكافأة نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:hr.salary.rule,name:plustech_hr_end_of_service.hr_payroll_rules_eos_resign_reward
+msgid "End of service reward"
+msgstr "مكافأة نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_res_company__salary_structure_id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_res_config_settings__salary_structure_id
+msgid "End of service salary structure"
+msgstr "بناء راتب نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__reason_id
+msgid "Ending Reason"
+msgstr "سبب الانهاء"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__eos_id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__eos_id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__eos_id
+msgid "Eos"
+msgstr "نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_contract_expiration
+msgid ""
+"Expiration of contract terms, or the parties have agreed to terminate the contract\n"
+"            "
+msgstr "انتهاء مدة العقد، أو باتفاق الطرفين على إنهاء العقد"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Extra Deductions"
+msgstr "حسومات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_follower_ids
+msgid "Followers"
+msgstr "التابعين"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "التابعين (الشركاء)"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_of_service_reward__compensation_type__company
+msgid "For Company"
+msgstr "تعويض للشركة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_of_service_reward__compensation_type__employee
+msgid "For Employee"
+msgstr "تعويض للموظف"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "GOSI Deduction"
+msgstr "خصم التأمينات الاجتماعية"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Generate Payment"
+msgstr "إنشاء السداد"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Generate Payslip"
+msgstr "انشاء كشف الرواتب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__gosi_deduction
+msgid "Gosi Deduction"
+msgstr "خصم التأمينات الاجتماعية"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_payslip__gross_wage
+msgid "Gross Wage"
+msgstr "الأجر الإجمالي"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_end_service_reason_filter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "Group By"
+msgstr "مجمع بحسب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_of_service_reward__state__hrm
+msgid "HRM"
+msgstr "إدارة الموارد البشرية"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_of_service_reward__state__hro
+msgid "HRO"
+msgstr "الاستعانة بمصادر خارجية للموارد البشرية"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__id
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__message_needaction
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "اذا تم التأكيد , رسالة جديدة تحتاج الاهتمام"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__message_has_error
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التأكيد , بعض الرسائل لديها خطأ في التوصيل"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__include_compensation
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__include_compensation
+msgid "Include Compensation"
+msgstr "يتضمن تعويض"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__includ_allowance
+msgid "Include all Allowance?"
+msgstr "يتضمن كل ﺑدﻻت"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__input_type
+msgid "Input Type"
+msgstr "نوع المدخل"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_is_follower
+msgid "Is Follower"
+msgstr "هو تابع"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__job_id
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__join_date
+msgid "Join Date"
+msgstr "تاريخ الإنضمام"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward____last_update
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason____last_update
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction____last_update
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues____last_update
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input____last_update
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules____last_update
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل في"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__last_payslip_date
+msgid "Last Payslip Date"
+msgstr "تاريخ أخر راتب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__last_salary
+msgid "Last Salary"
+msgstr "اخر راتب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__write_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__write_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__write_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__write_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_other_input__write_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__write_date
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل في"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__last_work_date
+msgid "Last Work Date"
+msgstr "اخر تاريخ عمل"
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#, python-format
+msgid "Last payslip date should be less than last working date"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Leave Balance Amount"
+msgstr "مبلغ رصيد الاجازات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__leave_balance_reward
+msgid "Leave Balance Reward"
+msgstr "مكافئة رصيد الإجازات"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Leaves Compensation"
+msgstr "تعويض الإجازات"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_force_majeure
+msgid "Leaving work as a result of force majeure"
+msgstr "ترك العمل نتيجة قوة قاهرة"
+
+#. module: plustech_hr_end_of_service
+#: model:hr.salary.rule,name:plustech_hr_end_of_service.hr_rule_eos_loan_deduction
+msgid "Loan Deduction"
+msgstr "خصم السلف"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__advances_deduction
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__unpaid_loans
+msgid "Loans Deduction"
+msgstr "حسم السلف"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Loans Deductions"
+msgstr "خصم السلف"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Logo"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في توصيل الرسالة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_ids
+msgid "Messages"
+msgstr "رسالة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__min_months_compensation
+msgid "Minimum Month's To Skip Remaining Period"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__res_company__month_type__0
+msgid "Month According To user Need"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__res_company__month_type__1
+msgid "Month According to the actual date"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#, python-format
+msgid "Month Days Must Bigger than Zero"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_res_company__month_type
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_res_config_settings__month_type
+msgid "Month Type"
+msgstr "نوع الشهر"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "تاريخ تسليم نشاطي"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "My Department"
+msgstr "إدارتي"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "My Team"
+msgstr "فريقي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "مناسبة تقويم للنشاط التالي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "تاريخ تسليم النشاط التالي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__no
+msgid "No#"
+msgstr "الرقم#"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Not Available"
+msgstr "غير متاح"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Not available"
+msgstr "غير متاح"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_deduction__note
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_extra_dues__note
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع اخطاء في التوصيل"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__name
+msgid "Number#"
+msgstr "عدد#"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__open_bank_loan
+msgid "Open Bank Loan"
+msgstr "قروض البنكية"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__other_additions
+msgid "Other Addition"
+msgstr "إضافات "
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Other Additions"
+msgstr "اضافات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__other_deduction_ids
+msgid "Other Deduction"
+msgstr "حسومات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__other_deductions
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Other Deductions"
+msgstr "حسومات "
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__other_dues_ids
+msgid "Other Dues"
+msgstr "اضافات اخرى"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_of_service_reward__state__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال الرواتب للسداد"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model,name:plustech_hr_end_of_service.model_account_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__payslip_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Payslip"
+msgstr "كشف الرواتب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__payslip_amount
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Payslip Amount"
+msgstr "مبلغ قسيمة الراتب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_payslip__payslip_type
+msgid "Payslip Type"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__period
+msgid "Period"
+msgstr "الفترة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__period_from
+msgid "Period From(Years)"
+msgstr "(بالسنوات)الفترة من"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__period_to
+msgid "Period To(Years)"
+msgstr "الفترة إلى(بالسنوات)"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__service_days
+msgid "Period in days"
+msgstr "الفترة بالأيام"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__service_months
+msgid "Period in months"
+msgstr "الفترة بالشهور"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__service_years
+msgid "Period in years"
+msgstr "الفترة بالسنوات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_eos_rules__reason_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "Reason"
+msgstr "السبب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__reason_type
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_end_service_reason_filter
+msgid "Reason Type"
+msgstr "نوع السبب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__remaining_leaves
+msgid "Remaining Leaves"
+msgstr "الاجازات المتبقية"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Request Details"
+msgstr "معلومات الطلب"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Reset to Draft"
+msgstr "ارجاع الى مسودة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_service_reason__reason_type__resign
+msgid "Resignation"
+msgstr "إستقالة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_reward_details__reward
+msgid "Reward"
+msgstr "المكافأة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__reward_details
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__reward_details_ids
+msgid "Reward Details"
+msgstr "تفاصيل نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_end_service_reason_form
+msgid "Rules"
+msgstr "القواعد"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في توصيل الرسالة"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "Search"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_employee__service_duration
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_employee_form_inherit
+msgid "Service Duration"
+msgstr "مدة الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_employee__service_duration_days
+msgid "Service Duration (days)"
+msgstr "مده الخدمة (أيام)"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_employee__service_duration_months
+msgid "Service Duration (months)"
+msgstr "مدة الخدمة (شهور)"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_employee__service_duration_years
+msgid "Service Duration (years)"
+msgstr "مدة الخدمة (سنوات)"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Service Period Details"
+msgstr "معلومات فترة الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_hr_employee__service_duration
+msgid "Service duration in days"
+msgstr "مدة الخدمة بالايام"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.actions.act_window,name:plustech_hr_end_of_service.eos_config_settings_action
+#: model:ir.ui.menu,name:plustech_hr_end_of_service.eos_menu_configuration
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__slip_count
+msgid "Slip Count"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__state
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_of_service_reward__state__submit
+msgid "Submitted"
+msgstr "تم الارسال"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields.selection,name:plustech_hr_end_of_service.selection__end_service_reason__reason_type__termination
+msgid "Termination"
+msgstr "الفصل"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__salary_compensation
+msgid "Termination Compensation"
+msgstr "تعويض الإنهاء"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_hr_employee__service_termination_date
+msgid "Termination Date"
+msgstr "تاريخ الفصل"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_hr_employee__service_termination_date
+msgid ""
+"Termination date is the last day the employee actually works and this date "
+"is used for accrual leave allocations calculation"
+msgstr ""
+"تاريخ الإنهاء هو آخر تاريخ قام الموظف فيه بالعمل حاليايستخدم من اجل حساب "
+"توزيع الإستحقاق"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_fired
+msgid "Termination of the contract by the employer"
+msgstr "فسخ العقد من صاحب العمل"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_termination_by_condition_80
+msgid ""
+"Termination of the contract by the employer for one of the terms and conditions stated in\n"
+"                Article (80).\n"
+"            "
+msgstr "فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة(8)"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_termination_by_condition_77
+msgid "Termination of the employment contract under Article (77)"
+msgstr "فسخ عقد العمل بموجب المادة 77 من نظام العمل"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_condition_81_leave
+msgid ""
+"The worker leaves work for one of the conditions stated in Article (81)"
+msgstr "ترك العامل العمل لأحد الحالات الواردة في المادة (81)"
+
+#. module: plustech_hr_end_of_service
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_condition_81_termination
+#: model:end.service.reason,name:plustech_hr_end_of_service.eos_reason_marriage
+msgid ""
+"The worker terminates the labor contract within six months into the marriage contract or\n"
+"                three months into birth.\n"
+"            "
+msgstr ""
+"إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج او خلال ثلاثة أشهر من "
+"الوضع"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "To Approve"
+msgstr "للاعتماد"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "To Pay"
+msgstr "للسداد"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Total"
+msgstr "الاجمالي"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Total Additions"
+msgstr "اجمالي الاضافات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__total_deductions
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "Total Deductions"
+msgstr "مجموع الحسميات"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__final_deserving
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Total Deserved Amount"
+msgstr "مجموع الإستحقاق"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__total_reward
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "Total Reward"
+msgstr "مجموع المكافأة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__total_service_year
+msgid "Total Service Years"
+msgstr "مدة الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__unpaid_leave_desc
+msgid "Unpaid Leave"
+msgstr "اجازات غير المدفوعة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__unpaid_leave_month
+msgid "Unpaid Leave Months"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.hr_unpaid_loan_tree_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+#, python-format
+msgid "Unpaid Loans"
+msgstr "السلف غير المسدد"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل غير المقروءة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_service_reason__provision_calculatation
+msgid "Use This Rule to calculate eos provisions in payslip"
+msgstr "تستخدم هذه القاعدة لحساب احكام نهاية الخدمة بقسيمة الراتب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_service_reason__provision_calculatation
+msgid "Use in Payslip"
+msgstr "استخدم بقسيمة الراتب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__website_message_ids
+msgid "Website Messages"
+msgstr "رسالة صفحة ويب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,help:plustech_hr_end_of_service.field_end_of_service_reward__website_message_ids
+msgid "Website communication history"
+msgstr "تاريخ تواصل صفحة الويب"
+
+#. module: plustech_hr_end_of_service
+#: model:ir.model.fields,field_description:plustech_hr_end_of_service.field_end_of_service_reward__working_days
+msgid "Working Days"
+msgstr "أيام العمل"
+
+#. module: plustech_hr_end_of_service
+#: code:addons/plustech_hr_end_of_service/models/end_of_service_reward.py:0
+#, python-format
+msgid "You Can Not Delete a Request Which Is Not Draft."
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.res_config_settings_eos_form
+msgid "default = 30 days"
+msgstr "الافتراضي = 30 يوم"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.res_config_settings_eos_form
+msgid "default End of service salary structure used to compute reward ..."
+msgstr "هيكل الرواتب الافتراضي المستخدم في احتساب نهاية الخدمة"
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_hr_end_of_service_filter
+msgid "end of service of people you are manager of"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "ألإجمالي"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "إضافات أخرى"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الإدارة"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الإضافات"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الاسم"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "التأمينات الاجتماعية"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "التاريخ"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "التوقيع"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الحضور و الانصراف"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الخصم"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الراتب الأساسي"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الرقم الوظيفي"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "السلف"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الغياب"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الفترة بالأيام"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الفترة بالسنوات"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "الفترة بالشهور"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "المنصب الوظيفي"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "بهذا أقر انا الموقع أدناه ("
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "تاريخ أخر يوم عمل"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "تاريخ الانضمام"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid ""
+"تفاصيل مستحقات نهاية الخدمة<br/>\n"
+"                            End Of Service Details"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid ""
+"جميع مستحقاتي المرتبطة\n"
+"                                بفترة عملي مع الشركة من تاريخ"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "خصومات أخرى"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "رصيد ألإجارات"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "سبب الإنهاء"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "م) وحتى تاريخ ("
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid ""
+"م).\n"
+"                                <br/>\n"
+"                                2- مكافاة نهاية الخدمة<br/>\n"
+"                                3- كافة المستحقات الانتداب و تذاكر السفر<br/>\n"
+"                                4- جميع الحوافز و النسب و مقابل ساعات العمل الاضافية<br/>\n"
+"                                5- تعويضات عن فترة الانذار و مدة الاجازة المتبقية و غيرها<br/>\n"
+"                                6- كل المستحقات الناشئة عن عقد العمل أو انظمة و لوائح الشركة او نظام العمل و العمال\n"
+"                                ممالم يذكر في الفقرات الاربعة اعلاه<br/>\n"
+"                                7- اي مطالبات او خلافات مهنية تتعلق بعلاقتي المهنية مع الشركة مما يدخل تحت حكم الهيئة\n"
+"                                السعودية للمقيمين المعتمدين\n"
+"                                او غيرها من جهات اللادارية ذات علاقة و نظام المقيمين المعتمدين سواء كانت هذا المطالبات\n"
+"                                اما الجهات الادارية او القضائية.\n"
+"                                و تعتبر هذه المخالصة نهائية و مبرئة لذمة الشركة و مصفية للعقد و لا يجوز لي المطالبة باي\n"
+"                                شي بعد ذلك و تكون صلتي قد انقطعت نهائيا بالشركة.\n"
+"                                و على كل ما ورد اعلاه اقر و اوقع"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "مبلغ تعويض ألإجارات"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "مبلغ قسيمة الراتب"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "مجموع الإضافات"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "مجموع الاستحقاق"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "مجموع الخصومات"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "مجموع المكافأة"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "مكافأة نهاية الخدمة"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid ""
+"و أني لا املك اي مطالبات\n"
+"                                مهنية او عملية متعلقة بفترة عملي بين هذين تاريخين او ناشئة عنها و لو بعد نهايتها و يشمل\n"
+"                                هذا:\n"
+"                                <br/>\n"
+"                                1- جميع الرواتب والأجور والبدلات من تاريخ ("
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.report_eos_document
+msgid "وحتى نهاية علاقتي بالشركة بتاريخ"
+msgstr ""
+
+#. module: plustech_hr_end_of_service
+#: model_terms:ir.ui.view,arch_db:plustech_hr_end_of_service.view_end_of_service_award_form
+msgid "ُExtra Additions"
+msgstr "اضافات اخرى"

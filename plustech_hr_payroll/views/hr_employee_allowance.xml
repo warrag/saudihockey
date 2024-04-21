@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_allowance_type_list" model="ir.ui.view">
+        <field name="name">employee.allowance.type.list</field>
+        <field name="model">employee.allowance.type</field>
+        <field name="arch" type="xml">
+            <tree string="Allowances">
+                <field name="name"/>
+                <field name="code"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="employee_allowance_type_view_kanban" model="ir.ui.view">
+        <field name="name">employee.allowance.type.kanban</field>
+        <field name="model">employee.allowance.type</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_content oe_kanban_global_click">
+                            <div class="row">
+                                <div class="col-8">
+                                    <strong>
+                                        <field name="name"/>
+                                    </strong>
+                                </div>
+                                <!-- <div class="col-4">
+                                    <span class="float-right"><field name="category_id"/></span>
+                                </div> -->
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <span>Code:
+                                        <field name="code"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="employee_allowance_type_form" model="ir.ui.view">
+        <field name="name">employee.allowance.type.form</field>
+        <field name="model">employee.allowance.type</field>
+        <field name="arch" type="xml">
+            <form string="Allowances">
+                <sheet>
+                    <label for="name" string="Allowance Name"/>
+                    <h1>
+                        <field name="name" placeholder="e.g. Housing Allowance"/>
+                    </h1>
+                    <label for="category_id"/>
+                    <h2><field name="category_id" placeholder="e.g. Housing Allowance"/></h2>
+
+                    <group name="main_details">
+                        <group>
+                            <field name="code"/>
+                            <field name="salary_rule_id" attrs="{'readonly': [('create_rule','=',True)]}"/>
+                            <field name="struct_id" required="1"/>
+                            <field name="create_rule"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="amount_select"/>
+                            <field name="amount" string="Amount/Percentage(%)"/>
+                            <field name="is_default"/>
+                            <field name="gosi_deduction"/>
+                            <field name="leave_compensation"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_employee_allowance_type_filter" model="ir.ui.view">
+        <field name="name">employee.allowance.type.select</field>
+        <field name="model">employee.allowance.type</field>
+        <field name="arch" type="xml">
+            <search string="Search Allowance">
+                <field name="name" string="Allowance "
+                       filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
+                <field name="salary_rule_id"/>
+                <field name="amount_select"/>
+                <field name="is_default"/>
+                <separator/>
+                <filter name="is_default" string="Default" domain="[('is_default', '=', True)]"/>
+                <group col="8" colspan="4" expand="0" string="Group By">
+                    <filter string="amount_select" name="Amonut Type" context="{'group_by': 'amount_select'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_allowance_type_form" model="ir.actions.act_window">
+        <field name="name">Allowance Types</field>
+        <field name="res_model">employee.allowance.type</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="view_employee_allowance_type_filter"/>
+    </record>
+
+    <menuitem
+            id="menu_action_allowance_type_form"
+            action="action_allowance_type_form"
+            name="Allowance Types"
+            parent="hr_payroll.menu_hr_salary_configuration"
+            sequence="36"/>
+
+
+
+     <!-- Allowance Category-->
+    <record id="hr_allowance_category_form" model="ir.ui.view">
+        <field name="name">hr.allowance.category.form</field>
+        <field name="model">hr.allowance.category</field>
+        <field name="arch" type="xml">
+            <form string="Allowance Categories">
+            <sheet>
+                <group name="category_details" col="4">
+                    <field name="name"/>
+                    <field name="code"/>
+                </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_allowance_category_tree" model="ir.ui.view">
+        <field name="name">hr.allowance.category.tree</field>
+        <field name="model">hr.allowance.category</field>
+        <field name="arch" type="xml">
+            <tree string="Allowance Categories">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_allowance_category_filter" model="ir.ui.view">
+        <field name="name">hr.allowance.category.select</field>
+        <field name="model">hr.allowance.category</field>
+        <field name="arch" type="xml">
+            <search string="Allowance Categories">
+                <field name="name" string="Allowance Categories" filter_domain="['|',('name','ilike',self),('code','ilike',self)]"/>
+           </search>
+        </field>
+    </record>
+
+    <record id="action_hr_allowance_category" model="ir.actions.act_window">
+        <field name="name">Allowance Categories</field>
+        <field name="res_model">hr.allowance.category</field>
+        <field name="view_id" ref="hr_allowance_category_tree"/>
+       <field name="search_view_id" ref="view_hr_allowance_category_filter"/>
+    </record>
+
+    <menuitem
+            id="menu_action_allowance_category_form"
+            action="action_hr_allowance_category"
+            name="Allowance Categories"
+            parent="hr_payroll.menu_hr_salary_configuration"
+            sequence="37"/>
+</odoo>

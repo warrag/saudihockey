@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sh_stages_form_view" model="ir.ui.view">
+        <field name="name">letters.stages</field>
+        <field name="model">letter.stages</field>
+        <field name="arch" type="xml">
+            <form string="Stages">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sequence" invisible="1" groups="base.group_no_one" />
+                            <field name="name" />
+                            <field name="group_ids" invisible="1" widget="many2many_tags" />
+                        </group>
+                        <group>
+                            <field name="next_stage" invisible="1" />
+                            <field name="default_stage" invisible="1" />
+                            <field name="cancel_stage" invisible="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_stages_tree_view" model="ir.ui.view">
+        <field name="name">letters.stages</field>
+        <field name="model">letter.stages</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="sequence" widget="handle" optional="show" />
+                <field name="name" />
+                <field name="default_stage" />
+                <field name="print" />
+                <field name="readonly" />
+                <field name="cancel_stage" />
+                <field name="sent_notification" />
+                <field name="activity_type_id"
+                    attrs="{'required': [('sent_notification', '=', True)]}" />
+            </tree>
+        </field>
+    </record>
+    <record id="sh_stages_action" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">letter.stages</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="letter_configuration_menu" name="Configuration"
+        parent="plustech_hr_employee_letter.hr_employee_letter_main_menu"
+        groups="plustech_hr_employee_letter.employee_letter_manager" />
+    <menuitem id="letters_stages_menu" name="Stages"
+        parent="plustech_hr_employee_letter.letter_configuration_menu"
+        action="sh_stages_action" sequence="2" />
+    <menuitem id="request_letter_menu"
+        name="Letter Template"
+        action="letter_template_action"
+        parent="plustech_hr_employee_letter.letter_configuration_menu"
+        sequence="2"
+    />
+</odoo>

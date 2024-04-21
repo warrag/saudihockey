@@ -1,0 +1,39 @@
+<odoo>
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="external_clearance_template" model="letter.letter">
+            <field name="name">شهادة إخلاء طرف</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="container" style="width:100%;">
+                    <div class="row">
+                        <span>${object.request_date}</span>
+                    </div>
+
+                    <div class="row">
+                        <h4>${object.name}</h4>
+                        <br/>
+                        <p>
+                            تشهد شركة ${object.company_id.with_context(lang='ar_001').name} بأن السيد/ السيدة
+                            ${object.request_id.name}،
+                            (${object.request_id.country_id.with_context(lang='ar_001').name}) الجنسية يحمل هوية
+                            رقم
+                            <br/>
+                            ( ${object.request_id.identification_id})) كان يعمل لدينا بوظيفة (
+                            ${object.request_id.job_id.name})) من تاريخ  ${object.request_id.join_date}م وحتى تاريخ
+                            <br/>
+                            ${object.request_date}م وقد قام بتسليم ما لديه من عهد وليس عليه أي التزام تجاه الشركة.
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <h6>والله ولي التوفيق،،</h6>
+                        <br/><br/>
+                        <h6>الرئيس التنفيذي</h6>
+                    </div>
+
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_employee_expense_form" model="ir.ui.view">
+        <field name="name">hr.employee.expense.form</field>
+        <field name="model">hr.employee.expense</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Submit" groups="hr.group_hr_user" name="action_submit" states="draft"
+                            type="object" class="oe_highlight"/>
+                    <button string="Confirm" groups="hr.group_hr_user" name="action_confirm" states="submit"
+                            type="object" class="oe_highlight"/>
+                    <button string="Approve" groups="hr.group_hr_user" name="action_approve" states="confirm"
+                            type="object" class="oe_highlight"/>
+
+                    <button string="Create Deferred Expense" groups="hr.group_hr_user"
+                            name="action_create_deferred_expense"
+                            attrs="{'invisible': ['|',('export_as', '!=', 'deferred'),('state', '!=', 'approve')]}"
+                            type="object" class="oe_highlight"/>
+                    <button string="Create Bill" groups="hr.group_hr_user" name="action_create_payment"
+                            attrs="{'invisible': ['|','|',('account_move_id', '!=', False),('export_as', '!=', 'bill'),('state', '!=', 'approve')]}"
+                            type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                          <button name="action_open_account_move" class="oe_stat_button"
+                                icon="fa-file-text-o"
+                                type="object"
+                                attrs="{'invisible': [('account_move_id', '=', False)]}"
+                                groups="account.group_account_invoice,account.group_account_readonly">
+                            Bill
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1 class="mt0">
+                            <field name="name" readonly="True"/>
+                        </h1>
+                    </div>
+                    <group string="Request Details">
+                        <group>
+                            <field name="employee_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                   options="{'no_create': 1}"/>
+                            <field name="employee_number"/>
+                            <field name="department_id"/>
+                            <field name="job_id"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="request_date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="effective_date" attrs="{'readonly': [('state','=','confirm')]}"/>
+                            <field name="interval_period" attrs="{'readonly': [('state','=','confirm')]}"/>
+                            <field name="end_date" readonly="1" force_save="1"/>
+                            <field name="expense_type_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                   required="1" force_save="1"/>
+                            <field name="amount" attrs="{'readonly': [('state','=','confirm')]}"/>
+                            <field name="partner_id" attrs="{'readonly': [('state','=','confirm')]}"/>
+                            <field name="export_as" invisible="1"/>
+                            <field name="account_move_id" invisible="1"/>
+                        </group>
+
+
+                    </group>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_expense_tree" model="ir.ui.view">
+        <field name="name">hr.employee.expense.tree</field>
+        <field name="model">hr.employee.expense</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employee_number"/>
+                <field name="employee_id"/>
+                <field name="expense_type_id"/>
+                <field name="request_date"/>
+                <field name="effective_date"/>
+                <field name="end_date"/>
+                <field name="amount"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_expense_filter" model="ir.ui.view">
+        <field name="name">hr.employee.expense.filter</field>
+        <field name="model">hr.employee.expense</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="employee_id"/>
+                <field name="department_id" operator="child_of"/>
+                <field name="expense_type_id"/>
+                <field name="name"/>
+                <filter domain="[('state','in',('confirm'))]" string="To Approve"
+                        name="approve"/>
+                <separator/>
+                <filter string="My Team" name="my_team"
+                        domain="['|', ('employee_id.parent_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                        help="expenses of people you are manager of"/>
+                <filter string="My Department" name="department"
+                        domain="['|', ('department_id.member_ids.user_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                        help="My Department"/>
+                <separator/>
+                <filter name="filter_date_request" date="request_date" string="Request Date"/>
+                <filter name="filter_date_effective" date="effective_date" string="Effective Date"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_expense_type_id" string="Expense Type"
+                            context="{'group_by':'expense_type_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"/>
+                    <separator/>
+                    <filter name="group_request_date" string="Request Date" context="{'group_by':'request_date'}"/>
+                </group>
+                <searchpanel>
+                    <field name="state" string="Status"/>
+                    <field name="expense_type_id" string="Expense Type"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_employee_expense" model="ir.actions.act_window">
+        <field name="name">Employee Expense</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.employee.expense</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_employee_expense_main" name="Employee Expenses"
+              groups="base.group_user" web_icon="plustech_hr_expense,static/description/icon.png"/>
+    <menuitem id="menu_employee_expense"
+              name="Expenses"
+              parent="menu_employee_expense_main"
+              action="action_employee_expense"
+              sequence="1"/>
+    <menuitem
+            id="menu_employee_expense_config"
+            parent="menu_employee_expense_main"
+            name="Configuration"
+            sequence="4"
+    />
+
+</odoo>

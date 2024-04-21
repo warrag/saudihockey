@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_gosi_list" model="ir.ui.view">
+        <field name="name">employee.gosi.list</field>
+        <field name="model">hr.employee.gosi</field>
+        <field name="arch" type="xml">
+            <tree string="Gosi Attributes" editable="bottom">
+                <field name="name"/>
+                <field name="gosi_type" required="1"/>
+                <field name="percentage" sum="Percentage"/>
+                <field name="country_ids" widget="many2many_tags"/>
+                <field name="is_active" widget="boolean_toggle" />
+            </tree>
+        </field>
+    </record>
+
+   
+    <record id="action_gosi_form" model="ir.actions.act_window">
+        <field name="name">Gosi</field>
+        <field name="res_model">hr.employee.gosi</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+     <menuitem
+        id="menu_gosi"
+        action="action_gosi_form"
+        name="Gosi Configuration"
+        parent="hr_payroll.menu_hr_salary_configuration"
+        sequence="38"/>
+</odoo>

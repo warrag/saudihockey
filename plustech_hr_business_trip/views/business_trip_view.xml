@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_deputation_form" model="ir.ui.view">
+        <field name="name">hr.deputation.form</field>
+        <field name="model">hr.deputation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Submit" name="action_submit" states="new"
+                            type="object" class="oe_highlight"
+                            groups="plustech_hr_business_trip.group_hr_deputation_user,plustech_hr_business_trip.group_hr_deputation_officer"/>
+                    <button string="Accept"
+                            name="%(plustech_hr_business_trip.approval_wizard_action)d"
+                            attrs="{'invisible': ['|',('state', '!=', 'acceptance'),('is_employee', '=', False)]}"
+                            groups="plustech_hr_business_trip.group_hr_deputation_user"
+                            type="action" class="oe_highlight"
+                            context="{'triggered_action':'action_employee_acceptance'}"/>
+                    <button string="Approve"
+                            groups="plustech_hr_business_trip.group_hr_deputation_user"
+                            name="%(plustech_hr_business_trip.approval_wizard_action)d"
+                            context="{'triggered_action':'action_direct_manager_approve'}"
+                            type="action" class="oe_highlight"
+                            attrs="{'invisible': ['|',('state', '!=', 'direct_manager'), ('is_manager', '=', False)]}"
+                    />
+                    <button string="Approve"
+                            groups="plustech_hr_business_trip.group_hr_deputation_officer"
+                            name="%(plustech_hr_business_trip.approval_wizard_action)d"
+                            states="hr" context="{'triggered_action':'action_hr_officer_approve'}"
+                            type="action" class="oe_highlight"/>
+                    <button string="Approve"
+                            groups="plustech_hr_business_trip.group_hr_deputation_manager"
+                            name="%(plustech_hr_business_trip.approval_wizard_action)d"
+                            states="hrm" context="{'triggered_action':'action_hr_manager_approve'}"
+                            type="action" class="oe_highlight"/>
+                    <button string="Approve"
+                            groups="plustech_hr_business_trip.group_financial_and_administrative_affairs"
+                            name="%(plustech_hr_business_trip.approval_wizard_action)d" states="finance"
+                            type="action" class="oe_highlight"
+                            context="{'triggered_action':'action_finance_approve'}"/>
+                    <button string="Approve"
+                            groups="plustech_hr_business_trip.group_hr_deputation_ceo"
+                            name="%(plustech_hr_business_trip.approval_wizard_action)d" states="ceo"
+                            type="action" class="oe_highlight"
+                            context="{'triggered_action':'action_ceo_approve'}"/>
+                    <!-- reactivate action_move_create after account module implement-->
+
+                    <!--                    <button name="action_move_create"-->
+                    <!--                        string="Post Journal Entries"-->
+                    <!--                        type="object"-->
+                    <!--                        data-hotkey="y"-->
+                    <!--                        class="oe_highlight"-->
+                    <!--                        attrs="{'invisible': ['|', ('state', '!=', 'to_pay'), ('account_move_id', '!=', False)]}"-->
+                    <!--                        groups="account.group_account_invoice" />-->
+
+                    <!-- change register payment button's attrs to attrs="{'invisible': ['|', ('state', '!=', 'to_pay'), ('account_move_id', '=', False)]}" after account module implement-->
+                    <button name="action_register_payment"
+                            type="object"
+                            data-hotkey="w"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('state', '!=', 'to_pay')]}"
+                            context="{'dont_redirect_to_payments': True}"
+                            string="Register Payment"
+                            groups="account.group_account_invoice"/>
+
+                    <button string="Book Ticket" name="book_ticket" type="object"
+                            class="oe_highlight"
+                            groups="plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_user"
+                            attrs="{'invisible': ['|','|',('need_ticket', '=', False),('state','not in',['to_pay', 'paid']), ('flight_ticket','!=',[])]}"/>
+                    <button type="object" icon="fa-pencil-square-o" name="view_flight_ticket"
+                            string="Ticket" class="oe_stat_button"
+                            attrs="{'invisible': [('flight_ticket','=', [])]}"
+                            groups="plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_user"/>
+                    <button name="action_draft" string="Re-Draft" type="object" states="reject"
+                            confirm="Are you sure you want to do this?"/>
+                    <button name="%(plustech_hr_business_trip.rejection_wizard_action)d"
+                            type="action" string="Reject"
+                            attrs="{'invisible': [('can_reject', '=', False)]}"
+                            class="btn btn-danger"
+                            groups="plustech_hr_business_trip.group_hr_deputation_user"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,paid,reject"/>
+                    <field name="can_reject" invisible="1"/>
+                </header>
+                <sheet>
+                    <div class="o_not_full oe_button_box">
+                        <button name="action_open_account_move" class="oe_stat_button"
+                                icon="fa-file-text-o"
+                                type="object"
+                                attrs="{'invisible': [('account_move_id', '=', False)]}"
+                                groups="account.group_account_invoice,account.group_account_readonly">
+                            Journal Entry
+                        </button>
+                        <button name="action_get_attachment_view" class="oe_stat_button"
+                                icon="fa-book" type="object"
+                                attrs="{'invisible': [('attachment_number', '=', 0)]}">
+                            <field name="attachment_number" widget="statinfo" string="Documents"
+                                   options="{'reload_on_button': true}"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" nolabel="1" readonly="1"/>
+                        </h1>
+                    </div>
+
+
+                    <group>
+                        <group string="Employee Info">
+                            <field name="is_manager" invisible="1"/>
+                            <field name="flight_ticket" invisible="1"/>
+                            <field name="employee_id" options="{'no_open': 1, 'no_create': 1}"/>
+                            <field name="is_employee" invisible="1"/>
+                            <field name="current_user_id" invisible="1"/>
+                            <field name="department_id"/>
+                            <field name="job_title"/>
+                            <field name="manager_id"/>
+                        </group>
+                        <group>
+                            <field name="request_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="deputation_info" string="Deputation Info">
+                            <group>
+                                <group>
+                                    <field name="deputation_type"/>
+                                    <field name="deputation_id" required="1" options="{'no_open': 1, 'no_create': 1}"/>
+                                    <field name="country_group_id" widget="selection" invisible="1"/>
+                                    <field name="source_country_id" string='Source Country' invisible="1"/>
+                                    <field name="from_city_id" options="{'no_open': 1, 'no_create': 1}"
+                                           domain="[('country_id','=',source_country_id)]" required="1"/>
+                                    <field name="destination_country_id" options="{'no_open': 1, 'no_create': 1}"
+                                           required="1" attrs="{'invisible':[('deputation_type','=','internal')]}"/>
+                                    <field name="to_city_id" options="{'no_open': 1, 'no_create': 1}" required="1"/>
+                                    <field name="need_ticket" invisible="1"/>
+                                </group>
+                                <group>
+                                    <label for="from_date" string="Dates"/>
+                                    <div name="dates" class="o_row">
+                                        <field name="from_date" required="1" widget="daterange"
+                                               options='{"related_end_date": "to_date"}'/>
+                                        <i class="fa fa-long-arrow-right mx-2 oe_edit_only"
+                                           aria-label="Arrow icon"
+                                           title="Arrow"/>
+                                        <i class="fa fa-long-arrow-right mx-2 oe_read_only"
+                                           aria-label="Arrow icon"
+                                           title="Arrow"
+                                           attrs="{'invisible': [('from_date', '=', False), ('to_date', '=', False)]}"/>
+                                        <field name="to_date" required="1" widget="daterange"
+                                               options='{"related_start_date": "from_date"}'/>
+                                    </div>
+                                    <label for="days" string="Duration"/>
+                                    <div name="duration_display">
+                                        <div class="o_row">
+                                            <div class="o_row">
+                                                <field name="days" nolabel="1" force_save="1"
+                                                       readonly="1"
+                                                       class="oe_inline"/>
+                                                <span>Days</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label for="days_before" string="Extra Days"/>
+                                    <div>
+                                        <div class="o_row o_row_readonly">
+                                            <field name="days_before" force_save="1" readonly="1" class="oe_inline"
+                                                   nolabel="1"/>
+                                            <span class="oe_inline">
+                                                Day Before
+                                            </span>
+                                            <field name="days_after" readonly="1" force_save="1" class="oe_inline"/>
+                                            <span class="oe_inline">
+                                                Day After
+                                            </span>
+                                        </div>
+                                    </div>
+                                </group>
+                            </group>
+
+                            <group>
+                                <group>
+                                    <field name="travel_by" required="1"
+                                           options="{'no_open': 1, 'no_create': 1}"/>
+                                    <field name="housing_by" invisible="1"/>
+                                    <field name="transportation_cost" invisible="1"/>
+                                </group>
+                            </group>
+
+                            <group col="4">
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="total_days"/>
+                                    <field name="perdiem_amount"/>
+                                    <field name="daily_other_allowance"/>
+                                    <field name="deputation_allowance" colspan="2" readonly="1"
+                                           force_save="1"/>
+                                    <field name="deputation_other_allowance" colspan="2"
+                                           readonly="1" force_save="1"/>
+                                    <field name="deputation_amount"
+                                           class="oe_subtotal_footer_separator"
+                                           readonly="1" force_save="1"/>
+                                    <field name="amount_residual"
+                                           class="oe_subtotal_footer_separator"
+                                           attrs="{'invisible': [('state', 'not in', ('to_pay', 'paid'))]}"/>
+                                </group>
+                            </group>
+                            <div class="oe_clear"/>
+                        </page>
+                        <page name="allowance" string="Deputation Allowance"
+                              groups="plustech_hr_business_trip.group_hr_deputation_manager,plustech_hr_business_trip.group_hr_deputation_officer">
+                            <field name="allowance_ids" context="{'allowance_ids': allowance_ids}"
+                                   attrs="{'readonly': [('state', 'not in', ['new','hr'])]}">
+                                <tree editable="bottom">
+                                    <field name="existing_allowance_ids" invisible="1"/>
+                                    <field name="allowance_id" required="1"
+                                           options="{'no_open': 1, 'no_create': 1}"/>
+                                    <field name="amount"/>
+                                </tree>
+
+                            </field>
+
+                        </page>
+                        <page name="task" string="Task Description">
+                            <group>
+                                <field name="description" nolabel="1" required="1"
+                                />
+                            </group>
+                        </page>
+                        <page name="approvals" string="Approver's" groups="plustech_hr_business_trip.group_hr_deputation_officer,
+                         plustech_hr_business_trip.group_hr_deputation_manager, plustech_hr_business_trip.group_financial_and_administrative_affairs,
+                           plustech_hr_business_trip.group_hr_deputation_ceo">
+                            <field name="approval_ids" readonly="0"
+                                   attrs="{'invisible': [('state', '=', 'new')]}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="key"/>
+                                    <field name="user_id"/>
+                                    <field name="state"/>
+                                    <field name="date"/>
+                                    <field name="comment"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Other Info" name="account_info" groups="plustech_hr_business_trip.group_hr_deputation_officer,
+                         plustech_hr_business_trip.group_hr_deputation_manager, plustech_hr_business_trip.group_financial_and_administrative_affairs,
+                           plustech_hr_business_trip.group_hr_deputation_ceo">
+                            <group>
+                                <group>
+                                    <field name="company_id"
+                                           options="{'no_open': 1, 'no_create': 1}"
+                                           attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                                    <field name="deputation_ticket_product_id"
+                                           groups="base.group_system"
+                                           options="{'no_open': 1, 'no_create': 1}"/>
+                                    <field name="deputation_allowance_product_id"
+                                           groups="base.group_system"
+                                           options="{'no_open': 1, 'no_create': 1}"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group name="accounting">
+                                    <field name="accounting_date"
+                                           attrs="{'readonly': [('state', '!=', 'to_pay')]}"
+                                           groups="account.group_account_user"/>
+                                    <field name="journal_id" required="1"
+                                           options="{'no_open': 1, 'no_create': 1}"
+                                           groups="account.group_account_user"
+                                           attrs="{'readonly': [('state', '!=', 'ceo')]}"/>
+                                    <field name="deputation_analytic_account_id"
+                                           options="{'no_open': 1, 'no_create': 1}"/>
+                                    <field name="account_move_id" readonly="1"
+                                           groups="account.group_account_user"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="o_attachment_preview"/>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"
+                           groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_deputation_tree" model="ir.ui.view">
+        <field name="name">hr.deputation.tree</field>
+        <field name="model">hr.deputation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="request_date"/>
+                <field name="employee_id"/>
+                <field name="deputation_type"/>
+                <field name="deputation_id"/>
+                <field name="days" optional="show"/>
+                <field name="from_date" optional="show"/>
+                <field name="to_date" optional="show"/>
+                <field name="travel_by" optional="hide"/>
+                <field name="from_city_id" optional="hide"/>
+                <field name="to_city_id" optional="hide"/>
+                <!-- <field name="housing_by" optional="hide"/> -->
+                <!-- <field name="transportation_cost" optional="hide"/> -->
+                <field name="deputation_allowance"/>
+                <field name="deputation_other_allowance"/>
+                <field name="deputation_amount"/>
+                <field name="amount_residual"/>
+                <field name="state" optional="show"/>
+            </tree>
+        </field>
+    </record>
+    <record id="hr_deputation_view_kanban" model="ir.ui.view">
+        <field name="name">hr.deputation.view.kanban</field>
+        <field name="model">hr.deputation</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" create="0" sample="1">
+                <field name="employee_id"/>
+                <field name="from_date"/>
+                <field name="to_date"/>
+                <field name="name"/>
+                <field name="days"/>
+                <field name="deputation_id"/>
+                <field name="state"/>
+                <field name="attachment_number"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click container">
+                            <div class="row no-gutters">
+                                <div class="col-3">
+                                    <img
+                                            t-att-src="kanban_image('hr.employee', 'avatar_128', record.employee_id.raw_value)"
+                                            t-att-title="record.employee_id.value"
+                                            t-att-alt="record.employee_id.value"
+                                            class="o_image_64_cover float-left mr4"/>
+                                </div>
+                                <div class="col-9">
+                                    <span class="badge badge-pill float-right mt4 mr16">
+                                        <t
+                                                t-esc="record.total_days"/>
+                                        days
+                                    </span>
+                                    <strong class="o_kanban_record_title">
+                                        <t t-esc="record.employee_id.value"/>
+                                    </strong>
+                                    <div class="text-muted o_kanban_record_subtitle">
+                                        <t t-esc="record.deputation_id.value"/>
+                                    </div>
+                                    <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                        <a role="button" class="dropdown-toggle o-no-caret btn"
+                                           data-toggle="dropdown" href="#"
+                                           aria-label="Dropdown menu" title="Dropdown menu">
+                                            <span class="fa fa-ellipsis-v"/>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a t-if="widget.editable" role="menuitem" type="edit"
+                                               class="dropdown-item">Edit Deputation
+                                            </a>
+                                            <a t-if="widget.deletable" role="menuitem" type="delete"
+                                               class="dropdown-item">Delete
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <field name="from_date" widget="date"/>
+                                        <span class="text-muted">-</span>
+                                        <field name="to_date" widget="date"/>
+                                    </div>
+                                    <div class="o_kanban_record_bottom">
+                                        <div class="oe_kanban_bottom_left text-muted">
+                                            <span>
+                                                <t t-esc="record.name.value"/>
+                                            </span>
+                                            <field name="activity_ids" widget="kanban_activity"/>
+                                        </div>
+                                        <div class="float-right mt4 mr16">
+                                            <field name="state" widget="label_selection"
+                                                   options="{'classes': {'draft': 'default', 'cancel': 'default', 'paid': 'success'}}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="view_hr_business_trip_filter" model="ir.ui.view">
+        <field name="name">hr.business.trip.filter</field>
+        <field name="model">hr.deputation</field>
+        <field name="arch" type="xml">
+            <search string="Search Business Trip">
+                <field name="employee_id"/>
+                <field name="department_id" operator="child_of"/>
+                <field name="deputation_type"/>
+                <field name="name"/>
+                <filter domain="[('state','not in',('new','to_pay','paid','cancel', 'reject'))]" string="To Approve"
+                        name="approve"/>
+                <filter domain="[('state', '=', 'to_pay')]" string="To Pay" name="to_pay"/>
+                <separator/>
+                <filter string="My Trips" name="my_trips" domain="[('employee_id.user_id', '=', uid)]"/>
+                <filter string="My Team" name="my_team"
+                        domain="['|', ('employee_id.parent_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                        help="Business trip of people you are manager of"/>
+                <filter string="My Department" name="department"
+                        domain="['|', ('department_id.member_ids.user_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                        help="My Department"/>
+                <separator/>
+                <filter name="filter_date_from" date="from_date" string="Start Date"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_type" string="Type" context="{'group_by':'deputation_type'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"/>
+                    <separator/>
+                    <filter name="group_request_date" string="Request Date" context="{'group_by':'request_date'}"/>
+                    <filter name="group_date_from" string="Start Date" context="{'group_by':'from_date'}"/>
+                    <separator/>
+                    <filter name="group_business_trip" string="Business Trip" context="{'group_by':'deputation_id'}"/>
+                    <filter name="group_destination_country" string="Destination Country"
+                            context="{'group_by': 'destination_country_id'}"/>
+                    <filter name="group_destination_city" string="Destination City"
+                            context="{'group_by': 'to_city_id'}"/>
+                    <filter name="group_travel" string="Travel" context="{'group_by':'travel_by'}"
+                    />
+                </group>
+                <searchpanel>
+                    <field name="state" string="Status"/>
+                    <field name="department_id" string="Department" icon="fa-users"/>
+                    <field name="deputation_id" string="Deputation" icon="fa-users"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="action_hr_deputation" model="ir.actions.act_window">
+        <field name="name">Business Trip Request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="context">{'default_deputation_type':'internal'}</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="search_view_id" ref="view_hr_business_trip_filter"/>
+    </record>
+
+
+    <menuitem name="Business Trip" id="deputation_main_menu"
+              web_icon="plustech_hr_business_trip,static/description/icon.png"/>
+    <menuitem id="deputation_request_menu"
+              parent="deputation_main_menu"
+              action="action_hr_deputation"
+              sequence="3"/>
+</odoo>

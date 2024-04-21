@@ -1,0 +1,1327 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_employee_training
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-07 13:42+0000\n"
+"PO-Revision-Date: 2023-06-07 13:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                                            <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('start_date', '=', False), ('end_date', '=', False)]}\"/>"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                                    <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('f_date', '=', False), ('to_date', '=', False)]}\"/>"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "<span>Days</span>"
+msgstr "<span>الأيام</span>"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "<span>Person</span>"
+msgstr "<span>متدرب</span>"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_needaction
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_needaction
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_needaction
+msgid "Action Needed"
+msgstr "يحتاج اجراء"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__course_schedule__state__active
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Active"
+msgstr "نشط"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.ui.menu,name:plustech_employee_training.training_activity_main_menu
+msgid "Activity"
+msgstr "الأنشطة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__activity_type_id
+msgid "Activity Type"
+msgstr "نوع النشاط"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Add Attach"
+msgstr "اضافة مرفقات"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Agreement"
+msgstr "الشروط"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__agreement_content
+msgid "Agreement Content"
+msgstr "محتوى الشروط"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_agreement_template_form_view
+msgid "Agreement Template"
+msgstr "نموذج "
+
+#. module: plustech_employee_training
+#: model:ir.ui.menu,name:plustech_employee_training.course_agreemnt_menu
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_agreement_template_form_view
+msgid "Agreement Templates"
+msgstr "نماذج الشروط"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__agreement_template_id
+msgid "Agreement template"
+msgstr "نموذج الشروط"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__bio_agreement
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__goals
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__requirements
+msgid "Agreements"
+msgstr "موافقة الشروط"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__amount_currency
+msgid "Amount Currency"
+msgstr "المبلغ بالعملة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_res_company__training_analytic_account_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_res_config_settings__training_analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Application for Attending a Course"
+msgstr "طلب التحاق بدورة تدريبية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__admin_confirm_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__general_manager_confirm_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__hr_confirm_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__hr_officer_confirm_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__manager_approval_date
+msgid "Approval Date"
+msgstr "تاريخ الاعتماد"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__approve
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__approve
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__hours
+msgid "Attending Hours"
+msgstr "ساعات الحضور"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__bio
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__bio_cont
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__goals
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__requirements
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__bio_course
+msgid "Bio"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:res.groups,name:plustech_employee_training.group_ceo_training
+msgid "CEO"
+msgstr "الرئيس التنفيذي"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "CEO Approval"
+msgstr "اعتماد الرئيس التنفيذي"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__cancel
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__cancel
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__capacity
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Capacity"
+msgstr "السعة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "City"
+msgstr "مدينة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__course_schedule__state__close
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__close
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__close
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__reference
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: plustech_employee_training
+#: code:addons/plustech_employee_training/models/models.py:0
+#: code:addons/plustech_employee_training/models/training_setting.py:0
+#: model:ir.model.constraint,message:plustech_employee_training.constraint_course_agreement_template_agreement_reference_unique
+#: model:ir.model.constraint,message:plustech_employee_training.constraint_course_training_course_code_unique
+#, python-format
+msgid "Code Must be Unique"
+msgstr "الكود لابد ان يكون فريد"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__company_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__company_id
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__course_schedule__paid_by__company
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__company_currency_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__company_currency_id
+msgid "Company Currency"
+msgstr "عملة الشركة"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: plustech_employee_training
+#: model:ir.ui.menu,name:plustech_employee_training.configuration_manu
+msgid "Configuration"
+msgstr "الاعدادات"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_res_partner
+msgid "Contact"
+msgstr "جهة اتصال "
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_agreement_template_form_view
+msgid "Content"
+msgstr "المحتوى"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__bio_content
+msgid "Contents"
+msgstr "المحتوى"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__text
+msgid "Cou"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Country"
+msgstr "الدولة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_account_bank_statement_line__course_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_account_move__course_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_account_payment__course_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__course_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__course_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__course_id
+msgid "Course"
+msgstr "دورة"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_course_agreement_template
+msgid "Course Agreement Template"
+msgstr "نموذج شروط الدورة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Course Details"
+msgstr "تفاصيل الدورة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Course Duration"
+msgstr "مدة الدورة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__course
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__course
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__course_name
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Course Name"
+msgstr "اسم الدورة"
+
+#. module: plustech_employee_training
+#: model:ir.ui.menu,name:plustech_employee_training.training_training
+msgid "Course Request"
+msgstr "طلب دورة تدريبية"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_course_schedule
+#: model:ir.ui.menu,name:plustech_employee_training.course_sechdule_configuration
+msgid "Course Schedule"
+msgstr "الدورات التدريبية"
+
+#. module: plustech_employee_training
+#: model:ir.actions.act_window,name:plustech_employee_training.course_sechdule_action
+msgid "Course Sechdule"
+msgstr "جدولة الدورات"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Course Title"
+msgstr "اسم الدورة"
+
+#. module: plustech_employee_training
+#: model:ir.actions.act_window,name:plustech_employee_training.course_training_action
+#: model:ir.model,name:plustech_employee_training.model_course_training
+msgid "Course Training"
+msgstr "الدورات التدريبية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_hr_payslip__courses_ids
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.res_config_settings_view_form
+msgid "Courses"
+msgstr "الدورات التدريبية"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.res_config_settings_view_form
+msgid "Courses products and analytic account"
+msgstr "صنف الدورة التدريبية والحساب التحليلي"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Create Bill"
+msgstr "انشاء فاتورة"
+
+#. module: plustech_employee_training
+#: model:ir.ui.menu,name:plustech_employee_training.course_training_configuration
+msgid "Create Courses"
+msgstr "البرنامج التدريبية"
+
+#. module: plustech_employee_training
+#: model_terms:ir.actions.act_window,help:plustech_employee_training.res_partner_action_trainer
+msgid "Create a new trainer in your address book"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__create_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__create_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__create_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__create_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__create_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__create_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__create_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__create_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__create_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__create_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__create_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__create_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__create_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__create_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__currency_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__currency_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__date
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Dates"
+msgstr "التاريخ"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__week_day
+msgid "Day of Week"
+msgstr "اليوم"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.res_config_settings_view_form
+msgid "Default Analytic Account"
+msgstr "الحساب التحليلي الافتراضي"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.res_config_settings_view_form
+msgid "Default analytic account &amp; training product for create invoice"
+msgstr "الحساب التحليلي الافتراضي وصنف التدريب لانشاء الفاتورة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Denied"
+msgstr "مرفوق"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Departement"
+msgstr "القسم"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_trainind_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Description of the Course"
+msgstr "بيانات الدورة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Deserved"
+msgstr "مستحق"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__city_id
+msgid "Destination City"
+msgstr "مدينة الوجهة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__country_id
+msgid "Destination Country"
+msgstr "دولة الوجهة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Direct Manager Approval"
+msgstr "اعتماد المدير المباشر"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__display_name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__display_name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__display_name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__display_name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__display_name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__display_name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__display_name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Documents"
+msgstr "مرفقات"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__duration
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__duration
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Duration"
+msgstr "المدة الزمنية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__email
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__employee_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__employee_id
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__course_schedule__paid_by__employee
+#: model:res.groups,name:plustech_employee_training.training_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Employee Information"
+msgstr "بيانات الموظف"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__employee_no
+msgid "Employee Number"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Employee Signature"
+msgstr "توقيع الموظف"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__registered_employees
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__end_date
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Ending Date"
+msgstr "تاريخ النهاية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__enrolled_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__enrolled_date
+msgid "Enrolled Date"
+msgstr "تاريخ الانضمام"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Enrolled Employees"
+msgstr "الموظفين المنضمين"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_enrolled_student
+msgid "Enrolled Student"
+msgstr "الطالب المنضم"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__trainer_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__executing_agency_id
+msgid "Executing Agency"
+msgstr "الجهة المنفذة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__training_type__external
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "External"
+msgstr "خارجي"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Fees"
+msgstr "الرسوم"
+
+#. module: plustech_employee_training
+#: model:res.groups,name:plustech_employee_training.group_financial_and_administrative_affairs_training
+msgid "Financial and Administrative Affairs"
+msgstr "مدير عام الشؤون المالية والادارية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__admin
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__admin
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Financial and Administrative Affairs Approval"
+msgstr "اعتماد مدير عام الشؤون المالية والادارية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_time_table__week_day__4
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__f_date
+msgid "From"
+msgstr "من"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Generate Schedule"
+msgstr "انشاء الجدول الزمني"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__goals
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__requirements
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_trainind_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Goals"
+msgstr "الأهداف"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__has_message
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__has_message
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Hijri"
+msgstr "الموافق"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__hours
+msgid "Hours"
+msgstr "الساعات"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__hours_per_day
+msgid "Hours Per Days"
+msgstr "عدد الساعات في اليوم"
+
+#. module: plustech_employee_training
+#: model:res.groups,name:plustech_employee_training.training_manager
+msgid "Human Resources Manager"
+msgstr "مدير"
+
+#. module: plustech_employee_training
+#: model:res.groups,name:plustech_employee_training.training_officer
+msgid "Human Resources Officer"
+msgstr "موظف الموارد البشرية"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Human Resources Officer Approval"
+msgstr "اعتماد موظف موارد بشرية"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Human Resources Report"
+msgstr "تقرير الموارد البشرية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__message_needaction
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__message_unread
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__message_needaction
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__message_unread
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__message_needaction
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__message_has_error
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__message_has_sms_error
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__message_has_error
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__message_has_sms_error
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__message_has_error
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Institution"
+msgstr "المعهد"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__training_type__internal
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__invoice_count
+msgid "Invoice Count"
+msgstr "عدد الفواتير"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_is_follower
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_is_follower
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__is_manager
+msgid "Is Manager"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_res_partner__is_trainer
+#: model:ir.model.fields,field_description:plustech_employee_training.field_res_users__is_trainer
+msgid "Is a Trainer"
+msgstr "مدرب"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Job No"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__job_title
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__joining_date
+msgid "Joining Date"
+msgstr "تاريخ الانضمام"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template____last_update
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule____last_update
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training____last_update
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student____last_update
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses____last_update
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table____last_update
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training____last_update
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__write_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__write_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__write_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__write_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__write_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__write_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__write_uid
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__write_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__write_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__write_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__write_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_previous_courses__write_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_time_table__write_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__write_date
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__admin_user_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__general_manager_user_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__hr_manager_user_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__manager_id
+msgid "Manager"
+msgstr "مدير"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_has_error
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_has_error
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_time_table__week_day__0
+msgid "Monday"
+msgstr "الأثنين"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_employee_training
+#: code:addons/plustech_employee_training/models/training_request.py:0
+#: code:addons/plustech_employee_training/models/training_request.py:0
+#: code:addons/plustech_employee_training/models/training_request.py:0
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__course_schedule__state__new
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__new
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__new
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Not Deserved"
+msgstr "لا يستحق"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__attachment_number
+msgid "Number of Attachments"
+msgstr "عدد المرفقات"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__message_needaction_counter
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__message_needaction_counter
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__message_has_error_counter
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__message_has_error_counter
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__message_unread_counter
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__message_unread_counter
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__name
+msgid "Number#"
+msgstr "رقم#"
+
+#. module: plustech_employee_training
+#: model_terms:ir.actions.act_window,help:plustech_employee_training.res_partner_action_trainer
+msgid "Odoo helps you easily track all activities related to a trainer."
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__hr_officer_user_id
+msgid "Officer"
+msgstr "موظف موارد بشرية"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال الرواتب للسداد"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__paid_by
+msgid "Paying By"
+msgstr "الدفع عن طريق"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__payslip_paid
+msgid "Payslip Paid"
+msgstr "خصمت من الراتب"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Period"
+msgstr "الفترة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__phone
+msgid "Phone"
+msgstr "الهاتف"
+
+#. module: plustech_employee_training
+#: code:addons/plustech_employee_training/models/models.py:0
+#, python-format
+msgid "Please set the product up for creating the bill"
+msgstr "الرجاء اعداد الصنف الخاص بالتدريب وذلك لانشاء الفاتورة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Prepared By"
+msgstr "طلبت بواسطة"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_previous_courses
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Previous Courses"
+msgstr "الدورة التدريبية السابقة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__price
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__price_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__price
+msgid "Price"
+msgstr "السعر"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_res_company__training_product_id
+#: model:ir.model.fields,field_description:plustech_employee_training.field_res_config_settings__training_product_id
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.res_config_settings_view_form
+msgid "Product"
+msgstr "الصنف"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__manager_id
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__remain
+msgid "Remaining"
+msgstr "تذكير"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.view_hr_employee_form_inherited_is_open
+msgid "Remaining Courses"
+msgstr "الدورات التدريبية المتبقية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Requester Function"
+msgstr "الاعتمادات"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_trainind_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Requirements"
+msgstr "المتطلبات"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__reserve
+msgid "Reservation"
+msgstr "المحجوز"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_time_table__week_day__5
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__schedule_ids
+#: model:ir.ui.menu,name:plustech_employee_training.course_training_Schedule_menu
+msgid "Schedule"
+msgstr "الجدولة"
+
+#. module: plustech_employee_training
+#: model:ir.actions.act_window,name:plustech_employee_training.training_config_settings_action
+#: model:ir.ui.menu,name:plustech_employee_training.training_menu_configuration
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Starting Date"
+msgstr "تاريخ البداية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__state
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_enrolled_student__student_name
+msgid "Student Name"
+msgstr "اسم الموظف"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_agreement_template__name
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__subject
+msgid "Subject"
+msgstr "العنوان"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_training_form_view
+msgid "Submit"
+msgstr "ارسال"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_time_table__week_day__6
+msgid "Sunday"
+msgstr "الاحد"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__tags
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "The Purpose"
+msgstr "الغرض"
+
+#. module: plustech_employee_training
+#: model:res.groups,comment:plustech_employee_training.training_employee
+msgid "The user can be read and create only"
+msgstr "المستخدم يستطيع القراءة والانشاء فقط"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_time_table__week_day__3
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.course_schedule_form_view
+msgid "Time Table"
+msgstr "الجدول الزمني"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__to_date
+msgid "To"
+msgstr "الى"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__training
+msgid "Train"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.actions.act_window,name:plustech_employee_training.res_partner_action_trainer
+#: model:ir.ui.menu,name:plustech_employee_training.partner_trainer_configuration
+msgid "Trainers"
+msgstr "المدربون"
+
+#. module: plustech_employee_training
+#: model:ir.actions.act_window,name:plustech_employee_training.training_agreement_template_action
+#: model:ir.actions.act_window,name:plustech_employee_training.training_training_action
+#: model:ir.model,name:plustech_employee_training.model_training_training
+#: model:ir.module.category,name:plustech_employee_training.training_security_category
+#: model:ir.ui.menu,name:plustech_employee_training.training_man_menu
+#: model:ir.ui.menu,name:plustech_employee_training.training_training_menu
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.view_hr_employee_form_inherited_is_open
+msgid "Training"
+msgstr "التدريب"
+
+#. module: plustech_employee_training
+#: model:ir.actions.act_window,name:plustech_employee_training.training_activity_action
+msgid "Training Activity"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:hr.salary.rule,name:plustech_employee_training.hr_payroll_rules_employee_traing_fees
+msgid "Training Fees"
+msgstr "رسوم التدريب"
+
+#. module: plustech_employee_training
+#: model:hr.leave.type,name:plustech_employee_training.holiday_status_training_leave
+msgid "Training Leave"
+msgstr "اجازة دورة تدريبية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__training_place
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__training_place
+msgid "Training Place"
+msgstr "مكان التدريب"
+
+#. module: plustech_employee_training
+#: model:ir.actions.report,name:plustech_employee_training.training_request_report_action
+msgid "Training Request"
+msgstr "طلب تدريب"
+
+#. module: plustech_employee_training
+#: model:ir.ui.menu,name:plustech_employee_training.training_activity_menu
+msgid "Training Requests"
+msgstr "طلبات التدريب"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__training_state
+msgid "Training State"
+msgstr "حالة طلب التدريب"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_training_time_table
+msgid "Training Time Table"
+msgstr "الجدول الزمني"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__training_type
+msgid "Training Type"
+msgstr "نوع التدريب"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_time_table__week_day__1
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: plustech_employee_training
+#: model_terms:ir.ui.view,arch_db:plustech_employee_training.training_request_doc
+msgid "Type"
+msgstr "النوع"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_unread
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_unread
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__user_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training_activity__users_id
+msgid "Users"
+msgstr "المستخدمين"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__ceo
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__ceo
+msgid "Waiting CEO Approval"
+msgstr "بانتظار اعتماد الرئيس التنفيذي"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__officer
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__officer
+msgid "Waiting Human Resource Officer Approval"
+msgstr "بانتظار اعتماد موظف موارد بشرية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__hr
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__hr
+msgid "Waiting Human Resource Report"
+msgstr "بانتظار تقرير الموارد البشرية"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training__state__direct_manager
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_training_activity__training_state__direct_manager
+msgid "Waiting Manager Approval"
+msgstr "بانتظار اعتماد المدير المباشر"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_schedule__website_message_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_course_training__website_message_ids
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,help:plustech_employee_training.field_course_schedule__website_message_ids
+#: model:ir.model.fields,help:plustech_employee_training.field_course_training__website_message_ids
+#: model:ir.model.fields,help:plustech_employee_training.field_training_training__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_employee_training
+#: model:ir.model.fields.selection,name:plustech_employee_training.selection__training_time_table__week_day__2
+msgid "Wednesday"
+msgstr "الاربعاء"
+
+#. module: plustech_employee_training
+#: model:ir.model.fields,field_description:plustech_employee_training.field_training_training__course_ids
+msgid "previous Courses"
+msgstr "دورات السابقة"
+
+#. module: plustech_employee_training
+#: model:ir.model,name:plustech_employee_training.model_training_training_activity
+msgid "training.training.activity"
+msgstr ""

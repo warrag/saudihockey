@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <report
+        id="contract_excel_report"
+        model="hr.contracts.report.wizard"
+        string="Contract Report(XLS)"
+        report_type="xlsx"
+        name="plustech_hr_contract.contract"
+        file="plustech_hr_contract.contract"
+        />
+</odoo>

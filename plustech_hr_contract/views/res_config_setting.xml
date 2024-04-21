@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_contract_config_settings" model="ir.ui.view">
+            <field name="name">Contract Config Settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="plustech_hr_employee.view_hr_employee_config_settings"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='membership_notification_period_setting']" position="after">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Contract Expiration Reminder</span>
+                        <div class="text-muted" name="hr_contract_expire">
+                            Employee contract expiration reminder periods.
+                        </div>
+                        <div class="row">
+                            <label for="contract_end_days_manager_reminder" class="o_light_label col-lg-6 ml8"/>
+                            <field name="contract_end_days_manager_reminder" class="col-lg-2 ml16"/>
+                        </div>
+
+                        <div class="row">
+                            <label for="contract_end_days_hr_reminder" class="o_light_label col-lg-6 ml8"/>
+                            <field name="contract_end_days_hr_reminder" class="col-lg-2 ml16"/>
+                        </div>
+
+
+                    </div>
+
+                    </div>
+                    <!--           contract end reminder         -->
+                    <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Probation Period End Reminder</span>
+                        <div class="text-muted" name="hr_probation_evaluation">
+                            Employee probation end  notification periods.
+                        </div>
+                        <div class="row">
+                            <label for="probation_manager_notification" class="o_light_label col-lg-6 ml8"/>
+                            <field name="probation_manager_notification" class="col-lg-2 ml16"/>
+                        </div>
+
+                        <div class="row">
+                            <label for="probation_hr_notification" class="o_light_label col-lg-6 ml8"/>
+                            <field name="probation_hr_notification" class="col-lg-2 ml16"/>
+                        </div>
+
+
+                    </div>
+
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

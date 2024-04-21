@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_request_user,hr.employee.request,model_hr_employee_request,group_hr_employee_request_user,1,1,1,1
+access_hr_employee_request_manager,hr.employee.request,model_hr_employee_request,group_hr_employee_request_manager,1,1,1,1
+access_hr_employee_request_line_user,hr.employee.request.line,model_hr_employee_request_line,group_hr_employee_request_user,1,1,1,1
+access_hr_employee_request_line_manager,hr.employee.request.line,model_hr_employee_request_line,group_hr_employee_request_manager,1,1,1,1
+access_hr_employee_request_approvals,hr.employee.request.approvals,model_hr_employee_request_approvals,,1,1,1,1

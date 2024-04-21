@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Annual leave based-->
+        <record id="holiday_status_annual_leave" model="hr.leave.type">
+            <field name="name">Annual Leave</field>
+            <field name="requires_allocation">yes</field>
+            <field name="leave_validation_type">both</field>
+            <field name="allocation_validation_type">set</field>
+            <field name="color_name">black</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">calendar_days</field>
+            <field name="time_type">other</field>
+            <field name="allow_credit">True</field>
+            <field name="is_annual_leave">True</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+        <!-- New Born Leave-->
+        <record id="holiday_status_newborn_leave" model="hr.leave.type">
+            <field name="name">Pregnancy and Delivery Leave</field>
+            <field name="requires_allocation">no</field>
+            <field name="leave_validation_type">both</field>
+            <field name="color_name">black</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">calendar_days</field>
+            <field name="gender_specific">female</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="max_yearly_leaves">70</field>
+        </record>
+
+        <!-- Fatherhood Leave-->
+        <record id="holiday_status_fatherhood_leave" model="hr.leave.type">
+            <field name="name">Fatherhood Leave</field>
+            <field name="requires_allocation">no</field>
+            <field name="leave_validation_type">both</field>
+            <field name="color_name">brown</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">working_days</field>
+            <field name="gender_specific">male</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="max_yearly_leaves">3</field>
+        </record>
+
+
+        <!-- Marriage Leave-->
+        <record id="holiday_status_marriage_leave" model="hr.leave.type">
+            <field name="name">Marriage Leave</field>
+            <field name="requires_allocation">no</field>
+            <field name="leave_validation_type">both</field>
+            <field name="color_name">black</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">working_days</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="max_yearly_leaves">5</field>
+        </record>
+
+        <!-- Death Leave-->
+        <record id="holiday_status_death_leave" model="hr.leave.type">
+            <field name="name">Death Leave</field>
+            <field name="requires_allocation">no</field>
+            <field name="leave_validation_type">both</field>
+            <field name="color_name">magenta</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="gender_specific">female</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="max_yearly_leaves">5</field>
+        </record>
+
+
+        <!-- husband death for non-muslim-->
+        <record id="holiday_status_non_musli_husband_death_leave" model="hr.leave.type">
+            <field name="name">Husband Death (Non-muslim)</field>
+            <field name="requires_allocation">no</field>
+            <field name="leave_validation_type">both</field>
+            <field name="color_name">red</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">working_days</field>
+            <field name="gender_specific">female</field>
+            <field name="religion_specific">True</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="max_yearly_leaves">15</field>
+        </record>
+
+
+        <!-- husband death for muslim-->
+        <record id="holiday_status_muslim_husband_death_leave" model="hr.leave.type">
+            <field name="name">Husband Death (muslim)</field>
+            <field name="requires_allocation">no</field>
+            <field name="leave_validation_type">both</field>
+            <field name="color_name">red</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">working_days</field>
+            <field name="gender_specific">female</field>
+            <field name="religion_specific">True</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="max_yearly_leaves">130</field>
+        </record>
+
+        <!-- Haj Leave-->
+        <record id="holiday_status_hajj_leave" model="hr.leave.type">
+            <field name="name">Hajj Leave</field>
+            <field name="leave_validation_type">both</field>
+            <field name="requires_allocation">yes</field>
+            <field name="allocation_validation_type">officer</field>
+            <field name="color_name">ivory</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">calendar_days</field>
+            <field name="religion_specific">True</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+            <field name="max_yearly_leaves">10</field>
+        </record>
+
+        <!-- Exam Leave-->
+        <record id="holiday_status_exam_leave" model="hr.leave.type">
+            <field name="name">Exam Leave</field>
+            <field name="requires_allocation">no</field>
+            <field name="leave_validation_type">both</field>
+            <field name="color_name">blue</field>
+            <field name="leave_notif_subtype_id" ref="hr_holidays.mt_leave"/>
+            <field name="allocation_notif_subtype_id" ref="hr_holidays.mt_leave_allocation"/>
+            <field name="calculation_type">working_days</field>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record> <!--  Sick Leave  -->
+        <record id="hr_holidays.holiday_status_sl" model="hr.leave.type">
+            <field name="name">Sick Leave</field>
+            <field name="max_yearly_leaves">120</field>
+        </record>
+        <!--  Unpaid Leave  -->
+        <record id="hr_holidays.holiday_status_unpaid" model="hr.leave.type">
+            <field name="name">Unpaid Leave</field>
+        </record>
+        <!--  paid time off Leave  -->
+        <record id="hr_holidays.holiday_status_cl" model="hr.leave.type">
+            <field name="active">0</field>
+        </record>
+        <!--  Compensatory Days Leave  -->
+        <record id="hr_holidays.holiday_status_comp" model="hr.leave.type">
+            <field name="active">0</field>
+        </record>
+        <!--  Extra TimeOff Days Leave  -->
+        <record id="hr_contract_salary_holidays.holiday_status_eto" model="hr.leave.type">
+            <field name="active">0</field>
+        </record>
+    </data>
+    <data noupdate="1">
+        <!--  Sick Leave  -->
+        <record id="hr_holidays.holiday_status_sl" model="hr.leave.type">
+            <field name="name">Sick Leave</field>
+            <field name="max_yearly_leaves">120</field>
+            <field name="calculation_type">working_days</field>
+        </record>
+        <!--  Unpaid Leave  -->
+        <record id="hr_holidays.holiday_status_unpaid" model="hr.leave.type">
+            <field name="name">Unpaid Leave</field>
+            <field name="calculation_type">calendar_days</field>
+        </record>
+        <!--  paid time off Leave  -->
+        <record id="hr_holidays.holiday_status_cl" model="hr.leave.type">
+            <field name="active">0</field>
+        </record>
+        <!--  Compensatory Days Leave  -->
+        <record id="hr_holidays.holiday_status_comp" model="hr.leave.type">
+            <field name="active">0</field>
+        </record>
+        <!--  Extra TimeOff Days Leave  -->
+        <record id="hr_contract_salary_holidays.holiday_status_eto" model="hr.leave.type">
+            <field name="active">0</field>
+        </record>
+        <!--  Annual Leaves Plan -->
+        <record id="annual_leave_accrual_plan" model="hr.leave.accrual.plan">
+            <field name="name">Annual Leaves Plan</field>
+            <field name="time_off_type_id" ref="holiday_status_annual_leave"/>
+        </record>
+        <record id="accrual_plan_first_level" model="hr.leave.accrual.level">
+            <field name="start_count">1</field>
+            <field name="added_value">1.75</field>
+            <field name="frequency">monthly</field>
+            <field name="accrual_plan_id" ref="annual_leave_accrual_plan"/>
+        </record>
+        <record id="accrual_plan_second_level" model="hr.leave.accrual.level">
+            <field name="start_count">5</field>
+            <field name="start_type">year</field>
+            <field name="added_value">2.5</field>
+            <field name="frequency">monthly</field>
+            <field name="accrual_plan_id" ref="annual_leave_accrual_plan"/>
+        </record>
+    </data>
+
+</odoo>

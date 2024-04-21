@@ -1,0 +1,2105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_employee_letter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-27 08:53+0000\n"
+"PO-Revision-Date: 2023-03-27 08:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "${line.allowance_amount or '0.0'|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "${line.allowance_type.name or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "${line}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "${object.contract_id.monthly_yearly_costs or '0.0'|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "${object.contract_id.wage or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "${object.contract_id.wage or '0.0'|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_investigation_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.trial_period_extension_template
+msgid "${object.letter_type_id.name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.external_clearance_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "${object.name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.trial_period_extension_template
+msgid "${object.name}الموضوع:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_investigation_template
+msgid "${object.name}نوع القرار:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "${object.request_date or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "${object.request_id.birthday or '' |safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "${object.request_id.country_id.name or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "${object.request_id.country_id.with_context(lang='ar_001').name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "${object.request_id.department_id.name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "${object.request_id.employee_number or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "${object.request_id.employee_number}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "${object.request_id.identification_id or '' |safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "${object.request_id.identification_id or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "${object.request_id.job_id.name or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "${object.request_id.job_id.name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "${object.request_id.join_date or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "${object.request_id.name or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "${object.request_id.name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "${object.to_party_id or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "% endfor"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "% for line in object.contract_id.allowance_ids:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "% for line in object.request_id.bank_account_id.acc_number:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"(.................................................................................................................................<br>\n"
+"                            ...................................................................................................................................<br>\n"
+"                            ...................................................................................................................................<br>\n"
+"                            ................................................................................................................................."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.actions.report,print_report_name:plustech_hr_employee_letter.salary_def_01_report_id
+msgid "(object.name)"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid ",Regards"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid ". ID No"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"1- أن لا أفشي أي معلومة عن مضمون الوثائق والمستندات والتقارير والأرقام التي أطلع\n"
+"                                    عليها إلى أي طرف آخر."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid ""
+"1- جميع الرواتب والأجور والبدلات من تاريخ (${object.request_id.join_date}م) وحتى\n"
+"                                    تاريخ (${object.request_date}م)."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"2- أن لا أكشف عن طبيعة وآلية العمل الذي أقوم به للشركة إلى أي طرف أو شركة أخرى، سواء\n"
+"                                    كانت هذه المعلومات تقنية أو\n"
+"                                    فنية أو متعلقة بمصادر المعلومات أو الإجراءات أو غيرها، دون الحصول على موافقة خطية\n"
+"                                    مسبقة من الشركة."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "2- مكافأة نهاية الخدمة."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"3- أن لا أسرب أي معلومات عن عملاء الشركة الحاليين أو المحتملين سواء أثناء عملي في\n"
+"                                    الشركة أو بعد انتهاء علاقتي بها."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "3- كافة مستحقات الانتدابات وتذاكر السفر."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"4- أن لا أنقل أي مستندات أو أوراق أو ملفات إلكترونية تخص الشركة أو عملائها إلى خارج\n"
+"                                    مقر الشركة أو نظامها الإلكتروني\n"
+"                                    سواء كانت أصولا أو نسخا أو صورا فوتوغرافية أو غيرها دون أن تكون الشركة على علم مسبق\n"
+"                                    بهذا."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "4- جميع النسب والحوافز ومقابل ساعات العمل الإضافية."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"5- أن لا أحتفظ بأي مستندات وأوراق تخص الشركة بعد انتهاء علاقتي التعاقدية بها وأن\n"
+"                                    أعيدها للشركة فورا."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "5- التعويضات عن فترة الإنذار ومدة الإجازة المتبقية وغيرها."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"6- إن مخالفتي لأي من بنود هذا التعهد تعني أن للشركة الحق في مطالبتي والحصول على\n"
+"                                    التعويض عن كل ضرر وخسارة\n"
+"                                    ورسوم ومصروفات تسببت بها هذا المخالفة."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid ""
+"6- كل مستحقاتي الناشئة عن عقد العمل أو أنظمة ولوائح الشركة أو نظام العمل والعمال مما\n"
+"                                    لم يذكر في\n"
+"                                    <br>\n"
+"                                    الفقرات الأربعة أعلاه"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid ""
+"7- أي مطالبات أو خلافات مهنية تتعلق بعلاقتي المهنية مع الشركة مما يدخل تحت حكم\n"
+"                                    الهيئة السعودية\n"
+"                                    <br>\n"
+"                                    للمقيمين المعتمدين أو غيرها من الجهات الإدارية ذات العلاقة ونظام المقيمين المعتمدين\n"
+"                                    سواء كانت هذه\n"
+"                                    <br>\n"
+"                                    المطالبات أمام الجهات الإدارية أو القضائية."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">إدارة الموارد البشرية</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">الإدارة التي يعمل بها الموظف</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">الإدارة المالية</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">بيان استلام العهدة</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">بيان بحالة السيارة من الخارج</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">بيان بحالة السيارة من الداخل</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">بيان تسليم العهدة من الموظف إلى الشركة:</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">قسم الدعم و المساندة</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid ""
+"<b>\n"
+"                                        <span lang=\"ar-SA\">ملاحظات</span>\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid ""
+"<b>\n"
+"                                        أقر باستلامي للعهدة الموضحة بياناتها أعلاه وأتعهد بالمحافظة عليها وأن لا\n"
+"                                        استخدمها إلا في نطاق العمل وللغرض\n"
+"                                        المحدد لها وأن أتحمل كامل المسؤولية القانونية في استخدامي لها.\n"
+"                                    </b>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid ""
+"<br>   بناءً على الصلاحيات المخولة لنا و مصلحة العمل يقرر ما يلي:\n"
+"                        <br>   1- اعتماد القرار الإداري أعلاه.\n"
+"                          <br> 2- يعمل بهذا القرار اعتبارا من تاريخ لمباشرة.\n"
+"                         <br>  واللّه الموفق ،،،،"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "<span lang=\"ar-SA\">حالة العهدة</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "<span>${object.company_id.name}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>${object.request_date or ''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.external_clearance_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.trial_period_extension_template
+msgid "<span>${object.request_date}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_investigation_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid ""
+"<span>${object.request_date}</span>\n"
+"                        <br><br><br>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>${object.request_id.country_id.name or ''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid ""
+"<span>${object.request_id.country_id.with_context(lang='ar_001').name or "
+"''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid ""
+"<span>${object.request_id.country_id.with_context(lang='ar_001').name}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>${object.request_id.identification_id or ''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid "<span>${object.request_id.identification_id}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>${object.request_id.job_id.name or ''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid ""
+"<span>${object.request_id.job_id.with_context(lang='ar_001').name or "
+"''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid ""
+"<span>${object.request_id.job_id.with_context(lang='ar_001').name}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>${object.request_id.name or ''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>${object.request_id.passport_id or ''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid ""
+"<span>${object.request_id.with_context(lang='ar_001').name or "
+"''|safe}</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "<span>Date:</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>To:</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "<span>إلى:</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid "<span>الجنسية</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid "<span>الرقم الوظيفي</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid "<span>رقم الهوية</span>"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__action
+msgid "Action"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_needaction
+msgid "Action Needed"
+msgstr "للإجراء"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__appears_on_portal
+msgid "Appears on Portal"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__model_id
+msgid "Applies to"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__user_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__approval_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__approval
+msgid "Approval"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__approval_date
+msgid "Approval Date"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_request__state__approve
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__approve_boolean
+msgid "Approve Stage"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "Bank IBAN"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Basic Salary"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__body
+msgid "Body"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_temp_stage__approval__ceo
+#: model:res.groups,name:plustech_hr_employee_letter.employee_letter_ceo
+msgid "CEO"
+msgstr "المدير التنفيذي"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__can_print
+msgid "Can Print"
+msgstr "للطباعة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__cancel_stage
+msgid "Cancel Stage"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__categ_id
+msgid "Category"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid ""
+"Company certifies that the employee named above is currently a staff member and the contract period is automatically renewed.\n"
+"                                                    This certification is given to hime for whatever purpose it may serve without commitment on the part of the company."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.ui.menu,name:plustech_hr_employee_letter.letter_configuration_menu
+msgid "Configuration"
+msgstr "التهيئة والاعدادات"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_letter_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "Content"
+msgstr "المحتوى"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__create_uid
+msgid "Created by"
+msgstr "ادخلت بواسطة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__create_date
+msgid "Created on"
+msgstr "تاريخ الادخال"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__contract_id
+msgid "Current Contract"
+msgstr "العقد الحالي"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__current_stage_id
+msgid "Current Stage"
+msgstr "المرحلة الحالية"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__contract_id
+msgid "Current contract of the employee"
+msgstr "العقد الحالي للموظف"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "Date: ${object.request_date or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_temp_stage__approval__depart_mg
+msgid "Department Manager"
+msgstr "مدير الإدارة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_temp_stage__approval__direct_mg
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_temp_stage__approval__employee
+msgid "Employee"
+msgstr "موظف"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+msgid "Employee Definition"
+msgstr "تعريف الموظف"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_temp_stage__approval__financial
+msgid "Financial"
+msgstr "مالي"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__for_other_party
+msgid "For Organization"
+msgstr "للمنظمة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__group_ids
+msgid "Groups"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_temp_stage__approval__hr_manager
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields.selection,name:plustech_hr_employee_letter.selection__letter_temp_stage__approval__hr_officer
+msgid "HR Officer"
+msgstr "موظف  الموارد البشرية"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__has_message
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__has_message
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__history_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "History"
+msgstr "السجلات"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "Housing Allowance"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "ID No."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__message_needaction
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__message_unread
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__message_needaction
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__message_unread
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__message_needaction
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__message_has_error
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__message_has_error
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__message_has_error
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__default_stage
+msgid "Is Default Stage"
+msgstr "هي المرحلة الافتراضية؟"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__last_stage
+msgid "Is Last Stage"
+msgstr " المرحلة الأخيرة؟"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__cancel_stage
+msgid "Is cancel stage"
+msgstr "مرحلة الإلغاء؟"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Job"
+msgstr "وظيفة"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Joining Date"
+msgstr "تاريخ الانضمام"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__lang
+msgid "Language"
+msgstr "لغة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__last_stage_id
+msgid "Last Stage"
+msgstr "اخر مرحلة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__last_stg
+msgid "Last stage"
+msgstr "اخر مرحلة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_approval__letter_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__letter_id
+msgid "Letter"
+msgstr "خطاب"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.actions.act_window,name:plustech_hr_employee_letter.letter_categ_action
+msgid "Letter Categories"
+msgstr "الفئات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.ui.menu,name:plustech_hr_employee_letter.letter_categ_menu
+msgid "Letter Category"
+msgstr "الفئة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__latter_content
+msgid "Letter Content"
+msgstr "محتوى الخطاب"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_letter_tree
+msgid "Letter Name"
+msgstr "الموضوع"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.actions.report,name:plustech_hr_employee_letter.salary_def_01_report_id
+msgid "Letter Print"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model,name:plustech_hr_employee_letter.model_letter_request
+msgid "Letter Request"
+msgstr "الخطابات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.ui.menu,name:plustech_hr_employee_letter.request_letter_menu
+msgid "Letter Template"
+msgstr "نماذج الخطابات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.actions.act_window,name:plustech_hr_employee_letter.letter_template_action
+msgid "Letter Templates"
+msgstr "نماذج الخطابات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__letter_type_id
+msgid "Letter Type"
+msgstr "نوع الخطاب"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model,name:plustech_hr_employee_letter.model_letter_letter
+#: model:ir.ui.menu,name:plustech_hr_employee_letter.hr_employee_letter_main_menu
+#: model:ir.ui.menu,name:plustech_hr_employee_letter.letter_service_root
+msgid "Letters"
+msgstr "الخطابات و الشهادات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model,name:plustech_hr_employee_letter.model_letter_letter_categ
+msgid "Letters Categories"
+msgstr "الفئات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model,name:plustech_hr_employee_letter.model_letter_stages
+msgid "Letters Stages"
+msgstr "مراحل الخطاب"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model,name:plustech_hr_employee_letter.model_letter_temp_stage
+msgid "Letters Template Stages"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:res.groups,name:plustech_hr_employee_letter.employee_letter_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "Messrs/${object.company_id.name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Monthly Salary"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "MonthlySalary"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__name
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Name"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "Name: ${object.request_id.name or ''|safe}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Nationality"
+msgstr "جنسية"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__need_approval
+msgid "Need Approval"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__need_party
+msgid "Need Party"
+msgstr "خطاب لجهة معينة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__next_stage
+msgid "Next Stage"
+msgstr "المرحلة القادمة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__date
+msgid "Operation Date"
+msgstr "تاريخ العملية"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__to_party_id
+msgid "Organization/Person Name"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Passport NO"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Personal Information"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: code:addons/plustech_hr_employee_letter/models/hr_letter.py:0
+#: code:addons/plustech_hr_employee_letter/models/hr_letter.py:0
+#, python-format
+msgid "Please Select At least One Stage."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: code:addons/plustech_hr_employee_letter/models/hr_letter.py:0
+#, python-format
+msgid "Please Select letter print template"
+msgstr "الرجاء اختيار النموذج قبل الطباعة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__print
+msgid "Print"
+msgstr "طباعة"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "Print Letter"
+msgstr "طباعة"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "Process"
+msgstr "ترحيل"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid ""
+"Reference to the employment contract signed on ${object.contract_id.date_start},\n"
+"                        I inform you of my desire to transfer my monthly salary and all\n"
+"                        My job entitlements are on my bank account ( ) shown below, and I also pledge that all data\n"
+"                        The blog is correct and is under my responsibility, and I also acknowledge that the company's\n"
+"                        deposit of any amounts in this account is a final acquittal\n"
+"                        For her slander, and for that I sign."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__report_xml_id
+msgid "Report XML ID"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request_history__request_id
+msgid "Request"
+msgstr "طلب"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.ui.menu,name:plustech_hr_employee_letter.service_template_menu
+msgid "Request Letter"
+msgstr "خطابات و الشهادات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.actions.act_window,name:plustech_hr_employee_letter.request_letter_action
+msgid "RequestLetter"
+msgstr "خطابات و الشهادات"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__request_id
+msgid "Requester"
+msgstr "الموظف"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__activity_user_id
+msgid "Responsible User"
+msgstr "مستخدم مسؤول"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Salary Definition"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__sequence
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__sequence
+msgid "Sequence"
+msgstr "متسلسل"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__stage_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__stage_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_temp_stage__stage_id
+msgid "Stage"
+msgstr "مرحلة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_stages__name
+msgid "Stage Name"
+msgstr "اسم المرحلة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.actions.act_window,name:plustech_hr_employee_letter.sh_stages_action
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__stages_ids
+#: model:ir.ui.menu,name:plustech_hr_employee_letter.letters_stages_menu
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_letter_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.sh_stages_form_view
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__activity_state
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__activity_state
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__name
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "Submit"
+msgstr "ارسال"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__submit_boolean
+msgid "Submit Stage"
+msgstr "إرسال"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_transfer_template
+msgid "Thank you."
+msgstr "ولكم خالص التحية والاحترام ،،"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__model_id
+msgid "The type of document this template can be used with"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: code:addons/plustech_hr_employee_letter/models/stages.py:0
+#, python-format
+msgid "There is default stage already defined!"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "To"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "Transportation Allowance"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "Until Present  - the contract period is automatically renewed"
+msgstr "و يتجدد العقد تلقائياً لمدة مماثلة"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__lang
+msgid ""
+"Use this field to either force a specific language (ISO code) or dynamically"
+" detect the language of your recipient by a placeholder expression (e.g. "
+"${object.partner_id.lang})"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:res.groups,name:plustech_hr_employee_letter.employee_letter_user
+msgid "User"
+msgstr "مستخدم"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_letter_categ__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_letter_categ__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_employee_letter.field_letter_request__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model.fields,field_description:plustech_hr_employee_letter.field_letter_request__has_access
+msgid "Who Can Access Process Btn"
+msgstr "من يمكنه الوصول إلى زر الإرسال"
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model,name:plustech_hr_employee_letter.model_letter_approval
+msgid "letter.approval"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model:ir.model,name:plustech_hr_employee_letter.model_letter_request_history
+msgid "letter.request.history"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_categ_view_form
+msgid "letter_categ_form"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_categ_view_tree
+msgid "letter_categ_tree"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.request_letter_form_view
+msgid "set to Draft"
+msgstr "ضبط كمسودة"
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid ""
+"the ${object.company_id.name or ''|safe} Company certifies that the employee named above is currently a staff\n"
+"                        member and the contract period is automatically renewed. This certification is given to hime\n"
+"                        for whatever purpose it may serve without commitment on the part of the company.\n"
+"                            <br><br><br> Regards,"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+msgid ""
+"the ${object.company_id.name or ''|safe} Company certifies that the employee named above is currently a staff\n"
+"                        member and the contract period is automatically renewed. This certification is given to hime\n"
+"                        for whatever purpose it may serve without commitment on the part of the company.\n"
+"                        <br><br><br> Regards,"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"أنا الموقع أدناه: ${object.request_id.name}\n"
+"                            (${object.request_id.country_id.with_context(lang='ar_001').name}) الجنسية، حامل بطاقة رقم (\n"
+"                            ${object.request_id.identification_id}) أفيد أني\n"
+"                            قد اطلعت بحكم\n"
+"                            وظيفتي في شركة ${object.request_id.company_id.with_context(lang='ar_001').name} س.ت :\n"
+"                            1010468077 على وثائق ومستندات ومعلومات تخص الشركة\n"
+"                            وعملائها، وبناء عليه أتعهد بما\n"
+"                            يلي:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "إدارة الموارد البشرية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.trial_period_extension_template
+msgid ""
+"إشارة إلى عقد العمل الموقع بتاريخ ${object.contract_id.date_start} والمتضمن على فترة التجربة\n"
+"                            لمدة (الفترة كتابة) (الفترة رقما)\n"
+"                            يوم تبدأ من أول يوم عمل بتاريخ ${object.request_id.join_date} وبناء على نص المادة (53) من\n"
+"                            نظام العمل ولرغبة شركة ${object.company_id.with_context(lang='ar_001').name}\n"
+"                            <br>\n"
+"                            بتمديد فترة التجربة ولموافقتكم على ذلك فإنه تم تمديد فترة التجربة لمدة (الفترة كتابة)\n"
+"                            (الفترة رقما) يوم اعتبارا\n"
+"                            من تاريخ 00/00/0000 مع استمرار العرض الوظيفي المقدم لكم مسبقًا.\n"
+"                            <br>\n"
+"                            والله الموفق،،\n"
+"                            <br>\n"
+"                            المقر بما فيه\n"
+"                            <br>\n"
+"                            الاســــــــــم:\n"
+"                            <br>\n"
+"                            التوقيع:\n"
+"                            <br>\n"
+"                            التاريـــخ:\n"
+"                            <br>\n"
+"                            الأصل. ملف الموظف\n"
+"                            ص. للموظف\n"
+"                            ص.المدير المباشر"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "إقامة رقم"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "إلى"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "إنهاء خدمات"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "استقالة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "اسم الموظف:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "اعتماد أدارة الموارد البشرية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "اعتماد قسم الموارد البشرية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid ""
+"الأصل لقسم الموارد البشرية يضاف مع أصل العقد.\n"
+"                               صز للحسابات.\n"
+"                               صز للموظف."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "الأمام"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "الإدارة المالية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "الإدارة/القسم"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "الإسم"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "الاسم"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid "الاسم:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "البيان"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "التاريخ"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid "التاريخ:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "التوقيع"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "التوقيع بالاستلام"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid "التوقيع:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "الجنسية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "الجنسية:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "الجهة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "الخلف"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.external_clearance_template
+msgid "الرئيس التنفيذي"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "الراتب الأساسى"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "الراتب الأساسي"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "الراتب الشهري"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "الرقم الوظيفي"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "العدد والإطارات الاحتياطية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "الغرض"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "اللون"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "المسمى الوظيفي"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "المقرر بما فيه"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "الملاحظات"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "الوضع الحالي"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "الوضع بعد القرار"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "الوظيفة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "الى"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "اليسرى"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "اليمنى"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid ""
+"بأن الموضح إسمه و بياناته أعلاه يعمل لدينا و لا يزال على رأس العمل حتى "
+"تاريخه و يتجدد العقد تلقائياً لمدة مماثلة وبناء على طلبه أعطى هذا التعريف "
+"دون أدنى مسؤولية أو التزام تجاه الشركة."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "بداية العمل من"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "بدايةالعمل من"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid ""
+"بهذا أقر أنا الموقع أدناه (${object.request_id.name}) بأني قد استلمت من شركة\n"
+"                            ${object.request_id.company_id.with_context(lang='ar_001').name} جميع مستحقاتي\n"
+"                            المرتبطة بفترة\n"
+"                            <br>\n"
+"                            عملي مع الشركة من تاريخ (${object.request_id.join_date}م) وحتى نهاية علاقتي بالشركة بتاريخ\n"
+"                            (${object.request_date}م) وأني لا\n"
+"                            أملك\n"
+"                            <br>\n"
+"                            أي مطالبات مهنية أو عمالية متعلقة بفترة عملي بين هذين التاريخين أو ناشئة عنها ولو بعد\n"
+"                            نهايتها، ويشمل هذا:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "بيان"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "بيانات الموظف"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "تاريخ اخر يوم عمل"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "تاريخ التفعيل"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "تاريخ الميلاد:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "ترقية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.external_clearance_template
+msgid ""
+"تشهد شركة ${object.company_id.with_context(lang='ar_001').name} بأن السيد/ السيدة\n"
+"                            ${object.request_id.name}،\n"
+"                            (${object.request_id.country_id.with_context(lang='ar_001').name}) الجنسية يحمل هوية\n"
+"                            رقم\n"
+"                            <br>\n"
+"                            ( ${object.request_id.identification_id})) كان يعمل لدينا بوظيفة (\n"
+"                            ${object.request_id.job_id.name})) من تاريخ  ${object.request_id.join_date}م وحتى تاريخ\n"
+"                            <br>\n"
+"                            ${object.request_date}م وقد قام بتسليم ما لديه من عهد وليس عليه أي التزام تجاه الشركة."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "تعديل مسمى الوظيفة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "تعريف بالراتب"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+msgid "تعريف موظف"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "تعيين جديد"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "تم استلام العهدة كما هو موضح أعلاهـ."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "جواز رقم"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "حالة السيارة من الداخل"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "حالة العهدة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "رقم البطاقة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "رقم التسلسلي"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "رقم اللوحة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "رقم الهُوِيَّة:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "سنة الصنع"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.confidentiality_template
+msgid ""
+"صيغة التعهد –تكتب بخط اليد-: أنا الموقع أدناه: (${object.request_id.name}) أطلعت على بنود\n"
+"                            هذا\n"
+"                            التعهد الستة أعلاه،\n"
+"                            وقد وقعت عليه بكامل أهليتي الشرعية والنظامية وأتحمل المسؤولية الكاملة عن كل مخالفة لمقتضاه\n"
+"                            أمام الله والنظام\n"
+"                            والشركة، والله على ما أقول رقيب شهيد.\n"
+"                            الصيغة:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "عدد الكيلو مترات"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "عدم تجديد العقد"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "علاوة استثنائية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "علاوة سنوية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "فصل حسب المادة رقم()"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "قرار إداري"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "قسم الدعم و المساندة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.administrative_decision_template
+msgid "قسم الموارد البشرية"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid "لمن يهمه الأمر"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid "ما زال على رأس العمل حتى الان و يتجدد العقد تلقائياً لمدة مماثلة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid "مدير المباشر"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "مصادقة الرئيس التنفيذي"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "مصادقة المدير المباشر"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "معتمد صرف العهدة في نموذج التتبع الوظيفي عند التعيين"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.trial_period_extension_template
+msgid ""
+"من: ${object.company_id.with_context(lang='ar_001').name}\n"
+"                        <br>\n"
+"                        الى: الموظف/ ${object.request_id.name}"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.salary_definition_template
+msgid ""
+"نشهد نحن في شركة ${object.company_id.with_context(lang='ar_001').name} بأن الموضح إسمه و بياناته أعلاه يعمل لدينا و لا يزال على رأس العمل\n"
+"                            حتى تاريخه و يتجدد العقد تلقائياً لمدة مماثلة وبناء على طلبه أعطى هذا التعريف دون أدنى مسؤولية أو التزام تجاه الشركة.\n"
+"                            <br><br><br>وتقبلوا تحياتنا،"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_definition_template
+msgid ""
+"نشهد نحن في شركة ${object.company_id.with_context(lang='ar_001').name} بأن الموضح إسمه و بياناته أعلاه يعمل لدينا و لا يزال على رأس العمل\n"
+"                        حتى تاريخه و يتجدد العقد تلقائياً لمدة مماثلة وبناء على طلبه أعطى هذا التعريف دون أدنى مسؤولية أو التزام تجاه الشركة.\n"
+"                        <br><br><br>وتقبلوا تحياتنا،"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "نشهد نحن قى شركة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.employee_investigation_template
+msgid ""
+"نظراً لارتكاب الموظف/ ${object.request_id.name} ، المسمى الوظيفي (الوظيفة) رقم الهوية\n"
+"                            (${object.request_id.identification_id})\n"
+"                            للمخالفات\n"
+"                            التالية:\n"
+"                            <br>\n"
+"                            1-\n"
+"                            2- .\n"
+"                            3-\n"
+"                            <br>\n"
+"                            وبناءً على الصلاحيات المخولة لنا فقد تقرر ما يلي:\n"
+"                            أولاً: تشكيل لجنة تحقيق تتكون من: -\n"
+"                            1- السيد / .................. ( الوظيفة )\n"
+"                            2- السيدة/ .................. ( الوظيفة)\n"
+"                            3-\n"
+"                            <br>\n"
+"                            ثانياً: يحال الموظف ${object.request_id.name} للتحقيق، وتقوم اللجنة المشكلة في الفقرة\n"
+"                            أولا من هذا القرار بالتحقيق\n"
+"                            معه في يوم الأربعاء الموافق 30/09/2021م الساعة الثالثة عصرا.\n"
+"                            <br>\n"
+"                            ثالثا: تقوم اللجنة بإثبات مجريات التحقيق ونتيجته في محضر موقع منها ومن الموظف المحال\n"
+"                            للتحقيق، وتقوم برفع\n"
+"                            المحضر ونتيجته مع توصيتها لنا، لنقوم باتخاذ القرار المناسب بناء عليه.\n"
+"                            <br>\n"
+"                            توقيع الموظف بالاستلام<br>\n"
+"                             الاســــــــــم:\n"
+"                            <br>\n"
+"                            التوقيع:\n"
+"                            <br>\n"
+"                            التاريـــخ:"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.internal_clearance_template
+msgid ""
+"نفيدكم بأن الموظف الموضح بياناته أعلاه خالي الطرف من جميع البنود والالتزامات المعتمدة والمذيلة\n"
+"                        بتوقيعي كمدير إدارة وعلى هذا <br>يتم\n"
+"                        تسليم الموظف كل مستحقاته."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.car_delivery_template_template
+msgid "نوع السيارة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.custody_request_template
+msgid "نوع لعهدة"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.experience_certificate_template
+msgid ""
+"هذا هو التصديق بأن الموضح بياناته أعلاه كان يعمل لدينا في شركة ${object.request_id.country_id.with_context(lang='ar_001').name} من تاريخ\n"
+"                           ${object.request_id.join_date}<br>\n"
+"                           <br> وحتى تاريخ  ${object.request_date} وأعطيت له هذه الشهادة بناءً على طلبه دون أدنى مسؤولية تجاه الشركة.\n"
+"                            وقد كان متعاون خلال فترة عمله بالشركة وحسن السيرة والسلوك، متمنين له التوفيق في مستقبله\n"
+"                            العملي."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.external_clearance_template
+msgid "والله ولي التوفيق،،"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid ""
+"وتعتبر هذه المخالصة نهائية ومبرئه لذمة الشركة ومصفية للعقد ولا يجوز لي المطالبة بأي شيء بعد\n"
+"                        ذلك وتكون\n"
+"                        <br>\n"
+"                        صلتي قد انقطعت نهائيا بالشركة بها."
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_letter.letter_report_template
+msgid "وتقبلوا تحياتنا ،"
+msgstr ""
+
+#. module: plustech_hr_employee_letter
+#: model_terms:letter.letter,body:plustech_hr_employee_letter.eos_clearance_template
+msgid "وعلى كل ما ورد أعلاه أقر وأوقع"
+msgstr ""

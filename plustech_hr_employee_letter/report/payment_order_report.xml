@@ -1,0 +1,206 @@
+<odoo>
+    <data>
+        <report
+                id="payment_order_01_report_id"
+                model="letter.request"
+                string="Letter Print"
+                report_type="qweb-pdf"
+                name="plustech_hr_employee_letter.payment_order__report_template"
+                file="plustech_hr_employee_letter.payment_order__report_template"
+                attachment_use="False"
+                menu="False"
+        />
+
+        <template id="payment_order__report_template">
+            <t t-call="web.html_container">
+                <!--                <t t-set="data_report_margin_top" t-value="35"/>-->
+                <!--                <t t-set="data_report_header_spacing" t-value="40"/>-->
+                <!--                <t t-set="data_report_dpi" t-value="110"/>-->
+                <t t-foreach="docs" t-as="doc">
+
+                    <t t-if="not o" t-set="o" t-value="doc"/>
+
+                    <t t-if="not company">
+                        <!-- Multicompany -->
+                        <t t-if="company_id">
+                            <t t-set="company" t-value="company_id"/>
+                        </t>
+                        <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                            <t t-set="company" t-value="o.company_id.sudo()"/>
+                        </t>
+                        <t t-else="else">
+                            <t t-set="company" t-value="res_company"/>
+                        </t>
+                    </t>
+                    <t t-set="data_report_margin_top" t-value="40"/>
+                    <t t-set="data_report_header_spacing" t-value="10"/>
+                    <t t-set="data_report_dpi" t-value="110"/>
+                    <t t-call="plustech_layout_template.plustech_layout_template_layout">
+                        <t t-set="doc" t-value="doc.with_context(lang=doc.env.user.lang)"/>
+                        <t t-set="direction" t-value="((doc.env.user.lang=='en_US' and 'ltr') or 'rtl')"/>
+                        <div class="page" t-attf-style="direction:#{direction};font-family:GESSTOW;">
+                            <style>
+                                td{
+                                padding:5px !important;
+                                text-align: center;
+                                border-bottom:2px solid black;
+                                border-top:2px solid black !important;
+                                border-left:2px solid black;
+                                border-right:2px solid black;
+                                }
+                                table{
+                                padding: 0px;
+                                text-align: center;
+                                }
+                                th{
+                                padding: 0px;
+                                border-bottom:2px solid black;
+                                border-top:2px solid black;
+                                border-left:2px solid black;
+                                border-right:2px solid black;
+                                }
+                                tr{
+                                padding: 0px;
+                                }
+                            </style>
+                            <div class="row">
+                                <div class="text-center"><h1>أمر صرف</h1></div>
+                            </div>
+                            <br/>
+                            <div class="row" style="font-size: 16px;width: 100%;text-align:center;" >
+                                <p style="font-size: 20px;">
+                                    ســعــادة / مـديـر عـام الـشـؤون المـالـيـة والإداريـة
+                                    <br/>
+                                    المحترم
+                                    <br/>
+                                    السلام عليكم ورحمة الله وبركاته
+                                </p>
+                            </div>
+                            <br/>
+                            <div class="row"  style="font-size: 18px;width: 100%;text-align:center;">
+                                <div class="col-12">
+                                    <span>نأمل منكم الموافقة باعتماد صرف مبلغ (
+                                        <t t-esc="doc.get_letter_field_value('amount')"/>
+                                        ريال)
+                                    </span>
+                                    <br/>
+                                    فقط
+                                    <t t-esc="doc.get_letter_field_value('amount_word')"/>
+                                    لا غير
+                                </div>
+                                <div>
+                                    (نقداً / بشیك) للسادة/
+                                    <t t-esc="doc.get_letter_field_value('org')"/>
+                                </div>
+                                <div class="col-12">
+                                    وذلك مقابل/
+                                    <t t-esc="doc.get_letter_field_value('purpose')"/>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="row" dir="rtl" style="text-align:center;margin:auto;">
+                                <table style="width:80%;margin-bottom:10px;margin:auto;">
+                                    <thead>
+                                        <tr style="width:100%;">
+                                            <tr>
+                                                <td colspan="3" style="border-bottom:0px">مقدم الطلب</td>
+                                            </tr>
+                                            <th width="40%" scope="row"
+                                                style="padding:5px;border-top:0px;border-left:0px;text-align: right;">
+                                                <span>الاسم:
+                                                    <t t-esc="doc.request_id.name"/>
+                                                </span>
+                                            </th>
+                                            <td width="30%" style="border-right:0px;border-left:0px;border-top:0px;">
+                                                <span>التوقيع:
+                                                    <img style="height: 50px;"
+                                            t-if="doc.request_id.user_id and doc.request_id.user_id.sudo().sign_signature"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.request_id.user_id.sudo().sign_signature)" />
+                                                </span>
+                                            </td>
+                                            <th width="30%" scope="row"
+                                                style="border-right:0px;border-top:0px;padding:5px;">
+                                                <span>التاريخ:
+                                                    <t t-esc="doc.request_date"/>
+                                                </span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <br/>
+                            <div class="row" dir="rtl" style="text-align:center;margin:auto;"
+                                 t-foreach="doc.history_ids.filtered(lambda a: a.approval!= 'employee' and a.appear_on_report == True)" t-as="line">
+                                <table style="width:80%;margin-bottom:10px;margin:auto;">
+                                    <thead>
+                                        <tr style="width:100%;">
+                                            <tr>
+                                                <td colspan="3" style="border-bottom:0px"><t t-esc="line.stage_id.stage_id.name"/> </td>
+                                            </tr>
+                                            <th width="40%" scope="row"
+                                                style="padding:5px;border-top:0px;border-left:0px;text-align: right;">
+                                                <span>الاسم:
+                                                    <t
+                                                       t-esc="line.user_id.sudo().name"/>
+                                                </span>
+                                            </th>
+                                            <td width="30%" style="border-right:0px;border-left:0px;border-top:0px;">
+                                                <span>التوقيع:
+                                                </span>
+                                                 <img style="height: 50px;"
+                                        t-if="line.user_id.sudo().sign_signature"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(line.user_id.sudo().sign_signature)" />
+                                    </td>
+                                            <th width="30%" scope="row"
+                                                style="border-right:0px;border-top:0px;padding:5px;">
+                                                <span>التاريخ:
+                                                    <t t-esc="line.date"/>
+                                                </span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+<!--                            <br/>-->
+<!--                            <div class="row" dir="rtl" style="text-align:center;margin:auto;">-->
+<!--                                <table style="width:80%;margin-bottom:10px;margin:auto;">-->
+<!--                                    <thead>-->
+<!--                                        <tr style="width:100%;">-->
+<!--                                            <tr>-->
+<!--                                                <td colspan="3" style="border-bottom:0px">اعتماد مدير عام الشؤون المالية-->
+<!--                                                    والإدارية-->
+<!--                                                </td>-->
+<!--                                            </tr>-->
+<!--                                            <th width="40%" scope="row"-->
+<!--                                                style="padding:5px;border-top:0px;border-left:0px;text-align: right;">-->
+<!--                                                <span>الاسم:-->
+<!--                                                     <t t-if="doc.history_ids.filtered(lambda a: a.approval== 'finance')"-->
+<!--                                                       t-esc="doc.history_ids.filtered(lambda a: a.approval== 'finance')[0].user_id.sudo().name"/>-->
+<!--                                                </span>-->
+<!--                                            </th>-->
+<!--                                            <td width="30%" style="border-right:0px;border-left:0px;border-top:0px;">-->
+<!--                                                <span>التوقيع:-->
+<!--                                                </span>-->
+<!--                                            <img style="height: 50px;"-->
+<!--                                        t-if="doc.history_ids.filtered(lambda a: a.approval== 'financial') and doc.history_ids.filtered(lambda a: a.approval== 'financial')[0].user_id.sudo().sign_signature"-->
+<!--                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.history_ids.filtered(lambda a: a.approval== 'financial')[0].user_id.sudo().sign_signature)" />-->
+<!--                                    </td>-->
+<!--                                            <th width="30%" scope="row"-->
+<!--                                                style="border-right:0px;border-top:0px;padding:5px;">-->
+<!--                                                <span>التاريخ:-->
+<!--                                                    <t t-esc="doc.request_date"/>-->
+<!--                                                </span>-->
+<!--                                            </th>-->
+<!--                                        </tr>-->
+<!--                                    </thead>-->
+<!--                                </table>-->
+<!--                            </div>-->
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

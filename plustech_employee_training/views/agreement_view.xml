@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <record id="training_agreement_template_form_view" model="ir.ui.view">
+            <field name="name">Agreement Form View</field>
+            <field name="model">course.agreement.template</field>
+            <field name="arch" type="xml">
+                <form string="Agreement Templates">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Agreement Template" />
+                            <h1>
+                                <field name="name" required="1" />
+                            </h1>
+
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="reference" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Content" name="content">
+                                <group>
+                                    <field name="agreement_content" widget="html"
+                                        class="oe-bordered-editor" nolabel="1" />
+                                </group>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+
+        <record id="course_agreement_tree_view" model="ir.ui.view">
+            <field name="name">Agreement Tree View</field>
+            <field name="model">course.agreement.template</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="reference" />
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- action -->
+
+        <record id="training_agreement_template_action" model="ir.actions.act_window">
+            <field name="name">Training</field>
+            <field name="res_model">course.agreement.template</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!---<Menuitem>-->
+
+        <menuitem name="Agreement Templates" id="course_agreemnt_menu" parent="configuration_manu"
+            action="training_agreement_template_action" sequence="10" />
+
+
+    </data>
+</odoo>

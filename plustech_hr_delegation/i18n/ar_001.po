@@ -1,0 +1,405 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_delegation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-19 09:58+0000\n"
+"PO-Revision-Date: 2023-02-19 09:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_delegation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_delegation.hr_employee_delegation_view_form
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                                    <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('from_date', '=', False), ('to_date', '=', False)]}\"/>"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_delegation.hr_employee_delegation_view_form
+msgid "Add Attach"
+msgstr "إضافة مرفقات"
+
+#. module: plustech_hr_delegation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_delegation.hr_employee_delegation_view_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields.selection,name:plustech_hr_delegation.selection__hr_employee_delegation__state__validate
+msgid "Approved"
+msgstr "مُعتمد"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields.selection,name:plustech_hr_delegation.selection__hr_employee_delegation__state__cancel
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__delegated_employee_id
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_leave__delegated_employee_id
+msgid "Delegated Employee"
+msgstr "الموظف المٌفوض"
+
+#. module: plustech_hr_delegation
+#: model:ir.ui.menu,name:plustech_hr_delegation.hr_employee_delegation_menu
+msgid "Delegations"
+msgstr "التفويضات"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__department_id
+msgid "Department Name"
+msgstr "القسم"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_delegation.hr_employee_delegation_view_form
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_delegation
+#: model:ir.model,name:plustech_hr_delegation.model_hr_employee_delegation
+msgid "Employee Delegation"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.actions.act_window,name:plustech_hr_delegation.hr_employee_delegation_action
+msgid "Employee delegation"
+msgstr "تفويض الموظفين"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__from_date
+msgid "From Date"
+msgstr "من تاريخ"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__message_needaction
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__message_has_error
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__job_id
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_leave__need_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_leave_type__need_delegation
+msgid "Need delegation"
+msgstr "تحتاج تفويض؟"
+
+#. module: plustech_hr_delegation
+#: code:addons/plustech_hr_delegation/models/hr_employee_delegation.py:0
+#: code:addons/plustech_hr_delegation/models/hr_employee_delegation.py:0
+#: code:addons/plustech_hr_delegation/models/hr_employee_delegation.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__attachment_number
+msgid "Number of Attachments"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_delegation.hr_employee_delegation_view_form
+msgid "Period"
+msgstr "المدة"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields.selection,name:plustech_hr_delegation.selection__hr_employee_delegation__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_delegation.hr_employee_delegation_view_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_hr_delegation
+#: model:ir.model,name:plustech_hr_delegation.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: plustech_hr_delegation
+#: model:ir.model,name:plustech_hr_delegation.model_hr_leave_type
+msgid "Time Off Type"
+msgstr "نوع الإجازة "
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields.selection,name:plustech_hr_delegation.selection__hr_employee_delegation__state__confirm
+msgid "To Approve"
+msgstr "للإعتماد"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields.selection,name:plustech_hr_delegation.selection__hr_employee_delegation__state__submit
+msgid "To Confirm"
+msgstr "للتأكيد"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields.selection,name:plustech_hr_delegation.selection__hr_employee_delegation__state__draft
+msgid "To Submit"
+msgstr "للإرسال"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__to_date
+msgid "To date"
+msgstr "الى تاريخ"
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,field_description:plustech_hr_delegation.field_hr_employee_delegation__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: model:ir.model.fields,help:plustech_hr_delegation.field_hr_employee_delegation__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_delegation
+#: code:addons/plustech_hr_delegation/models/hr_employee_delegation.py:0
+#, python-format
+msgid "You can't delete record not in draft state"
+msgstr ""

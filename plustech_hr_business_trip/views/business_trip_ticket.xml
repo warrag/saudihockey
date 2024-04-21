@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="flight_ticket_business_trip_action_bt" model="ir.actions.act_window">
+            <field name="name">Business Trip Flight Tickets</field>
+            <field name="res_model">hr.flight.ticket</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_type': 'business_trip', 'create': False}</field>
+            <field name="domain">[('type', '=', 'business_trip')]</field>
+        </record>
+
+        <menuitem
+            id="menu_deputation_flight_tickets"
+            name="Tickets"
+            parent="plustech_hr_business_trip.deputation_main_menu"
+            action="flight_ticket_business_trip_action_bt"
+            groups="plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_user,plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_admin_affairs,plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_dfadminaffairs,plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_ceo,plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_hr"
+            sequence="3" />
+    </data>
+</odoo>

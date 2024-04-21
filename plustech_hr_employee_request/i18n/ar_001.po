@@ -1,0 +1,778 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_employee_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-01 12:52+0000\n"
+"PO-Revision-Date: 2023-11-01 12:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.actions.act_window,help:plustech_hr_employee_request.hr_employee_request_form_action
+msgid ""
+"A employee request is an instruction to Purchasing to procure\n"
+"                a certain quantity of materials services, so that they are\n"
+"                available at a certain point in time."
+msgstr ""
+"طلب الموظف هو تعليمات للشراء للشراء\n"
+"                كمية معينة من خدمات المواد ، بحيث تكون كذلك\n"
+"                متوفر في وقت معين."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "استثناء النشاط الديكور"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__analytic_account_id
+msgid "Analytic Account"
+msgstr "حساب تحليلي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "العلامات التحليلية"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields.selection,name:plustech_hr_employee_request.selection__hr_employee_request_approvals__state__approved
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Approved"
+msgstr "موافقة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__approval_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_form
+msgid "Approver's"
+msgstr "الموافقة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__product_uom_category_id
+msgid "Category"
+msgstr "فئة"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.actions.act_window,help:plustech_hr_employee_request.hr_employee_request_form_action
+msgid "Click to start a new employee request process."
+msgstr "انقر لبدء عملية طلب الموظف الجديدة."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__comment
+msgid "Comments"
+msgstr "تعليقات"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__company_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"لا يمكن أن يحدث التحويل بين وحدات القياس إلا إذا كانت تنتمي إلى نفس "
+"الفئة.سيتم التحويل بناءً على النسب."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__currency_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__currency_id
+msgid "Currency"
+msgstr "عملة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__date
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__date
+msgid "Date when the user initiated the request."
+msgstr "التاريخ عندما بدأ المستخدم الطلب."
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Denied"
+msgstr "رفض"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Departement"
+msgstr "قسم"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__description
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_employee_request
+#: code:addons/plustech_hr_employee_request/models/employee_request_line.py:0
+#, python-format
+msgid "Detailed Line"
+msgstr ""
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Direct Manager Approval"
+msgstr "موافقة المدير المباشر"
+
+#. module: plustech_hr_employee_request
+#: model:res.groups,name:plustech_hr_employee_request.group_hr_employee_request_manager
+msgid "Director of Financial and Administrative Affairs"
+msgstr "مدير"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields.selection,name:plustech_hr_employee_request.selection__hr_employee_request__state__done
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Done"
+msgstr "مُؤكد"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields.selection,name:plustech_hr_employee_request.selection__hr_employee_request__state__draft
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__employee_id
+#: model:res.groups,name:plustech_hr_employee_request.group_hr_employee_request_user
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: plustech_hr_employee_request
+#: model:ir.actions.report,name:plustech_hr_employee_request.material_requisition_report_action
+msgid "Employee Material Requisition"
+msgstr "طلب موظف الموظف"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__employee_number
+msgid "Employee Number"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__employee_request_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__request_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Employee Request"
+msgstr "طلب الموظف"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__line_count
+msgid "Employee Request Line count"
+msgstr "عدد خط طلب الموظف"
+
+#. module: plustech_hr_employee_request
+#: model:ir.actions.act_window,name:plustech_hr_employee_request.hr_employee_request_form_action
+#: model:ir.ui.menu,name:plustech_hr_employee_request.menu_employee_request_act
+#: model:ir.ui.menu,name:plustech_hr_employee_request.menu_hr_employee_request
+#: model:ir.ui.menu,name:plustech_hr_employee_request.parent_menu_employee_request
+msgid "Employee Requests"
+msgstr "طلبات الموظفين"
+
+#. module: plustech_hr_employee_request
+#: model:ir.module.category,name:plustech_hr_employee_request.module_category_employee_requisition
+msgid "Employee Requisition"
+msgstr "طلب الموظف"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Employee Signature"
+msgstr "توقيع الموظف"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__estimated_cost
+msgid "Estimated Cost"
+msgstr "التكلفة المتوقعة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__estimated_cost
+msgid "Estimated cost of Purchase Request Line, not propagated to PO."
+msgstr "التكلفة المقدرة لطلب طلب الشراء ، لا يتم نشرها إلى PO."
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Financial and Administrative Affairs Approval"
+msgstr "موافقة الشؤون المالية والإدارية"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "أتباع (شركاء)"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "الرمز الرائع على سبيل المثالFA-TASKS"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Group By..."
+msgstr "مجموعة من..."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model,name:plustech_hr_employee_request.model_hr_employee_request
+msgid "HR Employee Request"
+msgstr "طلب موظف الموارد البشرية"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model,name:plustech_hr_employee_request.model_hr_employee_request_line
+msgid "HR Employee Request Line"
+msgstr "خط طلب موظف الموارد البشرية"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__has_message
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__id
+msgid "ID"
+msgstr "بطاقة تعريف"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثناء."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__message_needaction
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__message_unread
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__message_needaction
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم التحقق منها ، تتطلب رسائل جديدة انتباهك."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__message_has_error
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__message_has_error
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التحقق منها ، فإن بعض الرسائل لديها خطأ في التسليم."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__is_editable
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__is_editable
+msgid "Is Editable"
+msgstr "قابلة للتحرير"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_is_follower
+msgid "Is Follower"
+msgstr "هو أتباع"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__is_manager
+msgid "Is Manager"
+msgstr "هو المدير"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__is_name_editable
+msgid "Is Name Editable"
+msgstr "هو الاسم قابل للتحرير"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Item"
+msgstr "غرض"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Job No"
+msgstr "وظيفة رقم"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__job_id
+msgid "Job Position"
+msgstr "وظيفه"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Job Title"
+msgstr "مسمى وظيفي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل على"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث على"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__manager_id
+msgid "Manager"
+msgstr "مدير"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ تسليم الرسائل"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي للنشط"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "My requests"
+msgstr "طلباتي"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Name"
+msgstr "اسم"
+
+#. module: plustech_hr_employee_request
+#: code:addons/plustech_hr_employee_request/models/employee_request.py:0
+#: code:addons/plustech_hr_employee_request/models/employee_request.py:0
+#: code:addons/plustech_hr_employee_request/models/employee_request.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث تقويم النشاط التالي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "No#"
+msgstr "لا#"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل ذات خطأ التسليم"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__description
+msgid "PR Description"
+msgstr "وصف العلاقات العامة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__product_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__product_id
+msgid "Product"
+msgstr "الصنف"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_form
+msgid "Products"
+msgstr "الأصناف"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_form
+msgid "Purchase Request"
+msgstr "طلب الشراء"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Purchase Requisition"
+msgstr "طلب شراء"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__product_qty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields.selection,name:plustech_hr_employee_request.selection__hr_employee_request__state__rejected
+#: model:ir.model.fields.selection,name:plustech_hr_employee_request.selection__hr_employee_request_approvals__state__reject
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__requested_by
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__requested_by
+msgid "Related user name for the resource to manage its access."
+msgstr "اسم المستخدم ذي الصلة للمورد لإدارة وصوله."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__date
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__date
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__date_required
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Request Information"
+msgstr "طلب معلومات"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Request No."
+msgstr "رقم الطلب."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__name
+msgid "Request Reference"
+msgstr "المرجع"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Request is to be approved"
+msgstr "الطلب للإعتماد"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__request_state
+msgid "Request state"
+msgstr "حالة الطلب"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__line_ids
+msgid "Requested Product"
+msgstr "الصنف المطلوب"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__requested_by
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Requested by"
+msgstr "تم الطلب بواسطة"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_form
+msgid "Reset To Draft"
+msgstr "إرجاع الى مسودة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ تسليم الرسائل القصيرة"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Search Employee Request"
+msgstr "البحث عن طلب الموظف"
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Signature"
+msgstr "إمضاء"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__specifications
+msgid "Specifications"
+msgstr "المواصفات"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__state
+msgid "State"
+msgstr "ولاية"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__state
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.material_requisition_doc
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__activity_state
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناءً على الأنشطة\n"
+"متأخر: تم تمرير تاريخ الاستحقاق بالفعل\n"
+"اليوم: تاريخ النشاط اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: plustech_hr_employee_request
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_hr_employee_request
+#: code:addons/plustech_hr_employee_request/models/employee_request.py:0
+#, python-format
+msgid "This request is waiting your approval"
+msgstr "هذا الطلب في انتظار موافقتك"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__name
+msgid "Title"
+msgstr "عنوان"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__to_approve_allowed
+msgid "To Approve Allowed"
+msgstr "للموافقة المسموح بها"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__estimated_cost
+msgid "Total Estimated Cost"
+msgstr "إجمالي التكلفة المقدرة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "رسائل غير مقروءة عداد"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__product_uom_id
+msgid "UoM"
+msgstr "UOM"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__requested_by
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_approvals__user_id
+msgid "User"
+msgstr "مستخدم"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields.selection,name:plustech_hr_employee_request.selection__hr_employee_request__state__admin
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Waiting For  Director of Financial and Administrative Affairs Approval"
+msgstr "بإنتظار إعتماد مدير الشؤون المالية والإدارية"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields.selection,name:plustech_hr_employee_request.selection__hr_employee_request__state__manager_approve
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_request.view_hr_employee_request_search
+msgid "Waiting For Manager Approval"
+msgstr "بإنتظار إعتماد المدير المباشر"
+
+#. module: plustech_hr_employee_request
+#: code:addons/plustech_hr_employee_request/models/employee_request.py:0
+#, python-format
+msgid "Waiting your approval"
+msgstr "في انتظار موافقتك"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_request.field_hr_employee_request_line__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_employee_request.field_hr_employee_request_line__website_message_ids
+msgid "Website communication history"
+msgstr "تاريخ اتصال الموقع"
+
+#. module: plustech_hr_employee_request
+#: code:addons/plustech_hr_employee_request/models/employee_request_line.py:0
+#, python-format
+msgid "You can only delete a request line if the request is in draft state."
+msgstr ""
+
+#. module: plustech_hr_employee_request
+#: code:addons/plustech_hr_employee_request/models/employee_request.py:0
+#, python-format
+msgid "You cannot delete a request which is not draft."
+msgstr "لا يمكنك حذف طلب غير مسودة"
+
+#. module: plustech_hr_employee_request
+#: model:ir.model,name:plustech_hr_employee_request.model_hr_employee_request_approvals
+msgid "hr.employee.request.approvals"
+msgstr ""

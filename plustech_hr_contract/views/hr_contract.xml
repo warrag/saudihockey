@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_contract_template_inherited_form_view" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherited.view</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <field name="job_id" position="after">
+                <field name="contract_duration" />
+            </field>
+            <field name="contract_type_id" position="attributes">
+                <attribute name="required">1</attribute>
+            </field>
+            <field name="contract_type_id" position="attributes">
+                <attribute name="options">{'no_create':1,'no_open':1}</attribute>
+            </field>
+            <xpath expr="//field[@name='hr_responsible_id']" position="after">
+                <field name="template_id" string="Contract Print Template" />
+            </xpath>
+            <div class="oe_button_box" name="button_box" position="inside">
+                <button name="action_contract_preview"
+                    type="object" string="Preview"
+                    class="oe_stat_button"
+                    icon="fa-solid fa-eye"
+                    attrs="{'invisible': [('template_id', '=', False)]}" />
+            </div>
+            <xpath expr="//field[@name='date_end']" position="after">
+                <field name="trial_date_end" />
+                <field name="duration_type" invisible="1" />
+            </xpath>
+            <field name="date_end" position="attributes">
+                <attribute name="attrs">{'required': [('duration_type', '=', 'limited')]}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_contract_salary_inherited_form_view" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherited.view</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract_salary.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <label for="wage_on_signature" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </label>
+            <div name="wage" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </div>
+            <field name="final_yearly_costs" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="contract_update_template_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="sign_template_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="default_contract_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <xpath expr="//page[@name='personal_documents']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='%(hr_contract_salary.generate_simulation_link_action)d']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_contract_sign_inherited_form_view" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherited.view</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract_sign.hr_contract_sign_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='%(hr_contract_sign.sign_contract_wizard_action)d']"
+                position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+    <delete model="ir.ui.menu" id="hr_contract.hr_menu_contract_history" />
+    <delete model="ir.ui.menu" id="hr_work_entry_contract_enterprise.hr_menu_contract" />
+
+
+    <menuitem
+        id="menu_contract_plustech"
+        name="Contracts"
+        parent="hr.menu_hr_root"
+        sequence="4" />
+
+    <menuitem
+        id="menu_my_contracts"
+        name="Contracts"
+        groups="plustech_hr_contract.group_hr_contract_own"
+        parent="plustech_hr_contract.menu_contract_plustech"
+        action="hr_contract.action_hr_contract"
+        sequence="2" />
+
+    <menuitem
+        id="menu_all_contracts"
+        name="Contracts History"
+        groups="hr_contract.group_hr_contract_manager"
+        parent="plustech_hr_contract.menu_contract_plustech"
+        action="hr_contract.hr_contract_history_view_list_action"
+        sequence="2" />
+
+</odoo>

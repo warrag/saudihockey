@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="paperformat_contract_report" model="report.paperformat">
+            <field name="name">Contract A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="action_report_contract" model="ir.actions.report">
+            <field name="name">Employee Contract</field>
+            <field name="model">hr.contract</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">plustech_hr_contract.report_hr_contract</field>
+            <field name="report_file">plustech_hr_contract.report_hr_contract</field>
+            <field name="print_report_name">'%s' % (object.name)</field>
+            <field name="binding_model_id" ref="plustech_hr_contract.model_hr_contract"/>
+            <field name="paperformat_id" ref="paperformat_contract_report"/>
+        </record>
+
+        <template id="report_contract_document">
+            <t t-set="doc" t-value="doc.with_context(lang=res_company.partner_id.lang)"/>
+            <t t-call="web.basic_layout">
+                <t t-set="direction" t-value="((user.lang=='en_US' and 'ltr') or 'rtl')"/>
+                <div class="page contract-font" t-attf-style="direction:#{direction};">
+                    <div class="oe_structure"/>
+                    <div t-raw="doc.get_render_template()"/>
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_hr_contract">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="plustech_hr_contract.report_contract_document" t-lang="res_company.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_payroll_workflow
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-26 08:36+0000\n"
+"PO-Revision-Date: 2022-11-26 08:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.payslip_stage_view_form
+msgid "Actions"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__active
+msgid "Active"
+msgstr "مفعل"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.payslip_stage_view_form
+msgid ""
+"Add a description to help your coworkers understand the meaning and purpose "
+"of the stage."
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.payslip_stage_view_form
+msgid "Add a description..."
+msgstr "اضافة وصف...."
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__user_ids
+msgid "Approvers"
+msgstr "معتمدين"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.payslip_run_stage_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_batch_account_view_form_stage
+msgid "Are you sure you want to proceed ?"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__backward
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__backward
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_run_view_form_stage
+msgid "Backward"
+msgstr "ارجاع"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_run_view_form_stage
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__cancel
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__cancel
+msgid "Cancel Batch"
+msgstr "الغاء كشف الرواتب"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_batch_account_view_form_stage
+msgid "Create Draft Entry"
+msgstr "انشاء قيد الرواتب"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__generate_entry
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__generate_entry
+msgid "Create Journal Entry"
+msgstr "انشاء قيد الرواتب"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__description
+msgid "Description"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_run_view_form_stage
+msgid "Forward"
+msgstr "تاكيد"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__next_stage_id
+msgid "Next Stage"
+msgstr "المرحلة التالية"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.actions.act_window,help:plustech_payroll_workflow.payslip_batch_stage_action
+msgid "No stages found. Let's create one!"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.actions.act_window,name:plustech_payroll_workflow.payslip_batch_stage_action
+#: model:ir.ui.menu,name:plustech_payroll_workflow.payslip_batch_stage_menu
+msgid "Payslip Batch"
+msgstr "كشف الرواتب"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model,name:plustech_payroll_workflow.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "كشوفات الرواتب"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model,name:plustech_payroll_workflow.model_payslip_run_stage
+msgid "Payslip run Stage"
+msgstr "مراحل كشف الرواتب"
+
+#. module: plustech_payroll_workflow
+#: code:addons/plustech_payroll_workflow/models/payslip_batch.py:0
+#, python-format
+msgid "Please Create Batch Entry before forward!"
+msgstr "الرجاء انشاء قيد الرواتب قبل التاكيد"
+
+#. module: plustech_payroll_workflow
+#: code:addons/plustech_payroll_workflow/models/payslip_batch.py:0
+#, python-format
+msgid "Please Post Batch Entry before forward!"
+msgstr "الرجاء ترحيل قيد الرواتب قبل التاكيد"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_run_view_form_stage
+msgid "Post"
+msgstr "ترحيل القيد"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__post_entry
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__post_entry
+msgid "Post Journal Entry"
+msgstr "ترحيل قيد الرواتب"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__payment
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__payment
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_run_view_form_stage
+msgid "Register Payment"
+msgstr "دفع الرواتب"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__set_to_draft
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_payslip_run_stage__set_to_draft
+msgid "Set To Draft"
+msgstr "ارجاع الى مسودة"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.hr_payslip_run_view_form_stage
+msgid "Set to Draft"
+msgstr "ارجاع الى مسودة"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__show_for_current_user
+msgid "Show For Current User"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:res.groups,name:plustech_payroll_workflow.group_payroll_readonly
+msgid "Show Payroll Features - Readonly"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.payslip_batch_stage_view_tree
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.payslip_stage_view_form
+msgid "Stage Description and States Meaning"
+msgstr "وصف المرحلة"
+
+#. module: plustech_payroll_workflow
+#: model_terms:ir.ui.view,arch_db:plustech_payroll_workflow.payslip_stage_view_form
+msgid "Stage Search"
+msgstr ""
+
+#. module: plustech_payroll_workflow
+#: model:ir.ui.menu,name:plustech_payroll_workflow.payroll_stage_menu
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: plustech_payroll_workflow
+#: model:ir.model.fields,field_description:plustech_payroll_workflow.field_hr_payslip_run__stage_id
+msgid "Target Stage"
+msgstr ""

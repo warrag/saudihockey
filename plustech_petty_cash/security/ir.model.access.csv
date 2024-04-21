@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_journal_transfer,accoumt.transfer,model_account_journal_transfer,base.group_user,1,1,1,1
+access_account_journal_transfer,account_journal_transfer,model_account_journal_transfer,,1,1,1,1
+access_petty_user,petty_user,model_petty_user,,1,1,1,1
+access_account_transfer_wizard,account_transfer_wizard,model_account_transfer_wizard,,1,1,1,1
+access_petty_cash_reconcile_bill,petty_cash.reconcile.bill,model_petty_cash_reconcile_bill,,1,1,1,1

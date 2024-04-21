@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="user_job_request_rule" model="ir.rule">
+            <field name="name">Only Request</field>
+            <field ref="model_job_request" name="model_id"/>
+            <field name="domain_force">[('user_id','=',user.id)]</field>
+            <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+        </record>
+        <record id="admin_job_request_rule" model="ir.rule">
+            <field name="name">All Job Request</field>
+            <field ref="model_job_request" name="model_id"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_manager'))]"/>
+        </record>
+
+    </data>
+</odoo>

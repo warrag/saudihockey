@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_employee_inherit_form_view">
+            <field name="name">medical.insurance.hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="emergency_phone" position="after">
+                    <field name="insurance_class"/>
+                </field>
+
+            </field>
+        </record>
+    </data>
+</odoo>

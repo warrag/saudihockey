@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="training_trip_form_view" model="ir.ui.view">
+            <field name="name">Training Form View</field>
+            <field name="model">training.training</field>
+            <field name="inherit_id" ref="plustech_employee_training.training_training_form_view"/>
+            <field name="arch" type="xml">
+                <field name="company_currency_id" position="after">
+                    <field name="deserve_perdiem"/>
+                    <field name="business_trip_ids" invisible="1"/>
+                </field>
+               <button name="action_submit" position="after">
+                     <button string="Generate Trip" groups="hr.group_hr_user" name="action_generate_trip"
+                            attrs="{'invisible': ['|','|', ('state', '!=', 'hr'),('deserve_perdiem', '=', False),
+                            ('business_trip_ids', '!=', [])]}"
+                            type="object" class="oe_highlight"/>
+               </button>
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                     <button name="action_trip_view" type="object" class="oe_stat_button" icon="fa-plane"
+                     attrs="{'invisible': ['|',('deserve_perdiem', '=', False), ('business_trip_ids', '!=', [])]}" string="Business Trip"/>
+                </xpath>
+
+            </field>
+        </record>
+
+           <record id="training_trip_search_view" model="ir.ui.view">
+            <field name="name">Training Search View</field>
+            <field name="model">training.training</field>
+            <field name="inherit_id" ref="plustech_employee_training.view_hr_training_request_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="inside">
+                    <separator/>
+                    <filter name="group_training_type" string="Training Type" context="{'group_by':'training_type'}"/>
+                    <filter name="group_executing_agency_id" string="Executing Agency" context="{'group_by': 'executing_agency_id'}"/>
+                </xpath>
+            </field>
+           </record>
+    </data>
+</odoo>

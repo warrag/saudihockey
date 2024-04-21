@@ -1,0 +1,105 @@
+<odoo>
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="salary_definition_template" model="letter.letter">
+            <field name="name">Salary Definition</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="container"  style="width:100%;">
+                  <div class="row"><span>${object.request_date or ''|safe}</span></div>
+                   <div class="row">
+                       <div class="col-2 text-center"><span>To:</span></div>
+                       <div class="col-6 text-center"><p>${object.to_party_id or ''|safe}</p></div>
+                       <div class="col-2 text-right"><span>إلى:</span></div>
+                   </div>
+                <br/><br/>
+               <div class="row" style="border: 2px solid black;">
+                <table class="table table-bordered salary" style="width:100%;text-align: center;border:1.5px  solid black;">
+                    <tr style="background:#D9D9D9;">
+                        <th colspan="2">تعريف بالراتب</th>
+                        <th  colspan="2">Salary Definition</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">بيانات الموظف</th>
+                        <th colspan="2">Personal Information</th>
+                    </tr>
+                    <tr>
+                        <td  class="grey_cells" width="100">الاسم</td>
+                        <td ><span>${object.request_id.name or ''|safe}</span></td>
+                        <td  ><span>${object.request_id.with_context(lang='ar_001').name or ''|safe}</span></td>
+                        <td class="grey_cells" width="100">Name</td>
+                    </tr>
+                    <tr>
+                        <td class="grey_cells" width="100">إقامة رقم</td>
+                        <td colspan="2"><span>${object.request_id.identification_id or ''|safe}</span></td>
+                        <td class="grey_cells" width="100">ID No.</td>
+                    </tr>
+                     <tr>
+                         <td class="grey_cells" width="100">جواز رقم</td>
+                         <td colspan="2"><span>${object.request_id.passport_id or ''|safe}</span></td>
+                         <td class="grey_cells" width="100">Passport NO</td>
+                     </tr>
+                     <tr>
+                         <td class="grey_cells" width="100">الجنسية</td>
+                         <td><span>${object.request_id.country_id.with_context(lang='ar_001').name or ''|safe}</span></td>
+                         <td><span>${object.request_id.country_id.name or ''|safe}</span></td>
+                         <td class="grey_cells" width="100">Nationality</td>
+                     </tr>
+                    <tr>
+                        <td class="grey_cells" width="100">بداية العمل من</td>
+                        <td colspan="2">${object.request_id.join_date or ''|safe}</td>
+                        <td class="grey_cells" width="100">Joining Date</td>
+                    </tr>
+                     <tr>
+                         <td class="grey_cells" width="100">الى</td>
+                         <td><p>ما زال على رأس العمل حتى الان و يتجدد العقد تلقائياً لمدة مماثلة</p></td>
+                         <td><p>Until Present  - the contract period is automatically renewed</p></td>
+                         <td class="grey_cells" width="100">To</td>
+                    </tr>
+                    <tr>
+                        <td class="grey_cells" width="100">الوظيفة</td>
+                        <td><span>${object.request_id.job_id.with_context(lang='ar_001').name or ''|safe}</span></td>
+                        <td><span>${object.request_id.job_id.name or ''|safe}</span></td>
+                        <td class="grey_cells" width="100">Job</td>
+                    </tr>
+                     <tr>
+                         <th class="grey_cells" colspan="2">الراتب الشهري</th>
+                         <th class="grey_cells" colspan="2">Monthly Salary</th>
+                    </tr>
+                     <tr>
+                         <td class="grey_cells" width="100">الراتب الأساسي</td>
+                         <td>${object.contract_id.wage or ''|safe}</td>
+                         <td>${object.contract_id.wage or ''|safe}</td>
+                         <td class="grey_cells" width="100">Basic Salary</td>
+                     </tr>
+                    % for line in object.contract_id.allowance_ids:
+                     <tr>
+                        <td class="grey_cells" width="100">${line.allowance_type.name or ''|safe}</td>
+                        <td>${line.allowance_amount or '0.0'|safe}</td>
+                          <td>${line.allowance_amount or '0.0'|safe}</td>
+                        <td class="grey_cells" width="100">${line.allowance_type.name or ''|safe}</td>
+                    </tr>
+                    % endfor
+                     <tr>
+                         <td class="grey_cells" width="100">الراتب الشهري</td>
+                         <td>${object.contract_id.monthly_yearly_costs or '0.0'|safe}</td>
+                         <td>${object.contract_id.monthly_yearly_costs or '0.0'|safe}</td>
+                         <td class="grey_cells" width="100">Monthly Salary</td>
+                    </tr>
+                    <tr>
+                        <th class="text-right" colspan="2">نشهد نحن في شركة ${object.company_id.with_context(lang='ar_001').name} بأن الموضح إسمه و بياناته أعلاه يعمل لدينا و لا يزال على رأس العمل
+                            حتى تاريخه و يتجدد العقد تلقائياً لمدة مماثلة وبناء على طلبه أعطى هذا التعريف دون أدنى مسؤولية أو التزام تجاه الشركة.
+                            <br/><br/><br/>وتقبلوا تحياتنا،
+                        </th>
+                        <th class="text-left" colspan="2">the ${object.company_id.name or ''|safe} Company certifies that the employee named above is currently a staff
+                        member and the contract period is automatically renewed. This certification is given to hime
+                        for whatever purpose it may serve without commitment on the part of the company.
+                            <br/><br/><br/> Regards,</th>
+                    </tr>
+                </table>
+               </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

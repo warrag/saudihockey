@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data>
+        <record id="module_category_human_resources_business_trip" model="ir.module.category">
+            <field name="name">Business Trip</field>
+            <field name="description">Business Trip</field>
+            <field name="sequence">100</field>
+        </record>
+
+        <record id="group_hr_deputation_user" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="module_category_human_resources_business_trip"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_hr_deputation_officer" model="res.groups">
+            <field name="name">Human Resource Officer</field>
+            <field name="category_id" ref="module_category_human_resources_business_trip"/>
+        </record>
+
+
+        <record id="group_hr_deputation_manager" model="res.groups">
+            <field name="name">Human Resource Manager</field>
+            <field name="category_id" ref="module_category_human_resources_business_trip"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <record id="group_financial_and_administrative_affairs" model="res.groups">
+            <field name="name">Financial and Administrative Affairs</field>
+            <field name="category_id" ref="module_category_human_resources_business_trip"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <record id="group_hr_deputation_ceo" model="res.groups">
+            <field name="name">CEO</field>
+            <field name="category_id" ref="module_category_human_resources_business_trip"/>
+        </record>
+    </data>
+    <data>
+        <record id="rule_hr_deputation_manager" model="ir.rule">
+            <field name="name">Deputation Manager</field>
+            <field name="model_id" ref="model_hr_deputation"/>
+            <field name="groups" eval="[(4, ref('group_hr_deputation_manager'))]"/>
+            <field name="domain_force">[(1,'=', 1)]</field>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="perm_create" eval="1"/>
+        </record>
+
+        <record id="hr_deputation_rule_employee_read" model="ir.rule">
+            <field name="name">Deputation user read</field>
+            <field name="model_id" ref="model_hr_deputation"/>
+            <field name="domain_force">['|',('employee_id.user_id', '=', user.id),
+                ('employee_id.parent_id.user_id',
+                '=', user.id)]
+            </field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4,ref('group_hr_deputation_user'))]"/>
+        </record>
+
+        <record id="hr_deputation_rule_fiance_and_administrative" model="ir.rule">
+            <field name="name">Deputation Finance And Administrative Affairs</field>
+            <field name="model_id" ref="model_hr_deputation"/>
+            <field name="domain_force">[
+                ('state', 'not in', ['finance', 'ceo','paid', 'to_pay'])
+                ]
+            </field>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4,ref('group_financial_and_administrative_affairs'))]"/>
+        </record>
+        <record id="hr_deputation_rule_employee" model="ir.rule">
+            <field name="name">Deputation base.group_user create/write</field>
+            <field name="model_id" ref="model_hr_deputation"/>
+            <field name="domain_force">[
+                '|', ('employee_id.user_id', '=', user.id),
+                ('employee_id.parent_id.user_id', '=', user.id),
+                ('state', 'not in', ['hrm', 'ceo','paid'])
+                ]
+            </field>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4,ref('group_hr_deputation_user'))]"/>
+        </record>
+        <record id="hr_deputation_rule_officer" model="ir.rule">
+            <field name="name">Deputation Officer read</field>
+            <field name="model_id" ref="model_hr_deputation"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups" eval="[(4, ref('group_hr_deputation_officer'))]"/>
+        </record>
+
+        <record id="rule_hr_deputation_multi_company" model="ir.rule">
+            <field name="name">Deputation Multi Company</field>
+            <field name="model_id" ref="model_hr_deputation"/>
+            <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in',
+                company_ids)]
+            </field>
+        </record>
+
+        <record id="rule_deputation_allowance_multi_company" model="ir.rule">
+            <field name="name">Deputation Allowance Multi Company</field>
+            <field name="model_id" ref="model_hr_deputation_allowance"/>
+            <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in',
+                company_ids)]
+            </field>
+        </record>
+        <!-- <record id="rule_deputation_ticket_multi_company" model="ir.rule">
+            <field name="name">Deputation Tickets Multi Company</field>
+            <field name="model_id" ref="model_deputation_flight_ticket"/>
+            <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in',
+                company_ids)]
+            </field>
+        </record> -->
+
+        <record id="hr_flight_ticket_rule_employee_read" model="ir.rule">
+            <field name="name">Flight Ticket User</field>
+            <field name="model_id" ref="model_hr_deputation"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="groups" eval="[(4,ref('plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_user'))]"/>
+        </record>
+
+
+    </data>
+
+
+
+</odoo>

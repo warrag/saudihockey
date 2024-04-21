@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- hr.loan.policy form view -->
+        <record id="hr_loan_policy_view_form" model="ir.ui.view">
+            <field name="name">hr.loan.policy.view.form</field>
+            <field name="model">hr.loan.policy</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="Policy name ..." />
+
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <label for="max_payment_period" />
+                                <div class="o_row" name="max_payment_period">
+                                    <field name="max_payment_period" nolabel="1" />
+                                    <span>/ months</span>
+                                </div>
+                                <label for="min_years" />
+                                <div class="o_row" name="min_years">
+                                    <field name="min_years" nolabel="1" />
+                                    <span>/ years</span>
+                                </div>
+                                
+                            </group>
+                            <group>
+                                <field name="max_amount" />
+                                <label for="max_salaries" />
+                                <div class="o_row" name="max_salaries">
+                                    <field name="max_salaries" nolabel="1" />
+                                    <span>
+                                        <field name="salary_type" nolabel="1" />
+                                    </span>
+                                </div>
+                                
+                                <field name="company_id" groups="base.group_multi_company"
+                                    options="{'no_create': True}" />
+
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="active" widget="boolean_toggle" />
+                                <field name="allow_multi" widget="boolean_toggle" />
+                            </group>
+                        </group>
+                        <group string="Job Positions">
+                            <field name="job_position_ids" nolabel="1" widget="many2many_tags" />
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"
+                            groups="base.group_user" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- loan.policy tree view -->
+        <record id="hr_loan_policy_view_tree" model="ir.ui.view">
+            <field name="name">hr.loan.policy.view.tree</field>
+            <field name="model">hr.loan.policy</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="max_payment_period" />
+                    <field name="max_amount" />
+                    <field name="min_years" />
+                    <field name="max_salaries" />
+                    <field name="allow_multi" widget="boolean_toggle" />
+                    <field name="active" widget="boolean_toggle" />
+                    <field name="company_id" groups="base.group_multi_company" optional="hide" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- loan.policy action window -->
+        <record id="hr_loan_policy_action" model="ir.actions.act_window">
+            <field name="name">Loan Policy</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.loan.policy</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+
+
+    <menuitem id="loan_policy_action" name="Loan Policies" parent="menu_hr_loans"
+        action="hr_loan_policy_action" sequence="8" groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+
+</odoo>

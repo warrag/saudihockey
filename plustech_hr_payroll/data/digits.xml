@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="digits" model="decimal.precision">
+            <field name="name">Contract Allowance</field>
+            <field name="digits">0</field>
+        </record>
+    </data>
+</odoo>

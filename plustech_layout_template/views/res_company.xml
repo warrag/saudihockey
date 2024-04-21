@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_company_custom_inherit_form_view" model="ir.ui.view">
+            <field name="name">res_company_inherit.inherit_form_view</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form" />
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Print Out Configuration">
+                        <group>
+                            <field name="company_name" />
+                        </group>
+                        <group>
+                            <field name="report_footer_text" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_contract_form_view_inherited" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherited.view</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+             <field name="structure_type_id" position="after">
+                <field name="struct_id"/>
+            </field>
+            <xpath expr="//page[@name='information']" position="after">
+                <page string="Allowances" name='allowance'>
+                    <field name="has_allowance" invisible="1"/>
+                    <field name="allowance_ids" context="{'allowance_ids': allowance_ids}" attrs="{'readonly':[('has_allowance', '=', False)]}">
+                        <tree editable="bottom">
+                            <field name="existing_allowance_ids" invisible="1"/>
+                            <field name="allowance_type"/>
+                            <field name="amount_select" required="1"/>
+                            <field name="gosi_deduction" widget="toggle_button"/>
+                            <field name="amount"/>
+                            <field name="allowance_amount"/>
+                        </tree>
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="existing_allowance_ids" invisible="1"/>
+                                    <field name="allowance_type" required="1"/>
+                                    <field name="amount_select" required="1"/>
+                                    <field name="amount" required="1"/>
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+                <page string="Gosi Information" name="gosi_information">
+
+                    <group name="gosi_info">
+                        <group string="Gosi Percentage">
+                            <field name="company_gosi_percentage" readonly="1"/>
+                            <field name="employee_gosi_percentage" readonly="1"/>
+                        </group>
+
+                        <group string="Deduction">
+                            <label for="gosi_company_deduction" string="Company"/>
+                            <div>
+                                <div class="o_row">
+                                    <field name="gosi_company_deduction" readonly="1" class="oe_inline" nolabel="1"/>
+                                    <span class="oe_inline">
+                                        Monthly
+                                    </span>
+                                    <field name="gosi_company_daily" readonly="1" class="oe_inline"/>
+                                    <span class="oe_inline">
+                                        Daily
+                                    </span>
+                                </div>
+                            </div>
+                            <label for="gosi_employee_deduction" string="Employee"/>
+                            <div>
+                                <div class="o_row">
+                                    <field name="gosi_employee_deduction" readonly="1" class="oe_inline" nolabel="1"/>
+                                    <span class="oe_inline">
+                                        Monthly
+                                    </span>
+                                    <field name="gosi_employee_daily" readonly="1" class="oe_inline"/>
+                                    <span class="oe_inline">
+                                        Daily
+                                    </span>
+                                </div>
+                            </div>
+                        </group>
+                         <field name="gois_line_ids" mode="tree" readonly="1">
+                            <tree>
+                                <field name="sequence" invisible="1"/>
+                                <field name="month_char"/>
+                                <field name="days"/>
+                                <field name="gosi_company_daily" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                <field name="gosi_employee_daily" widget='monetary' options="{'currency_field': 'currency_id'}" />
+                                <field name="currency_id" invisible="1"/>
+                            </tree>
+                        </field>
+
+                    </group>
+                    <button type="object" name="get_employee_gosi" string="Update Gosi" colspan="2"
+                            groups="hr.group_hr_manager,hr.group_hr_user" class="oe_stat_button" icon="fa-refresh"/>
+                    <div class="oe_clear"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+    <record id="structure_type_all_employee" model="hr.payroll.structure.type">
+        <field name="name">All Employee</field>
+        <field name="country_id" eval="False"/>
+    </record>
+
+    <record id="structure_main" model="hr.payroll.structure">
+        <field name="name">Main Structure</field>
+        <field name="schedule_pay">monthly</field>
+        <field name="type_id" ref="structure_type_all_employee"/>
+    </record>
+    <record id="provisions" model="hr.salary.rule.category">
+            <field name="name">Provisions</field>
+            <field name="code">PROVISION</field>
+    </record>
+</data>
+     <data noupdate="1">
+     <record id="TOTAL" model="hr.salary.rule.category">
+            <field name="name">Totals</field>
+            <field name="code">TOTAL</field>
+    </record>
+
+     <record id="hr_salary_rule_total_additions" model="hr.salary.rule">
+            <field name="name">Total Additions</field>
+            <field name="code">TADD</field>
+            <field name="sequence" eval="99"/>
+            <field name="category_id" ref="plustech_hr_payroll.TOTAL"/>
+            <field name="struct_id" ref="plustech_hr_payroll.structure_main"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result =  categories.ALW</field>
+        </record>
+
+    <record id="hr_salary_rule_total_deductions" model="hr.salary.rule">
+            <field name="name">Total Deductions</field>
+            <field name="code">TDED</field>
+            <field name="sequence" eval="199"/>
+            <field name="category_id" ref="plustech_hr_payroll.TOTAL"/>
+            <field name="struct_id" ref="plustech_hr_payroll.structure_main"/>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result =  categories.DED</field>
+        </record>
+
+           <record id="hr_rule_gosi" model="hr.salary.rule">
+            <field name="name">GOSI Contribution For Employee</field>
+            <field name="sequence" eval="99"/>
+            <field name="code">GOSI</field>
+            <field name="struct_id"  ref="plustech_hr_payroll.structure_main"/>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = -contract.gosi_employee_deduction</field>
+        </record>
+
+
+        <record id="hr_rule_gosi_comp" model="hr.salary.rule">
+            <field name="name">GOSI Company Contribution For Saudi Employee</field>
+            <field name="sequence" eval="99"/>
+            <field name="code">GOSI_COMP</field>
+            <field name="struct_id"  ref="plustech_hr_payroll.structure_main"/>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.gosi_company_deduction</field>
+        </record>
+
+    </data>
+</odoo>

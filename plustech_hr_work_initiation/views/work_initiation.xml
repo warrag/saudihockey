@@ -1,0 +1,124 @@
+<odoo>
+    <data>
+        <record id="hr_wor_initiation_view_form" model="ir.ui.view">
+            <field name="name">hr.work.initiation.view.form</field>
+            <field name="model">hr.work.initiation</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button string="Submit" name="action_submit"
+                            type="object" class="oe_highlight"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}" />
+                        <button string="Approve" name="action_manager_approve"
+                            type="object" class="oe_highlight"
+                            attrs="{'invisible': ['|',('is_manager','=', False), ('state', '!=', 'direct_manager')]}" />
+                        <button string="Approve" name="action_hr_approve"
+                            type="object" class="oe_highlight" groups="hr.group_hr_user"
+                            attrs="{'invisible': [('state', '!=', 'hr')]}" />
+                        <button name="action_admin_approve" string="Approve" type="object"
+                            groups="hr.group_hr_manager" states="admin"
+                            class="btn-primary" />
+                        <widget id="attach_document" name="attach_document" string="Add Attach"
+                            action="attach_document" />
+                        <field name="state" widget="statusbar"
+                            statusbar_visible="draft,direct_manager,cancel, approved" readonly="1" />
+                        <field name="is_manager" invisible="1" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_get_attachment_view" class="oe_stat_button"
+                                icon="fa-file-text-o"
+                                type="object">
+                                <field name="attachment_number" widget="statinfo" string="Documents"
+                                    options="{'reload_on_button': true}" />
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1 class="mt0">
+                                <field name="name" readonly="True" />
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="request_date" required="1"
+                                    attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Employee Info">
+                                <field name="employee_id" options="{'no_create': 1}" />
+                                <field name="employee_no" />
+                                <field name="job_id" />
+                                <field name="department_id"
+                                    options="{'no_create': True, 'no_create_edit':True, 'no_open': True}"
+                                    readonly="1" />
+                                <field name="manager_id" />
+                            </group>
+
+                        </group>
+                        <group string="Initiation">
+                            <group>
+                                <field name="joining_date" />
+                                <field name="duty_commencement_type_id" required="1" />
+                                <field name="commencement_status" required="1" />
+                                <field name="late_days"
+                                    attrs="{'invisible': [('commencement_status', '=', 'on-time')]}" />
+                            </group>
+                            <group>
+                                <field name="description" required="1" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="approvals" string="Approver's"
+                                attrs="{'invisible': [('approval_ids', '=', [])]}">
+                                <field name="approval_ids" readonly="1">
+                                    <tree>
+                                        <field name="name" />
+                                        <field name="user_id" />
+                                        <field name="state" />
+                                        <field name="date" />
+                                        <!-- <field name="comment" /> -->
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="o_attachment_preview" />
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"
+                            groups="base.group_user" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="employee_work_initiation_view_tree" model="ir.ui.view">
+            <field name="name">hr.work.initiation.view.tree</field>
+            <field name="model">hr.work.initiation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="employee_id" />
+                    <field name="request_date" />
+                    <field name="joining_date" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="employee_work_initiation_action" model="ir.actions.act_window">
+            <field name="name">Work Initiation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.work.initiation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="employee_work_initiation_menu" name="Work Initiation"
+            parent="hr.menu_hr_root"
+            action="employee_work_initiation_action" sequence="19" />
+
+    </data>
+</odoo>

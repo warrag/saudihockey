@@ -1,0 +1,919 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_overtime
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-27 08:56+0000\n"
+"PO-Revision-Date: 2023-03-27 08:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                                <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('date_from', '=', False), ('date_to', '=', False)]}\"/>"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_contract_overtime_view
+msgid "<span>/day</span>"
+msgstr "<span>/يوم</span>"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_contract_overtime_view
+msgid "<span>/hour</span>"
+msgstr "<span>/ساعة</span>"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "<span>Day's</span>"
+msgstr "<span>أيام</span>"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__accounting_date
+msgid "Accounting Date"
+msgstr "التاريخ المحاسبي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_needaction
+msgid "Action Needed"
+msgstr "للإجراء"
+
+#. module: plustech_hr_overtime
+#: model:res.groups,name:plustech_hr_overtime.group_hr_overtime_manager
+msgid "Administrator"
+msgstr "مدير"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__hrs_amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__amount_residual
+msgid "Amount Due"
+msgstr "المبلغ المتبقي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__analytic_account_id
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_company__overtime_analytic_account_id
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_config_settings__overtime_analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__attchd_copy
+msgid "Attach A File"
+msgstr "ارفاق مستندات"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__attendance_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Attendance"
+msgstr "حضور وانصراف"
+
+#. module: plustech_hr_overtime
+#: model:res.groups,name:plustech_hr_overtime.group_hr_overtime_ceo
+msgid "CEO"
+msgstr "المدير التنفيذي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_company__overtime_cal_days
+msgid "Calculation Days"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_company__overtime_cal_hours
+msgid "Calculation Hours"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__cancel
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__type__cash
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_type__type__cash
+msgid "Cash"
+msgstr "نقدية"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.actions.act_window,help:plustech_hr_overtime.hr_overtime_type_action
+msgid "Click to create new Approval Type."
+msgstr "اضغط لانشاء نوع اعتماد جديد"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.actions.act_window,help:plustech_hr_overtime.hr_overtime_action
+msgid "Click to create new Pre Approval Overtime Request."
+msgstr "اضغط لانشاء طلب عمل اضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_res_company
+msgid "Companies"
+msgstr "شركات"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: plustech_hr_overtime
+#: model:ir.ui.menu,name:plustech_hr_overtime.overtime_config_menu
+msgid "Configuration"
+msgstr "التهيئة والاعدادات"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__create_uid
+msgid "Created by"
+msgstr "أدخلت بواسطة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__create_date
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__create_date
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__create_date
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__create_date
+msgid "Created on"
+msgstr "تاريخ الادخال"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__current_user_id
+msgid "Current User"
+msgstr "المستخدم"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__contract_id
+msgid "Current contract of the employee"
+msgstr "العقد الحالي للموظف"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__date_to
+msgid "Date to"
+msgstr "الى تاريخ"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Dates"
+msgstr "التاريخ"
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#, python-format
+msgid "Day Overtime Needs Day Wage in Employee Contract."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_contract__over_day
+msgid "Day Wage"
+msgstr "قيمة اليوم"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__week_day
+msgid "Day of Week"
+msgstr "ايام الاسبوع"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__duration_type__days
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_type__duration_type__days
+msgid "Days"
+msgstr "ايام"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.view_hr_overtime_configuration
+msgid "Default Expense Product And Analytic Account"
+msgstr "صنف المصروف والحساب التحليلي الافتراضي"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.view_hr_overtime_configuration
+msgid "Define overtime Settings"
+msgstr "تعريف اعدادات العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__desc
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__hours_per_day
+msgid "Dialy Hours"
+msgstr "معدل ساعات اليومي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__display_name
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__display_name
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__display_name
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__done
+msgid "Done"
+msgstr "مؤكد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__duration
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Duration"
+msgstr "المدة الزمنية"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__duration_type
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__duration_type
+msgid "Duration Type"
+msgstr "نوع المدة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__employee_number
+msgid "Employee Number"
+msgstr "رقم الوظيفي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__journal_id
+msgid "Expense Journal"
+msgstr "يومية المصاريف"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__attchd_copy_name
+msgid "File Name"
+msgstr "اسم الملف"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__overtime_payment__finance
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__res_company__overtime_payment__finance
+msgid "Finance"
+msgstr "صرف مباشر"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_schedule__week_day__4
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__from_hrs
+msgid "From"
+msgstr "من"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Generate Schedule"
+msgstr "إنشاء جدولة"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Global Leaves"
+msgstr "اجازات عامة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__global_leaves
+msgid "Global Time Off"
+msgstr "اجازة عامة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_hr_overtime
+msgid "HR Overtime"
+msgstr "العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_overtime_type
+msgid "HR Overtime Type"
+msgstr "انواع العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_overtime_type_rule
+msgid "HR Overtime Type Rule"
+msgstr "قواعد انواع العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__duration_type__hours
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_type__duration_type__hours
+msgid "Hour"
+msgstr "ساعة"
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#, python-format
+msgid "Hour Overtime Needs Hour Wage in Employee Contract."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_contract__over_hour
+msgid "Hour Wage"
+msgstr "قيمة الساعة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__days_no_tmp
+msgid "Hours"
+msgstr "الساعات"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__id
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__id
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__id
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__message_needaction
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__message_has_error
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__is_employee
+msgid "Is Employee"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__is_manager
+msgid "Is Manager"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__job_id
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__account_move_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime____last_update
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule____last_update
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type____last_update
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__write_date
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__write_date
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__write_date
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_type__type__leave
+msgid "Leave "
+msgstr "اجازة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__leave_compute
+msgid "Leave Compute"
+msgstr "احتساب الاجازة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__leave_id
+msgid "Leave ID"
+msgstr "الاجازة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__leave_type
+msgid "Leave Type"
+msgstr "نوع الاجازة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__manager_id
+msgid "Manager"
+msgstr "مدير"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_schedule__week_day__0
+msgid "Monday"
+msgstr "الاثنين"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__name
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__name
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#, python-format
+msgid ""
+"No Expense account found for the product %s (or for its category), please "
+"configure one."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#, python-format
+msgid "No Home Address found for the employee %s, please configure one."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__days_no
+msgid "No. of Days"
+msgstr "عدد الايام"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:res.groups,name:plustech_hr_overtime.group_hr_overtime_officer
+msgid "Officer"
+msgstr "موظف"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Other Info"
+msgstr "معلومات اخرى"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__type_line_id
+msgid "Over Time Type"
+msgstr "انواع العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:hr.salary.rule,name:plustech_hr_overtime.hr_salary_rule_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_account_move_line__overtime_id
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_payslip__overtime_ids
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__overtime_id
+#: model:ir.ui.menu,name:plustech_hr_overtime.overtime_submenu
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_contract_overtime_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.view_hr_overtime_configuration
+msgid "Overtime"
+msgstr "عمل الإضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__cash_day_amount
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__cash_hrs_amount
+msgid "Overtime Amount"
+msgstr "مبلغ العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_config_settings__overtime_cal_days
+msgid "Overtime Calculation Days"
+msgstr "احتساب ايام العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_config_settings__overtime_cal_hours
+msgid "Overtime Calculation Hours"
+msgstr "احتساب ساعات العمل الإضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_company__overtime_product_id
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_config_settings__overtime_product_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.view_hr_overtime_configuration
+msgid "Overtime Expense Product"
+msgstr "صنف المصروف للعمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.view_hr_overtime_configuration
+msgid "Overtime Payment Option"
+msgstr "طرق سداد العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_company__overtime_payment
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_res_config_settings__overtime_payment
+msgid "Overtime Payment Options"
+msgstr "طرق سداد العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__overtime_product_id
+msgid "Overtime Product"
+msgstr "صنف العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.actions.act_window,name:plustech_hr_overtime.hr_overtime_action
+#: model:ir.ui.menu,name:plustech_hr_overtime.overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.overtime_tree_view
+msgid "Overtime Request"
+msgstr " عمل الإضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_overtime_schedule
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Overtime Schedule"
+msgstr "جدول العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__overtime_type_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_type_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_type_tree_view
+msgid "Overtime Type"
+msgstr "نوع العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.actions.act_window,name:plustech_hr_overtime.hr_overtime_type_action
+#: model:ir.ui.menu,name:plustech_hr_overtime.overtime_type_submenu
+msgid "Overtime Types"
+msgstr "انواع العمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.view_hr_overtime_configuration
+msgid "Overtime analytic account"
+msgstr "الحساب التحليلي للعمل الاضافي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__paid
+msgid "Paid"
+msgstr "مدفوعة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__payslip_paid
+msgid "Paid in Payslip"
+msgstr "مدفوعة في ايصال المرتبات"
+
+#. module: plustech_hr_overtime
+#: model:ir.model,name:plustech_hr_overtime.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال الرواتب للسداد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__overtime_payment
+msgid "Payment Options"
+msgstr "طرق السداد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__overtime_payment__payroll
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__res_company__overtime_payment__payroll
+msgid "Payroll"
+msgstr "مع الراتب"
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#, python-format
+msgid ""
+"Please configure Default Expense account for Category expense: "
+"`property_account_expense_categ_id`."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Post Journal Entries"
+msgstr "تأكيد قيد اليومية"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__public_holiday
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Public Holiday"
+msgstr "اجازات عامة"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_type_form_view
+msgid "Reference ...."
+msgstr "المرجع"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__cancel_reason
+msgid "Refuse Reason"
+msgstr "سبب الرفض"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+#, python-format
+msgid "Register Payment"
+msgstr "تسجيل دفعة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__manager_id
+msgid "Related user name for the resource to manage its access."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__rule_line_ids
+msgid "Rule Line"
+msgstr "القواعد"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_type_form_view
+msgid "Rules"
+msgstr "القواعد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_schedule__week_day__5
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__schedule_ids
+msgid "Schedule"
+msgstr "جدولة"
+
+#. module: plustech_hr_overtime
+#: model:ir.actions.act_window,name:plustech_hr_overtime.action_hr_overtime_general_config
+#: model:ir.ui.menu,name:plustech_hr_overtime.menu_hr_overtime_global_settings
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_schedule__week_day__6
+msgid "Sunday"
+msgstr "الاحد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__journal_id
+msgid "The journal used when the overtime is done."
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_schedule__week_day__3
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type_rule__to_hrs
+msgid "To"
+msgstr "الى"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__to_pay
+msgid "To Pay"
+msgstr "للسداد"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__total_hours
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Total Hours"
+msgstr "اجمالي الساعات"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_schedule__week_day__1
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__type
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_type__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:res.groups,name:plustech_hr_overtime.group_hr_overtime_user
+msgid "User"
+msgstr "مستخدم"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__ceo
+msgid "Waiting CEO Approval"
+msgstr "في إنتظار إعتماد المدير التنفيذي"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__finance
+msgid "Waiting Finance Approval"
+msgstr "في إنتظار إعتماد المالية"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__hr_approve
+msgid "Waiting For HR Approval"
+msgstr "في إنتظار إعتماد موظف الموارد البشرية"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__dm_approve
+msgid "Waiting For Manager Approval"
+msgstr "في إنتظار إعتماد المدير المباشر"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__state__hrm
+msgid "Waiting HRM Approval"
+msgstr "في إنتظار إعتماد مدير الموارد البشرية"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_hr_overtime__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__overtime_schedule__week_day__2
+msgid "Wednesday"
+msgstr "الاربعاء"
+
+#. module: plustech_hr_overtime
+#: model_terms:ir.ui.view,arch_db:plustech_hr_overtime.hr_overtime_form_view
+msgid "Work Schedule"
+msgstr "جدول العمل"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_overtime_schedule__working_hours
+msgid "Working Hours"
+msgstr "ساعات العمل"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__work_schedule
+msgid "Working Time"
+msgstr "ساعات العمل"
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#, python-format
+msgid "You can not have 2 Overtime requests that overlaps on same day!"
+msgstr "لا يمكن تقديم طلبين عمل اضافي في نفس اليوم"
+
+#. module: plustech_hr_overtime
+#: code:addons/plustech_hr_overtime/models/overtime_request.py:0
+#, python-format
+msgid "You cannot delete overtime request which is not in draft state."
+msgstr "لا يمكنك حذف طلب العمل الاضافي وهو في حالة غير مسودة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields.selection,name:plustech_hr_overtime.selection__hr_overtime__type__leave
+msgid "leave"
+msgstr "الاجازة"
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,help:plustech_hr_overtime.field_account_move_line__overtime_id
+msgid "overtime where the move line come from"
+msgstr ""
+
+#. module: plustech_hr_overtime
+#: model:ir.model.fields,field_description:plustech_hr_overtime.field_hr_overtime__state
+msgid "state"
+msgstr "الحالة"

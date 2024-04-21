@@ -1,0 +1,31 @@
+<openerp>
+    <data>
+        <record id="hr_employee_form_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.view.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//group[@name='employee_service']" position="after">
+                  <group name="duration" string="Service Duration">
+                        <field name="service_duration" />
+                        <field name="service_duration_years" />
+                        <field name="service_duration_months" />
+                        <field name="service_duration_days" />
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_employee_inherit_view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="plustech_hr_employee.hr_employee_inherit_form_view"/>
+            <field name="arch" type="xml">
+              
+                <xpath expr="//field[@name='join_date']" position="after">
+                    <field name="service_termination_date" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

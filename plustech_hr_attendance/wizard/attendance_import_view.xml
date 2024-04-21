@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="attendance_import_wizard">
+            <field name="name">import.attendance.wizard</field>
+            <field name="model">import.attendance</field>
+            <field name="arch" type="xml">
+                <form string="attendance Import Wizard">
+                    <separator
+                            string="This wizard will import attendance form the selected excel file. Please select your .xls or .xlsx file."/>
+                    <group>
+                        <div>
+                            <field name="files" class="oe_inline" filename="datas_fname" required="True"/>
+                            <field name="datas_fname" class="oe_inline" invisible="0" readonly="1"/>
+                        </div>
+                    </group>
+                    <footer>
+                        <button string="Import" name="import_file" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="import_attendance_action">
+            <field name="name">Import attendance</field>
+            <field name="res_model">import.attendance</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem name="Import Attendance Log" parent="hr_attendance.menu_hr_attendance_view_attendances" id="menu_attendance_import" action="import_attendance_action" groups="base.group_user"/>
+
+
+        <!--<act_window-->
+        <!--id="action_import_attendance_file"-->
+        <!--multi="False"-->
+        <!--name="Import Purchase Order Lines"-->
+        <!--key2="client_action_multi"-->
+        <!--res_model="import.attendance"-->
+        <!--src_model="wizard.add.attendance"-->
+        <!--view_mode="form"-->
+        <!--target="new"-->
+        <!--view_type="form"/>-->
+    </data>
+</odoo>

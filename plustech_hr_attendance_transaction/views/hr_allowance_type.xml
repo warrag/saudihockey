@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="allowance_type_form_inherit" model="ir.ui.view">
+            <field name="name">employee.allowance.type.form</field>
+            <field name="model">employee.allowance.type</field>
+            <field name="inherit_id" ref="plustech_hr_payroll.employee_allowance_type_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='leave_compensation']" position="after">
+                    <field name="attendance_deduction"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

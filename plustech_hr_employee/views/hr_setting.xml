@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_employee_config_settings" model="ir.ui.view">
+            <field name="name">Human Resources Settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="hr.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@data-key='hr']" position="inside">
+                    <h2>Notifications</h2>
+                    <div class="row mt16 o_settings_container" name="employees_setting_container">
+                        <div class="col-12 col-lg-6 o_setting_box"
+                             id="id_notification_period_setting"
+                             title="Employee ID Expiration Reminder">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">ID Expiration Reminder</span>
+                                <div class="text-muted" name="hr_employee_id_expiration">
+                                    Employee ID expiration reminder.
+                                </div>
+                                <div class="row">
+                                    <label for="id_days" class="o_light_label col-lg-4 ml8"/>
+                                    <field name="id_days" class="col-lg-1 ml16"/>
+                                </div>
+                                <div class="row">
+                                    <label for="id_reminder_user_ids" class="o_light_label col-lg-2 ml8"/>
+                                    <field name="id_reminder_user_ids" widget="many2many_tags" class="col-lg-1 ml16"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box"
+                             id="passport_notification_period_setting"
+                             title="Employee Passport Expiration Reminder">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Passport Expiration Reminder</span>
+                                <div class="text-muted" name="hr_employee_passport_expiration">
+                                    Employee passport expiration reminder.
+                                </div>
+                                <div class="row">
+                                    <label for="passport_days" class="o_light_label col-lg-4 ml8"/>
+                                    <field name="passport_days" class="col-lg-1 ml16"/>
+                                </div>
+                                <div class="row">
+                                    <label for="passport_reminder_user_ids" class="o_light_label col-lg-2 ml8"/>
+                                    <field name="passport_reminder_user_ids" widget="many2many_tags" class="col-lg-1 ml16"/>
+                                </div>
+                            </div>
+                        </div>
+                           <div class="col-12 col-lg-6 o_setting_box"
+                             id="membership_notification_period_setting"
+                             title="Employee membership Expiration Reminder">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Membership Expiration Reminder</span>
+                                <div class="text-muted" name="hr_employee_membership_expiration">
+                                    Employee membership expiration reminder.
+                                </div>
+                                <div class="row">
+                                    <label for="membership_days" class="o_light_label col-lg-4 ml8"/>
+                                    <field name="membership_days" class="col-lg-1 ml16"/>
+                                </div>
+                                <div class="row">
+                                    <label for="membership_reminder_user_ids" class="o_light_label col-lg-2 ml8"/>
+                                    <field name="membership_reminder_user_ids" widget="many2many_tags" class="col-lg-1 ml16"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//div[@id='enrich_employee_setting']" position="after">
+                    <div class="col-12 col-lg-6 o_setting_box" id="id_generation_setting" title="Employee ID Generation">
+                            <div class="o_setting_right_pane">
+                                 <label string="Employee ID Generation Method" for="default_id_generation_method"/>
+                            <div class="text-muted">
+                                Employee ID Generation Method
+                            </div>
+                                <div class="content-group" name="hr_employee_id_generation_options">
+                                    <div class="mt16">
+                                        <field name="default_id_generation_method" class="o_light_label" widget="radio"/>
+                                    </div>
+                                    <div class="mt16" attrs="{'invisible': [('default_id_generation_method', '=', 'manual')]}">
+                                    <label for="default_employee_sequence_id"/>
+                                    <field name="default_employee_sequence_id" context="{'default_is_employee_id': 1}"
+                                           domain="[('is_employee_id', '=', True)]"/>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

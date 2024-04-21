@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_eos_reason_user,hr.eos.reason.user,model_end_service_reason,hr.group_hr_user,1,1,1,1
+access_end_of_service_reward,access_end_of_service_reward,model_end_of_service_reward,,1,1,1,1
+access_eos_rules,eos_rules,model_eos_rules,,1,1,1,1
+access_reward_details,reward.details,model_reward_details,,1,1,1,1
+access_eos_other_input_user,eos.other.input.user,model_eos_other_input,base.group_user,1,0,0,0
+access_eos_other_input_officer,eos.other.input.officer,model_eos_other_input,hr.group_hr_user,1,1,1,1
+access_eos_extra_dues_user,eos.extra.dues.user,model_eos_extra_dues,base.group_user,1,0,0,0
+access_eos_extra_dues_officer,eos.extra.dues.officer,model_eos_extra_dues,hr.group_hr_user,1,1,1,1
+access_eos_extra_deduction_user,eos.extra.deduction.user,model_eos_extra_deduction,base.group_user,1,0,0,0
+access_eos_extra_deduction_officer,eos.extra.deduction.officer,model_eos_extra_deduction,hr.group_hr_user,1,1,1,1
+

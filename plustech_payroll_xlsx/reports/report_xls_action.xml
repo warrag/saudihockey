@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <report
+        id="inma_payroll_report"
+        model="hr.payslip.run"
+        string="INMA Payroll Sheet"
+        report_type="xlsx"
+        name="xlsx_payroll_report.inma"
+        file="INMA Payroll Sheet"
+        attachment_use="False"
+        menu="False"
+        />
+
+         <report
+        id="rajhi_payroll_report"
+        model="hr.payslip.run"
+        string="Alrajhi Bank WPS Payroll"
+        report_type="xlsx"
+        name="xlsx_payroll_report.alrajhi_wps"
+        file="PSH_WPS_Payroll_Upload_File"
+        attachment_use="False"
+         menu="False"
+        />
+
+     <report
+        id="rajhi_cards_payroll_report"
+        model="hr.payslip.run"
+        string="Alrajhi Bank Payroll(Cards)"
+        report_type="xlsx"
+        name="xlsx_payroll_report.alrajhi_cards"
+        file="PayrollCardsUploadWPS"
+        attachment_use="False"
+         menu="False"
+        />
+    <report
+        id="payslip_batch_excel_report"
+        model="hr.payslip.run"
+        string="Payslips Batches Report(XLS)"
+        report_type="xlsx"
+        name="plustech_hr_payroll.batch"
+        file="plustech_hr_payroll.batch"
+        />
+
+</odoo>

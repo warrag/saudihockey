@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="resource_calendar_inherit_form_view" model="ir.ui.view">
+            <field name="name">resource.calendar.inherit.form</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="plustech_hr_attendance.resource_calendar_inherit_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='check_in_necessary']" position="after">
+                    <field name="check_in_early"/>
+                    <field name="min_ot_check_in"/>
+                </xpath>
+                <xpath expr="//field[@name='check_out_necessary']" position="after">
+                    <field name="check_out_delay"/>
+                    <field name="min_ot_check_out"/>
+                </xpath>
+                <xpath expr="//group[@name='attendance_deduction']" position="after">
+                    <group string="Overtime Computation">
+                        <field name="ot_working_day" widget="float_time"/>
+                        <field name="ot_holiday" widget="float_time"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

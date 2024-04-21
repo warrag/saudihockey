@@ -1,0 +1,227 @@
+<odoo>
+    <data>
+        <report id="salary_definition_2_report_id" model="letter.request" string="Letter Print" report_type="qweb-pdf"
+                name="plustech_hr_employee_letter.salary_definition_2_report_template"
+                file="plustech_hr_employee_letter.salary_definition_2_report_template" attachment_use="False"
+                menu="False"/>
+
+        <template id="salary_definition_2_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+
+                    <t t-if="not o" t-set="o" t-value="doc"/>
+
+                    <t t-if="not company">
+                        <!-- Multicompany -->
+                        <t t-if="company_id">
+                            <t t-set="company" t-value="company_id"/>
+                        </t>
+                        <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                            <t t-set="company" t-value="o.company_id.sudo()"/>
+                        </t>
+                        <t t-else="else">
+                            <t t-set="company" t-value="res_company"/>
+                        </t>
+                    </t>
+                    <t t-set="data_report_margin_top" t-value="40"/>
+                    <t t-set="data_report_header_spacing" t-value="10"/>
+                    <t t-set="data_report_dpi" t-value="110"/>
+                    <t t-call="plustech_layout_template.plustech_layout_template_layout">
+                        <t t-set="doc" t-value="doc.with_context(lang=doc.env.user.lang)"/>
+                        <t t-set="direction" t-value="ltr"/>
+                        <div class="page" style="font-family:Sakkal Majalla !important;font-size:26px;direction:ltr">
+                            <style>
+                                td {
+                                padding-left:10px !important;
+                                padding-right:10px !important;
+                                text-align: center;
+                                border-bottom:1px solid black !important;
+                                border-top:1px solid black !important;
+                                border-left:1px solid black !important;
+                                border-right:1px solid black !important;
+                                }
+                            </style>
+
+
+                            <table class="table table-borderless" style="direction:rtl !important">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:right" colspan="3">
+                                            تعريف بالراتب
+                                        </td>
+                                        <td style="text-align:left" colspan="3">
+                                            Salary Definition
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right">
+                                            التاريخ
+                                        </td>
+                                        <td style="text-align:center" colspan="2">
+                                            2/2/2200
+                                        </td>
+                                        <td style="text-align:center" colspan="2">
+                                            2/2/2200
+                                        </td>
+                                        <td style="text-align:left">
+                                            Date
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:20%;text-align:right">
+                                            السادة
+                                        </td>
+                                        <td style="width:30%;text-align:center" colspan="2">
+                                            مصرف الانماء
+                                        </td>
+                                        <td style="width:30%;text-align:center" colspan="2">
+                                            Alinma Bank
+                                        </td>
+                                        <td style="width:20%;text-align:left">
+                                            To
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right" colspan="3">
+                                            <p>
+                                                بهذا نفيدكم بأن الأستاذ/
+                                                <span>
+                                                    <t t-esc="doc.request_id.with_context(lang='ar_001').name"/>
+                                                </span>
+                                                الموضحه بياناته ادناه، يصرف له
+                                                بعد الاستقطاعات الشهرية الثابتة راتب شهري مقداره (
+                                                <span t-esc="doc.request_id.contract_id.monthly_yearly_costs"/>
+                                                ريال)
+                                                <span t-esc="doc.request_id.contract_id.amount_to_text_arabic(doc.request_id.contract_id.monthly_yearly_costs)"/>
+                                                لا غير.
+                                            </p>
+                                        </td>
+                                        <td style="text-align:left" colspan="3">
+                                            <p>
+                                                This letter is to certify that <span t-esc="doc.request_id.with_context(lang='ar_001').name"/> is an employee of
+                                                <span t-esc="doc.company_id.name"/> with a monthly salary of <span t-esc="doc.request_id.contract_id.monthly_yearly_costs"/> SAR.
+                                            </p>
+                                        </td>
+                                    </tr>
+
+                                    <tr t-if="doc.field_ids.filtered(lambda line: line.field_id.technical_name == 'emp_name' and line.visible)">
+                                        <td rowspan="2" style="vertical-align: middle;text-align:right">
+                                            الاسم
+                                        </td>
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.with_context(lang='ar_001').name"/>
+                                        </td>
+
+                                        <td rowspan="2" style="vertical-align: middle;text-align:left">
+                                            name
+                                        </td>
+                                    </tr>
+                                    <tr t-if="doc.field_ids.filtered(lambda line: line.field_id.technical_name == 'emp_name' and line.visible)">
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.with_context(lang='en_US').name"/>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="doc.field_ids.filtered(lambda line: line.field_id.technical_name == 'job' and line.visible)">
+                                        <td rowspan="2" style="vertical-align: middle;text-align:right">
+                                            المسمس الوظيفي
+                                        </td>
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.job_id.with_context(lang='ar_001').name"/>
+                                        </td>
+
+                                        <td rowspan="2" style="vertical-align: middle;text-align:left">
+                                            Position
+                                        </td>
+                                    </tr>
+                                    <tr t-if="doc.field_ids.filtered(lambda line: line.field_id.technical_name == 'job' and line.visible)">
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.job_id.with_context(lang='en_US').name"/>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="doc.field_ids.filtered(lambda line: line.field_id.technical_name == 'identification_id' and line.visible)">
+                                        <td style="text-align:right">
+                                            رقم الهوية /الاقامة
+                                        </td>
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.identification_id"/>
+                                        </td>
+
+                                        <td style="text-align:left">
+                                            National ID
+                                        </td>
+                                    </tr>
+                                    <tr t-if="doc.field_ids.filtered(lambda line: line.field_id.technical_name == 'nationality' and line.visible)">
+                                        <td style="text-align:right">
+                                            الجنسية
+                                        </td>
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.with_context(lang='ar_001').country_id.name"/>
+                                        </td>
+
+                                        <td style="text-align:left">
+                                            Nationality
+                                        </td>
+                                    </tr>
+                                    <tr t-if="doc.field_ids.filtered(lambda line: line.field_id.technical_name == 'joining_date' and line.visible)">
+                                        <td style="text-align:right">
+                                            تاريخ الالتحاق بالعمل
+                                        </td>
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.contract_id.date_start"/>
+                                        </td>
+
+                                        <td style="text-align:left">
+                                            Joining Date
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:right">
+                                            الراتب الاساسي
+                                        </td>
+                                        <td style="text-align:center" colspan="4">
+                                            <t t-esc="doc.request_id.contract_id.wage"/>
+                                        </td>
+
+                                        <td style="text-align:left">
+                                            Basic Salary
+                                        </td>
+                                    </tr>
+                                    <tr t-foreach="doc.request_id.contract_id.allowance_ids" t-as="line">
+
+                                        <td class="border_td" style="text-align:right">
+                                            <t t-esc="line.allowance_type.with_context(lang='ar_001').name"/>
+                                        </td>
+                                        <td class="border_td" style="text-align:center" colspan="4">
+                                            <t t-esc="line.allowance_amount"/>
+                                        </td>
+
+                                        <td class="border_td" style="text-align:left">
+                                            <t t-esc="line.allowance_type.with_context(lang='en_US').name"/>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                            <p>
+                                <span>
+
+                                    وما زال على رأس العمل حتى تاريخه، وقد أعطي هذا التعريف بناءً على طلبه دون أدنى
+                                    مسؤولية على شركة وادي الرياض، علماً بان مصدر دخله من الراتب فقط.
+                                </span>
+                            </p>
+                            <p>
+                                <span>
+
+                                    This certification is being issued upon his request for whatever legal purpose it
+                                    may serve him, with no further responsibility toward others.
+                                </span>
+                            </p>
+                        </div>
+
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

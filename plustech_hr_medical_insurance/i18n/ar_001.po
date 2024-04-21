@@ -1,0 +1,1405 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_medical_insurance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-26 11:31+0000\n"
+"PO-Revision-Date: 2022-10-26 11:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_medical_insurance
+#: model:mail.template,body_html:plustech_hr_medical_insurance.medical_cancel_email_template
+#: model:mail.template,body_html:plustech_hr_medical_insurance.medical_insu_email_template
+msgid ""
+"<?xml version=\"1.0\"?>\n"
+"<div>\n"
+"            Dear {{object.policy_id.partner_id.name}} <br/>\n"
+"                <br/>\n"
+"\n"
+"                <br/>\n"
+"                <br/>\n"
+"\n"
+"            </div>\n"
+"        "
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_kanban
+msgid "<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Duration\" title=\"Duration\"/>"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_record_insurance_view_form
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                                    <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('start_date', '=', False), ('end_date', '=', False)]}\"/>"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_kanban
+msgid "<strong>-</strong>"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_kanban
+msgid "<strong>Class :</strong>"
+msgstr "<strong>الفئة :</strong>"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_kanban
+msgid "<strong>Policy :</strong>"
+msgstr "<strong>بوليصة :</strong>"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_needaction
+msgid "Action Needed"
+msgstr "للإجراء"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Add Attach"
+msgstr "ارفاق مستندات"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.res_config_settings_view_form
+msgid "Add family members to medical insurance."
+msgstr "اضافة افراد العائلة للتامين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__afford_amount
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__afford_amount
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__afford_amount
+msgid "Afford Amount"
+msgstr "نسبة التحمل"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__age
+msgid "Age"
+msgstr "العمر"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__agreement_id
+msgid "Agreement"
+msgstr "اتفاقية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__amount
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__amount
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__amount
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__amount
+msgid "Amount"
+msgstr "مبلغ"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/wizard/insurance_record_import.py:0
+#, python-format
+msgid "Amount is invalid at row number %s. Please check."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__annual_premium
+msgid "Annual Premium"
+msgstr "إشتراك السنوي"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_kanban
+msgid "Annual Premium:"
+msgstr "إشتراك السنوي"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/insurance_policy.py:0
+#, python-format
+msgid "Basic category must be unique!"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__beneficiary
+msgid "Beneficiaries"
+msgstr "المستفيدين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__bill_id
+msgid "Bill"
+msgstr "فاتورة شراء"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Bills"
+msgstr "فواتير مشتريات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__cancel_request__state__cancel
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_policy__state__cancel
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_records_import_wizard
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+msgid "Cancel Information"
+msgstr "معلومات الالغاء"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.cancel_request_action
+msgid "Cancel request"
+msgstr "طلب الغاء"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.cancel_request_menu_action
+msgid "Cancellation"
+msgstr "طلب الغاء"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__category_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__line_ids
+msgid "Categories"
+msgstr "الفئات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__categ_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__categ_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__category_id
+msgid "Category"
+msgstr "فئه"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/hr_employee_medical.py:0
+#, python-format
+msgid "Claims"
+msgstr "المطالبات"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+msgid "Classes"
+msgstr "الفئات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__color
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__color
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__color
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__color
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__color
+msgid "Color Index"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__company_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__company_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__company_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_search
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.medical_insurance_confugurtion
+msgid "Configuration"
+msgstr "الاعدادات"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Create Bill"
+msgstr "إنشاء فاتورة"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+msgid "Create Purchase Agreement"
+msgstr "إنشاء فاتورة مشتريات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__create_uid
+msgid "Created by"
+msgstr "انشئ بوايطة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__create_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__create_date
+msgid "Created on"
+msgstr "انشء في "
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__currency_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__currency_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__currency_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__current_categ_id
+msgid "Current Category"
+msgstr "الفئة الحالية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__insurance_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__insurance_id
+msgid "Current Insurance"
+msgstr "التامين الحالي"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__employee_insurance_record__relation__daughter
+msgid "Daughter"
+msgstr "إبنة"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_kanban
+msgid "Delete"
+msgstr "حذف"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__department_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__department_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__employee_insurance_record__member_type__dependent
+msgid "Dependent"
+msgstr "تابع"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_employee_insurance_record_search
+msgid "Dependents"
+msgstr "توابع"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__description
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__category_lines
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__category_lines
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__category_lines
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_form
+msgid "Details"
+msgstr "التفاصيل "
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__display_name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Documents"
+msgstr "المرفقات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__cancel_request__state__done
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_request__state__done
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__upgrade_request__state__done
+msgid "Done"
+msgstr "تم"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__cancel_request__state__draft
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_policy__state__draft
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_request__state__draft
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__upgrade_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_record_insurance_view_form
+msgid "Duration"
+msgstr "المدة"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_kanban
+msgid "Edit..."
+msgstr "تحرير..."
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_hr_employee
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__employee_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_employee_insurance_record_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_request__state__employee
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__upgrade_request__state__employee
+msgid "Employee Approval"
+msgstr "موافقة الموظف"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/wizard/insurance_record_import.py:0
+#, python-format
+msgid "Employee ID %s is at row number %s. is not exist please check."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_employee_insurance_record_search
+msgid "Employee Insurance Record"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__employee_id
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__employee_number
+msgid "Employee Number"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_employee_insurance_record_search
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__end_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__files
+msgid "Excel File"
+msgstr "ملف اكسل"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_policy__state__expired
+msgid "Expired"
+msgstr "منتهي"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__family_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Family"
+msgstr "العائلة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_res_company__include_family
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_res_config_settings__include_family
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_res_config_settings__medical_insurance_product_id
+msgid "Family Include"
+msgstr "تأمين التوابع"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__employee_insurance_record__relation__father
+msgid "Father"
+msgstr "أب"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__datas_fname
+msgid "File Name"
+msgstr "اسم الملف"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_form
+msgid "General Information"
+msgstr "المعلومات العامة"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_employee_insurance_record_search
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__has_message
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__has_message
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__has_message
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__has_message
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__cancel_request__state__hr
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_request__state__hr
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__upgrade_request__state__hr
+msgid "Hr"
+msgstr "الموارد البشرية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__cancel_request__state__hr_manager
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_request__state__hr_manager
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__upgrade_request__state__hr_manager
+msgid "Hr Manager Approval"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_form
+msgid "Hr Manager Approve"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__message_needaction
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__message_unread
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__message_needaction
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__message_unread
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__message_needaction
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__message_unread
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__message_needaction
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__message_unread
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__message_needaction
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__message_has_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__message_has_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__message_has_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__message_has_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__message_has_error
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_records_import_wizard
+msgid "Import"
+msgstr "استيراد"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.import_insurance_records_action
+msgid "Import Medical Insurance"
+msgstr "استيراد ملفات التأمين"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_record_insurance_view_form
+msgid "Import Records"
+msgstr "استيراد ملفات"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.res_config_settings_view_form
+msgid "Include Family"
+msgstr "تضمين العائلة"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/hr_employee_medical.py:0
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_hr_employee__insurance_ids
+#, python-format
+msgid "Insurance"
+msgstr "تامين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__insurance_class
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_hr_employee__insurance_class
+msgid "Insurance Class"
+msgstr "فئة التامين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__name
+msgid "Insurance Company"
+msgstr "شركة التأمين"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_record_insurance_view_form
+msgid "Insurance Company name ..."
+msgstr "اسم شركة التامين..."
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Insurance Information"
+msgstr "معلومات التامين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.insurance_policy_action
+#: model:ir.model,name:plustech_hr_medical_insurance.model_insurance_policy
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_search
+msgid "Insurance Policy"
+msgstr "بوليصة التامين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_policy_category
+msgid "Insurance Policy Category"
+msgstr "فئة بوليصة التأمين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_policy_category_line
+msgid "Insurance Policy Category Line"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_policy_category_item
+msgid "Insurance Policy Item"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.medical_insurance_record_menu
+msgid "Insurance Records"
+msgstr "ملفات التأمين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_cancel_request
+#: model:ir.model,name:plustech_hr_medical_insurance.model_insurance_request
+#: model:ir.model,name:plustech_hr_medical_insurance.model_upgrade_request
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.insurance_request_menu_action
+msgid "Insurance Request"
+msgstr "طلب تامين"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/hr_employee_medical.py:0
+#, python-format
+msgid "Insurance amount must be greater then premium amount!"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__is_basic
+msgid "Is Basic Category"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.policy_category_item_action
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.policy_category_item_menu_action
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.policy_category_view_form
+msgid "Items"
+msgstr "البنود"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__job_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__job_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__job_id
+msgid "Job Title"
+msgstr "الوظيفة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line____last_update
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_import_insurance_record__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__write_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:res.groups,name:plustech_hr_medical_insurance.group_hr_medical_insurance_manager
+msgid "Manager"
+msgstr "مدير"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/insurance_policy.py:0
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.insurance_request_action
+#: model:ir.module.category,name:plustech_hr_medical_insurance.category_medical_insurance
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.medical_insurance_menu_main
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.medical_insurance_menu_root
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.res_config_settings_view_form
+#, python-format
+msgid "Medical Insurance"
+msgstr "التامين الطبي"
+
+#. module: plustech_hr_medical_insurance
+#: model:mail.template,name:plustech_hr_medical_insurance.medical_cancel_email_template
+msgid "Medical Insurance Cancel Request"
+msgstr "إلغاء التأمين"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_records_import_wizard
+msgid "Medical Insurance Import Wizard"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_res_company__medical_insurance_product_id
+msgid "Medical Insurance Product"
+msgstr "منتج التأمين الطبي"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.act_medical_record_view
+#: model:ir.model,name:plustech_hr_medical_insurance.model_medical_insurance_record
+msgid "Medical Insurance Records"
+msgstr "ملفات التأمين الطبي"
+
+#. module: plustech_hr_medical_insurance
+#: model:mail.template,name:plustech_hr_medical_insurance.medical_insu_email_template
+msgid "Medical Insurance Request"
+msgstr "طلب تأمين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__member_ids
+msgid "Member"
+msgstr "المشترك"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.employee_insurance_record_view_tree
+msgid "Member Name"
+msgstr "اسم المشترك"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__member_type
+msgid "Member Type"
+msgstr "نوع المشترك"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/wizard/insurance_record_import.py:0
+#, python-format
+msgid "Member Type is invalid at row number %s. Please check."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/wizard/insurance_record_import.py:0
+#, python-format
+msgid "Member age is invalid at row number %s. Please check."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/medical_insurance_record.py:0
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__member_count
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.employee_insurance_record_view_tree
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_kanban
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_record_insurance_view_form
+#, python-format
+msgid "Members"
+msgstr "المشتركين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__employee_insurance_record__relation__mother
+msgid "Mother"
+msgstr "أم"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_item__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/wizard/insurance_record_import.py:0
+#, python-format
+msgid "Name is invalid at row number %s. Please check."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/cancel_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/cancel_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/cancel_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/insurance_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/insurance_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/insurance_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/upgrade_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/upgrade_request.py:0
+#: code:addons/plustech_hr_medical_insurance/models/upgrade_request.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__up_categ_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__categ_id
+msgid "New Category"
+msgstr " الفئة الجديدة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__note
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__note
+msgid "Notice"
+msgstr "ملاحظة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__attachment_number
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__attachment_number
+msgid "Number of Attachments"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__name
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__name
+msgid "Number#"
+msgstr "الرقم"
+
+#. module: plustech_hr_medical_insurance
+#: model:res.groups,name:plustech_hr_medical_insurance.group_hr_medical_insurance_officer
+msgid "Officer"
+msgstr "موظف موارد البشرية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/hr_employee_medical.py:0
+#, python-format
+msgid "Passed Amount should be greater then 0"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__payment_method
+msgid "Payment Method"
+msgstr "طريقة الدفع"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__percentage
+msgid "Percentage"
+msgstr "نسبة التحمل"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__po_id
+msgid "Po"
+msgstr "امر شراء"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.medical_policy_menu_action
+msgid "Policies"
+msgstr "بوليصات التأمين"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__policy_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__policy_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category__policy_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_purchase_requisition__policy_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__policy_id
+msgid "Policy"
+msgstr "بوليصة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__number
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__policy_number
+msgid "Policy Number"
+msgstr "رقم البوليصة"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_record_insurance_view_form
+msgid "Policy Number ..."
+msgstr "رقم البوليصة ..."
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+msgid "Policy name ..."
+msgstr "اسم البوليصة..."
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.res_config_settings_view_form
+msgid "Project Income Product"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/insurance_policy.py:0
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+#, python-format
+msgid "Purchase Agreement"
+msgstr "امر شراء"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_purchase_requisition
+msgid "Purchase Requisition"
+msgstr "طلب الشراء"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/wizard/insurance_record_import.py:0
+#, python-format
+msgid "Relation Type is invalid at row number %s. Please check."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_employee_insurance_record__relation
+msgid "Relation with employee"
+msgstr "صلة بالموظف"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__relation
+msgid "Relationship"
+msgstr "صلة القرابة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__renew_date
+msgid "Renewal Due On"
+msgstr "تاريخ التجديد"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__request_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__request_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤل"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Send Email"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__partner_id
+msgid "Service Provider"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.action_medical_insurance_config_settings
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.menu_medical_insurance_general_settings
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_medical_record_kanban
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__show_fam
+msgid "Show Fam"
+msgstr "اظهار العائلة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__show_up_categ
+msgid "Show Up Categ"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__employee_insurance_record__relation__son
+msgid "Son"
+msgstr "إبن"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__employee_insurance_record__relation__spouse
+msgid "Spouse"
+msgstr "زوج/زوجة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__start_date
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__state
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__state
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__state
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__activity_state
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__activity_state
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__activity_state
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__activity_state
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_form
+msgid "Submit"
+msgstr "ارسال"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/hr_employee_medical.py:0
+#, python-format
+msgid "There is no payable account defined for this supplier: \"%s\"."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_records_import_wizard
+msgid ""
+"This wizard will import medical insurance form the selected excel file. "
+"Please select your .xls or .xlsx file."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.employee_insurance_record_view_tree
+msgid "Total Cost"
+msgstr "مبلغ الكلي"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_unread
+msgid "Unread Messages"
+msgstr "رساله غير مقروءه"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.ui.menu,name:plustech_hr_medical_insurance.upgrade_request_menu_action
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+msgid "Upgrade"
+msgstr "طلب ترقية"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_form
+msgid "Upgrade Information"
+msgstr "معلومات الترقية"
+
+#. module: plustech_hr_medical_insurance
+#: code:addons/plustech_hr_medical_insurance/models/insurance_request.py:0
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+#, python-format
+msgid "Upgrade Request"
+msgstr "طلب ترقية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.actions.act_window,name:plustech_hr_medical_insurance.upgrade_request_action
+msgid "Upgrade request"
+msgstr "طلب ترقية"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__insurance_policy__state__done
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.cancel_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_policy_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_form
+msgid "Validate"
+msgstr "موافقة"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_cancel_request__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_policy__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_insurance_request__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_medical_insurance_record__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_upgrade_request__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_cancel_request__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_policy__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_insurance_request__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_medical_insurance_record__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_medical_insurance.field_upgrade_request__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields.selection,name:plustech_hr_medical_insurance.selection__employee_insurance_record__member_type__employee
+msgid "employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.insurance_request_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.upgrade_request_view_form
+msgid "employee Approve"
+msgstr "موافقة الموظف"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_employee_insurance_record
+msgid "employee.insurance.record"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model,name:plustech_hr_medical_insurance.model_import_insurance_record
+msgid "import.insurance.record"
+msgstr ""
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_policy_category_line__item
+msgid "item"
+msgstr "البند"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.hr_employee_insurance_record_search
+msgid "member_type"
+msgstr "نوع المشترك"
+
+#. module: plustech_hr_medical_insurance
+#: model:ir.model.fields,field_description:plustech_hr_medical_insurance.field_employee_insurance_record__name
+msgid "name"
+msgstr "الاسم"
+
+#. module: plustech_hr_medical_insurance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_medical_insurance.medical_records_import_wizard
+msgid "or"
+msgstr "او"
+
+#. module: plustech_hr_medical_insurance
+#: model:mail.template,subject:plustech_hr_medical_insurance.medical_cancel_email_template
+#: model:mail.template,subject:plustech_hr_medical_insurance.medical_insu_email_template
+msgid "{{object.name}}"
+msgstr ""

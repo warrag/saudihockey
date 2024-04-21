@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="group_hr_contract_all" model="res.groups">
+            <field name="name">Readonly: All Contracts</field>
+            <field name="category_id" ref="base.module_category_human_resources_contracts"/>
+        </record>
+        <record id="group_hr_contract_own" model="res.groups">
+            <field name="name">Readonly: Own Contracts</field>
+            <field name="category_id" ref="base.module_category_human_resources_contracts"/>
+        </record>
+<!-- 
+        <record id="hr_work_entry_contract_enterprise.hr_menu_contract" model="ir.ui.menu">
+            <field name="groups_id"
+                   eval="[(4, ref('plustech_hr_contract.group_hr_contract_all')), (4, ref('plustech_hr_contract.group_hr_contract_own'))]"/>
+        </record>
+
+        <record id="hr_contract.hr_menu_contract_history" model="ir.ui.menu">
+            <field name="attribute"
+                   eval="invisible"/>
+        </record> -->
+
+
+        <record id="hr_contract_rule_group_readonly_all" model="ir.rule">
+            <field name="name">Readonly all contract</field>
+            <field name="model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_hr_contract_all'))]"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="hr_contract_rule_group_readonly_own" model="ir.rule">
+            <field name="name">Readonly own contract</field>
+            <field name="model_id" ref="hr_contract.model_hr_contract"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_hr_contract_own'))]"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+         <record id="hr_contract_history_rule_group_readonly_all" model="ir.rule">
+            <field name="name">Readonly all contract</field>
+            <field name="model_id" ref="hr_contract.model_hr_contract_history"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_hr_contract_all'))]"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <record id="hr_contract_history_rule_group_readonly_own" model="ir.rule">
+            <field name="name">Readonly own contract</field>
+            <field name="model_id" ref="hr_contract.model_hr_contract_history"/>
+            <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_hr_contract_own'))]"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!--  hr.contract.employee_.report  -->
+        <record id="hr_contract_employee_report_multi_company" model="ir.rule">
+            <field name="name">HR Contract Employee Report Multi Company</field>
+            <field name="model_id" ref="hr_contract_reports.model_hr_contract_employee_report"/>
+            <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]
+            </field>
+        </record>
+    </data>
+</odoo>

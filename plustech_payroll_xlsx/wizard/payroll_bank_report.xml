@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="payroll_bank_report" model="ir.ui.view">
+            <field name="name">Payroll Bank Sheet</field>
+            <field name="model">payroll.bank.report</field>
+            <field name="arch" type="xml">
+                <form string="Payroll Bank Sheet">
+                    <span class="o_form_label">Selected Sheet template to print excel sheet.</span>
+                    <group>
+                        <group>
+                            <field name="report_type" options="{'no_create': 1, 'no_open': 1}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Print" name="action_print_excel" type="object" default_focus="1"
+                                class="btn-primary" data-hotkey="q"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_print_payroll_excel" model="ir.actions.act_window">
+            <field name="name">Payroll Bank Sheet</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payroll.bank.report</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="payroll_bank_report"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+            <field name="help">This wizard will validate all journal entries selected. Once journal entries are
+                validated, you can not update them anymore.
+            </field>
+        </record>
+
+    </data>
+</odoo>

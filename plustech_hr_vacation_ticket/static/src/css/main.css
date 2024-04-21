@@ -1,0 +1,12 @@
+.ticket-fare-button {
+  width:20px; 
+  height:20px;
+  padding: 0px !important;
+  border-radius: 4px !important;
+}
+.air-fare{
+  margin: 5px 20px 0px 10px;
+}
+.ticket-fare-group{
+  width:122px;
+}

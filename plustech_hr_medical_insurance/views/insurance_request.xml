@@ -1,0 +1,194 @@
+<odoo>
+  <data>
+    <record id="insurance_request_view_form" model="ir.ui.view">
+      <field name="name">insurance.request.view.form</field>
+      <field name="model">insurance.request</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <header>
+
+            <button string="Submit" name="action_submit" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','draft')]}"/>
+            <button string="Hr Manager Approve" name="action_manager" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','hr')]}"/>
+            <button string="employee Approve" name="action_employee_approval" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','hr_manager')]}"/>
+            <button string="Upgrade" name="action_upgrade_request" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','hr_manager')]}"/>
+            <button string="Validate" name="action_done" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','employee')]}"/>
+            <button string="Upgrade Request" name="action_upgrade_open" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','done')]}"/>
+            <button string="Create Bill" name="action_create_bill" type="object" class="oe_highlight" attrs="{'invisible':['|',('state','!=','done'),('bill_id','!=',False)]}"/>
+            <button string="Send Email" name="action_send" type="object" class="oe_highlight" attrs="{'invisible':[('state','!=','done')]}"/>
+            <widget id="attach_document" name="attach_document" string="Add Attach" action="attach_document"/>
+
+            <field name="state" widget="statusbar" readonly="1" />
+          </header>
+          <sheet>
+            <div class="oe_button_box" name="button_box">
+               <button name="project_bills_view" string="Bills" type="object" icon="fa-pencil-square-o"
+                                class="oe_stat_button"/>
+              <button name="action_get_attachment_view" class="oe_stat_button" icon="fa-file-text-o" type="object">
+                <field name="attachment_number" widget="statinfo" string="Documents" options="{'reload_on_button': true}" />
+              </button>
+            </div>
+            <group>
+              <field name="show_up_categ" invisible='1'/>
+              <field name="show_fam" invisible='1'/>
+              <field name="po_id" invisible='1'/>
+              <field name="bill_id" invisible="1"/>
+            </group>
+            <div class="oe_title">
+              <h1 class="mt0">
+                <field name="name" readonly="True"/>
+              </h1>
+            </div>
+            <group string='General Information'>
+              <group>
+                <field name="employee_id" options="{'no_create': True, 'no_create_edit':True, 'no_open': True}" />
+              </group>
+              <group>
+                <field name="department_id" options="{'no_create': True, 'no_create_edit':True, 'no_open': True}" />
+              </group>
+              <group>
+                <field name="job_id" options="{'no_create': True, 'no_create_edit':True, 'no_open': True}" />
+                <field name="company_id" invisible="1"/>
+              </group>
+              <group>
+                <field name="request_date" required="1" />
+              </group>
+            </group>
+
+            <group string='Insurance Information'>
+              <group>
+                <field name="policy_id" options="{'no_create': True, 'no_create_edit':True, 'no_open': True}" />
+              </group>
+              <group>
+                <field name="categ_id" options="{'no_create': True, 'no_create_edit':True, 'no_open': True}" />
+              </group>
+              <group>
+                <field name="afford_amount" />
+              </group>
+              <group>
+                <field name="up_categ_id" options="{'no_create': True, 'no_create_edit':True, 'no_open': True}" attrs="{'invisible':[('show_up_categ','!=',True)]}"/>
+              </group>
+            </group>
+            <notebook>
+
+              <page string="Details">
+                <field name="category_lines">
+                  <tree>
+                    <field name="item"/>
+                    <field name="amount"/>
+                  </tree>
+                </field>
+              </page>
+
+              <page string="Family" attrs="{'invisible':[('show_fam','!=',True)]}">
+                <field name="family_ids">
+                  <tree editable="bottom">
+                    <field name="member_name"/>
+                    <field name="relation"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+
+          </sheet>
+          <div class="o_attachment_preview"/>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <record id="insurance_request_view_kanban" model="ir.ui.view">
+      <field name="name">insurance.request.kanban</field>
+      <field name="model">insurance.request</field>
+      <field name="arch" type="xml">
+        <kanban class="oe_background_grey o_kanban_dashboard o_hr_department_kanban" sample="1">
+          <field name="id"/>
+          <field name="color"/>
+          <field name="name"/>
+          <field name="employee_id"/>
+          <field name="policy_id"/>
+          <field name="categ_id"/>
+          <templates>
+            <t t-name="kanban-box">
+              <div t-attf-class="{{!selection_mode ? 'oe_kanban_color_' + kanban_getcolor(record.color.raw_value) : ''}} oe_kanban_card oe_kanban_global_click oe_kanban_mass_mailing">
+                <div class="oe_kanban_global_click oe_kanban_content">
+                  <strong class="o_kanban_record_title">
+                    <field name="name"/>
+                  </strong>
+                  <div>
+                    <field name="employee_id"/>
+                  </div>
+                  <div>
+                    <span>
+                      <strong>Policy :</strong>
+                      <field name="policy_id"/>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <strong>Class :</strong>
+                      <field name="categ_id"/>
+                    </span>
+                  </div>
+                </div>
+                <div class="container o_kanban_card_content">
+                  <div class="row o_kanban_card_upper_content">
+                    <div class="col-4 o_kanban_primary_left">
+                      <!-- <button string="Medical Insurance" name="action_medical_insurance" type="object" class="btn btn-primary">Members</button> -->
+                    </div>
+                    <div class="col-8 o_kanban_primary_right">
+                    </div>
+                  </div>
+                </div>
+                <div class="o_dropdown_kanban dropdown">
+
+                  <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" data-display="static" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                    <span class="fa fa-ellipsis-v"/>
+                  </a>
+                  <div class="dropdown-menu" role="menu">
+                    <t t-if="widget.editable">
+                      <a role="menuitem" type="edit" class="dropdown-item">Edit...</a>
+                    </t>
+                    <t t-if="widget.deletable">
+                      <a role="menuitem" type="delete" class="dropdown-item">Delete</a>
+                    </t>
+                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                  </div>
+                </div>
+
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <record id="insurance_request_view_tree" model="ir.ui.view">
+      <field name="name">insurance.request.view.tree</field>
+      <field name="model">insurance.request</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="employee_id"/>
+          <field name="department_id"/>
+          <field name="job_id"/>
+          <field name="request_date"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="insurance_request_action" model="ir.actions.act_window">
+      <field name="name">Medical Insurance</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">insurance.request</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+        <menuitem id="medical_insurance_menu_main" name="Medical Insurance" parent="plustech_hr_medical_insurance.medical_insurance_menu_root"
+                  sequence="1" groups="plustech_hr_medical_insurance.group_hr_medical_insurance_officer"/>
+    <menuitem id="insurance_request_menu_action" name="Insurance Request" parent="plustech_hr_medical_insurance.medical_insurance_menu_main" action="insurance_request_action" sequence="1" />
+
+  </data>
+</odoo>

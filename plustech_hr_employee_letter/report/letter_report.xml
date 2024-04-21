@@ -1,0 +1,196 @@
+<odoo>
+    <data>
+        <record id="salary_def_01_report_id" model="ir.actions.report">
+            <field name="name">Letter Print</field>
+            <field name="model">letter.request</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">plustech_hr_employee_letter.letter_report_template</field>
+            <field name="report_file">plustech_hr_employee_letter.letter_report_id</field>
+            <field name="print_report_name">(object.name)</field>
+            <field name="binding_model_id" ref="model_letter_request"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="letter_report_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page">
+                            <t t-set="direction" t-value="((user.lang=='en_US' and 'ltr') or 'rtl')"/>
+                            <div class="page contract-font" t-attf-style="direction:#{direction};">
+                                <div class="oe_structure"/>
+                                <div class="row" dir="ltr" >
+                                    <span>Date:</span>
+                                    <span t-esc="o.request_date"/>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">إلى</div>
+                                    <div class="col-8 text-center"><span t-field="o.request_id"/></div>
+                                    <div class="col-2">To</div>
+                                </div>
+                                <table align="center" class="table table-bordered"  cellpadding="1" cellspacing="1"
+                                       style="width:100%;float: right; border:2px solid black !important;" dir="rtl">
+                                    <tbody>
+                                        <tr style="height:18px; background:#d9d9d9;">
+                                            <td colspan="2" class="text-center">Salary Definition</td>
+                                            <td colspan="2" class="text-center">تعريف بالراتب</td>
+                                        </tr>
+                                        <tr style="height:18px; background:white;">
+                                            <td colspan="2" class="text-center">Personal Information</td>
+                                            <td colspan="2" class="text-center">بيانات الموظف</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Name</td>
+                                            <td class="text-center"><span t-field="o.request_id"/></td>
+                                            <td class="text-center"><span t-field="o.request_id"/></td>
+                                            <td class="text-center">الإسم</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">. ID No </td>
+                                            <td class="text-center"><span t-field="o.request_id.pin"/></td>
+                                            <td class="text-center"><span t-field="o.request_id.pin"/></td>
+                                            <td class="text-center">إقامة رقم</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Passport NO </td>
+                                            <td class="text-center"><span t-field="o.request_id.passport_id"/></td>
+                                            <td class="text-center"><span t-field="o.request_id.passport_id"/></td>
+                                            <td class="text-center">جواز رقم</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Nationality</td>
+                                            <td class="text-center"><span t-field="o.request_id.country_id"/></td>
+                                            <td class="text-center"><span t-field="o.request_id.country_id"/></td>
+                                            <td class="text-center">الجنسية </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Joining Date</td>
+                                            <td class="text-center"><span t-field="o.request_id.join_date"/></td>
+                                            <td class="text-center"><span t-field="o.request_id.join_date"/></td>
+                                            <td class="text-center">بدايةالعمل من </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">To</td>
+                                            <td class="text-center"><span t-field="o.request_id.visa_expire"/></td>
+                                            <td class="text-center"><span t-field="o.request_id.visa_expire"/></td>
+                                            <td class="text-center">إلى</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="text-center">MonthlySalary</td>
+                                            <td colspan="2" class="text-center">الراتب الشهري</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Basic Salary</td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id" t-field="o.request_id.contract_id.wage"/></td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id" بt-field="o.request_id.contract_id.wage"/></td>
+                                            <td class="text-center">الراتب الأساسى</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Housing Allowance</td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id"/>
+                                                <t t-foreach="o.request_id.contract_id.allowance_ids" t-as="ll">
+                                                    <t t-if="ll.allowance_type.code == 'HRA'">
+                                                        <span t-esc="ll.allowance_type.amount" />
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id"/>
+                                                <t t-foreach="o.request_id.contract_id.allowance_ids" t-as="ll">
+                                                    <t t-if="ll.allowance_type.code == 'HRA'">
+                                                        <span t-esc="ll.allowance_type.amount" />
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td class="text-center">Housing Allowance</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Transportation Allowance</td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id"/>
+                                                <t t-foreach="o.request_id.contract_id.allowance_ids" t-as="ll">
+                                                    <t t-if="ll.allowance_type.code == 'TA'">
+                                                        <span t-esc="ll.allowance_type.amount" />
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id"/>
+                                                <t t-foreach="o.request_id.contract_id.allowance_ids" t-as="ll">
+                                                    <t t-if="ll.allowance_type.code == 'TA'">
+                                                        <span t-esc="ll.allowance_type.amount" />
+                                                    </t>
+                                                </t>
+                                            </td>
+                                            <td class="text-center">Transportation Allowance</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">Monthly Salary</td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id" t-field="o.request_id.contract_id.monthly_yearly_costs"/></td>
+                                            <td class="text-center"><span t-if="o.request_id.contract_id" t-field="o.request_id.contract_id.monthly_yearly_costs"/></td>
+                                            <td class="text-center">الراتب الشهري</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" dir="ltr" style="text-align: left;">
+                                                <p>
+                                                    <span t-field="o.company_id" /> Company certifies that the employee named above is currently a staff member and the contract period is automatically renewed.
+                                                    This certification is given to hime for whatever purpose it may serve without commitment on the part of the company.
+
+                                                </p>
+                                                <p>
+                                                    ,Regards
+                                                </p>
+                                            </td>
+                                            <div class="oe_structure"/>
+                                            <td colspan="2" dir="rtl" >
+                                                <p>
+                                                    نشهد نحن قى شركة
+                                                    <span t-field="o.company_id" />
+                                                    بأن الموضح إسمه و بياناته أعلاه يعمل لدينا و لا يزال على رأس العمل حتى تاريخه و يتجدد العقد تلقائياً لمدة مماثلة وبناء على طلبه أعطى هذا التعريف دون أدنى مسؤولية أو التزام تجاه الشركة.
+
+                                                </p>
+                                                <p>
+                                                  وتقبلوا تحياتنا ،
+                                                </p>
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                                <div class="oe_structure"/>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+<!--        <record id="letter_report_id" model="ir.actions.report">-->
+<!--            <field name="name">Letter Print</field>-->
+<!--            <field name="model">letter.request</field>-->
+<!--            <field name="report_type">qweb-pdf</field>-->
+<!--            <field name="report_name">plustech_hr_employee_letter.letter_report_template</field>-->
+<!--            <field name="report_file">plustech_hr_employee_letter.letter_report_id</field>-->
+<!--            <field name="print_report_name">(object.name)</field>-->
+<!--            <field name="binding_model_id" ref="model_letter_request"/>-->
+<!--            <field name="binding_type">report</field>-->
+<!--        </record>-->
+
+
+        <!--        <template id="letter_report_template">-->
+        <!--            <t t-call="web.html_container">-->
+        <!--                <t t-call="web.external_layout">-->
+        <!--                    <t t-foreach="docs" t-as="o">-->
+        <!--                        <div class="page">-->
+        <!--                            <t t-set="direction" t-value="((user.lang=='en_US' and 'ltr') or 'rtl')" />-->
+        <!--                            <div class="page contract-font" t-attf-style="direction:#{direction};">-->
+        <!--                                <div class="oe_structure" />-->
+        <!--                                <div t-raw="o.latter_content" />-->
+        <!--                                <div class="oe_structure" />-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                    </t>-->
+        <!--                </t>-->
+        <!--            </t>-->
+        <!--        </template>-->
+    </data>
+</odoo>

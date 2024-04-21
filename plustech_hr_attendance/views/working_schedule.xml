@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_resource_calendar_attendance_tree_extend" model="ir.ui.view">
+            <field name="name">resource.calendar.attendance.extend</field>
+            <field name="model">resource.calendar.attendance</field>
+            <field name="inherit_id" ref="resource.view_resource_calendar_attendance_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='hour_from']" position="attributes">
+                    <attribute name="string">Check-In</attribute>
+                </xpath>
+                <xpath expr="//field[@name='hour_to']" position="attributes">
+                    <attribute name="string">Check-Out</attribute>
+                </xpath>
+                <xpath expr="//field[@name='hour_from']" position="after">
+                    <field name="check_in_end" widget="float_time"/>
+                    <field name="check_out_start" widget="float_time"/>
+                </xpath>
+                <xpath expr="//field[@name='week_type']" position="attributes">
+                    <attribute name="optional">hide</attribute>
+                </xpath>
+                <xpath expr="//field[@name='work_entry_type_id']" position="after">
+                    <field name="is_weekend"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="resource_calendar_inherit_form_view" model="ir.ui.view">
+            <field name="name">resource.calendar.inherit.form</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="resource.resource_calendar_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="work_hours" widget="float_time"/>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="month_work_days"/>
+                </xpath>
+                <xpath expr="//field[@name='attendance_ids']" position="before">
+                    <group>
+                        <group string="Check-In Schedule Details">
+                            <field name="check_in_necessary"/>
+                            <!--                            <field name="check_in_early"/>-->
+                            <!--                            <field name="min_ot_check_in"/>-->
+                        </group>
+                        <group string="Check-Out Schedule Details">
+                            <field name="check_out_necessary"/>
+                            <!--                            <field name="check_out_delay"/>-->
+                            <!--                            <field name="min_ot_check_out"/>-->
+                        </group>
+                    </group>
+                    <group>
+                        <div>
+                            When Late exceeds
+                            <field name="check_in_late" class="oe_inline"/>
+                            minutes, count as absence
+                            <br/>
+                            <!--                            </div>-->
+                            <!--                            <div>-->
+                            When Early Leave exceeds
+                            <field name="check_out_early" class="oe_inline"/>
+                            minutes, count as absence
+                            <br/>
+                            When there is no Check-In, count as
+                            <field name="no_check_in" class="oe_inline"/>
+                            <field name="no_check_in_minute" attrs="{'invisible':[('no_check_in','=','absent')]}"
+                                   class="oe_inline"/>
+                            Minute
+                            <br/>
+                            When there is no Check-Out, count as
+                            <field name="no_check_out" class="oe_inline"/>
+                            <field name="no_check_out_minute" attrs="{'invisible':[('no_check_out','=','absent')]}"
+                                   class="oe_inline"/>
+                            Minute
+                        </div>
+                         <group string="Attendance Deduction" name="attendance_deduction">
+                            <field name="check_in_minute"/>
+                            <field name="check_out_minute"/>
+
+                        </group>
+                        <!--                        <group string="Overtime Computation">-->
+                        <!--                            <field name="ot_working_day" widget="float_time"/>-->
+                        <!--                            <field name="ot_holiday" widget="float_time"/>-->
+                        <!--                        </group>-->
+                    </group>
+
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_employee_work_schedule_action" model="ir.actions.act_window">
+            <field name="name">Working Schedule</field>
+            <field name="res_model">resource.calendar</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create new work schedule.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- MenuItems -->
+        <!-- MenuItems -->
+        <menuitem id="hr_employee_working_hours_menu" name="Working Hours"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  groups="base.group_user" sequence="13"/>
+        <menuitem id="hr_employee_work_schedule_menu" name="Working Schedule"
+                  parent="hr_employee_working_hours_menu"
+                  action="hr_employee_work_schedule_action"
+                  groups="base.group_user" sequence="1"/>
+    </data>
+</odoo>

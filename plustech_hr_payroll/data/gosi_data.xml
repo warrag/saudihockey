@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="gosi_annuities_company" model="hr.employee.gosi">
+            <field name="name">Annuities</field>
+            <field name="gosi_type">company</field>
+            <field name="percentage">9</field>
+            <field name="is_active">1</field>
+            <field name="country_ids" eval="[(4, 192)]"/>
+        </record>
+        <record id="gosi_annuities_employee" model="hr.employee.gosi">
+            <field name="name">Annuities</field>
+            <field name="gosi_type">employee</field>
+            <field name="percentage">9</field>
+            <field name="is_active">1</field>
+            <field name="country_ids" eval="[(4, 192)]"/>
+        </record>
+
+        <record id="gosi_hazards_company" model="hr.employee.gosi">
+            <field name="name">Hazards</field>
+            <field name="gosi_type">company</field>
+            <field name="percentage">2</field>
+            <field name="is_active">1</field>
+            <field name="country_ids" eval="[(4, 192)]"/>
+        </record>
+
+        <record id="gosi_saned_company" model="hr.employee.gosi">
+            <field name="name">Saned</field>
+            <field name="gosi_type">company</field>
+            <field name="percentage">0.75</field>
+            <field name="is_active">1</field>
+            <field name="country_ids" eval="[(4, 192)]"/>
+        </record>
+        <record id="gosi_saned_employee" model="hr.employee.gosi">
+            <field name="name">Saned</field>
+            <field name="gosi_type">employee</field>
+            <field name="percentage">0.75</field>
+            <field name="is_active">1</field>
+            <field name="country_ids" eval="[(4, 192)]"/>
+        </record>
+
+    </data>
+</odoo>

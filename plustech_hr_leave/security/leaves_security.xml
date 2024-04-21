@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+       <record model="res.groups" id="group_portal_employee">
+            <field name="name">Portal Employee</field>
+        </record>
+        <record id="hr_leave_balance" model="ir.rule">
+        <field name="name">Time Off Balance : multi company</field>
+        <field name="model_id" ref="model_hr_leave_balance"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="hr_leave_balance_rule_group_user" model="ir.rule">
+        <field name="name">Time Off Balance / Report: Internal User</field>
+        <field name="model_id" ref="model_hr_leave_balance"/>
+        <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+     <record id="hr_leave_balance_rule_group_officer" model="ir.rule">
+        <field name="name">Time Off Balance / Report: Timeoff Officer</field>
+        <field name="model_id" ref="model_hr_leave_balance"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="groups" eval="[(4, ref('hr_holidays.group_hr_holidays_user'))]"/>
+    </record>
+</odoo>

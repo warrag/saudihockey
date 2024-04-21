@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_job_position_category_form" model="ir.ui.view">
+            <field name="name">job.position.category.form</field>
+            <field name="model">job.position.category</field>
+            <field name="priority" eval="0"/>
+            <field name="arch" type="xml">
+                <form string="Job Category" create="1">
+                    <sheet>
+                      <div class="oe_title">
+                        <label for="name" string="Name"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_job_position_category_tree" model="ir.ui.view">
+            <field name="name">job.position.category.form</field>
+            <field name="model">job.position.category</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Job Categories" create="1">
+                    <field name="name"/>
+               </tree>
+            </field>
+        </record>
+
+        <record id="action_job_position_category" model="ir.actions.act_window">
+            <field name="name">Job Categories</field>
+            <field name="res_model">job.position.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_job_position_category"
+            name="Job Categories"
+            parent="hr.menu_human_resources_configuration"
+            action="action_job_position_category"
+            sequence="1"/>
+
+
+        <record id="view_hr_job_form" model="ir.ui.view">
+            <field name="name">hr.job</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <group>
+                        <field name="category_id"/>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+
+         <record id="view_hr_job_search" model="ir.ui.view">
+            <field name="name">hr.job.search</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_job_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='department']" position="after">
+                    <filter string="Category" name="category" domain="[]" context="{'group_by': 'category_id'}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,1289 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_flight_ticket
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-18 14:11+0000\n"
+"PO-Revision-Date: 2023-06-18 14:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.hr_flight_ticket_view_kanban
+msgid "<span class=\"text-muted\"> - </span>"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.flight_activity_main_menu
+msgid "Activity"
+msgstr "الأنشطة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__activity_type_id
+msgid "Activity Type"
+msgstr "نوع النشاط"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_admin_affairs
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_leave_flight_tickets_admin_affairs
+msgid "Administrative Affairs"
+msgstr "الشؤون الادارية"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Administrative affairs report"
+msgstr "تقرير الشؤون الادارية"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_book_flight_ticket_form
+msgid "Adult 12 and over"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__adult_fare
+msgid "Adult Fare"
+msgstr "تكلفة البالغ"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__adults
+msgid "Adults"
+msgstr "البالغين"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.air_fare_action
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.air_far_menu
+msgid "Air Fare"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__air_line_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Air Line"
+msgstr "خطوط الطيران"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.air_lines_action
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.meun_air_lines
+msgid "Air Lines"
+msgstr "خطوط الطيران"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.air_fare_view_tree
+msgid "Aire Fare"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__partner_id
+msgid "Airline"
+msgstr "خطوط طيران"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_res_config_settings__tickets_analytic_account_id
+msgid "Analtyic Account"
+msgstr "حساب التحليلي"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid "Analytic Account Account"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Annual Vac"
+msgstr "إجازة سنوية"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_request_approvals_flight_ticket__state__approved
+msgid "Approved"
+msgstr "مُعتمد"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__approval_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Approver's"
+msgstr "المعتمدين"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_leave__leave_salary__0
+msgid "Basic"
+msgstr "الراتب الاساسي"
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/hr_leave.py:0
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.hr_vacation_form_view
+#, python-format
+msgid "Book Flight Ticket"
+msgstr "حجز تذكرة طيران"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_book_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_book_flight_ticket_form
+msgid "Book Ticket"
+msgstr "حجز تذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__flight_activity__ticket_state__booked
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__state__booked
+msgid "Booked"
+msgstr "تم الحجز"
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_emirates_Business
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_saudia_business
+msgid "Business"
+msgstr "أعمال"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__type__business_trip
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.flight_activity_menu
+msgid "Business Trip"
+msgstr "رحلات العمل"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.flight_ticket_business_trip_action
+msgid "Business Trip Flight Tickets"
+msgstr "تذاكر طيران رحلات العمل"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.report,name:plustech_hr_flight_ticket.business_trip_ticket_report_action
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__flight_activity__type__trip
+msgid "Business Trip Ticket"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.trip_flight_ticket_activity_action
+msgid "Business Trip Ticket Activity"
+msgstr "أنشطة تذاكر رحلات العمل"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.module.category,name:plustech_hr_flight_ticket.category_hr_business_trip_flight_tickets
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.menu_hr_flight_tickets_busniss_trip
+msgid "Business Trip Tickets"
+msgstr "تذاكر رحلات العمل"
+
+#. module: plustech_hr_flight_ticket
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_ceo
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_leave_flight_tickets_ceo
+msgid "CEO"
+msgstr "الرئيس التنفيذي"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "CEO Approval"
+msgstr "إعتماد الرئيس التنفيذي"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_book_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_book_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__state__canceled
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__chaild_fare
+msgid "Chaild Fare"
+msgstr "تكلفة الطفل"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__chailds
+msgid "Chailds"
+msgstr "الاطفال"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_book_flight_ticket_form
+msgid "Child 2-11"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid ""
+"Choose the expense account to post the flight tickets accounting\n"
+"                                    entries"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__city_from_id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__city_to_id
+msgid "City"
+msgstr "المدينة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Class"
+msgstr "الدرجة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__comment
+msgid "Comments"
+msgstr "الملاحظات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__company_id
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__company_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.menu_flight_ticket_general_configuration
+msgid "Configuration"
+msgstr "التهيئة والاعدادات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_res_partner
+msgid "Contact"
+msgstr "جهة اتصال "
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__country_from_id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__country_to_id
+msgid "Country"
+msgstr "الدولة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.actions.act_window,help:plustech_hr_flight_ticket.air_lines_action
+msgid "Create a new air line in your address book"
+msgstr "إنشاء خطوط طيران جديدة في دليل العناوين"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.actions.act_window,help:plustech_hr_flight_ticket.flight_ticket_business_trip_action
+msgid "Create new document"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__create_uid
+msgid "Created by"
+msgstr "أدخلت بواسطة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__create_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__create_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__create_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__create_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__create_date
+msgid "Created on"
+msgstr "تاريخ الادخال"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.hr_flight_ticket_view_kanban
+msgid "Delete"
+msgstr "حذف"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Departement"
+msgstr "القسم"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__department_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__departure_city_id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__depart_from
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__depart_from
+msgid "Departure"
+msgstr "محطة المغادرة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__dependent_ids
+msgid "Dependents"
+msgstr "التوابع"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid "Deserv After"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_res_config_settings__desver_ticket_after
+msgid "Deserv Ticket After"
+msgstr "يستحق تذكرة الطيران بعد"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__destination_city_id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__destination
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__destination
+msgid "Destination"
+msgstr "الوصف"
+
+#. module: plustech_hr_flight_ticket
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_dfadminaffairs
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_leave_flight_tickets_dfadminaffairs
+msgid "Director of Financial and Administrative Affairs"
+msgstr "مدير عام الشؤون المالية والإدارية"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__display_name
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__display_name
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__display_name
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__display_name
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.hr_flight_ticket_view_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_emirates_economy
+msgid "Economy"
+msgstr "إقتصادية"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.hr_flight_ticket_view_kanban
+msgid "Edit"
+msgstr "تعديل"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__employee_id
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__employee_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave__need_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave_type__need_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.hr_leave_type_form_view
+msgid "Employee Can Request Ticket?"
+msgstr "الموظف يستطيع طلب تذكرة؟"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Employee Info"
+msgstr "معلومات الموظف"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Employee Information"
+msgstr "بيانات الموظف"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__employee_no
+msgid "Employee Number"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__dependent_ids
+msgid "Employee dependents"
+msgstr "توابع الموظف"
+
+#. module: plustech_hr_flight_ticket
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_user
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_leave_flight_tickets_user
+msgid "Empolyee"
+msgstr "الموظف"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave_type__ticket_except_nationality_ids
+msgid "Except Nationalities"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave__expense_account
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid "Expense Account"
+msgstr "حساب المصروف"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_book_flight_ticket_form
+msgid "Family Members"
+msgstr "العائلة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Financial and Administrative Affairs Approval"
+msgstr "إعتماد مدير عام الشؤون المالية والإدارية"
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_emirates_first
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_saudia_first
+msgid "First"
+msgstr "الأولى"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Fligh Details"
+msgstr "تفاصيل الرحلة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Fligh Info"
+msgstr "معلومات الرحلة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.flight_class_action
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__flight_class_id
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.meun_flight_class
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_flight_class_tree
+msgid "Flight Class"
+msgstr "درجة الرحلات"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Flight Data"
+msgstr "بيانات الرحلة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__flight_details
+msgid "Flight Details"
+msgstr "تفاصيل الرحلة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Flight Route"
+msgstr "مسار الرحلة"
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/hr_leave.py:0
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave__flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.hr_vacation_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_book_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_book_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_tree
+#, python-format
+msgid "Flight Ticket"
+msgstr "تذكرة الطيران"
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/flight_ticket.py:0
+#, python-format
+msgid "Flight Ticket Invoice"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.hr_flight_tickets_main_menu
+msgid "Flight Tickets"
+msgstr "تذاكر الطيران"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__flight_details
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Flight details"
+msgstr "تفاصيل الرحلة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_leave__flight_ticket
+msgid "Flight ticket"
+msgstr "تذاكر الطيران"
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/flight_ticket.py:0
+#, python-format
+msgid "Flight ticket: %s on %s"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/flight_ticket.py:0
+#, python-format
+msgid "Flight ticket: %s on %s to %s"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/flight_ticket.py:0
+#, python-format
+msgid "Flight travelling start date must be less than flight return date."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "From"
+msgstr "من"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "From City"
+msgstr "من مدينة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "From Country"
+msgstr "من دولة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__ticket_fare
+msgid "Give the ticket fare"
+msgstr "اضافة قيمة التذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_leave__leave_salary__1
+msgid "Gross"
+msgstr "الاجمالي"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_saudia_guest
+msgid "Guest"
+msgstr "ضيافة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_hr
+#: model:res.groups,name:plustech_hr_flight_ticket.group_hr_leave_flight_tickets_hr
+msgid "Human Resource"
+msgstr "الموارد البشرية"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__id
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__message_needaction
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__message_has_error
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__infant_fare
+msgid "Infant Fare"
+msgstr "تكلفة رضيع"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_book_flight_ticket_form
+msgid "Infant under 2"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__infants
+msgid "Infants"
+msgstr "الرضع"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__invoice_id
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__invoice_id
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_res_partner__is_airline
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_res_users__is_airline
+msgid "Is Airline"
+msgstr "خطوط طيران؟"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave__is_annual_leave
+msgid "Is Annual Leave?"
+msgstr "اجازة سنوية"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Job No"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__job_title
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity____last_update
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class____last_update
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance____last_update
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket____last_update
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__write_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__write_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_ticket_allowance__write_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__write_date
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__leave_id
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__leave_id
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__type__leave
+msgid "Leave"
+msgstr "الاجازة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.action_hr_flight_tickets
+msgid "Leave Flight Tickets"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave__leave_salary
+msgid "Leave Salary"
+msgstr "راتب الاجازة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__flight_activity__type__leave
+msgid "Leave Ticket"
+msgstr "تذاكر الإجازات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.module.category,name:plustech_hr_flight_ticket.category_hr_leave_flight_tickets
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.menu_hr_flight_tickets_leave
+msgid "Leave Tickets"
+msgstr "تذاكر الإجازات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.flight_ticket_activity_menu
+msgid "Leaves"
+msgstr "الإجازات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.leave_flight_ticket_activity_action
+msgid "Leaves Ticket Activity"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_nas_light
+msgid "Light"
+msgstr "لايت"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave__min_days_for_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_leave_type__min_days_for_ticket
+msgid "Minimum Leave Days For Ticket?"
+msgstr "الحد الأدنى من أيام الإجازة للتذكرة؟"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "My Department"
+msgstr "قسمي"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "My Team"
+msgstr "فريقي"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "My Ticket"
+msgstr "تذاكري"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_class__name
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_res_config_settings__not_deserve_ticket_after
+msgid "Not Deserve Ticket After"
+msgstr "لا يستحق التذكرة بعد"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid "Not Deserve after"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__note
+msgid "Note"
+msgstr "ملاحطة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__note
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.actions.act_window,help:plustech_hr_flight_ticket.air_lines_action
+msgid "Odoo helps you easily track all activities related to an air lines."
+msgstr "أودو يساعدك بسهولة بمتابعة كل ما هو متعلق بخطوط الطيران"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__ticket_type__one
+msgid "One Way"
+msgstr "ذهاب فقط"
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/hr_leave.py:0
+#, python-format
+msgid "Only an HR Officer or Manager can book flight tickets."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Other Info"
+msgstr "معلومات اخرى"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__paid_for_employee
+msgid "Paid For employee"
+msgstr "السداد للموظف"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__payslip_paid
+msgid "Paid in Payslip"
+msgstr "السداد في مسير الرواتب"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__paid_for_employee
+msgid "Paid ticket cost for employee as allowance!"
+msgstr "دفع قيمة التذكرة للموظف كبدل"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال الرواتب للسداد"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_account_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Per diem"
+msgstr "انتداب"
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/hr_leave.py:0
+#, python-format
+msgid "Please set join date for %s"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_nas_plus
+msgid "Plus"
+msgstr "بلس"
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_nas_premium
+msgid "Premium"
+msgstr "بريميوم"
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_emirates_premium_economy
+msgid "Premium Economy"
+msgstr "إقتصادية متميزة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Purpose of Request"
+msgstr "الغرض من السفر"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_request_approvals_flight_ticket__state__reject
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__date_return
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Return Date"
+msgstr "تاريخ العودة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__return_flight_details
+msgid "Return Flight Details"
+msgstr "تفاصيل رحلة العودة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Return Flight details"
+msgstr "تفاصيل رحلة العودة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__date_return
+msgid "Return date"
+msgstr "تاريخ العودة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__ticket_type__round
+msgid "Round Trip"
+msgstr "ذهاب وعودة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Search Flight Ticket"
+msgstr "بحث عن تذكرة سفر"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__ticket_type
+msgid "Select the ticket type"
+msgstr "الرجاء اختيار نوع التذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.ui.menu,name:plustech_hr_flight_ticket.menu_flight_ticket_general_settings
+msgid "Setting"
+msgstr "الإعدادات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.actions.act_window,name:plustech_hr_flight_ticket.action_hr_flight_ticket_general_config
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__date_start
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Start Date"
+msgstr "تاريخ الذهاب"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__date_start
+msgid "Start date"
+msgstr "تاريخ الذهاب"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__ticket_state
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__state
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__subject
+msgid "Subject"
+msgstr "العنوان"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "Submet"
+msgstr "إرسال"
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/hr_leave.py:0
+#, python-format
+msgid ""
+"This Employee not deserve leave ticket before %s months from joining date"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__ticket_id
+msgid "Ticket"
+msgstr "التذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model:hr.salary.rule,name:plustech_hr_flight_ticket.hr_salary_rule_ticket
+msgid "Ticket Allowance"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid "Ticket Eligibility Period Conditions"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__ticket_fare
+msgid "Ticket Fare"
+msgstr "قيمة التذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Ticket Fees"
+msgstr "قيمة التذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__ticket_no
+msgid "Ticket No."
+msgstr "رقم التذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__ticket_type
+msgid "Ticket Type"
+msgstr "نوع التذكرة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid "Tickets"
+msgstr "التذاكر"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_hr_leave_type
+msgid "Time Off Type"
+msgstr "نوع الإجازة "
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__name
+msgid "Title"
+msgstr "العنوان"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_form
+msgid "To"
+msgstr "الى"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "To City"
+msgstr "الى مدينة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_filter
+msgid "To Country"
+msgstr "الى دولة"
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.flight_ticket
+msgid "Travel Authorization Form"
+msgstr "طلب إصدار أمر إركاب"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_res_config_settings__default_expense_account
+msgid "Travel Expense Account"
+msgstr "حساب مصروف تذاكر الطيران"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__trip_id
+msgid "Trip"
+msgstr "الرحلة"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__type
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__user_id
+msgid "User"
+msgstr "مستخدم"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_flight_activity__users_id
+msgid "Users"
+msgstr "المستخدم"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_account_payment__vacation_ticket_id
+msgid "Vacation Ticket"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:flight.class,name:plustech_hr_flight_ticket.res_partner_nas_value
+msgid "Value"
+msgstr "فاليو"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__flight_activity__ticket_state__report
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__state__report
+msgid "Waiting For Administrative Affairs Report"
+msgstr "بإنتظار تقرير الشؤون الإدارية"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__flight_activity__ticket_state__admin
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__state__admin
+msgid ""
+"Waiting For the Director of Financial and Administrative Affairs Approval"
+msgstr "بإنتظار إعتماد مدير عام الشؤون المالية والإدارية"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__flight_activity__ticket_state__ceo
+#: model:ir.model.fields.selection,name:plustech_hr_flight_ticket.selection__hr_flight_ticket__state__ceo
+msgid "Waiting for CEO Approval"
+msgstr "بانتظار اعتماد الرئيس التنفيذي"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_flight_ticket__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: code:addons/plustech_hr_flight_ticket/models/hr_leave.py:0
+#, python-format
+msgid ""
+"You can not request ticket as this employee's nationality not allowed to "
+"request ticket"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model_terms:ir.ui.view,arch_db:plustech_hr_flight_ticket.view_hr_flight_ticket_configuration
+msgid ""
+"You can setup annual leave ticket eligibility period setting\n"
+"                                    her."
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_flight_activity
+msgid "flight.activity"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_flight_class
+msgid "flight.class"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_flight_ticket_allowance
+msgid "flight.ticket.allowance"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_hr_flight_ticket
+msgid "hr.flight.ticket"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model,name:plustech_hr_flight_ticket.model_hr_request_approvals_flight_ticket
+msgid "hr.request.approvals.flight.ticket"
+msgstr ""
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,field_description:plustech_hr_flight_ticket.field_hr_request_approvals_flight_ticket__key
+msgid "key"
+msgstr "رمز"
+
+#. module: plustech_hr_flight_ticket
+#: model:ir.model.fields,help:plustech_hr_flight_ticket.field_hr_flight_ticket__return_flight_details
+msgid "return flight details"
+msgstr "تفاصيل رحلة العودة"

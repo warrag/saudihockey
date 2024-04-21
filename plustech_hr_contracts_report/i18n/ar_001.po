@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_contracts_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 07:50+0000\n"
+"PO-Revision-Date: 2023-06-19 07:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_contracts_report
+#: model_terms:ir.ui.view,arch_db:plustech_hr_contracts_report.view_hr_contracts_report
+msgid ""
+"<span class=\"text-muted\">Set a specific department if you wish to select "
+"all the employees from this department (and subdepartments) at once.</span>"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: model_terms:ir.ui.view,arch_db:plustech_hr_contracts_report.view_hr_contracts_report
+msgid ""
+"<span colspan=\"4\" nolabel=\"1\">This wizard will generate contracts excel "
+"report for all selected employee(s).</span>"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Basic Salary"
+msgstr "الراتب ألأساسي"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: plustech_hr_contracts_report
+#: model_terms:ir.ui.view,arch_db:plustech_hr_contracts_report.view_hr_contracts_report
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.actions.report,name:plustech_hr_contracts_report.contract_excel_report
+msgid "Contract Report(XLS)"
+msgstr "تقرير العقود اكسل"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model,name:plustech_hr_contracts_report.model_report_plustech_hr_contract_contract
+msgid "Contracts Excel Report"
+msgstr "تقرير العقود اكسل"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.ui.menu,name:plustech_hr_contracts_report.menu_report_contracts_report_excel
+msgid "Contracts Report Excel"
+msgstr "تقرير العقود اكسل"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__department_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_contracts_report.view_hr_contracts_report
+msgid "Department"
+msgstr "الإدارة"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Department Employees"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Department Total"
+msgstr "إجمالي الإدارة"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__employee_ids
+msgid "Employee"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Employee ID"
+msgstr "رقم الوظيفي"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Employee Name"
+msgstr "إجمالي الإدارة"
+
+#. module: plustech_hr_contracts_report
+#: model_terms:ir.ui.view,arch_db:plustech_hr_contracts_report.view_hr_contracts_report
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.actions.act_window,name:plustech_hr_contracts_report.action_hr_contracts_report
+msgid "Generate Contracts report"
+msgstr "إنشاء تقرير العقود"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model,name:plustech_hr_contracts_report.model_hr_contracts_report_wizard
+msgid "Generate contracts for all selected employees"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__id
+msgid "ID"
+msgstr "م"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Join Date"
+msgstr "تاريخ بداية العمل"
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: model:ir.model.fields,field_description:plustech_hr_contracts_report.field_hr_contracts_report_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Manager"
+msgstr "المدير المباشر"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "National ID Number"
+msgstr "رقم الهوية"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Net Salary"
+msgstr "الراتب الإجمالي"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "No#"
+msgstr "م"
+
+#. module: plustech_hr_contracts_report
+#: model_terms:ir.ui.view,arch_db:plustech_hr_contracts_report.view_hr_contracts_report
+msgid "Print Report"
+msgstr "طباعة التقرير"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Total Employees"
+msgstr "إجمالي عدد الموظفين"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Total Employees Report"
+msgstr "تقرير إجمالي الموظفين"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Total Employees Report "
+msgstr "تقرير إجمالي الموظفين"
+
+#. module: plustech_hr_contracts_report
+#: code:addons/plustech_hr_contracts_report/reports/contracts_report_xls.py:0
+#, python-format
+msgid "Total Salaries"
+msgstr "الإجمالي رواتب الموظفين"

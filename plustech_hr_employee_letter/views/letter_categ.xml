@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record id="letter_categ_view_form" model="ir.ui.view">
+            <field name="name">letter.letter.categ</field>
+            <field name="model">letter.letter.categ</field>
+            <field name="arch" type="xml">
+                <form string="letter_categ_form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="letter_categ_view_tree" model="ir.ui.view">
+            <field name="name">letter_categ_view_tree</field>
+            <field name="model">letter.letter.categ</field>
+            <field name="arch" type="xml">
+                <tree string="letter_categ_tree" editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="letter_categ_action" model="ir.actions.act_window">
+            <field name="name">Letter Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">letter.letter.categ</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <menuitem id="letter_categ_menu" name="Letter Category" action="letter_categ_action"
+                  parent="plustech_hr_employee_letter.letter_configuration_menu" sequence="3"/>
+    </data>
+</odoo>

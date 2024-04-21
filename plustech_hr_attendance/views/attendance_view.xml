@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="hr_employee_inherit_form_view" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="device_id"/>
+            </field>
+        </field>
+    </record>
+    <!-- Attendance Log -->
+	<record id="tree_attendance_view" model="ir.ui.view">
+		<field name="name">attendance.log.tree</field>
+		<field name="model">attendance.log</field>
+		<field name="arch" type="xml">
+			<tree string="Attendance Log" create="false" edit="false">
+				<field name="date"/>
+				<field name="employee_id"/>
+				<field name="department_id"/>
+				<field name="event_type"/>
+				<field name="device_id"/>
+				<field name="event_time"/>
+			</tree>
+		</field>
+	</record>
+	<record id="form_attendance_view" model="ir.ui.view">
+		<field name="name">attendance.log.form</field>
+		<field name="model">attendance.log</field>
+		<field name="arch" type="xml">
+			<form string="Attendance Log" create="false" edit="false">
+				<sheet>
+					<group col="4">
+						<field name="date"/>
+						<field name="employee_id"/>
+						<field name="department_id"/>
+						<field name="event_type"/>
+						<field name="device_id"/>
+						<field name="event_time"/>
+						<field name="attendance_id"/>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"/>
+					<field name="message_ids" widget="mail_thread"/>
+				</div>
+			</form>
+		</field>
+	</record>
+	<record id="attendance_filter" model="ir.ui.view">
+		<field name="name">attendance.log.search</field>
+		<field name="model">attendance.log</field>
+		<field name="arch" type="xml">
+			<search string="Attendance Log">
+				<field name="employee_id"/>
+				<field name="event_type"/>
+				<field name="date"/>
+				<filter name="event_time_filter" string="Event Time" date="event_time"/>
+				<filter name="date_filter" string="Event Date" date="date"/>
+				<group col="8" colspan="4" expand="0" string="Group By">
+					<filter string="Device" name="device_id" context="{'group_by':'device_id'}"/>
+					<filter string="Employee" name="employee_id" context="{'group_by':'employee_id'}"/>
+					<filter string="Department" name="department_id" context="{'group_by':'department_id'}"/>
+					<filter string="Date" name="date" context="{'group_by':'date'}"/>
+					<filter string="Event Type" name="event_type" context="{'group_by':'event_type'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+	<record id="action_attendance_log" model="ir.actions.act_window">
+		<field name="name">Attendance Log</field>
+		<field name="res_model">attendance.log</field>
+		<field name="view_mode">tree,form</field>
+		<field name="search_view_id" ref="attendance_filter"/>
+	</record>
+	<menuitem name="Attendance Log" parent="plustech_hr_attendance_transaction.menu_hr_attendance_main" id="menu_attendance"
+	 action="action_attendance_log" groups="base.group_user" sequence="14"/>
+</odoo>

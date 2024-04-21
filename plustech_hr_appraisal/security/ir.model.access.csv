@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_appraisal_template_user,hr.appraisal.template.user,model_hr_appraisal_template,,1,1,1,1
+access_hr_appraisal_evaluation_scale_user,hr.appraisal.evaluation.scale.user,model_hr_appraisal_evaluation_scale,,1,1,1,1
+access_appraisal_weight,appraisal.weight,model_appraisal_weight,,1,1,1,1
+access_hr_appraisal_appraisal,hr.appraisal.appraisal,model_hr_appraisal_appraisal,,1,1,1,1
+access_hr_appraisal_line,hr_appraisal_line,model_hr_appraisal_line,,1,1,1,1
+access_hr_appraisal_batch,hr_appraisal_batch,model_hr_appraisal_batch,,1,1,1,1
+access_hr_appraisal_history,hr_appraisal_history,model_hr_appraisal_history,,1,1,1,1
+access_hr_appraisal_evaluation,hr_appraisal_evaluation,model_hr_appraisal_evaluation,,1,1,1,1

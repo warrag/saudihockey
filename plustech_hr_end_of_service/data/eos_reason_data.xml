@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="eos_rule_resignation_2_5" model="eos.rules">
+            <field name="period_from">2</field>
+            <field name="period_to">5</field>
+            <field name="eos_award">0.5</field>
+            <field name="calculate_factor">0.333333333</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_rule_resignation_after_5" model="eos.rules">
+            <field name="period_from">5</field>
+            <field name="period_to">10</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">0.666666667</field>
+            <field name="no">2</field>
+        </record>
+         <record id="eos_rule_resignation_after_10" model="eos.rules">
+            <field name="period_from">10</field>
+            <field name="period_to">50</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">3</field>
+        </record>
+
+        <record id="eos_reason_employee_resignation" model="end.service.reason">
+            <field name="name">Employee Resignation</field>
+            <field name="reason_type">resign</field>
+            <field name="rule_id"
+                   eval="[(4, ref('eos_rule_resignation_2_5')),(4, ref('eos_rule_resignation_after_5')),
+                    (4, ref('eos_rule_resignation_after_10'))]"/>
+        </record>
+
+        <record id="eos_rule_contract_expiration_2_5" model="eos.rules">
+            <field name="period_from">2</field>
+            <field name="period_to">5</field>
+            <field name="eos_award">0.5</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_rule_contract_expiration_after_5" model="eos.rules">
+            <field name="period_from">5</field>
+            <field name="period_to">10</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">2</field>
+        </record>
+         <record id="eos_rule_contract_expiration_after_10" model="eos.rules">
+            <field name="period_from">10</field>
+            <field name="period_to">50</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">3</field>
+        </record>
+
+
+        <record id="eos_reason_contract_expiration" model="end.service.reason">
+            <field name="name">Expiration of contract terms, or the parties have agreed to terminate the contract
+            </field>
+            <field name="reason_type">end</field>
+            <field name="rule_id"
+                   eval="[(4, ref('eos_rule_contract_expiration_2_5')),(4, ref('eos_rule_contract_expiration_after_5')),
+                   (4, ref('eos_rule_contract_expiration_after_10'))]"/>
+        </record>
+
+
+        <record id="eos_rule_fired_2_5" model="eos.rules">
+            <field name="period_from">2</field>
+            <field name="period_to">5</field>
+            <field name="eos_award">0.5</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_rule_fired_after_5" model="eos.rules">
+            <field name="period_from">5</field>
+            <field name="period_to">10</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">2</field>
+        </record>
+        <record id="eos_reason_fired" model="end.service.reason">
+            <field name="name">Termination of the contract by the employer</field>
+            <field name="reason_type">termination</field>
+            <field name="rule_id" eval="[(4, ref('eos_rule_fired_2_5')),(4, ref('eos_rule_fired_after_5'))]"/>
+        </record>
+
+        <record id="eos_rule_condition_80" model="eos.rules">
+            <field name="period_from">1</field>
+            <field name="period_to">9999</field>
+            <field name="eos_award">0.0</field>
+            <field name="calculate_factor">0.0</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_reason_termination_by_condition_80" model="end.service.reason">
+            <field name="name">Termination of the contract by the employer for one of the terms and conditions stated in
+                Article (80).
+            </field>
+            <field name="reason_type">termination</field>
+            <field name="rule_id"
+                   eval="[(4, ref('eos_rule_condition_80'))]"/>
+        </record>
+
+          <record id="eos_rule_condition_77" model="eos.rules">
+            <field name="period_from">1</field>
+            <field name="period_to">9999</field>
+            <field name="eos_award">0.0</field>
+            <field name="calculate_factor">0.0</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_reason_termination_by_condition_77" model="end.service.reason">
+            <field name="name">Termination of the employment contract under Article (77)</field>
+            <field name="reason_type">termination</field>
+            <field name="include_compensation">True</field>
+            <field name="rule_id"
+                   eval="[(4, ref('eos_rule_condition_77'))]"/>
+        </record>
+
+        <record id="eos_rule_force_majeure_2_5" model="eos.rules">
+            <field name="period_from">2</field>
+            <field name="period_to">5</field>
+            <field name="eos_award">0.5</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_rule_force_majeure_after_5" model="eos.rules">
+            <field name="period_from">5</field>
+            <field name="period_to">10</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">2</field>
+        </record>
+        <record id="eos_reason_force_majeure" model="end.service.reason">
+            <field name="name">Leaving work as a result of force majeure</field>
+            <field name="reason_type">end</field>
+            <field name="rule_id"
+                   eval="[(4, ref('eos_rule_force_majeure_2_5')),(4, ref('eos_rule_force_majeure_after_5'))]"/>
+        </record>
+
+        <record id="eos_rule_marriage_2_5" model="eos.rules">
+            <field name="period_from">2</field>
+            <field name="period_to">5</field>
+            <field name="eos_award">0.5</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_rule_marriage_after_5" model="eos.rules">
+            <field name="period_from">5</field>
+            <field name="period_to">10</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">2</field>
+        </record>
+        <record id="eos_reason_marriage" model="end.service.reason">
+            <field name="name">The worker terminates the labor contract within six months into the marriage contract or
+                three months into birth.
+            </field>
+            <field name="reason_type">termination</field>
+            <field name="rule_id" eval="[(4, ref('eos_rule_marriage_2_5')),(4, ref('eos_rule_marriage_after_5'))]"/>
+        </record>
+        <record id="eos_rule_81leave_2_5" model="eos.rules">
+            <field name="period_from">2</field>
+            <field name="period_to">5</field>
+            <field name="eos_award">0.5</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_rule_81leave_after_5" model="eos.rules">
+            <field name="period_from">5</field>
+            <field name="period_to">10</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">2</field>
+        </record>
+        <record id="eos_reason_condition_81_leave" model="end.service.reason">
+            <field name="name">The worker leaves work for one of the conditions stated in Article (81)</field>
+            <field name="reason_type">end</field>
+            <field name="rule_id" eval="[(4, ref('eos_rule_81leave_2_5')),(4, ref('eos_rule_81leave_after_5'))]"/>
+        </record>
+
+        <record id="eos_rule_81termination_2_5" model="eos.rules">
+            <field name="period_from">2</field>
+            <field name="period_to">5</field>
+            <field name="eos_award">0.5</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">1</field>
+        </record>
+
+        <record id="eos_rule_81termination_after_5" model="eos.rules">
+            <field name="period_from">5</field>
+            <field name="period_to">10</field>
+            <field name="eos_award">1</field>
+            <field name="calculate_factor">1</field>
+            <field name="no">2</field>
+        </record>
+
+        <record id="eos_reason_condition_81_termination" model="end.service.reason">
+            <field name="name">The worker terminates the labor contract within six months into the marriage contract or
+                three months into birth.
+            </field>
+            <field name="reason_type">end</field>
+            <field name="rule_id"
+                   eval="[(4, ref('eos_rule_81termination_2_5')),(4, ref('eos_rule_81termination_after_5'))]"/>
+        </record>
+
+    </data>
+</odoo>

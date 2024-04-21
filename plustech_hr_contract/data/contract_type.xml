@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="fixed_term_contract" model="hr.contract.type">
+            <field name="name">Fixed Term Contract</field>
+            <field name="duration_type">limited</field>
+            <field name="end_of_service">True</field>
+            <field name="has_vacations">True</field>
+            <field name="has_medical_insurance">True</field>
+            <field name="has_allowance">True</field>
+        </record>
+        <record id="open_ended_contract" model="hr.contract.type">
+            <field name="name">Open-ended Contract</field>
+            <field name="duration_type">unlimited</field>
+            <field name="end_of_service">True</field>
+            <field name="has_vacations">True</field>
+            <field name="has_medical_insurance">True</field>
+            <field name="has_allowance">True</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,902 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_petty_cash
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-15 07:53+0000\n"
+"PO-Revision-Date: 2023-02-15 07:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_company__petty_account_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_config_settings__petty_account_id
+msgid " Petty Cash Account"
+msgstr "حساب العهدة"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_company__purchase_journal_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_config_settings__purchase_journal_id
+msgid " Purchase Journal"
+msgstr "دفتر يومية المصاريف"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid ""
+"<br/>\n"
+"                                        <span class=\"o_form_label\">\n"
+"                                            Analytic Account\n"
+"                                        </span>"
+msgstr ""
+"<br/>\n"
+"                                        <span class=\"o_form_label\">\n"
+"                                            الحساب التحليلي\n"
+"                                        </span>"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid ""
+"<br/>\n"
+"                                        <span class=\"o_form_label\">\n"
+"                                            Internal Transfer Account\n"
+"                                        </span>"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid ""
+"<br/>\n"
+"                                        <span class=\"o_form_label\">\n"
+"                                            Payment Journal\n"
+"                                        </span>"
+msgstr ""
+"<br/>\n"
+"                                        <span class=\"o_form_label\">\n"
+"                                            دفتر يومية المدفوعات\n"
+"                                        </span>"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid ""
+"<br/>\n"
+"                                        <span class=\"o_form_label\">\n"
+"                                            Purchase Journal\n"
+"                                        </span>"
+msgstr ""
+"<br/>\n"
+"                                        <span class=\"o_form_label\">\n"
+"                                            دفتر يومية المصاريف\n"
+"                                        </span>"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                            Default Limit\n"
+"                                        </span>"
+msgstr ""
+"<span class=\"o_form_label\">\n"
+"                                            الحد الافتراضي\n"
+"                                        </span>"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                            Petty Journal\n"
+"                                        </span>"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Accept"
+msgstr "إستلام"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Accept Petty Cash"
+msgstr "إستلام العهدة"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_needaction
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__petty_user__state__active
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.petty_user_view_form
+msgid "Active"
+msgstr "نشط"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Amount Bigger Than User Limit"
+msgstr "المبلغ أكبر من الحد الخاص بالموظف"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__petty_analytic_account_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__analytic_account_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_company__petty_analytic_account_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_config_settings__petty_analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.wizard_financial_view_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__move_id
+msgid "Bill"
+msgstr "فاتورة"
+
+#. module: plustech_petty_cash
+#: model:ir.actions.act_window,name:plustech_petty_cash.action_petty_bills
+#: model:ir.ui.menu,name:plustech_petty_cash.petty_bills_menu
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Bills"
+msgstr "الفواتير"
+
+#. module: plustech_petty_cash
+#: model:res.groups,name:plustech_petty_cash.group_petty_cash_ceo
+msgid "CEO"
+msgstr "الرئيس التنفيذي"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_product_product__expense_ok
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_product_template__expense_ok
+msgid "Can Be Expense"
+msgstr "مصروف"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Comments"
+msgstr "ملاحظات"
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: plustech_petty_cash
+#: model:ir.ui.menu,name:plustech_petty_cash.petty_cash_configuration_menu
+msgid "Configuration"
+msgstr "التهيئة والإعدادات"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.pety_view_move_form
+msgid "Confirm"
+msgstr "تاكيد"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_move__state__confirm
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__user_id
+msgid "Create By"
+msgstr "أنشئ بواسطة"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.actions.act_window,help:plustech_petty_cash.action_petty_bills
+msgid ""
+"Create Petty invoices, register payments and keep track of the discussions "
+"with your vendors."
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.actions.act_window,help:plustech_petty_cash.action_petty_bills
+msgid "Create a Petty bill"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__create_uid
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__create_uid
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__create_uid
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__create_date
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__create_date
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__create_date
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__date
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__move_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.petty_user_view_form
+msgid "Deactivate"
+msgstr "الغاء التنشيط"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__petty_user__state__deactive
+msgid "Deactive"
+msgstr "غير نشط"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_company__limit
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_config_settings__limit
+msgid "Default Limit"
+msgstr "الحد الافتراضي"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__department_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__display_name
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__display_name
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__display_name
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__done
+msgid "Done"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__draft
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__petty_user__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__employee_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__parent_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Employee Info"
+msgstr "بيانات الموظف"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/petty_cash_holder.py:0
+#, python-format
+msgid "Employee already have petty cash account!"
+msgstr "الموظف لديه حساب عهدة مسبقا"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Enter Petty Analytic Account In Settings"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Enter Petty Journal In Settings"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Enter Petty Transfer Account In Settings"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__finance
+msgid "Finance Approved"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+#, python-format
+msgid "Financial Approve"
+msgstr "إعتماد الادارة المالية"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__has_message
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__message_needaction
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__message_unread
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__message_needaction
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__message_has_error
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__message_has_sms_error
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__message_has_error
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__petty_transfer_account_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_company__petty_transfer_account_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_config_settings__petty_transfer_account_id
+msgid "Internal Transfer Account"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_is_follower
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__job_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__job_id
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer____last_update
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard____last_update
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill____last_update
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__write_uid
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__write_uid
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__write_uid
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__write_date
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__write_date
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__write_date
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__limit
+msgid "Limit"
+msgstr "الحد"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:res.groups,name:plustech_petty_cash.group_petty_cash_manager
+msgid "Manager"
+msgstr "المدير المباشر"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.petty_user_view_form
+msgid "Manager Approve"
+msgstr "إعتماد المدير المباشر"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__manger
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__petty_user__state__manager
+msgid "Manager Approved"
+msgstr "معتمد من المدير المباشر"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_has_error
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_ids
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__transfer_move_ids
+msgid "Moves"
+msgstr "قيود"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__name
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__note
+msgid "Note"
+msgstr "ملاحظات"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__message_needaction_counter
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__message_has_error_counter
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__message_unread_counter
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:res.groups,name:plustech_petty_cash.group_petty_cash_officer
+msgid "Officer"
+msgstr "موظف"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.petty_user_view_form
+msgid "Officer Approve"
+msgstr "إعتماد موظف شؤون الموظفين"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__officer
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__petty_user__state__officer
+msgid "Officer Approved"
+msgstr "معتمد من موظف شؤون الموظفين"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Other Info"
+msgstr "معلومات اخرى"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Other Petty Cash"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__other_running
+msgid "Other Running Petty?"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__over_limit
+msgid "Over Limit"
+msgstr "تجاوز الحد"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.pety_view_move_form
+msgid "POST"
+msgstr "ترحيل"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__payment_journal_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_company__payment_journal_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_config_settings__payment_journal_id
+msgid "Payment Journal"
+msgstr "دفتر يومية الدفع"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_bank_statement_line__petty
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_bank_statement_line__petty_ids
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__petty_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__petty_ids
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_move__petty
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_move__petty_ids
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_payment__petty
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_payment__petty_ids
+msgid "Petty"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.actions.act_window,name:plustech_petty_cash.action_petty_cash_config
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__petty_cash_id
+#: model:ir.ui.menu,name:plustech_petty_cash.account_transfer_main_menu
+#: model:ir.ui.menu,name:plustech_petty_cash.account_transfer_sub_menu
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid "Petty Cash"
+msgstr "العهد المالية"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__petty_account_id
+msgid "Petty Cash Account"
+msgstr "حساب العهدة"
+
+#. module: plustech_petty_cash
+#: model:ir.actions.act_window,name:plustech_petty_cash.account_journal_transfer_action
+#: model:ir.ui.menu,name:plustech_petty_cash.account_journal_transfer_action_menu
+msgid "Petty Cash Request"
+msgstr "طلب عهدة مالية"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.res_config_settings_view_form
+msgid "Petty Cash Settings"
+msgstr "إعدادات العهد المالية"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Petty Cash Transfer For "
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_company__petty_journal_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_res_config_settings__petty_journal_id
+msgid "Petty Journal"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_bank_statement_line__petty_payment_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_move__petty_payment_id
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_payment__petty_payment_id
+msgid "Petty Payment"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__petty_user_id
+msgid "Petty User"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.module.category,name:plustech_petty_cash.petty_cash_category
+msgid "PettyCash"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.actions.act_window,name:plustech_petty_cash.petty_cash_user_action
+#: model:ir.ui.menu,name:plustech_petty_cash.petty_cash_user_menu
+msgid "PettyCash Holder"
+msgstr "المستفيدين"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Please add amount."
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__purchase_journal_id
+msgid "Purchase Journal"
+msgstr "دفتر يومية المصاريف"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Reconcile"
+msgstr "التسويات"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__reconcile_line_ids
+msgid "Reconcile Line"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__amount
+msgid "Reconciled Amount"
+msgstr "المبلغ"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__reconciliation_date
+msgid "Reconciliation Date"
+msgstr "تاريخ التسوية"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__remaining_amount
+msgid "Remaining"
+msgstr "المتبقي"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_transfer_wizard__res_id
+msgid "Res"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__running
+msgid "Running"
+msgstr "فعال"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_search
+msgid "Search Petty Cash"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Set Draft"
+msgstr "إرجاع الى مسودة"
+
+#. module: plustech_petty_cash
+#: model:ir.ui.menu,name:plustech_petty_cash.petty_cash_setting_menu
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__state
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_move__state
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_payment__state
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_cash_reconcile_bill__move_state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__submit
+msgid "Submitted"
+msgstr "تم الارسال"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__manay_petty
+msgid "To many petty"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Transfer"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_tree
+msgid "Transfers"
+msgstr "التحويلات"
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_form
+msgid "Transfres"
+msgstr "التحويلات"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_unread
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__user_id
+#: model:res.groups,name:plustech_petty_cash.group_petty_cash_user
+msgid "User"
+msgstr "المستخدم"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__website_message_ids
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_petty_user__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,help:plustech_petty_cash.field_account_journal_transfer__website_message_ids
+#: model:ir.model.fields,help:plustech_petty_cash.field_petty_user__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__work_email
+msgid "Work Email"
+msgstr "البريد الإلكتروني للعمل"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__work_mobile
+msgid "Work Mobile"
+msgstr "الهاتف المحمول للعمل"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_journal_transfer__work_phone
+msgid "Work Phone"
+msgstr "هاتف العمل"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "You can't have more petty cash"
+msgstr "غير مسموح بوجود اكثر من عهدة مالية"
+
+#. module: plustech_petty_cash
+#: code:addons/plustech_petty_cash/models/account_transfer.py:0
+#, python-format
+msgid "Your requested amount is over the limit. We can't process this request"
+msgstr "المبلغ المطلوب اكثر من الحد المسموح به. لا يمكن معالجة الطلب"
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_account_journal_transfer
+msgid "account.journal.transfer"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_account_transfer_wizard
+msgid "account.transfer.wizard"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields.selection,name:plustech_petty_cash.selection__account_journal_transfer__state__cancel
+msgid "cancel"
+msgstr "إلغاء"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_bank_statement_line__is_petty_cash_payment
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_move__is_petty_cash_payment
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_payment__is_petty_cash_payment
+msgid "is_petty_cash_payment"
+msgstr "مدفوعات العهد المالية"
+
+#. module: plustech_petty_cash
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_bank_statement_line__is_petty_cash_transfer
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_move__is_petty_cash_transfer
+#: model:ir.model.fields,field_description:plustech_petty_cash.field_account_payment__is_petty_cash_transfer
+msgid "is_petty_cash_transfer"
+msgstr "تحويلات العهد المالية"
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_petty_user
+msgid "petty.user"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model:ir.model,name:plustech_petty_cash.model_petty_cash_reconcile_bill
+msgid "petty_cash.reconcile.bill"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.petty_user_view_form
+msgid "petty_user_form"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.petty_user_view_tree
+msgid "petty_user_tree"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_tree
+msgid "sum_amount"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.account_journal_transfer_tree
+msgid "sum_remaining_amount"
+msgstr ""
+
+#. module: plustech_petty_cash
+#: model_terms:ir.ui.view,arch_db:plustech_petty_cash.wizard_financial_view_form
+msgid "wizard_financial_form"
+msgstr ""

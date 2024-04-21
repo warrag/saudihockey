@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<odoo>
+    <data>
+
+        <record id="view_employee_transfer_history_tree" model="ir.ui.view">
+            <field name="name">employee.transfer.history.tree</field>
+            <field name="model">employee.transfer.history</field>
+            <field name="arch" type="xml">
+                <tree create="false" delete="false">
+                    <field name="department_id"/>
+                    <field name="new_department_id"/>
+                    <field name="from_date"/>
+                    <field name="date_to"/>
+                    <field name="analytic_account_id"/>
+<!--                    <field name="state"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_employee_transfer_history_form" model="ir.ui.view">
+            <field name="name">employee.transfer.history.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button class="oe_stat_button" type="object" name="open_transfer_history" string="Transfer History"
+                            icon="fa-users">
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="action_employee_transfer_history" model="ir.actions.act_window">
+            <field name="name">employee transfer history</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.transfer.history</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+    </data>
+</odoo>
+

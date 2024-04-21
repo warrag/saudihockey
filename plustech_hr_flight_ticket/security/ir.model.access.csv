@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_flight_ticket_user,hr.flight.ticket.user,model_hr_flight_ticket,hr_holidays.group_hr_holidays_user,1,1,1,1
+access_hr_flight_ticket_employee,hr.flight.ticket.employee,model_hr_flight_ticket,base.group_user,1,1,1,1
+access_flight_ticket_allowance,flight.ticket.allowance,model_flight_ticket_allowance,,1,1,1,1
+access_flight_class,flight.class,model_flight_class,,1,1,1,1
+access_hr_request_approvals_flight.ticket,hr.request.approvals.flight.ticket,model_hr_request_approvals_flight_ticket,,1,1,0,0
+access_flight_activity,flight.activity,model_flight_activity,,1,1,1,1

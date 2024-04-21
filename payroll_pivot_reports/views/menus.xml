@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--    <menuitem   id="menu_payroll_reports"-->
+<!--                name="Payroll Reports"-->
+<!--                sequence="99"-->
+<!--                />-->
+<!--    <menuitem   id="menu_paysliplines_beforelast"-->
+<!--                name="Month before last"-->
+<!--                parent="menu_payroll_reports"-->
+<!--                sequence="3"-->
+<!--                action="action_paysliplines_beforelast"-->
+<!--                />-->
+<!--    <menuitem   id="menu_paysliplines_last"-->
+<!--                name="Last Month"-->
+<!--                parent="menu_payroll_reports"-->
+<!--                sequence="2"-->
+<!--                action="action_paysliplines_last"-->
+<!--                />-->
+<!--    <menuitem   id="menu_paysliplines_current"-->
+<!--                name="Current Month"-->
+<!--                parent="menu_payroll_reports"-->
+<!--                sequence="1"-->
+<!--                action="action_paysliplines_current"-->
+<!--                />-->
+    <menuitem   id="menu_allpaysliplines"
+                name="Full Payroll Report"
+                parent="hr_payroll.menu_hr_payroll_report"
+                sequence="11"
+                action="action_allpaysliplines"
+                />
+</odoo>

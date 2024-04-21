@@ -1,0 +1,208 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_punishment_tree">
+            <field name="name">hr.punishment.tree</field>
+            <field name="model">hr.punishment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="employee_number"/>
+                    <field name="employee_id"/>
+                    <field name="declaration_date"/>
+                    <field name="applied_date"/>
+                    <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+                    <field name="violation_id"/>
+                    <field name="penalty_id"/>
+                    <field name="ded_amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_punishment_form">
+            <field name="name">hr.punishment.form</field>
+            <field name="model">hr.punishment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Done" name="action_done" groups="hr.group_hr_manager"
+                                states="hrm" type="object"
+                                class="oe_highlight"/>
+                        <button string="Approve" name="action_line_manager_approval"
+                                attrs="{'invisible':['|',('is_manager','=',False),('state','not in',['draft'])]}"
+                                type="object"
+                                class="oe_highlight"/>
+                        <button string="Approve" name="action_chairman_approval"
+                                groups="hr.group_hr_user"
+                                states="dm" type="object"
+                                class="oe_highlight"/>
+                        <button string="Approve" name="action_hrm_approval"
+                                groups="hr.group_hr_manager"
+                                states="chairman" type="object"
+                                class="oe_highlight"/>
+                        <button name="action_inform_employee" states="draft" string="Send Email"
+                                type="object"
+                                data-hotkey="g"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,dm,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id"
+                                       attrs="{'readonly':[('state','=','done')]}"/>
+                                <field name="employee_number"/>
+                                <field name="department_id" readonly="1"
+                                       attrs="{'readonly':[('state','=','done')]}"/>
+                                <field name="manager_id" readonly="1"
+                                       attrs="{'readonly':[('state','=','done')]}"/>
+                                <field name="is_manager" invisible="1"/>
+                                <field name="job_id" readonly="1"
+                                       attrs="{'readonly':[('state','=','done')]}"/>
+                                <field name="company_id" groups="base.group_multi_company"
+                                       options="{'no_create': True}"
+                                       attrs="{'readonly':[('state','=','done')]}"/>
+                            </group>
+                            <group>
+                                <field name="declaration_date"
+                                       attrs="{'readonly':[('state','=','done')]}"/>
+                                <field name="applied_date" readonly="1"
+                                       attrs="{'invisible':[('state','not in',('done','ded'))]}"/>
+
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Penalty Info">
+                                <field name="violation_id"
+                                       attrs="{'readonly':[('state','=','done')]}"
+                                       options="{'no_create': True, 'no_open': True}"/>
+                                <field name="penalty_id" attrs="{'readonly':[('state','=','done')]}"
+                                       options="{'no_create': True, 'no_open': True}"/>
+                                <field name="stage_id" attrs="{'readonly':[('state','=','done')]}"
+                                       options="{'no_create': True, 'no_open': True}"/>
+                                <field name="deduct" attrs="{'readonly':[('state','=','done')]}"/>
+                            </group>
+                            <group string="Deductions" attrs="{'invisible':[('deduct','=',False)]}">
+                                <field name="ded_amount"
+                                       attrs="{'invisible':[('deduct','=',False)],'readonly':[('state','=','done')]}"/>
+                                <field name="deducted_amount"
+                                       attrs="{'invisible':[('deduct','=',False)]}"/>
+                                <field name="remaining_amount"
+                                       attrs="{'invisible':[('deduct','=',False)]}"/>
+                                <field name="salary_type"
+                                       attrs="{'invisible':[('deduct','=',False)],'required':[('deduct','=',True)]}"/>
+                                <field name="allowance_ids" widget="many2many_tags"
+                                       attrs="{'invisible':[('salary_type','!=','selected_allowance')],'required':[('salary_type','=','selected_allowance')]}"/>
+                            </group>
+                        </group>
+
+                        <group name="reason" string="Comments" colspan="12" col="1">
+                            <field name="note" placeholder="Notes &amp; Comments" widget="html"
+                                   class="oe-bordered-editor"
+                                   attrs="{'readonly': [('state', 'in', ('done','ded'))]}"
+                                   options="{'style-inline': true}" nolabel="1"/>
+                            <field name="user_id" invisible="1"/>
+                        </group>
+                        <notebook>
+                            <page name="history" string="Penalties History"
+                                  attrs="{'invisible':[('history_ids','=',[])]}">
+                                <field name="history_ids" readonly="1" force_save="1">
+                                    <tree string="History" create="true" delete="true" edit="true"
+                                          editable="bottom" decoration-success="history_matching == True">
+                                        <field name="hr_punishment_id" invisible="1"/>
+                                        <field name="violation_id"/>
+                                        <field name="penalty_id"/>
+                                        <field name="stage_id"/>
+                                        <field name="declaration_date"/>
+                                        <field name="history_matching" invisible="1" force_save="1"/>
+                                    </tree>
+
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"
+                               widget="mail_followers"
+                               groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="hr_punishment_filter" model="ir.ui.view">
+            <field name="name">hr.punishment.search</field>
+            <field name="model">hr.punishment</field>
+            <field name="arch" type="xml">
+                <search string="Search Punishment">
+                    <field name="employee_id"/>
+                    <field name="declaration_date"/>
+                    <field name="applied_date"/>
+                    <filter string="Draft" name="state" domain="[('state','=','draft')]"/>
+                    <filter string="Done" name="state" domain="[('state','=','done')]"/>
+                    <separator/>
+                    <filter string="My Penalties" name="my_penalty" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <filter string="My Team" name="my_team"
+                            domain="['|', ('employee_id.parent_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                            help="penalties of people you are manager of"/>
+                     <separator/>
+                <filter name="filter_declaration_date" date="declaration_date" string="Declaration Date"/>
+                <filter name="filter_applied_date" date="applied_date" string="Applied Date"/>
+                    <group expand="0" string="Group By">
+                        <filter string="State" name="state" context="{'group_by':'state'}"/>
+                        <filter string="Employee" name="employee_id"
+                                context="{'group_by':'employee_id'}"/>
+                        <filter string="Violation Type" name="violation_type"
+                                context="{'group_by':'violation_id'}"/>
+                        <separator/>
+                        <filter name="group_declaration_date" string="Declaration Date"
+                                context="{'group_by':'declaration_date'}"/>
+                        <filter name="group_applied_date" string="Applied Date" context="{'group_by':'applied_date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_hr_punishment" model="ir.actions.act_window">
+            <field name="name">Penalties</field>
+            <field name="res_model">hr.punishment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="Penalties" id="menu_violation_punishment" parent="hr.menu_hr_root"
+                  sequence="20"/>
+
+        <menuitem name="Employees Penalties" id="menu_employee_violations"
+                  parent="menu_violation_punishment"
+                  action="action_hr_punishment"/>
+
+        <record model="ir.ui.view" id="hr_violation_tree">
+            <field name="name">violation.violation.tree</field>
+            <field name="model">violation.violation</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name" string="Violation Type" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_violation" model="ir.actions.act_window">
+            <field name="name">Violation Type</field>
+            <field name="res_model">violation.violation</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <menuitem id="penalties_configuration" name="Penalties" sequence="20"
+                  parent="hr.menu_human_resources_configuration"/>
+
+        <menuitem name="Violation Types" id="menu_violations" parent="penalties_configuration"
+                  action="action_hr_violation" sequence="20"/>
+
+    </data>
+</odoo>

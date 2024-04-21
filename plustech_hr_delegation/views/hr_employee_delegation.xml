@@ -1,0 +1,100 @@
+<odoo>
+    <data>
+        <record id="hr_employee_delegation_view_form" model="ir.ui.view">
+            <field name="name">hr.employee.delegation.view.form</field>
+            <field name="model">hr.employee.delegation</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button string="Submit" name="action_submit"
+                                type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button string="Approve" name="action_manager_approve"
+                                type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'submit')]}"/>
+                        <button string="Approve" name="action_hr_approve"
+                                type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'confirm')]}"/>
+                        <widget id="attach_document" name="attach_document" string="Add Attach"
+                                action="attach_document"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,submit,cancel, approved"
+                               readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_get_attachment_view" class="oe_stat_button" icon="fa-file-text-o"
+                                    type="object">
+                                <field name="attachment_number" widget="statinfo" string="Documents"
+                                       options="{'reload_on_button': true}"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1 class="mt0">
+                                <field name="name" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id" options="{'no_create': 1}"/>
+                                <field name="job_id"/>
+                                <field name="department_id" attrs="{'readonly': [('state', 'not in', ['draft', 'submit'])]}"
+                                       options="{'no_create': True, 'no_create_edit':True, 'no_open': True}"/>
+                                <field name="description" required="1"/>
+                            </group>
+                            <group>
+                                <field name="request_date" required="1"
+                                       attrs="{'readonly': [('state', 'not in', ['draft', 'submit'])]}"/>
+                                <label for="from_date" string="Period"/>
+                                <div name="dates" class="o_row">
+                                    <field name="from_date" widget="daterange"
+                                           options='{"related_end_date": "to_date"}'/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon"
+                                       title="Arrow"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon"
+                                       title="Arrow"
+                                       attrs="{'invisible': [('from_date', '=', False), ('to_date', '=', False)]}"/>
+                                    <field name="to_date" widget="daterange"
+                                           options='{"related_start_date": "from_date"}'/>
+                                </div>
+                                <field name="delegated_employee_id" domain="[('id', '!=', employee_id)]"
+                                       options="{'no_create': 1}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="o_attachment_preview"/>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="hr_employee_delegation_view_tree" model="ir.ui.view">
+            <field name="name">hr.employee.delegation.view.tree</field>
+            <field name="model">hr.employee.delegation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="department_id"/>
+                    <field name="delegated_employee_id"/>
+                    <field name="request_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_delegation_action" model="ir.actions.act_window">
+            <field name="name">Employee delegation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.delegation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="hr_employee_delegation_menu" name="Delegations"
+                  parent="hr_holidays.menu_hr_holidays_approvals"
+                  action="hr_employee_delegation_action" sequence="4"/>
+
+    </data>
+</odoo>

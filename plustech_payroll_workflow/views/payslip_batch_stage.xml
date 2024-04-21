@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Payslip.Batch.STAGE -->
+    <record id="payslip_batch_stage_view_tree" model="ir.ui.view">
+        <field name="name">payslip.run.stages.tree</field>
+        <field name="model">payslip.run.stage</field>
+        <field name="arch" type="xml">
+            <tree string="Stage" multi_edit="1" sample="1">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="user_ids" widget="many2many_tags" optional="show"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="payslip_run_stage_view_search" model="ir.ui.view">
+        <field name="name">payslip.run.stages.search</field>
+        <field name="model">payslip.run.stage</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="user_ids"/>
+                <filter string="Archived" name="active" domain="[('active', '=' ,False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="payslip_run_stage_view_kanban" model="ir.ui.view">
+        <field name="name">payslip.run.stages.kanban</field>
+        <field name="model">payslip.run.stage</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="sequence" widget="handle"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click oe_kanban_content">
+                            <strong class="o_kanban_record_title">
+                                <field name="name"/>
+                            </strong>
+                            <div>
+                                <field name="user_ids" widget="many2many_tags"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="payslip_stage_view_form" model="ir.ui.view">
+        <field name="name">payslip.run.stage.form</field>
+        <field name="model">payslip.run.stage</field>
+        <field name="arch" type="xml">
+            <form string="Stage Search">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="sequence" groups="base.group_no_one"/>
+                        </group>
+                        <group>
+                            <field name="user_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <group string="Stage Description and States Meaning">
+                        <group>
+                            <p class="text-muted mt-2" colspan="2">
+                                Add a description to help your coworkers understand the meaning and purpose of the stage.
+                            </p>
+                            <field name="description" placeholder="Add a description..." nolabel="1" colspan="2"/>
+                        </group>
+                    </group>
+                    <group string="Actions">
+                        <field name="generate_entry"/>
+                        <field name="post_entry"/>
+                        <field name="payment"/>
+                        <field name="cancel"/>
+                        <field name="set_to_draft"/>
+                        <field name="backward"/>
+                        <field name="print"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="payslip_batch_stage_action" model="ir.actions.act_window">
+        <field name="name">Payslip Batch</field>
+        <field name="res_model">payslip.run.stage</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="search_view_id" ref="payslip_run_stage_view_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            No stages found. Let's create one!
+          </p>
+        </field>
+    </record>
+
+    <menuitem id="payroll_stage_menu" name="Stages" sequence="3" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
+    <menuitem id="payslip_batch_stage_menu" action="payslip_batch_stage_action"
+         parent="payroll_stage_menu"/>
+
+</odoo>

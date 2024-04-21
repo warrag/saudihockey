@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="print_loan">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <t t-set="data_report_margin_top" t-value="12"/>
+                <t t-set="data_report_header_spacing" t-value="0"/>
+                <t t-set="data_report_dpi" t-value="110"/>
+                 <div class="header">
+                    <t t-if="o and 'company_id' in o">
+                        <t t-set="company" t-value="o.company_id"></t>
+                    </t>
+                    <t t-if="not o or not 'company_id' in o">
+                        <t t-set="company" t-value="res_company"></t>
+                    </t>
+                    <t t-set="report_header_style">background-color:white;height:auto;margin:0;padding-top:6.2mm;
+                        padding-left:8.2mm; padding-right:8.2mm;
+                    </t>
+                    <div class="row ">
+                        <div class="col-8">
+                            <img t-if="company.logo"
+                                 t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"
+                                 style="height: 100px;width: 190px;" />
+                            <!--                                                                <span t-esc="company.name" />-->
+                        </div>
+                         <div class="col-4">
+                        <strong>
+                            <span style=" font-weight: bold;color:#2666ae;  font-size: 24px;"
+                                  t-esc="company.name"/>
+                        </strong>
+                    </div>
+                    </div>
+                     <div class="row">
+                    <div class="col-12"
+                         style="position: fixed;opacity: 0.11;z-index: -99999999;top: 450px;text-align: center;">
+                        <img t-if="company.logo" style="width:80%"
+                             t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"/>
+                    </div>
+                </div>
+                </div>
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <style>
+                            td{
+                                padding:5px !important;
+                                text-align: center;
+                                border-bottom:2px solid black;
+                                border-top:2px solid black !important;
+                                border-left:2px solid black;
+                                border-right:2px solid black;
+                            }
+                            table{
+                                padding: 0px;
+                                text-align: center;
+                            }
+                            th{
+                                padding: 0px;
+                                border-bottom:2px solid black;
+                                border-top:2px solid black;
+                                border-left:2px solid black;
+                                border-right:2px solid black;
+                            }
+                            tr{
+                                padding: 0px;
+                            }
+                        </style>
+                           <div class="text-center">
+                            <span>
+                                <h2 style="text-align: center;"> loan Request - طلب سلفة
+                                </h2>
+                            </span>
+                       </div>
+                        <table style="width:100%;margin-bottom:10px;margin-top:10px">
+                            <thead>
+                                <tr style="width:100%;text-align:left;background-color: #e8e8e8;">
+                                    <th style="padding:5px;">
+                                        Employee Info.
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table style="width:100%" class="table">
+                            <colgroup>
+                                <col width="17%" />
+                                <col width="33%" />
+                                <col width="25%" />
+                                <col width="25%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                    Employee Name
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id"/>
+                                    </td>
+                                    <td>
+                                    Job Position
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.job_id"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    Department
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.department_id"/>
+                                    </td>
+                                    <td>
+                                    Manager
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.parent_id"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Email
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.work_email"/>
+                                    </td>
+                                    <td>
+                                        Mobile
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.work_phone"/>
+                                    </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                        <br/>
+                        <table style="width:100%;margin-bottom:10px">
+                            <thead>
+                                <tr style="width:100%;text-align:left;background-color: #e8e8e8;">
+                                    <th style="padding:5px;">
+                                        Request Info.
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table style="width:100%" class="table">
+                            <colgroup>
+                                <col width="17%" />
+                                <col width="33%" />
+                                <col width="25%" />
+                                <col width="25%" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                    Loan received date
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.date"/>
+                                    </td>
+                                    <td>
+                                    Payment Start Date	
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.payment_date"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    Type Of Installments
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.installment_type"/>
+                                    </td>
+                                    <td t-if="doc.installment_type == 'end_date'">
+                                        Payment End Date
+                                    </td>
+                                    <td t-if="doc.installment_type == 'end_date'">
+                                        <span t-field="doc.payment_end_date"/>
+                                    </td>
+                                    <td t-if="doc.installment_type == 'amount'">
+                                        Monthly installment
+                                    </td>
+                                    <td t-if="doc.installment_type == 'amount'">
+                                        <span t-field="doc.installment"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Loan Amount
+                                    </td>
+                                    <td colspan="3">
+                                        <span t-field="doc.loan_amount"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <table style="width:100%;margin-bottom:10px">
+                            <thead>
+                                <tr style="width:100%;text-align:left;background-color: #e8e8e8;">
+                                    <th style="padding:5px;width:34%;text-align:center">
+                                        Payment Date
+                                    </th>
+                                    <th style="padding:5px;width:33%;text-align:center">
+                                        Amount
+                                    </th>
+                                    <th style="padding:5px;width:33%;text-align:center">
+                                        Status
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table style="width:100%" class="table">
+                            <colgroup>
+                                <col width="34%" />
+                                <col width="33%" />
+                                <col width="33%" />
+                            </colgroup>
+                            <tbody>
+                                <tr t-foreach="doc.loan_lines" t-as="line">
+                                    <td>
+                                        <span t-field="line.date"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.amount"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.state"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+                 <div class="footer " style="font-family:MonixBold ;direction: rtl;border-top: 1px solid #2666ae;">
+                <div class="">
+                    <div class="row">
+                         <ul class="list-inline">
+                    <div t-field="company.report_footer"/>
+                </ul>
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page:
+                    <span class="page"/>
+                    of
+                    <span class="topage"/>
+                </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-raw="0"/>
+            </div>
+            </t>
+        </t>
+    </template>
+
+
+    <record id="advance_request_template_action" model="ir.actions.report">
+        <field name="name">Loan Request</field>
+        <field name="model">hr.loan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">plustech_hr_loan.print_loan</field>
+        <field name="report_file">plustech_hr_loan.print_loan</field>
+        <field name="binding_model_id" ref="model_hr_loan" />
+    </record>
+</odoo>

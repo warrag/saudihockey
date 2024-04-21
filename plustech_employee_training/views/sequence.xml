@@ -1,0 +1,13 @@
+<openerp>
+    <data noupdate="0">
+
+        <!-- Sequences for Contract Order -->
+        <record id="seq_engagement_info_order" model="ir.sequence">
+            <field name="name">engagement info Order</field>
+            <field name="code">course.schedule</field>
+            <field name="prefix"></field>
+            <field eval="1" name="number_next"/>
+            <field name="padding">6</field>
+        </record>
+    </data>
+</openerp>

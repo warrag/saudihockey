@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_contract_view_tree" model="ir.ui.view">
+            <field name="name">hr.contract.tree</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+            <field name="arch" type="xml">
+
+                <tree position="attributes">
+                    <attribute name="edit">1</attribute>
+                    <attribute name="multi_edit">1</attribute>
+                </tree>
+
+                <field name="name" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+                <field name="employee_id" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+                <field name="job_id" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+                <field name="resource_calendar_id" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+                <field name="date_start" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+                <field name="date_end" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+
+                <field name="state" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+            </field>
+        </record>
+
+         <record id="hr_payroll_form_inherit" model="ir.ui.view">
+            <field name="name">hr.payroll.contract.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_payroll.payroll_hr_employee_view_form"/>
+            <field name="arch" type="xml">
+
+                <field name="contract_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <field name="registration_number" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                  <xpath expr="//group[@name='payroll_group']" position="inside">
+                    <field name="contract_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

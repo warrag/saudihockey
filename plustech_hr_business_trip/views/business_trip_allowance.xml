@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="deputation_allowance_view_form" model="ir.ui.view">
+        <field name="name">business.trip.allowance.view.form</field>
+        <field name="model">hr.deputation.allowance</field>
+        <field name="arch" type="xml">
+            <form string="Allowance">
+                <sheet>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1"/>
+                        </h1>
+                    </div>
+
+                    <group col="2" colspan="2">
+                        <group>
+                            <field name="code" required="1"/>
+
+                            <field name="product_id" context="{'default_detailed_type': 'service'}"
+                                   required="1"/>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="company_id" groups="base.group_multi_company"
+                                   options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="type" required="1"/>
+                            <field name="amount" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"
+                           groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="deputation_allowance_view_tree" model="ir.ui.view">
+        <field name="name">deputation_allowance.view.tree</field>
+        <field name="model">hr.deputation.allowance</field>
+        <field name="arch" type="xml">
+            <tree string="Allowance">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="amount"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="deputation_allowance_action" model="ir.actions.act_window">
+        <field name="name">Other Allowance</field>
+        <field name="res_model">hr.deputation.allowance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <!-- <field name="help" type="html">
+
+        </field> -->
+    </record>
+
+    <menuitem
+            id="deputation_config_menu"
+            parent="deputation_main_menu"
+            name="Configuration"
+            sequence="10" groups="group_hr_deputation_manager"/>
+    <menuitem
+            id="deputation_allowance_menu"
+            parent="deputation_config_menu" action="deputation_allowance_action"
+            sequence="10"/>
+
+
+    <!-- cities allowance -->
+    <record id="deputation_cities_allowance_view_form" model="ir.ui.view">
+        <field name="name">deputation.cities.allowance.view.form</field>
+        <field name="model">deputation.cities.allowance</field>
+        <field name="arch" type="xml">
+            <form string="Business Trip Allowance">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_allowance" class="oe_stat_button"
+                                icon="fa-th-list"
+                                type="object">
+                            <field name="count_allowance" widget="statinfo" string="Allowance"
+                                   options="{'reload_on_button': true}"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="deputation_type" widget="radio"
+                                   options="{'horizontal':true}"/>
+                            <field name="dest_country_id" invisible="1"/>
+                            <field name="from_city_id" invisible="1"/>
+                            <field name="to_city_id" invisible="1"/>
+                            <field name="country_group_id"/>
+                        </group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="country_id" invisible="1"/>
+                            <field name="amount" invisible="1" required="1"/>
+
+                            <label for="days_before" string="Extra Days"/>
+                            <div>
+                                <div class="o_row o_row_readonly">
+                                    <field name="days_before" class="oe_inline" nolabel="1"/>
+                                    <span class="oe_inline">
+                                        Day Before
+                                    </span>
+                                    <field name="days_after" class="oe_inline"/>
+                                    <span class="oe_inline">
+                                        Day After
+                                    </span>
+                                </div>
+                            </div>
+                        </group>
+
+                    </group>
+                     <notebook>
+                        <page string="Countries">
+                            <field name="country_ids" force_save="1"/>
+                        </page>
+                          <page string="Excluded Cities">
+                            <field name="excluded_city_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="country_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"
+                           groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="deputation_cities_allowance_view_tree" model="ir.ui.view">
+        <field name="name">deputation.cities.allowance.view.tree</field>
+        <field name="model">deputation.cities.allowance</field>
+        <field name="arch" type="xml">
+            <tree string="Business Trip Allowance">
+                <field name="deputation_type"/>
+                <field name="country_group_id"/>
+                <field name="amount"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="deputation_cities_allowance_action" model="ir.actions.act_window">
+        <field name="name">Business Trip Allowance</field>
+        <field name="res_model">deputation.cities.allowance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <!-- <field name="help" type="html">
+
+        </field> -->
+    </record>
+
+    <menuitem
+            id="cities_deputation_allowance_menu"
+            parent="deputation_config_menu" action="deputation_cities_allowance_action"
+            sequence="9"/>
+
+    <record id="deputation_cities_allowance_lines_view_tree" model="ir.ui.view">
+        <field name="name">deputation.cities.allowance.lines.view.tree</field>
+        <field name="model">deputation.cities.allowance.line</field>
+        <field name="arch" type="xml">
+            <tree string="Business Trip Per-Diem" editable="bottom">
+                <field name="job_position_ids" width="800px" required="True" widget="many2many_tags"/>
+                <field name="parent_id" invisible="1"/>
+                <field name="per_diem_amount" width="300px"/>
+                <field name="internal_per_diem" width="300px" invisible="1"/>
+                <field name="external_per_diem" width="300px" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

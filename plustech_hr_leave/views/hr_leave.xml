@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="plus_hr_leave_view_form_manager" model="ir.ui.view">
+        <field name="name">hr.leave</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='holiday_status_id']" position="replace">
+                <field name="plus_type" invisible="1"/>
+                <field name="holiday_status_id" options="{'no_open': True}"
+                       domain="['&amp;', ('plus_type', '=', plus_type),'|', ('requires_allocation', '=', 'no'), ('has_valid_allocation', '=', True)]"
+                       context="{'from_manager_leave_form': True ,'employee_id': employee_id, 'default_date_from':date_from, 'default_date_to':date_to, 'default_plus_type':plus_type}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="plus_hr_leave_view_form" model="ir.ui.view">
+        <field name="name">hr.leave</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//button[@name='action_draft']" position="attributes">
+                                <attribute name="attrs">{'invisible': ['|', ('can_reset', '=', False), ('state', 'not in', ['refuse'])]}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_refuse']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <button name="action_refuse" position="after">
+                <field name="can_refuse" invisible="1"/>
+                <button string="Refuse" name="%(plustech_hr_leave.leave_rejection_wizard_action)d" type="action"
+                        attrs="{'invisible': ['|',('can_refuse', '=', False), ('state', 'not in', ('confirm','validate1','validate'))]}"/>
+            </button>
+              <button name="action_confirm" position="after">
+                <button string="Leave Cut" name="%(plustech_hr_leave.leave_cut_wizard_action)d" type="action"
+                        attrs="{'invisible': ['|',('cut_done', '=', True),('show_cut_button', '=', False)]}" class="oe_highlight"
+                />
+            </button>
+             <field name="supported_attachment_ids" position="after">
+                <field name="refuse_reason" attrs="{'invisible': [('state', '!=', 'refuse')]}"/>
+            </field>
+            <xpath expr="//field[@name ='number_of_hours_text']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <field name="number_of_hours_text" position="after">
+                <field name="duration_hours" nolabel="1" class="oe_inline"/>Hours
+            </field>
+            <xpath expr="//field[@name='holiday_status_id']" position="after">
+                <field name="plus_type" invisible="1"/>
+                <field name="show_cut_button" invisible="1"/>
+                <field name="cut_done" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='holiday_status_id']" position="replace">
+                <field name="holiday_status_id" force_save="1"
+                       domain="['&amp;', ('plus_type', '=', plus_type), '|', ('requires_allocation', '=', 'no'), '&amp;', ('has_valid_allocation', '=', True), '&amp;', ('virtual_remaining_leaves', '&gt;', 0), ('max_leaves', '&gt;', '0')]"
+                       context="{'employee_id':employee_id, 'default_date_from':date_from, 'default_date_to':date_to}"
+                       options="{'no_create': True, 'no_open': True}" class="w-100"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_leave_employee_view_dashboard_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.view.dashboard.inherit</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_employee_view_dashboard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//calendar" position="attributes">
+                <attribute name="js_class">time_off_employee_calendar_lang_en</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_leave_view_try_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.tree.inherit</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="duration_display" position="after">
+                <field name="duration_hours" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_leave_allocation_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.allocation</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="is_carry_forward" invisible="1"/>
+                <field name="cumulative_balance" attrs="{'invisible': [('allocation_type', '!=', 'accrual')]}"/>
+                <field name="from_join_date" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='holiday_status_id']" position="replace">
+                <field name="plus_type" invisible="1"/>
+                <field name="holiday_status_id" domain="[('plus_type', '=', plus_type)]"
+                       context="{'employee_id':employee_id, 'default_date_from':current_date}"/>
+
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,77 @@
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.base.setup</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="0"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Petty Cash Settings" string="Petty Cash"
+                         data-key="petty_cash">
+                        <div id="contacts_settings">
+                            <h2>Petty Cash Settings</h2>
+                            <div class="row mt16 o_settings_container">
+                                <div class="col-12 col-lg-6 o_setting_box">
+                                    <div class="o_setting_right_pane">
+                                        <span class='o_form_label'>
+                                            Petty Journal
+                                        </span>
+                                        <field name='petty_journal_id' options="{'no_create':1,'no_open':1}"/>
+                                        <br/>
+                                        <span class='o_form_label'>
+                                            Payment Journal
+                                        </span>
+                                        <field name='payment_journal_id' options="{'no_create':1,'no_open':1}"/>
+                                        <br/>
+                                        <span class='o_form_label'>
+                                            Purchase Journal
+                                        </span>
+                                        <field name='purchase_journal_id' options="{'no_create':1,'no_open':1}"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt16 o_settings_container">
+                                <div class="col-12 col-lg-6 o_setting_box">
+                                    <div class="o_setting_right_pane">
+                                        <span class='o_form_label'>
+                                            Default Limit
+                                        </span>
+                                        <field name='limit'/>
+                                        <br/>
+                                        <span class='o_form_label'>
+                                            Internal Transfer Account
+                                        </span>
+                                        <field name='petty_transfer_account_id' options="{'no_create':1,'no_open':1}"/>
+                                        <br/>
+                                        <span class='o_form_label'>
+                                            Analytic Account
+                                        </span>
+                                        <field name='petty_analytic_account_id' options="{'no_create':1,'no_open':1}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="action_petty_cash_config" model="ir.actions.act_window">
+            <field name="name">Petty Cash</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_id" ref="res_config_settings_view_form"/>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'petty_cash'}</field>
+        </record>
+
+        <menuitem id="petty_cash_configuration_menu" name="Configuration" parent="account_transfer_main_menu"
+                  sequence="90" />
+        <menuitem id="petty_cash_setting_menu" name="Settings" parent="petty_cash_configuration_menu"  sequence="1"
+                  action="action_petty_cash_config"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,42 @@
+<odoo>
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="salary_transfer_template" model="letter.letter">
+            <field name="name">Transfer Salary To Bank</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="container" style="width:100%;">
+                <div class="row">
+                    <h4>Messrs/${object.company_id.name}</h4>
+                </div>
+                <div class="row">
+                    <p>
+                        Reference to the employment contract signed on ${object.contract_id.date_start},
+                        I inform you of my desire to transfer my monthly salary and all
+                        My job entitlements are on my bank account ( ) shown below, and I also pledge that all data
+                        The blog is correct and is under my responsibility, and I also acknowledge that the company's
+                        deposit of any amounts in this account is a final acquittal
+                        For her slander, and for that I sign.
+                    </p>
+                    <h4>Thank you.</h4>
+                </div>
+                <div class="row">
+                    <h4>Bank IBAN</h4>
+                    <tabl class="table table-bordered" style="border: 1px solid black;">
+                        <tr style="border: 1px solid black;">
+                            % for line in object.request_id.bank_account_id.acc_number:
+                            <td style="border: 1px solid black;">${line}</td>
+                            % endfor
+                        </tr>
+                    </tabl>
+                </div>
+                <div class="row">
+                    <h4>Name: ${object.request_id.name or ''|safe}</h4>
+                    <br/>
+                    <h4>Date: ${object.request_date or ''|safe}</h4>
+                </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

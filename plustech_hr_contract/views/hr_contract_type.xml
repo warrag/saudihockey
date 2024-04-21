@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="contract_type_form" model="ir.ui.view">
+        <field name="name">hr.contract.type.form.view</field>
+        <field name="model">hr.contract.type</field>
+        <field name="arch" type="xml">
+            <form string="Contract Type">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Contract Type" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Seasonal Contract" />
+                        </h1>
+                    </div>
+                    <group>
+                         <group>
+                             <field name="duration_type" />
+                             <field name="end_of_service"/>
+                         </group>
+                        <group>
+                            <!--                             <field name="has_medical_insurance"/>-->
+                            <field name="has_vacations"/>
+                            <field name="has_allowance"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_contract_type">
+        <field name="name">Contract Types</field>
+        <field name="res_model">hr.contract.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem
+        id="menu_contract_types"
+        name="Contract Types"
+        parent="hr_contract.menu_human_resources_configuration_contract"
+        action="action_contract_type"
+        sequence="2" />
+
+</odoo>

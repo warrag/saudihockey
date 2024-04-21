@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="leave_ticket_doc">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <t t-set="data_report_margin_top" t-value="12"/>
+                <t t-set="data_report_header_spacing" t-value="0"/>
+                <t t-set="data_report_dpi" t-value="110"/>
+                <div class="header">
+                    <t t-if="o and 'company_id' in o">
+                        <t t-set="company" t-value="o.company_id"></t>
+                    </t>
+                    <t t-if="not o or not 'company_id' in o">
+                        <t t-set="company" t-value="res_company"></t>
+                    </t>
+                    <t t-set="report_header_style">background-color:white;height:auto;margin:0;padding-top:6.2mm;
+                        padding-left:8.2mm; padding-right:8.2mm;
+                    </t>
+                    <div class="row">
+                        <table class="table-bordered" style="width:96%;margin: auto;">
+                            <tr>
+                                <td style="background-color: #C6D9F1;border:2px solid black !important;">
+                                    <img t-if="company.logo"
+                                         t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"
+                                         style="height: 100px;width: 190px;"/>
+                                </td>
+                                <td class="text-center"
+                                    style="background-color: #C6D9F1;;border:2px solid black !important;">
+
+                                    <span style=" font-weight: bold;color:black;  font-size: 19px;">
+                                        طلب إصدار أمر إركاب
+                                        <br/>
+                                        Travel Authorization Form
+                                    </span>
+                                </td>
+                                <td class="text-center"
+                                    style="background-color: #C6D9F1;;border:2px solid black !important;">
+
+                                    <span style=" font-weight: bold;color:black;  font-size: 19px;">
+                                        الموارد البشرية
+                                        <br/>
+                                        Human Resources
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-12"
+                             style="position: fixed;opacity: 0.11;z-index: -99999999;top: 450px;text-align: center;">
+                            <img t-if="company.logo" style="width:80%"
+                                 t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"/>
+                        </div>
+                    </div>
+                </div>
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page" style="font-size:14px;">
+                        <style>
+                            td{
+                            padding:5px !important;
+                            text-align: center;
+                            border-bottom:2px solid black;
+                            border-top:2px solid black !important;
+                            border-left:2px solid black;
+                            border-right:2px solid black;
+                            }
+                            table{
+                            padding: 0px;
+                            text-align: center;
+                            }
+                            th{
+                            padding: 0px;
+                            border-bottom:2px solid black;
+                            border-top:2px solid black;
+                            border-left:2px solid black;
+                            border-right:2px solid black;
+                            }
+                            tr{
+                            padding: 0px;
+                            }
+                        </style>
+
+                        <table style="width:100%;margin-bottom:10px">
+                            <thead>
+                                <tr style="width:100%;text-align:left;background-color: #8DB3E2;">
+                                    <th style="padding:5px;" colspan="4">
+                                        بيانات الموظف Employee's Information
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: #e8e8e8;">الاسم<br/>Name
+                                    </th>
+                                    <th style="background-color: #e8e8e8;">الرقم الوظيفي<br/>Job No
+                                    </th>
+                                    <th style="background-color: #e8e8e8;">المسمى الوظيفي<br/>Job Title
+                                    </th>
+                                    <th style="background-color: #e8e8e8;">آلإدارة/القسم<br/>Dept/Sec
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="doc.employee_id"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.employee_number"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.job_id"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.employee_id.department_id"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table style="width:100%;margin-bottom:10px">
+                            <thead>
+                                <tr style="width:100%;text-align:left;background-color: #8DB3E2;">
+                                    <th style="padding:5px;" colspan="6">
+                                        بيانات الرحلة Flight Data
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">
+                                        خط السير
+                                        <br/>
+                                        Flight Route
+                                    </th>
+                                    <td>
+                                        <span t-field="doc.trip_id"/>
+                                    </td>
+                                    <th scope="row" style="background-color: #e8e8e8;">الدرجة<br/>Class
+                                    </th>
+                                    <td>
+                                        <span t-field="doc.ticket_class"/>
+                                    </td>
+                                    <th scope="row" style="background-color: #e8e8e8;">رقم الحجز<br/>Res No
+                                    </th>
+                                    <td>
+                                        <span t-field="doc.ticket_no"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">
+                                        وضع الحجز<br/>Status of Reservation
+                                    </th>
+                                    <td>
+                                        مؤكد
+                                        <br/>
+                                        Confirmed
+                                    </td>
+                                    <td colspan="2">
+                                        انتظار
+                                        <br/>
+                                        Waiting
+                                    </td>
+                                    <td style="background-color: #e8e8e8;">
+                                        تاريخ السفر<br/>Date Of Dep
+                                    </td>
+                                    <td>
+                                        <span t-field="doc.date_start"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">
+                                        الغرض من الطلب<br/>Purpose of Request
+                                    </th>
+                                    <td colspan="5">انتداب<br/>Per Diem
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">
+                                        سبب السفر
+                                        <br/>
+                                        Reason(s) of Travel
+                                    </th>
+                                    <td colspan="5"></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">
+                                        الـــمـــطـــلـــوب
+                                        <br/>
+                                        Requested
+                                    </th>
+                                    <td colspan="2">
+                                        إصـدار الــتــذكــرة<br/>Ticket Issue
+                                    </td>
+                                    <td colspan="3">
+                                        التعويض عن قيمة التذكرة<br/>Ticket Compensation
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table style="width:100%;margin-bottom:10px">
+                            <thead>
+                                <tr style="width:100%;text-align:center;">
+                                    <th width="40%" scope="row" style="padding:5px;background-color: #8DB3E2;">
+                                        توقيع الموظف صاحب الطلب على صحة المعلومات أعلاه
+                                        <br/>
+                                        Employee Signature
+                                    </th>
+                                    <td width="30%"></td>
+                                    <th width="10%" scope="row" style="padding:5px;background-color: #8DB3E2;">
+                                        التاريخ Date
+                                    </th>
+                                    <td width="20%"></td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table style="width:100%">
+                            <thead>
+                                <tr style="width:100%;text-align:canter; background-color: #8DB3E2;">
+                                    <th scope="row" style="padding:5px;" colspan="4">
+                                        تقرير الشؤون ألإدارية
+                                        <br/>
+                                        Administrative affairs report
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>يستحق<br/>Approved
+                                    </td>
+                                    <th scope="row">
+                                        قيمة التعويض عن التذاكر
+                                        <br/>
+                                        Ticket Compensation Amount
+                                    </th>
+                                    <td colspan="2">
+                                        <span t-esc="'{0:,.2f}'.format(doc.ticket_fare)"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>لا يستحق بسبب :<br/>Denied
+                                    </td>
+                                    <td colspan="3">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">التوقيع Signature</th>
+                                    <td></td>
+                                    <th scope="row" style="background-color: #e8e8e8;">التاريخ Date</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table style="width:100%;margin-top: 8px;">
+                            <thead>
+                                <tr style="width:100%;text-align:canter;">
+                                    <th scope="row" style="padding:5px;background-color: #8DB3E2;" colspan="4">
+                                        اعتماد مدير عام الشؤون المالية والإدارية
+                                        Financial and Administrative Affairs Approval
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>موافق Approved</td>
+                                    <td>غير موافق بسبب Denied</td>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">التوقيع Sig</th>
+                                    <td></td>
+                                    <th scope="row" style="background-color: #e8e8e8;">التاريخ Date</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table style="width:100%;margin-top:8px;page-break-before:avoid;">
+                            <thead>
+                                <tr style="width:100%;text-align:canter;">
+                                    <th scope="row" style="padding:5px;background-color: #8DB3E2;" colspan="4">
+                                        اعـتـمـاد الــرئــيــس الــتــنــفــيــذي
+                                        CEO Approval
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" style="background-color: #e8e8e8;">التوقيع  Sig</th>
+                                    <td></td>
+                                    <th scope="row" style="background-color: #e8e8e8;">التاريخ  Date</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </t>
+                <div class="footer " style="font-family:MonixBold ;direction: rtl;border-top: 1px solid #2666ae;">
+                    <div class="">
+                        <div class="row">
+                            <ul class="list-inline">
+                                <div t-field="company.report_footer"/>
+                            </ul>
+                            <div t-if="report_type == 'pdf'" class="text-muted">
+                                Page:
+                                <span class="page"/>
+                                of
+                                <span class="topage"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                     t-att-data-oe-lang="o and o.env.context.get('lang')">
+                    <t t-raw="0"/>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <record id="leave_ticket_report_action" model="ir.actions.report">
+        <field name="name">Leave Ticket</field>
+        <field name="model">hr.flight.ticket</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">plustech_hr_vacation_ticket.leave_ticket_doc</field>
+        <field name="report_file">plustech_hr_vacation_ticket.leave_ticket_doc</field>
+        <field name="binding_model_id" ref="model_hr_flight_ticket"/>
+    </record>
+</odoo>

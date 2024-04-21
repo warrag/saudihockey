@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="monthly_report">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <style>
+                        table{
+                        padding: 0px;
+                        font-family:MonixBold;
+                        }
+                        th{
+                        padding: 0px;
+                        tr{
+                        padding: 0px;
+                        }
+                    </style>
+                    <div class="oe_structure">
+                        <h1 align="center">Monthly report for employee attendance</h1>
+                    </div>
+                    <table class="table table-bordered table-sm mt-4">
+                        <thead style="background:#c0c0c0;">
+                            <tr>
+                                <th>
+                                    <strong>Month</strong>
+                                </th>
+                                <th>
+                                    <strong>Year</strong>
+                                </th>
+                                <th>
+                                    <strong>Employee Number</strong>
+                                </th>
+                                <th>
+                                    <strong>Name</strong>
+                                </th>
+                                <th>
+                                    <strong>Job Position</strong>
+                                </th>
+                                <th>
+                                    <strong>Department</strong>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <t t-if="form_data.get('month')">
+                                        <t t-esc="form_data['month']"/>
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="form_data.get('year')">
+                                        <t t-esc="form_data['year']"/>
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="form_data.get('employee_number')">
+                                        <t t-esc="form_data['employee_number']"/>
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="form_data.get('employee_id')">
+                                        <t t-esc="form_data.get('employee_id')[1]"/>
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="form_data.get('job_id')">
+                                        <t t-esc="form_data['job_id'][1]"/>
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="form_data.get('department_id')">
+                                        <t t-set="department" t-value="form_data.get('department_id')[1].split('/')"/>
+                                        <t t-esc="department[len(department) - 1]"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+
+                    <table class="table table-bordered mt32">
+                        <thead>
+                            <tr>
+                                <th name="th_id" class="text-left"
+                                    style="background:#c0c0c0;width:100px;vertical-align: top;">
+                                    <span>ID</span>
+                                </th>
+                                <th name="th_date" class="text-left" style="background:#c0c0c0;vertical-align: top;">
+                                    <span>Date</span>
+                                </th>
+                                <th name="th_leave" class="text-left" style="background:#99ccff;vertical-align: top;">
+                                    <span>Leave</span>
+                                </th>
+                                <th name="th_perdiem" class="text-left" style="background:#99ccff;vertical-align: top;">
+                                    <span>Per-Diem</span>
+                                </th>
+                                <th name="th_exception" class="text-left"
+                                    style="background:#99ccff;vertical-align: top;">
+                                    <span>Exception</span>
+                                </th>
+                                <th name="th_absent" class="text-left" style="background:#ff0000;vertical-align: top;">
+                                    <span>Absent</span>
+                                </th>
+                                <th name="th_sign_in" class="text-left" style="background:#c0c0c0;vertical-align: top;">
+                                    <span>Sign-in Time</span>
+                                </th>
+                                <th name="th_sign_out" class="text-left"
+                                    style="background:#c0c0c0;vertical-align: top;">
+                                    <span>Sign-out Time</span>
+                                </th>
+                                <th name="th_working_hours" class="text-left"
+                                    style="background:#c0c0c0;vertical-align: top;">
+                                    <span>Working Hours</span>
+                                </th>
+                                <th name="th_late_hours" class="text-left"
+                                    style="background:#ff9900;vertical-align: top;">
+                                    <span>Late Hours</span>
+                                </th>
+                                <th name="th_overtime_hours" class="text-left"
+                                    style="background:#00ff00;vertical-align: top;">
+                                    <span>Overtime Hours</span>
+                                </th>
+                                <th name="th_decision" class="text-left"
+                                    style="background:#c0c0c0;vertical-align: top;">
+                                    <span>Manager's Decision</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="no" t-value="0"/>
+                            <t t-foreach="docs" t-as="line">
+                                <t t-set="no" t-value="no+1"/>
+                                <tr>
+                                    <td>
+                                        <span t-esc="no"/>
+                                    </td>
+                                    <td style="white-space: nowrap;">
+                                        <span t-esc="line.date"/>
+                                    </td>
+                                    <td style="white-space: nowrap;">
+                                        <span t-if="line.leave_id" t-field="line.leave_id.holiday_status_id"/>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td tyle="white-space: nowrap;">
+                                        <span t-if="line.public_holiday_id" t-field="line.public_holiday_id"/>
+                                    </td>
+                                    <td>
+                                        <span t-if="line.status=='ab'" t-esc="line.diff_time_display"/>
+                                        <span t-if="line.status!='ab'" t-esc="'00:00'"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line.ac_sign_in_display"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line.ac_sign_out_display"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line.worked_hours"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line.late_in_display"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.overtime" t-options="{'widget': 'float_time'}"/>
+
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <div style="page-break-after: always;">
+                        <br/>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,102 @@
+<odoo>
+    <data>
+
+
+        <record id="salary_definition_02_letter_template" model="letter.letter">
+            <field name="name">Salary Definition 02</field>
+            <field name="report_xml_id">plustech_hr_employee_letter.salary_definition_2_report_id</field>
+            <field name="categ_id" ref="plustech_hr_employee_letter.salary_definition_letter_category"/>
+            <field name="version">V.001</field>
+        </record>
+
+
+        <record id="to_whome_02_ar" model="hr.letter.fields">
+            <field name="name">To AR</field>
+            <field name="technical_name">to_02_ar</field>
+            <field name="required">True</field>
+            <field name="default_value">الي من يهمة الامر </field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+        <record id="to_whome_02_en" model="hr.letter.fields">
+            <field name="name">To EN</field>
+            <field name="technical_name">to_02_en</field>
+            <field name="required">True</field>
+            <field name="default_value">Whom It May Concern</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="emp_name_02" model="hr.letter.fields">
+            <field name="name">Employee Name</field>
+            <field name="technical_name">emp_name</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="id_no_02" model="hr.letter.fields">
+            <field name="name">National ID</field>
+            <field name="technical_name">identification_id</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="nationality_02" model="hr.letter.fields">
+            <field name="name">Employee Nationality</field>
+            <field name="technical_name">nationality</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="joining_date_02" model="hr.letter.fields">
+            <field name="name">Employee Joining Date</field>
+            <field name="technical_name">joining_date</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="job_02" model="hr.letter.fields">
+            <field name="name">Employee job</field>
+            <field name="technical_name">job</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="company_02_ar" model="hr.letter.fields">
+            <field name="name">Company AR</field>
+            <field name="technical_name">company_ar</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+        <record id="company_02_en" model="hr.letter.fields">
+            <field name="name">Company EN</field>
+            <field name="technical_name">company_en</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="total_amount" model="hr.letter.fields">
+            <field name="name">Total Salary Amount</field>
+            <field name="technical_name">total_amount</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+        <record id="amount_word" model="hr.letter.fields">
+            <field name="name">Total Salary Amount Word</field>
+            <field name="technical_name">amount_word</field>
+            <field name="required">True</field>
+            <field name="visible">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.salary_definition_02_letter_template"/>
+        </record>
+
+    </data>
+</odoo>

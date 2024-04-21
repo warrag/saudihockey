@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <record id="transaction_generate_wizard_view_form" model="ir.ui.view">
+            <field name="name">transaction.generate.wizard.view.form</field>
+            <field name="model">transaction.generate.wizard</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                 <field name="employee_ids" widget="many2many_tags"/>
+                                <field name="date_from" required="1" options="{'datepicker':{'maxDate': 'now'}}"/>
+                                <field name="date_to" required="1" options="{'datepicker':{'maxDate': 'now'}}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="generate_transaction" class="oe_highlight" string="Generate"
+                                type="object"/>
+                        <button string="CANCEL" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="attendance_generate_wizard_action" model="ir.actions.act_window">
+            <field name="name">Generate Transaction</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">transaction.generate.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

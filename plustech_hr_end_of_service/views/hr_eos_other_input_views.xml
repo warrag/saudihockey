@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_eos_other_input_view_form" model="ir.ui.view">
+        <field name="name">hr.eos.other.input.view.form</field>
+        <field name="model">eos.other.input</field>
+        <field name="arch" type="xml">
+            <form string="EOS Input" >
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="input_type"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_eos_other_input_view_tree" model="ir.ui.view">
+        <field name="name">hr.os.other.input.view.tree</field>
+        <field name="model">eos.other.input</field>
+        <field name="arch" type="xml">
+            <tree string="EOS Input" >
+                <field name="name" placeholder="EOS Input Name"/>
+                <field name="input_type"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_view_hr_eos_other_input" model="ir.actions.act_window">
+        <field name="name">EOS Other Input</field>
+        <field name="res_model">eos.other.input</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="eos_other_input"  parent="menu_end_service_config"
+              action="action_view_hr_eos_other_input" sequence="2"/>
+
+</odoo>

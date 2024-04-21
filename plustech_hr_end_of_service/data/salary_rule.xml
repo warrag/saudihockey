@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+     <record id="hr_payroll_rules_eos_resign_reward" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">End of service reward</field>
+        <field name="code">EOS</field>
+        <field name="struct_id" ref="plustech_hr_payroll.structure_main" />
+        <field name="amount_select">fix</field>
+        <field name="sequence">110</field>
+        <field name="condition_select">python</field>
+        <field name="appears_on_payslip" eval="True"/>
+        <field name="condition_python">result = payslip.eos_id and payslip.eos_id.final_deserving or 0.0</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = payslip.eos_id and payslip.eos_id.final_deserving or 0.0</field>
+    </record> 
+
+    <record id="hr_rule_eos_loan_deduction" model="hr.salary.rule">
+            <field name="name">Loan Deduction</field>
+            <field name="code">LOANDED</field>
+            <field name="sequence">111</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="plustech_hr_payroll.structure_main" />
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = payslip.loan_ids and payslip.total_paid or 0</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = - payslip.total_paid</field>
+        </record>
+
+        <record id="hr_salary_rule_eos_provision" model="hr.salary.rule">
+        <field name="amount_select">code</field>
+        <field name="code">EOSPROV</field>
+        <field name="category_id" ref="plustech_hr_payroll.provisions"/>
+        <field name="name">EOS Provisions</field>
+        <field name="sequence" eval="17"/>
+        <field name="struct_id" ref="plustech_hr_payroll.structure_main"/>
+        <field name="amount_python_compute">result = employee.cal_eos_provisions(payslip)</field>
+    </record>
+
+    </data>
+</openerp>

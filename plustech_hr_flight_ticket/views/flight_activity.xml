@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="flight_activity_view_tree" model="ir.ui.view">
+        <field name="name">flight.activity.view.tree</field>
+        <field name="model">flight.activity</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="activity_type_id" />
+                <field name="type" invisible="1"/>
+                <field name="ticket_state"  required="1"/>
+                <field name="users_id" />
+                <field name="subject" />
+                <field name="note" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="flight_ticket_activity_view_tree" model="ir.ui.view">
+        <field name="name">flight.activity.tecket.view.tree</field>
+        <field name="model">flight.activity</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="activity_type_id" />
+                <field name="type" invisible="1"/>
+                <field name="ticket_state" required="1"/>
+                <field name="users_id" />
+                <field name="subject" />
+                <field name="note" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="trip_flight_ticket_activity_action" model="ir.actions.act_window">
+        <field name="name">Business Trip Ticket Activity</field>
+        <field name="res_model">flight.activity</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="flight_activity_view_tree" />
+        <field name="domain">[('type','=','trip')]</field>
+        <field name="context">{'default_type':'trip'}</field>
+    </record>
+
+    <record id="leave_flight_ticket_activity_action" model="ir.actions.act_window">
+        <field name="name">Leaves Ticket Activity</field>
+        <field name="res_model">flight.activity</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="flight_ticket_activity_view_tree" />
+        <field name="domain">[('type','=','leave')]</field>
+        <field name="context">{'default_type':'ticket'}</field>
+    </record>
+
+    <menuitem id="flight_activity_main_menu"
+        name="Activity"
+        parent="menu_flight_ticket_general_configuration"
+        sequence="50" />
+
+    <menuitem id="flight_activity_menu"
+        name="Business Trip"
+        parent="flight_activity_main_menu"
+        action="trip_flight_ticket_activity_action"
+        groups="plustech_hr_flight_ticket.group_hr_business_trip_flight_tickets_hr"
+        sequence="10" />
+
+
+    <menuitem id="flight_ticket_activity_menu"
+        name="Leaves"
+        parent="flight_activity_main_menu"
+        action="leave_flight_ticket_activity_action"
+        groups="plustech_hr_flight_ticket.group_hr_leave_flight_tickets_hr"
+        sequence="11" />
+
+
+</odoo>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="work_initiation_doc">
+        <t t-call="web.html_container">
+            <t t-call="plustech_layout_template.plustech_layout_template_layout">
+                <t t-set="data_report_margin_top" t-value="12"/>
+                <t t-set="data_report_header_spacing" t-value="0"/>
+                <t t-set="data_report_dpi" t-value="110"/>
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="doc" t-value="doc.with_context(lang=doc.env.user.lang)"/>
+                    <div class="page" style="font-family:GESSTOW">
+                        <style>
+                            td{
+                            padding:5px !important;
+                            text-align: center;
+                            border-bottom:2px solid black;
+                            border-top:2px solid black !important;
+                            border-left:2px solid black;
+                            border-right:2px solid black;
+                            }
+                            table{
+                            padding: 0px;
+                            text-align: center;
+                            }
+                            th{
+                            padding: 0px;
+                            border-bottom:2px solid black;
+                            border-top:2px solid black;
+                            border-left:2px solid black;
+                            border-right:2px solid black;
+                            }
+                            tr{
+                            padding: 0px;
+                            }
+                        </style>
+                        
+                        <table class="table table-sm">
+                            <colgroup>
+                                <col width='25%' />
+                                <col width='25%' />
+                                <col width='25%' />
+                                <col width='25%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td colspan="4" style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">
+                                        <h2 style="color:black;">
+                                            Duty Commencement Form
+                                        </h2>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- EMPLOYEE INFORMATION -->
+                        <table class="table table-sm">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="4"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Employee Information</td>
+                                    <td>Name</td>
+                                    <td colspan="3" style="text-align:center;">
+                                        <span t-field="doc.employee_id" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Job No</td>
+                                    <td>
+                                        <span t-field="doc.employee_id.employee_number" />
+                                    </td>
+                                    <td>Job Title</td>
+                                    <td>
+                                        <span t-field="doc.employee_id.job_id" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Departement</td>
+                                    <td colspan="3">
+                                        <span t-field="doc.department_id.name" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-sm">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="4"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Commencement Details</td>
+                                    <td colspan="2">Commencement Type</td>
+                                    <td colspan="2" style="text-align:center;">
+                                        <span t-field="doc.duty_commencement_type_id.name" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Status</td>
+                                    <td colspan="3" style="text-align:center;"> 
+                                        On Time <input type="checkbox" id="oe_import_tracking" t-att-checked="doc.commencement_status == 'on-time'"/> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                        Late <input type="checkbox" id="oe_import_tracking" t-att-checked="doc.commencement_status == 'late'"/>
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Description</td>
+                                    <td colspan="3" style="text-align:center;"> 
+                                        <span t-field="doc.description" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='80%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="1"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Employee Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                            t-if="doc.employee_id.user_id and doc.employee_id.user_id.sudo().sign_signature"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.employee_id.user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="3"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Direct Manager Approval</td>
+                                    <td colspan="2">Status</td>
+                                    <td colspan="2" style="text-align:center;"> 
+                                        Approved <input type="checkbox" id="oe_import_tracking" t-att-checked="doc.approval_ids.filtered(lambda a: a.name== 'direct_manager_approval' and a.state == 'approved')"/> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                        Denied <input type="checkbox" id="oe_import_tracking" t-att-checked="doc.approval_ids.filtered(lambda a: a.name== 'direct_manager_approval' and a.state == 'reject')"/>
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td style="vertical-align: middle;">Date</td>
+                                    <td style="vertical-align: middle;">
+                                        <span t-if="doc.approval_ids.filtered(lambda a: a.name== 'direct_manager_approval')"
+                                        t-esc="doc.approval_ids.filtered(lambda a: a.name== 'direct_manager_approval')[0].date"/>
+                                    </td>
+                                    <td style="vertical-align: middle;">Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                        t-if="doc.approval_ids.filtered(lambda a: a.name== 'direct_manager_approval')"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.approval_ids.filtered(lambda a: a.name== 'direct_manager_approval')[0].user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="4"
+                                        t-if="not request.env['hr.deputation'].search([('training_request_id', '=', doc.id)])"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Human Resources Manager</td>
+                                    <td style="vertical-align: middle;">Date</td>
+                                    <td style="vertical-align: middle;">
+                                        <span
+                                            t-if="doc.approval_ids.filtered(lambda a: a.name== 'human_resources_report')"
+                                            t-esc="doc.approval_ids.filtered(lambda a: a.name== 'human_resources_report')[0].date"/>
+                                    </td>
+                                    <td style="vertical-align: middle;">Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                        t-if="doc.approval_ids.filtered(lambda a: a.name== 'human_resources_report')"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.approval_ids.filtered(lambda a: a.name== 'human_resources_report')[0].user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="1"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Financial and Administrative Affairs Approval</td>
+                                    <td style="vertical-align: middle;">Date</td>
+                                    <td style="vertical-align: middle;">
+                                        <span
+                                            t-if="doc.approval_ids.filtered(lambda a: a.name== 'director_of_financial_and_administrative_affairs_approval')"
+                                            t-esc="doc.approval_ids.filtered(lambda a: a.name== 'director_of_financial_and_administrative_affairs_approval')[0].date" />
+                                    </td>
+                                    <td style="vertical-align: middle;">Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                        t-if="doc.approval_ids.filtered(lambda a: a.name== 'director_of_financial_and_administrative_affairs_approval')"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.approval_ids.filtered(lambda a: a.name== 'director_of_financial_and_administrative_affairs_approval')[0].user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+              
+
+            </t>
+        </t>
+    </template>
+
+    <record id="work_initiation_report_action" model="ir.actions.report">
+        <field name="name">Work Initiation</field>
+        <field name="model">hr.work.initiation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">plustech_hr_work_initiation.work_initiation_doc</field>
+        <field name="report_file">plustech_hr_work_initiation.work_initiation_doc</field>
+        <field name="binding_model_id" ref="model_hr_work_initiation"/>
+    </record>
+</odoo>

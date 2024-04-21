@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_employee_shift_form" model="ir.ui.view">
+            <field name="name">hr.employee.shift.form</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form string="Shift Management">
+                    <header>
+                        <button name="action_submit" type="object" string="Submit" states="draft"
+                                class="oe_highlight" groups="hr.group_hr_user"/>
+                        <button name="action_cancel" type="object" string="Cancel" states="draft"/>
+                        <button name="action_approve" type="object" string="Approve" states="submit"
+                                class="oe_highlight" groups="hr.group_hr_manager"/>
+                        <button name="action_reject"
+                            type="object" string="Reject"
+                            states="submit"
+                            class="btn btn-danger" icon="fa-times"
+                            groups="hr.group_hr_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,submit,approve,cancel"/>
+                    </header>
+                    <sheet>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                                attrs="{'invisible': [('active', '=', True)]}"/>
+                        <label for="name" string="Shift Name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. IT Department Morning Shift"
+                            attrs="{'readonly': [('state', 'not in', ['draft', 'submit'])]}"/>
+                        </h1>
+                        <group name="main_details">
+                            <group>
+                                <field name="shift_mode"/>
+                                <field name="employee_id" options="{'no_create': 1, 'no_edit': 1}"
+                                       attrs="{'required': [('shift_mode', '=', 'employee')], 'invisible': [('shift_mode', '!=', 'employee')]}"/>
+                                <field name="department_id" options="{'no_create': 1, 'no_edit': 1}"
+                                       attrs="{'required': [('shift_mode', '=', 'department')], 'invisible': [('shift_mode', '!=', 'department')]}"/>
+                                <field name="company_id" options="{'no_create': 1, 'no_edit': 1}"
+                                       attrs="{'required': [('shift_mode', '=', 'company')], 'invisible': [('shift_mode', '!=', 'company')]}"/>
+                            </group>
+                            <group>
+                                <field name="shift_type_id" attrs="{'readonly': [('state', 'not in', ['draft', 'submit'])]}"/>
+                                <label for="start_date" string="Duration" id="label_dates"/>
+                                <div>
+                                    <div class="o_row o_row_readonly">
+                                        <span class="oe_inline">
+                                            From
+                                        </span>
+                                        <field name="start_date" class="oe_inline" nolabel="1" widget="daterange"
+                                               options="{'related_end_date': 'end_date'}" attrs="{'readonly': [('state', 'not in', ['draft', 'submit'])]}"/>
+                                        <span class="oe_inline">
+                                            To
+                                        </span>
+                                        <field name="end_date" class="oe_inline" widget="daterange"
+                                               options="{'related_start_date': 'start_date'}"
+                                               attrs="{'readonly': [('state', 'not in', ['draft', 'submit'])]}"/>
+                                    </div>
+                                </div>
+
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <notebook colspan="6">
+                            <page name="description" string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+                </form>
+            </field>
+        </record>
+        <record id="hr_employee_shift_view_tree" model="ir.ui.view">
+            <field name="name">hr.employee.shift.view.tree</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="shift_mode"/>
+                    <field name="shift_type_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+          <record id="view_hr_employee_shift_search" model="ir.ui.view">
+        <field name="name">hr.employee.shift.list.select</field>
+        <field name="model">hr.employee.shift</field>
+        <field name="arch" type="xml">
+            <search string="Search Shift">
+                <field name="name" string="Employee Shift" />
+                <separator />
+                <field name="shift_type_id" />
+                <field name="shift_mode" />
+                <field name="state" />
+                 <separator />
+                <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+                <filter name="unarchived" string="Unarchived" domain="[('active', '=', True)]"/>
+                <separator />
+                <filter
+                    name="state_draft"
+                    string="Draft"
+                    domain="[('state','=','draft')]"
+                />
+                <filter
+                    name="state_to_approve"
+                    string="To Approve"
+                    domain="[('state','=','submit')]"
+                    help="Request is to be approved"
+                />
+                <filter
+                    name="state_approved"
+                    string="Approved"
+                    domain="[('state','=','approve')]"
+                    help="Request is approved"
+                />
+                <filter
+                    name="state_rejected"
+                    string="Rejected"
+                    domain="[('state','=','reject')]"
+                    help="Request is rejected"
+                />
+
+
+                <group expand="0" string="Group By...">
+                    <filter
+                        name="shift_type_id"
+                        string="Shift Type"
+                        icon="fa-user"
+                        domain="[]"
+                        context="{'group_by':'shift_type_id'}"
+                    />
+                     <filter
+                        name="status"
+                        string="Status"
+                        icon="fa-user"
+                        domain="[]"
+                        context="{'group_by':'state'}"
+                    />
+
+                    <filter
+                        name="start_date"
+                        string="Start Date"
+                        icon="fa-calendar"
+                        domain="[]"
+                        context="{'group_by':'start_date'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+        <record id="hr_employee_working_shift_action" model="ir.actions.act_window">
+            <field name="name">Shift</field>
+            <field name="res_model">hr.employee.shift</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create new shift schedule.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="hr_employee_work_shift_menu" name="Shifts"
+                  parent="plustech_hr_attendance.hr_employee_working_hours_menu"
+                  action="hr_employee_working_shift_action"
+                  groups="base.group_user" sequence="2"/>
+
+    </data>
+</odoo>

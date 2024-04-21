@@ -1,0 +1,185 @@
+<odoo>
+    <!-- Mail template is done in a NOUPDATE block
+         so users can freely customize/delete them -->
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="custody_request_template" model="letter.letter">
+            <field name="name">طلب عهدة عينية</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="text-center">
+                    <p>
+                        <img src="data:image/png;base64,${object.company_id.logo}" style="width: 150px;height: 80px;"/>
+                    </p>
+
+                </div>
+                <br/>
+                <div class="row" align="center" dir="rtl">
+                    <table class="tabl" cellpadding="0" cellspacing="0"
+                           style="width:100%;text-align: center;">
+                        <tr>
+                            <td style="background:#d9d9d9;" width="25%">
+                                <span>${object.company_id.name}</span>
+                            </td>
+                            <td width="50%"></td>
+                            <td style="background:#d9d9d9;" width="25%">
+                                <span>${object.request_date}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <div class="text-center">
+                    <h4 lang="ar-SA">${object.name}</h4>
+
+
+                </div>
+                <br/>
+
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;" dir="rtl">
+                    <tbody>
+                        <tr style="height:18px;">
+                            <td class="text-right" style="background:#d9d9d9;">اسم الموظف</td>
+                            <td class="text-right">${object.request_id.name}</td>
+                            <td class="text-right" style="background:#d9d9d9;">الإدارة/القسم</td>
+                            <td class="text-right">${object.request_id.department_id.name}</td>
+                            <td class="text-right" style="background:#d9d9d9;">المسمى الوظيفي</td>
+                            <td class="text-right">${object.request_id.job_id.name}</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td class="text-right" style="background:#d9d9d9;">نوع لعهدة</td>
+                            <td colspan="5"></td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td class="text-right" style="background:#d9d9d9;">الغرض</td>
+                            <td colspan="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered" style="width:100%;float: right;" dir="rtl">
+                    <tbody dir="rtl">
+                        <tr>
+                            <td style="border:0;">مدير المباشر</td>
+                            <td style="border:0;">إدارة الموارد البشرية</td>
+                            <td style="border:0;">الرئيس التنفيذي</td>
+                        </tr>
+                        <tr>
+                            <td style="border:0;">الاسم</td>
+                            <td style="border:0;">الاسم</td>
+                            <td style="border:0;">الاسم</td>
+                        </tr>
+                        <tr>
+                            <td style="border:0;">التاريخ</td>
+                            <td style="border:0;">التاريخ</td>
+                            <td style="border:0;">التاريخ</td>
+                        </tr>
+                        <tr>
+                            <td style="border:0;">التوقيع</td>
+                            <td style="border:0;">التوقيع</td>
+                            <td style="border:0;">التوقيع</td>
+                        </tr>
+                        <tr>
+                            <td style="border:0;">معتمد صرف العهدة في نموذج التتبع الوظيفي عند التعيين</td>
+                            <td style="border:0;" colspan="2">اعتماد قسم الموارد البشرية</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;" dir="rtl">
+                    <tbody>
+                        <tr style="height:18px;">
+
+                            <td colspan="4" style="height:18px;">
+                                <p class="western" dir="rtl" style="text-align:right;">
+                                    <b>
+                                        <span lang="ar-SA">بيان استلام العهدة</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="background:#d9d9d9;" align="right">رقم التسلسلي</td>
+                            <td></td>
+                            <td style="background:#d9d9d9;" align="right">حالة العهدة</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+
+                            <td colspan="4" style="height:18px;border:0;">
+                                <p class="western" dir="rtl" style="text-align:right;">
+                                    <b>
+                                        أقر باستلامي للعهدة الموضحة بياناتها أعلاه وأتعهد بالمحافظة عليها وأن لا
+                                        استخدمها إلا في نطاق العمل وللغرض
+                                        المحدد لها وأن أتحمل كامل المسؤولية القانونية في استخدامي لها.
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2" style="height:18px;border:0;" align="right">التوقيع بالاستلام</td>
+                            <td style="height:18px;border:0;" align="right">التوقيع بالاستلام</td>
+                            <td style="height:18px;border:0;" align="right">اعتماد أدارة الموارد البشرية</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="height:18px;border:0;">الاسم</td>
+                            <td align="right" style="height:18px;border:0;">الاسم</td>
+                            <td colspan="2" align="right" style="height:18px;border:0;">الاسم</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="height:18px;border:0;">التاريخ</td>
+                            <td align="right" style="height:18px;border:0;">التاريخ</td>
+                            <td colspan="2" align="right" style="height:18px;border:0;">التاريخ</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="height:18px;border:0;">التوقيع</td>
+                            <td align="right" style="height:18px;border:0;">التوقيع</td>
+                            <td colspan="2" align="right" style="height:18px;border:0;">التوقيع</td>
+                        </tr>
+                        <tr style="height:18px;">
+
+                            <td colspan="4" style="height:18px;" align="right">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">بيان تسليم العهدة من الموظف إلى الشركة:</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td style="height:18px;background-color: #d9d9d9;">
+
+                                <span lang="ar-SA">حالة العهدة</span>
+                            </td>
+                            <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <td align="right" colspan="4">تم استلام العهدة كما هو موضح أعلاهـ.</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;" colspan="2">التوقيع بالاستلام</td>
+                            <td align="right" style="border:0;">التوقيع بالاستلام</td>
+                            <td align="right" style="border:0;">اعتماد أدارة الموارد البشرية</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;">الاسم</td>
+                            <td align="right" style="border:0;">الاسم</td>
+                            <td align="right" style="border:0;" colspan="2">الاسم</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;">التاريخ</td>
+                            <td align="right" style="border:0;">التاريخ</td>
+                            <td align="right" style="border:0;" colspan="2">التاريخ</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;">التوقيع</td>
+                            <td align="right" style="border:0;">التوقيع</td>
+                            <td align="right" style="border:0;" colspan="2">التوقيع</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="training_training_form_view" model="ir.ui.view">
+            <field name="name">Training Form View</field>
+            <field name="model">training.training</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Submit" name="action_submit" states="new"
+                                type="object" class="oe_highlight"
+                                groups="plustech_employee_training.training_employee,plustech_employee_training.training_officer"/>
+                        <button name="action_manager_approve" string="Approve" type="object"
+                                class="btn-primary"
+                                attrs="{'invisible':['|', ('is_manager','=', False), ('state','!=','direct_manager')]}"/>
+                        <button name="action_hr_officer_approve" string="Approve" type="object"
+                                groups="plustech_employee_training.training_officer"
+                                states="officer"
+                                class="btn-primary"/>
+                        <button name="action_hr_approve" string="Approve" type="object"
+                                groups="plustech_employee_training.training_manager"
+                                states="hr"
+                                class="btn-primary"/>
+                        <button name="action_admin_approve" string="Approve" type="object"
+                                groups="plustech_employee_training.group_financial_and_administrative_affairs_training"
+                                states="admin"
+                                class="btn-primary"/>
+                        <button name="action_ceo_approve" states="ceo" string="Approve"
+                                groups="plustech_employee_training.group_ceo_training"
+                                class="btn-primary"
+                                type="object"/>
+                        <button name="action_close" states="approve" string="Closed"
+                                groups="plustech_employee_training.training_officer" class="btn-primary"
+                                type="object"/>
+                        <button name="action_cancel" states="hrman,new,hod"
+                                groups="plustech_employee_training.training_officer" string="Cancel"
+                                class="btn-primary"
+                                type="object"/>
+                        <widget id="attach_document" name="attach_document" string="Add Attach"
+                                action="attach_document"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="new,direct_manager,officer"/>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_get_attachment_view" class="oe_stat_button"
+                                    icon="fa-file-text-o"
+                                    type="object">
+                                <field name="attachment_number" widget="statinfo" string="Documents"
+                                       options="{'reload_on_button': true}"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1 class="mt0">
+                                <field name="name" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="is_manager" invisible="1"/>
+                                <field name="employee_id"/>
+                                <field name="employee_no"/>
+                                <field name="email"/>
+                                <field name="phone"/>
+                            </group>
+                            <group>
+                                <field name="request_date"/>
+                                <field name="joining_date"/>
+                                <field name="department_id"/>
+                                <field name="job_title"/>
+                                <field name="user_id" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Course Details">
+                                <group>
+                                    <group>
+                                        <field name="training_type"/>
+                                        <field name="country_id"
+                                               options="{'no_create': True, 'no_open':True}"
+                                               attrs="{'required': [('training_type', '=', 'external')], 'invisible': [('training_type', '=', 'internal')]}"/>
+                                        <field name="city_id"
+                                               options="{'no_create': True, 'no_open':True}"
+                                               attrs="{'required': [('training_type', '=', 'external')], 'invisible': [('training_type', '=', 'internal')]}"/>
+                                        <field name="course_id"
+                                               options="{'no_create': True, 'no_open':True}"
+                                               attrs="{'invisible': [('training_type', '!=', 'internal')],
+                                          'required': [('training_type', '=', 'internal')]}"/>
+                                        <field name="course_name"
+                                               attrs="{'invisible': [('training_type', '=', 'internal')]}"/>
+                                        <field name="executing_agency_id"
+                                               attrs="{'readonly': [('training_type', '=', 'internal')]}"/>
+                                        <field name="training_place"
+                                               attrs="{'readonly': [('training_type', '=', 'internal')]}"/>
+                                    </group>
+                                    <group>
+                                        <label for="start_date" string="Dates" id="label_dates"/>
+                                        <div name="dates" class="o_row">
+                                            <field name="start_date" required="1" widget="daterange"
+                                                   options='{"related_end_date": "end_date"}'
+                                                   attrs="{'readonly': [('training_type', '=', 'internal')]}"/>
+                                            <i class="fa fa-long-arrow-right mx-2 oe_edit_only"
+                                               aria-label="Arrow icon"
+                                               title="Arrow"/>
+                                            <i class="fa fa-long-arrow-right mx-2 oe_read_only"
+                                               aria-label="Arrow icon"
+                                               title="Arrow"
+                                               attrs="{'invisible': [('start_date', '=', False), ('end_date', '=', False)]}"/>
+                                            <field name="end_date" required="1" widget="daterange"
+                                                   options='{"related_start_date": "start_date"}'
+                                                   attrs="{'readonly': [('training_type', '=', 'internal')]}"/>
+                                        </div>
+                                        <label for="duration" string="Duration"/>
+                                        <div name="duration_display">
+                                            <div class="o_row">
+                                                <div class="o_row">
+                                                    <field name="duration" nolabel="1"
+                                                           class="oe_inline"/>
+                                                    <span>Days</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label for="price"/>
+                                        <div class="o_row" name="price">
+                                            <field name="price"
+                                                   attrs="{'readonly': [('training_type', '=', 'internal')]}"
+                                                   invisible=""/>
+                                            <span>
+                                                <field name="amount_currency" readonly="1"/>
+                                            </span>
+                                        </div>
+                                        <field name="currency_id" options="{'no_create':1}"
+                                               attrs="{'invisible': [('training_type', '=', 'internal')],
+                                         'required': [('training_type', '!=', 'internal')]}"/>
+                                        <field name="company_currency_id" options="{'no_create':1}"
+                                               invisible="1"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Requirements">
+                                <field name="requirements"/>
+                            </page>
+                            <page string="Goals">
+                                <field name="goals"/>
+                            </page>
+                            <page string="Description">
+                                <field name="bio_content"/>
+                            </page>
+                            <page name="previous_courses" string="Previous Courses">
+                                <field name="course_ids" readonly="1">
+                                    <tree string="Previous Courses">
+                                        <field name="student_name" string="Course Name"/>
+                                        <field name="enrolled_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Agreement">
+                                <field name="bio_agreement"/>
+                            </page>
+                            <page string="Requester Function" group="base.group_system">
+                                <group>
+                                    <group string="Prepared By">
+                                        <field name="create_uid" widget="selection"/>
+                                        <field name="create_date"/>
+                                    </group>
+                                    <group string="Direct Manager Approval">
+                                        <field name="manager_id" readonly="1"/>
+                                        <field name="manager_approval_date" readonly="1"/>
+                                    </group>
+                                    <group string="Human Resources Officer Approval">
+                                        <field name="hr_officer_user_id" readonly="1"/>
+                                        <field name="hr_officer_confirm_date" readonly="1"/>
+                                    </group>
+                                    <group string="Financial and Administrative Affairs Approval">
+                                        <field name="admin_user_id" readonly="1"/>
+                                        <field name="admin_confirm_date" readonly="1"/>
+                                    </group>
+                                    <group string="Human Resources Report">
+                                        <field name="hr_manager_user_id" readonly="1"/>
+                                        <field name="hr_confirm_date" readonly="1"/>
+                                    </group>
+                                    <group string="CEO Approval">
+                                        <field name="general_manager_user_id" readonly="1"/>
+                                        <field name="general_manager_confirm_date" readonly="1"/>
+                                    </group>
+                                    <group/>
+
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"
+                               groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="training_tree_view" model="ir.ui.view">
+            <field name="name">Training Tree View</field>
+            <field name="model">training.training</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name"/>
+                    <field name="request_date"/>
+                    <field name="employee_no"/>
+                    <field name="employee_id"/>
+                    <field name="course_name"/>
+                    <field name="executing_agency_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="price"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_training_request_filter" model="ir.ui.view">
+            <field name="name">hr.training.request.filter</field>
+            <field name="model">training.training</field>
+            <field name="arch" type="xml">
+                <search string="Search Training Request">
+                    <field name="employee_id"/>
+                    <field name="department_id" operator="child_of"/>
+                    <field name="name"/>
+                    <filter domain="[('state','not in',('new','approve','cancel', 'close'))]" string="To Approve"
+                            name="approve"/>
+                    <filter domain="[('state', '=', 'close')]" string="Closed" name="closed"/>
+                    <filter domain="[('state', '=', 'cancel')]" string="Cancelled" name="cancelled"/>
+                    <separator/>
+                    <filter string="My Courses" name="my_courses" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <filter string="My Team" name="my_team"
+                            domain="['|', ('employee_id.parent_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                            help="Courses of people you are manager of"/>
+                    <filter string="My Department" name="department"
+                            domain="['|', ('department_id.member_ids.user_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                            help="My Department"/>
+                    <separator/>
+                    <filter name="filter_start_date" date="start_date" string="Start Date"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                        <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                        <filter name="group_company" string="Company" context="{'group_by':'company_id'}"
+                                groups="base.group_multi_company"/>
+                        <separator/>
+                        <filter name="group_request_date" string="Request Date" context="{'group_by':'request_date'}"/>
+                        <filter name="group_start_date" string="Start Date" context="{'group_by':'start_date'}"/>
+                    </group>
+                    <searchpanel>
+                        <field name="state" string="Status"/>
+                        <field name="department_id" string="Department" icon="fa-users"/>
+                    </searchpanel>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="training_training_action" model="ir.actions.act_window">
+            <field name="name">Training</field>
+            <field name="res_model">training.training</field>
+            <field name="view_mode">tree,form</field>
+                    <field name="search_view_id" ref="view_hr_training_request_filter"/>
+
+        </record>
+
+        <menuitem name="Training" id="training_training_menu" parent="training_man_menu"
+                  sequence="1"/>
+
+        <menuitem name="Course Request" id="training_training" parent="training_training_menu"
+                  action="training_training_action"/>
+
+    </data>
+</odoo>

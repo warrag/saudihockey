@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.menu" id="menu_payroll_reports">
+        <field name="parent_id" ref="hr_payroll.menu_hr_payroll_report" />
+    </record>
+</odoo>

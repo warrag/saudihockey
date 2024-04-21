@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="employee_resignation_tree" model="ir.ui.view">
+            <field name="name">hr.employee.resignation.tree</field>
+            <field name="model">hr.employee.resignation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Employee Resignation">
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="expected_leaving_date"/>
+                    <field name="approved_date"/>
+                    <field name="resignation_type"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="employee_resignation_form" model="ir.ui.view">
+            <field name="name">hr.employee.resignation.form</field>
+            <field name="model">hr.employee.resignation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Employee Resignation">
+                    <header>
+                        <button string="Submit" type="object" name="resignation_submit" states='draft'
+                                class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel_resignation" states='draft'/>
+                        <button string="Approve" type="object"  name="action_manager_approval"
+                                  class="oe_highlight" attrs="{'invisible': ['|',('is_manager','=',False),('state', '!=', 'dm_approval')]}"/>
+                         <button string="Approve" type="action" groups="hr.group_hr_user" name="%(notice_period_wizard_action)d"
+                                states='hr_approval'  class="oe_highlight"/>
+                        <button string="Generate EOS" type="object" groups="hr.group_hr_user" name="action_generate_eos"
+                                attrs="{'invisible': ['|',('state', '!=','approved'), ('count_eos', '!=', 0)]}"  class="oe_highlight"/>
+                        <button string="Reject" type="object"  name="reject_resignation"
+                                confirm="This will reject the resignation. Do you want to proceed?"
+                                attrs="{'invisible': ['|',('is_manager','=',False),('state', '!=', 'dm_approval')]}"/>
+                        <button string="Reject" type="object" groups="hr.group_hr_user" name="reject_resignation"
+                                states='hr_approval' confirm="This will reject thr resignation. Do you want to proceed?"/>
+                        <button string="Set to Draft" type="object" groups="hr.group_hr_manager" name="reset_to_draft"
+                                states='cancel'/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,dm_approval,cancel"/>
+                    </header>
+                    <sheet>
+
+                         <div class="o_not_full oe_button_box">
+                             <button name="action_open_contract" class="oe_stat_button" icon="fa-book" type="object" groups="hr_contract.group_hr_contract_manager">
+                                  <div  class="o_stat_info">
+                                <span class="o_stat_text text-danger"  title="In Contract Since">Contract End In</span>
+                                <span class="o_stat_value text-danger">
+                                    <field name="contract_end_date" readonly="1"/>
+                                </span>
+                            </div>
+                        </button>
+                        <button name="action_open_eos" class="oe_stat_button" icon="fa-book" type="object"
+                                attrs="{'invisible': [('count_eos', '=', 0)]}">
+                            <field name="count_eos" widget="statinfo" string="EOS"
+                                   options="{'reload_on_button': true}"/>
+                        </button>
+                    </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Employee Details">
+                                <field name="is_manager" invisible="1"/>
+                                <field name="employee_id" attrs="{'readonly': [('state','=','approved')]}"/>
+                                <field name="employee_no"/>
+                                <field name="department_id"/>
+                                <field name="manager_id"/>
+                                <field name="resignation_type" string="Type" groups="hr.group_hr_user"
+                                       attrs="{'readonly': [('state','=','approved')]}"/>
+                            </group>
+                            <group string="Dates">
+                                <field name="request_date"/>
+                                <field name="expected_leaving_date" attrs="{'readonly': [('state','=','approved')]}"/>
+                                <field name="approved_date" readonly="1"
+                                       attrs="{'invisible': [('state','!=','approved')]}"
+                                       groups="hr.group_hr_user"/>
+                                <separator string="Notice Period"/>
+                                <field name="notice_start" readonly="1"/>
+                                <field name="notice_end" readonly="1"/>
+                            </group>
+                            <div class="col-6">
+                                <label for="reason" string="Resignation Reason"/>
+                                <field name="reason" placeholder="Reason"
+                                       attrs="{'readonly': [('state','=','approved')]}"/>
+                            </div>
+
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_employee_resignation">
+            <field name="name">Employee Resignation</field>
+            <field name="res_model">hr.employee.resignation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Employee Resignation Form
+                </p>
+            </field>
+        </record>
+
+        <record id="action_employee_contract_termination" model="ir.actions.act_window">
+            <field name="name">Contract Termination</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.resignation</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="employee_resignation_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+            <field name="help">contract termination</field>
+            <field name="binding_model_id" ref="plustech_hr_employee_resignation.model_hr_employee_resignation"/>
+            <field name="binding_view_types">form</field>
+        </record>
+        <menuitem id="employee_resignation" name="Resignation"
+                  groups="base.group_user"
+                  parent="plustech_hr_end_of_service.eos_main_menu"
+                  sequence="1"/>
+        <menuitem id="employee_resignation_request" parent="employee_resignation" name="Resignation Request"
+                  action="action_employee_resignation" groups="base.group_user" sequence="1"/>
+    </data>
+</odoo>

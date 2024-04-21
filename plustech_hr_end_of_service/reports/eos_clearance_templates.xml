@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_eos_document">
+        <t t-call="web.basic_layout">
+            <t t-set="doc" t-value="doc.with_context(lang=env.user.lang)"/>
+
+            <div class="page  contract-font">
+                <style>
+                    .clearance_grey {
+                    background:#BFBFBF;
+                    }
+                    .clearance td,.clearance th {
+                    border:1.5px solid black;border-spacing: 0px;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    }
+                </style>
+                <div class="oe_structure"/>
+                <table class="table table-bordered clearance" cellpadding="0" cellspacing="0"
+                       style="width:100%;text-align: center;border:1.5px  solid black;">
+                    <tr>
+                        <td colspan="3" width="70%">
+                            <span t-esc="doc.company_id.name"/>
+                        </td>
+                        <td colspan="1" width="30%">
+                            <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)"
+                                 class="float-left"
+                                 alt="Logo" style="height: 40px;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" height="10">
+                            <strong>مخالصة نهاية الخدمة</strong>
+                            <br/>
+                            <strong>END OF SERVICE CLEARANCE</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="clearance_grey">الإدارة</th>
+                        <th class="clearance_grey">المنصب الوظيفي</th>
+                        <th class="clearance_grey">الرقم الوظيفي</th>
+                        <th class="clearance_grey">اسم الموظف</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <t t-esc="doc.employee_id.department_id.name"/>
+                        </td>
+                        <td>
+                            <t t-esc="doc.employee_id.job_id.name"/>
+                        </td>
+                        <td>
+                            <t t-esc="doc.employee_id.employee_number"/>
+                        </td>
+                        <td>
+                            <t t-esc="doc.employee_id.name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="clearance_grey">تاريخ الانضمام</th>
+                        <th class="clearance_grey">تاريخ أخر يوم عمل</th>
+                        <th class="clearance_grey" colspan="2">سبب الإنهاء</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <t t-esc="doc.reason_id.name"/>
+                        </td>
+                        <td>
+                            <t t-esc="doc.last_work_date"/>
+                        </td>
+                        <td>
+                            <t t-esc="doc.join_date"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="clearance_grey">الفترة بالأيام</th>
+                        <th class="clearance_grey" colspan="2">الفترة بالشهور</th>
+                        <th class="clearance_grey">الفترة بالسنوات</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span t-esc="doc.service_days"/>
+                        </td>
+                        <td colspan="2">
+                            <span t-esc="doc.service_months"/>
+                        </td>
+                        <td>
+                            <span t-esc="doc.service_years"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="clearance_grey">Basic Salary</td>
+                        <td>
+                            <span t-esc="doc.employee_id.contract_id.wage"/>
+                        </td>
+                        <td>
+                            <span t-esc="doc.employee_id.contract_id.wage"/>
+                        </td>
+                        <td class="clearance_grey">الراتب الأساسي</td>
+                    </tr>
+                    <tr t-foreach="doc.employee_id.contract_id.allowance_ids" t-as="line">
+                        <td class="clearance_grey">
+                            <span t-esc="line.allowance_type.name"/>
+                        </td>
+                        <td>
+                            <span t-esc="line.allowance_amount"/>
+                        </td>
+                        <td>
+                            <span t-esc="line.allowance_amount"/>
+                        </td>
+                        <td class="clearance_grey">
+                            <span t-esc="line.allowance_type.with_context(lang='ar_001').name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="clearance_grey">Total</td>
+                        <td>
+                            <span t-esc="doc.employee_id.contract_id.monthly_yearly_costs"/>
+                        </td>
+                        <td>
+                            <span t-esc="doc.employee_id.contract_id.monthly_yearly_costs"/>
+                        </td>
+                        <td class="clearance_grey">ألإجمالي</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="clearance_grey">
+                            تفاصيل مستحقات نهاية الخدمة<br/>
+                            End Of Service Details
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="clearance_grey" colspan="3">Additions</td>
+                        <td class="clearance_grey" colspan="1">الإضافات</td>
+                    </tr>
+                    <tr>
+                        <td>Payslip Amount</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.payslip_amount)"/>
+                        </td>
+                        <td>مبلغ قسيمة الراتب</td>
+                    </tr>
+                    <tr>
+                        <td>Annual leave balance</td>
+                        <td colspan="2">
+                            <span t-esc="doc.unpaid_leaves"/>
+                        </td>
+                        <td>رصيد ألإجارات</td>
+                    </tr>
+                    <tr>
+                        <td>Leave Balance Amount</td>
+                        <td colspan="2">
+                            <span t-esc="doc.leave_balance_reward"/>
+                        </td>
+                        <td>مبلغ تعويض ألإجارات</td>
+                    </tr>
+                    <tr>
+                        <td>EOS Reward</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.deserving)"/>
+                        </td>
+                        <td>مكافأة نهاية الخدمة</td>
+                    </tr>
+                    <tr>
+                        <td>Other Additions</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.other_additions)"/>
+                        </td>
+                        <td colspan="1">إضافات أخرى</td>
+                    </tr>
+                    <tr>
+                        <td>Total Additions</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.total_reward)"/>
+                        </td>
+                        <td>مجموع الإضافات</td>
+                    </tr>
+                    <tr>
+                        <td class="clearance_grey" colspan="3">Deductions</td>
+                        <td class="clearance_grey" colspan="1">الخصم</td>
+                    </tr>
+                    <tr>
+                        <td>Loans Deductions</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.advances_deduction)"/>
+                        </td>
+                        <td>السلف</td>
+                    </tr>
+                    <tr>
+                        <td>Attendance Deduction</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.attendance_deduction)"/>
+                        </td>
+                        <td>الغياب</td>
+                    </tr>
+                    <tr>
+                        <td>Delay Hours</td>
+                        <td colspan="2"></td>
+                        <td>الحضور و الانصراف</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">GOSI Deduction</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.gosi_deduction)"/>
+                        </td>
+                        <td>التأمينات الاجتماعية</td>
+                    </tr>
+                    <tr>
+                        <td>Other Deductions</td>
+                        <td colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.other_deductions)"/>
+                        </td>
+                        <td>خصومات أخرى</td>
+                    </tr>
+                    <tr>
+                        <th>Total Deductions</th>
+                        <th colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.total_deductions)"/>
+                        </th>
+                        <td>مجموع الخصومات</td>
+                    </tr>
+                    <tr>
+                        <th>Total Reward</th>
+                        <th colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.total_reward)"/>
+                        </th>
+                        <th>مجموع المكافأة</th>
+                    </tr>
+                    <tr>
+                        <th>Total Deductions</th>
+                        <th colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.total_deductions)"/>
+                        </th>
+                        <th>مجموع الخصومات</th>
+                    </tr>
+                    <tr>
+                        <th>Total Deserved Amount</th>
+                        <th colspan="2">
+                            <span t-esc="'{0:,.2f}'.format(doc.final_deserving)"/>
+                        </th>
+                        <th>مجموع الاستحقاق</th>
+                    </tr>
+                    <tr>
+                        <th class="clearance_grey" colspan="4">
+                            <strong>إقرار مخالصة و براء ذمة<br/>Adoption of release and quittance
+                            </strong>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="text-left" colspan="2"></th>
+                        <th class="text-right" colspan="2" width="50%">
+                            <small dir="rtl">
+                                بهذا أقر انا الموقع أدناه (
+                                <span t-esc="doc.employee_id.with_context(lang='ar_001').name"/>
+                                ) بأني قد استلمت من شركة
+                                <span t-esc="doc.company_id.with_context(lang='ar_001').name"/>
+                                جميع مستحقاتي المرتبطة
+                                بفترة عملي مع الشركة من تاريخ
+                                <span t-esc="doc.join_date"/>
+                                وحتى نهاية علاقتي بالشركة بتاريخ
+                                <span t-esc="doc.last_work_date"/>
+                                و أني لا املك اي مطالبات
+                                مهنية او عملية متعلقة بفترة عملي بين هذين تاريخين او ناشئة عنها و لو بعد نهايتها و يشمل
+                                هذا:
+                                <br/>
+                                1- جميع الرواتب والأجور والبدلات من تاريخ (<t t-esc="doc.join_date"/>م) وحتى تاريخ (<t t-esc="doc.last_work_date"/>م).
+                                <br/>
+                                2- مكافاة نهاية الخدمة<br/>
+                                3- كافة المستحقات الانتداب و تذاكر السفر<br/>
+                                4- جميع الحوافز و النسب و مقابل ساعات العمل الاضافية<br/>
+                                5- تعويضات عن فترة الانذار و مدة الاجازة المتبقية و غيرها<br/>
+                                6- كل المستحقات الناشئة عن عقد العمل أو انظمة و لوائح الشركة او نظام العمل و العمال
+                                ممالم يذكر في الفقرات الاربعة اعلاه<br/>
+                                7- اي مطالبات او خلافات مهنية تتعلق بعلاقتي المهنية مع الشركة مما يدخل تحت حكم الهيئة
+                                السعودية للمقيمين المعتمدين
+                                او غيرها من جهات اللادارية ذات علاقة و نظام المقيمين المعتمدين سواء كانت هذا المطالبات
+                                اما الجهات الادارية او القضائية.
+                                و تعتبر هذه المخالصة نهائية و مبرئة لذمة الشركة و مصفية للعقد و لا يجوز لي المطالبة باي
+                                شي بعد ذلك و تكون صلتي قد انقطعت نهائيا بالشركة.
+                                و على كل ما ورد اعلاه اقر و اوقع
+                            </small>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="clearance_grey">Name</th>
+                        <th colspan="2"></th>
+                        <th class="clearance_grey">الاسم</th>
+                    </tr>
+                    <tr>
+                        <th class="clearance_grey">Date</th>
+                        <th colspan="2"></th>
+                        <th class="clearance_grey">التاريخ</th>
+                    </tr>
+                    <tr>
+                        <th class="clearance_grey">Signature</th>
+                        <th colspan="2"></th>
+                        <th class="clearance_grey">التوقيع</th>
+                    </tr>
+                </table>
+
+                <div class="oe_structure"/>
+            </div>
+        </t>
+    </template>
+
+
+    <template id="report_eos">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="plustech_hr_end_of_service.report_eos_document" t-lang="env.user.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <data>
+        <record id="paperformat_eos_clearance" model="report.paperformat">
+            <field name="name">End of service clearance</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">5</field>
+            <field name="header_spacing">20</field>
+        </record>
+        <record id="action_report_eos" model="ir.actions.report">
+            <field name="name">End Of Service</field>
+            <field name="model">end.of.service.reward</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">plustech_hr_end_of_service.report_eos</field>
+            <field name="report_file">plustech_hr_end_of_service.report_eos</field>
+            <field name="print_report_name">'End Of Service Clearance - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_end_of_service_reward"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="paperformat_eos_clearance"/>
+
+        </record>
+    </data>
+
+</odoo>

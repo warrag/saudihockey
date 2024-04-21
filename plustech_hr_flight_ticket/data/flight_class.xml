@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+       
+       <!-- ******************************************************************************** -->
+        <record id="res_partner_saudia_guest" model="flight.class">
+            <field name="name">Guest</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_saudia"/>
+        </record>
+
+        <record id="res_partner_saudia_business" model="flight.class">
+            <field name="name">Business</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_saudia"/>
+        </record>
+
+        <record id="res_partner_saudia_first" model="flight.class">
+            <field name="name">First</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_saudia"/>
+        </record>
+
+        <!-- ******************************************************************************** -->
+        <record id="res_partner_nas_light" model="flight.class">
+            <field name="name">Light</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_nas"/>
+        </record>
+
+        <record id="res_partner_nas_value" model="flight.class">
+            <field name="name">Value</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_nas"/>
+        </record>
+
+        <record id="res_partner_nas_plus" model="flight.class">
+            <field name="name">Plus</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_nas"/>
+        </record>
+
+        <record id="res_partner_nas_premium" model="flight.class">
+            <field name="name">Premium</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_nas"/>
+        </record>
+
+        <!-- ******************************************************************************** -->
+        <record id="res_partner_emirates_economy" model="flight.class">
+            <field name="name">Economy</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_emirates"/>
+        </record>
+
+        <record id="res_partner_emirates_premium_economy" model="flight.class">
+            <field name="name">Premium Economy</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_emirates"/>
+        </record>
+
+        <record id="res_partner_emirates_Business" model="flight.class">
+            <field name="name">Business</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_emirates"/>
+        </record>
+
+        <record id="res_partner_emirates_first" model="flight.class">
+            <field name="name">First</field>
+            <field name="partner_id" ref="plustech_hr_flight_ticket.res_partner_emirates"/>
+        </record>
+    </data>
+</odoo>

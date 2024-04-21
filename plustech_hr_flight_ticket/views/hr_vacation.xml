@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_vacation_form_view" model="ir.ui.view">
+            <field name="name">Leave Request</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header/button[@name='action_approve']" position="before">
+                    <field name="flight_ticket" invisible="1"/>
+                    <field name="need_ticket" invisible="1"/>
+                    <field name="min_days_for_ticket" invisible="1"/>
+                    <button type="object" icon="fa-pencil-square-o" name="view_flight_ticket"
+                            string="Flight Ticket" class="oe_stat_button"
+                            attrs="{'invisible': [('flight_ticket','=', [])]}"
+                            groups="plustech_hr_flight_ticket.group_hr_leave_flight_tickets_hr"/>
+                </xpath>
+                <button name="action_draft" position="after">
+                    <button string="Book Flight Ticket" name="book_ticket" type="object" context="{'default_type': 'leave'}"
+                            groups="plustech_hr_flight_ticket.group_hr_leave_flight_tickets_hr" class="oe_highlight"
+                            attrs="{'invisible': ['|','|',('need_ticket','=',False),('state','!=','validate'), ('flight_ticket','!=',[])]}"
+                    />
+                </button>
+            </field>
+        </record>
+
+        <record id="view_hr_holidays_filter" model="ir.ui.view">
+            <field name="name">hr holidays</field>
+            <field name="model">hr.leave</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='holiday_type']" position="after">
+                    <field name="flight_ticket" invisible="1"/>
+                    <field name="is_annual_leave" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

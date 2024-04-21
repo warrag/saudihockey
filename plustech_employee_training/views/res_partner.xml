@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="view_partner_form_inherited_is_open" model="ir.ui.view">
+            <field name="name">Inherited Form View For Is Open</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="is_trainer" invisible="1" />
+                </xpath>
+
+                <xpath expr="//notebook" position="attributes">
+                    <attribute name="attrs">{'invisible':[('is_trainer', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="//div[@name='button_box']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('is_trainer', '=', True)]}</attribute>
+                </xpath>
+
+            </field>
+        </record>
+        <record id="res_partner_action_trainer" model="ir.actions.act_window">
+            <field name="name">Trainers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{'default_is_trainer': 1}</field>
+            <field name="domain">[('is_trainer', '=', True)]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new trainer in your address book
+                </p>
+                <p>
+                    Odoo helps you easily track all activities related to a trainer.
+                </p>
+            </field>
+        </record>
+        <menuitem name="Trainers" id="partner_trainer_configuration"
+            parent="plustech_employee_training.configuration_manu"
+            action="res_partner_action_trainer" sequence="115" />
+
+    </data>
+</odoo>

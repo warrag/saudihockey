@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_journal_pos_user_form" model="ir.ui.view">
+            <field name="name">account.journal.form</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <field name="default_account_id" position="after">
+                    <field string="Transfer From" name="transfer_user_ids" widget="many2many_tags"
+                           groups="plustech_petty_cash.group_petty_cash_user"
+                           attrs="{'invisible':[('type','!=','petty')]}"/>
+                    <field name="receive_user_ids" widget="many2many_tags" attrs="{'invisible':[('type','!=','petty')]}"
+                           groups="plustech_petty_cash.group_petty_cash_user"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="action_petty_journal_form" model="ir.actions.act_window">
+            <field name="name">Petty Journals</field>
+            <field name="res_model">account.journal</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('account.view_account_journal_tree')}),
+                (0, 0, {'view_mode': 'kanban', 'view_id': ref('account.account_journal_view_kanban')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('account.view_account_journal_form')})]"/>
+            <field name="context">{'default_show_on_dashboard': False}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a Petty journal
+                </p>
+                <p>
+                    A journal is used to record Petty transactions of all accounting data
+                    related to the day-to-day business.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

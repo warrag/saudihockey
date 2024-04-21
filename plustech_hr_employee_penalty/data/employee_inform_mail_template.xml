@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+       
+
+        <record id="email_template_employee_penalty_inform" model="mail.template">
+            <field name="name">Penalties: Employee Inform</field>
+            <field name="model_id" ref="plustech_hr_employee_penalty.model_hr_punishment"/>
+            <field name="email_from">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
+            <field name="subject">{{ object.employee_id.name }} Penalty Inform</field>
+            <field name="partner_to">{{ object.employee_id.address_id.id }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear <t t-out="object.employee_id.name or ''">Brandon Freeman</t>
+                        <br/><br/>
+                        The Penalty Declared from <t t-out="object.company_id.name or ''"/>
+                         <br/>
+                        On date <t t-out="object.declaration_date or ''"/>
+                        <br/>
+                        Will be applied on date <t t-out="object.applied_date or ''"/>   
+                        <br/>
+                        The penalty is:<br/>
+                        <t t-out="object.violation_id.name"/>:    
+                         <t t-if="object.ded_amount">
+                        The Penalty Amount is <t t-out="object.ded_amount or ''"/> 
+                        </t>               
+                    </p>
+                </div></field>
+                            <field name="lang">{{ object.employee_id.address_id.lang }}</field>
+                            <field name="auto_delete" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

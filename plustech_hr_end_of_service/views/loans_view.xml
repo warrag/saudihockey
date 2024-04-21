@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <!--Loan Tree view-->
+    <record id="hr_unpaid_loan_tree_view" model="ir.ui.view">
+        <field name="name">hr.unpaid.loan.tree</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+            <tree string="Unpaid Loans">
+                <field name="date"/>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="loan_amount"/>
+                <field name="total_paid_amount"/>
+                <field name="balance_amount"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+         <!-- HR employee inherit Loans -->
+    <record id="view_hr_loan_form_loan_inherit" model="ir.ui.view">
+        <field name="name">hr.loan.form.inherit</field>
+        <field name="model">hr.loan</field>
+        <field name="inherit_id" ref="plustech_hr_loan.hr_loan_form_view"/>
+        <field name="arch" type="xml">
+            <field name="actual_salary" position="after">
+                            <field name="eos_due" readonly="1" force_save="1" />
+                </field>
+        </field>
+    </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+    <data noupdate="0">
+ 
+
+        <record id="employee_definition_01_letter_template" model="letter.letter">
+            <field name="name">Employee Definition 01</field>
+            <field name="report_xml_id">plustech_hr_employee_letter.employee_definition_1_report_id</field>
+            <field name="categ_id" ref="plustech_hr_employee_letter.employee_definition_letter_category"/>
+            <field name="version">V.001</field>
+        </record>
+
+
+        <record id="amount_word" model="hr.letter.fields">
+            <field name="name">Amount in Words</field>
+            <field name="technical_name">amount_word</field>
+            <field name="required">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.employee_definition_01_letter_template"/>
+
+        </record>
+
+    </data>
+</odoo>

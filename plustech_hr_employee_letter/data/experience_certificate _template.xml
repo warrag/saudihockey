@@ -1,0 +1,49 @@
+<odoo>
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="experience_certificate_template" model="letter.letter">
+            <field name="name">شهادة خبرة</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="container" style="width:100%;">
+                    <div class="row">
+                        <span>${object.request_date}</span>
+                        <br/><br/><br/>
+                          <h4>${object.name}</h4>
+                                                <br/><br/>
+                    </div>
+                    <div class="row">
+                        <div class="col-2" style="background-color: #d9d9d9;height:50px; text-align: center; padding-top: 15px;"><h6>اسم الموظف</h6></div>
+                        <div class="col-8" style="margin: 0px 0px 0px 10px;"><div style="background-color: #f2f2f2;height:50px;width: 400px;text-align: center; padding-top: 15px;"><h6>${object.request_id.name}</h6></div></div>
+                          <div class="col-2" style="height:50px; text-align: center;background-color: #d9d9d9; margin: 10px 0px 0px 0px;padding-top: 15px;"><span>رقم الهوية</span></div>
+                        <div class="col-8" style="margin: 10px 0px 0px 10px;"><div style="background-color: #f2f2f2;height:50px;width: 400px; text-align: center; padding-top: 15px;"><span>${object.request_id.identification_id}</span></div></div>
+                          <div class="col-2" style="height:50px; text-align: center;background-color: #d9d9d9; margin: 10px 0px 0px 0px;padding-top: 10px;"><span>الجنسية</span></div>
+                        <div class="col-8" style="margin: 10px 0px 0px 10px;"><div style="background-color:#f2f2f2; height:50px;width: 400px;text-align: center; padding-top: 15px;">
+                            <span>${object.request_id.country_id.with_context(lang='ar_001').name}</span></div>
+                        </div>
+                          <div class="col-2" style="height:50px; text-align: center; padding-top: 15px;background-color: #d9d9d9; margin: 10px 0px 0px 0px;"><span>الرقم الوظيفي</span></div>
+                        <div class="col-8" style="margin: 10px 0px 0px 10px;">
+                            <div style="background-color: #f2f2f2;height:50px;width: 400px; text-align: center; padding-top: 15px;">
+                                <span>${object.request_id.job_id.with_context(lang='ar_001').name}</span>
+                            </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+
+                        <br/>
+                        <h6>لمن يهمه الأمر</h6>
+                        <p>
+                            هذا هو التصديق بأن الموضح بياناته أعلاه كان يعمل لدينا في شركة ${object.request_id.country_id.with_context(lang='ar_001').name} من تاريخ
+                           ${object.request_id.join_date}<br/>
+                           <br/> وحتى تاريخ  ${object.request_date} وأعطيت له هذه الشهادة بناءً على طلبه دون أدنى مسؤولية تجاه الشركة.
+                            وقد كان متعاون خلال فترة عمله بالشركة وحسن السيرة والسلوك، متمنين له التوفيق في مستقبله
+                            العملي.
+                        </p>
+                    </div>
+
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

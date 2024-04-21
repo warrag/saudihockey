@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="inherit_hr_leave_allocation_view_form_manager" model="ir.ui.view">
+            <field name="name">hr.leave.allocation</field>
+            <field name="model">hr.leave.allocation</field>
+            <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form_manager"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='allocation_type']" position="after">
+                    <field name="plus_type" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='is_carry_forward']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('plus_type', '=', 'permission')]}</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="hr_holidays.hr_leave_allocation_action_approve_department" model="ir.actions.act_window">
+            <field name="name">Leave Allocations</field>
+            <field name="res_model">hr.leave.allocation</field>
+            <field name="view_mode">tree,form,kanban,activity</field>
+            <field name="context">{
+                'search_default_my_team': 1,
+                'search_default_approve': 2,
+                'search_default_active_employee': 3,
+                'default_plus_type': 'leave'
+                }
+            </field>
+            <field name="domain">[('plus_type', '=', 'leave')]</field>
+            <field name="search_view_id" ref="hr_holidays.hr_leave_allocation_view_search_manager"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new time off allocation
+                </p>
+                <p>
+                    Time Off Officers allocate time off days to employees (e.g. paid time off).
+                    <br/>
+                    Employees request allocations to Time Off Officers (e.g. recuperation days).
+                </p>
+            </field>
+        </record>
+        <record id="permission_allocation_action" model="ir.actions.act_window">
+            <field name="name">Permission Allocations</field>
+            <field name="res_model">hr.leave.allocation</field>
+            <field name="view_mode">tree,form,kanban,activity</field>
+            <field name="context">{ 'search_default_my_team': 1, 'search_default_approve': 2,
+                'search_default_active_employee': 3, 'default_plus_type': 'permission' }
+            </field>
+            <field name="domain">[('plus_type', '=', 'permission')]</field>
+            <field name="search_view_id" ref="hr_holidays.hr_leave_allocation_view_search_manager"/>
+        </record>
+
+        <menuitem
+                id="hr_holidays.hr_holidays_menu_manager_approve_allocations"
+                name="Leave Allocations"
+                parent="hr_holidays.menu_hr_holidays_approvals"
+                action="hr_holidays.hr_leave_allocation_action_approve_department"
+                sequence="2"/>
+        <menuitem
+                id="permission_hr_holidays_menu_manager_approve_allocations"
+                name="Permission Allocations"
+                parent="permission_hr_permission_root"
+                action="permission_allocation_action"
+                groups="hr_holidays.group_hr_holidays_manager"
+                sequence="2"/>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "Petty Cash",
+    'version': '1.0',
+    'summary': '',
+    'description': '',
+    'category': 'Custom',
+    'website': '',
+    'depends': ['base', 'account_accountant', 'account'],
+    'data': [
+        'security/groups.xml',
+        'security/ir.model.access.csv',
+        'data/sequence.xml',
+        'views/account_journal_transfer_view.xml',
+        'views/settings.xml',
+        # 'views/account_journal_view.xml',
+        'views/petty_cash_holder.xml',
+        'views/account_move.xml',
+        'views/product.xml',
+        'wizard/petty_cash_payment.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

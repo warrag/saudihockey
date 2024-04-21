@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_employee_expense_user,hr.employee.expense.user,model_hr_employee_expense,hr.group_hr_user,1,1,1,1
+access_hr_expense_type_user,hr.expense.type,model_hr_expense_type,hr.group_hr_user,1,1,1,1
+access_hr_employee_cost,access.hr.employee.cost,model_hr_employee_cost,,1,1,1,1
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="wizard_appraisal_batch_view_form" model="ir.ui.view">
+        <field name="name">Batch</field>
+        <field name="model">hr.appraisal.batch</field>
+        <field name="arch" type="xml">
+            <form string="wizard_appraisal_batch_form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="department_id"/>
+                            <field name="appraisal_tmp_id"/>
+                            <field name="type" force_save="1"/>
+                            <field name="appraisal_count" invisible="1"/>
+                        </group>
+                        <field name="employee_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="work_email"/>
+                                <field name="department_id"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="generate_batch" class="oe_highlight" type="object" string="Generate Batch"
+                            attrs="{'invisible':[('appraisal_count', '>', 0)]}"/>
+
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="appraisal_batch_view_tree" model="ir.ui.view">
+        <field name="name">appraisal_batch_view_tree</field>
+        <field name="model">hr.appraisal.batch</field>
+        <field name="arch" type="xml">
+            <tree string="appraisal_batch_tree">
+                <field name="name"/>
+                <field name="company_id"/>
+                <field name="department_id"/>
+                <field name="appraisal_tmp_id"/>
+            </tree>
+        </field>
+    </record>
+    <record id="appraisal_batch_view_form" model="ir.ui.view">
+        <field name="name">appraisal_batch_view_form</field>
+        <field name="model">hr.appraisal.batch</field>
+        <field name="arch" type="xml">
+            <form string="appraisal_batch_form">
+                <header>
+                    <button name="open_batch" class="oe_highlight" type="object" string="Generate Batch"
+                            attrs="{'invisible':[('appraisal_count', '>', 0)]}"/>
+
+                    <field name="state" widget="statusbar" />
+
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_appraisals" type="object" class="oe_stat_button" icon="fa-globe icon">
+                            <field name="appraisal_count"/>
+                            Appraisals
+                        </button>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="company_id" readonly="1" force_save="1"/>
+                            <field name="department_id" invisible="1"/>
+                            <field name="appraisal_tmp_id" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="is_generate" invisible="1"/>
+                            <field name="appraisal_ids" widget="many2many_tags" invisible="1"/>
+                            <field name="employee_ids" invisible="1" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_view_appraisal_batch">
+        <field name="name">Appraisal Batch</field>
+        <field name="res_model">hr.appraisal.batch</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('plustech_hr_appraisal.appraisal_batch_view_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('plustech_hr_appraisal.appraisal_batch_view_form')})]"/>
+
+    </record>
+    <menuitem name="Appraisals Batch"
+              parent="menu_hr_appraisal_main"
+              id="menu_appraisal_batch"
+              action="action_view_appraisal_batch"
+              sequence="3" groups="base.group_user"/>
+
+
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="business_trip_activity_view_tree" model="ir.ui.view">
+        <field name="name">business.trip.activity.view.tree</field>
+        <field name="model">business.trip.activity</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="activity_type_id" />
+                <field name="type" invisible="1"/>
+                <field name="business_trip_state"  required="1"/>
+                <field name="users_id"  attrs="{'required': [('business_trip_state', '!=', 'direct_manager')]}"/>
+                <field name="subject" />
+                <field name="note" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="business_trip_ticket_activity_view_tree" model="ir.ui.view">
+        <field name="name">business.trip.activity.tecket.view.tree</field>
+        <field name="model">business.trip.activity</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="activity_type_id" />
+                <field name="type" invisible="1"/>
+                <field name="business_trip_ticket_state" required="1"/>
+                <field name="users_id" />
+                <field name="subject" />
+                <field name="note" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="business_trip_activity_action" model="ir.actions.act_window">
+        <field name="name">Business Trip Activity</field>
+        <field name="res_model">business.trip.activity</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="business_trip_activity_view_tree" />
+        <field name="domain">[('type','=','trip')]</field>
+        <field name="context">{'default_type':'trip'}</field>
+    </record>
+
+    <menuitem id="business_trip_activity_main_menu"
+        name="Activity"
+        parent="deputation_config_menu"
+        sequence="50" />
+
+    <menuitem id="business_trip_activity_menu"
+        name="Business Trip"
+        parent="business_trip_activity_main_menu"
+        action="business_trip_activity_action"
+        groups="plustech_hr_business_trip.group_hr_deputation_manager"
+        sequence="10" />
+
+</odoo>

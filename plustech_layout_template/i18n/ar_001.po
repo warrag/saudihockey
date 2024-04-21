@@ -1,0 +1,606 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* khabeer_invoice_templates
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200817\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 11:54+0000\n"
+"PO-Revision-Date: 2020-09-06 11:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<br/>\n"
+"                                    <span>Account Id : </span>"
+msgstr ""
+"<br/>\n"
+"                                    <span>رقم الحساب : </span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<br/>\n"
+"                                    <span>Bank Name : </span>"
+msgstr ""
+"<br/>\n"
+"                                    <span>اسم البنك : </span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<br/>\n"
+"                                    <span>Branch Name/Address : </span>"
+msgstr ""
+"<br/>\n"
+"                                    <span>الفرع / العنوان : </span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<br/>\n"
+"                                    <span>Currency : </span>"
+msgstr ""
+"<br/>\n"
+"                                    <span>العملة : </span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<br/>\n"
+"                                    <span>IBAN Number : </span>"
+msgstr ""
+"<br/>\n"
+"                                    <span>رقم الايبان : </span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<br/>\n"
+"                                    <span>Swift Code : </span>"
+msgstr ""
+"<br/>\n"
+"                                    <span>كود البنك : </span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+msgid ""
+"<br/>\n"
+"                            <span>\n"
+"                                <font color=\"#fff\">Bank Name :</font>\n"
+"                            </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+msgid ""
+"<br/>\n"
+"                            <span>\n"
+"                                <font color=\"#fff\">Branch Name/Address :</font>\n"
+"                            </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+msgid ""
+"<br/>\n"
+"                            <span>\n"
+"                                <font color=\"#fff\">IFSC Code :</font>\n"
+"                            </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+msgid ""
+"<br/>\n"
+"                            <span>\n"
+"                                <font color=\"#fff\">Swift Code :</font>\n"
+"                            </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid ""
+"<br/>\n"
+"                        <span><font color=\"#fff\">Bank Name :</font> </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid ""
+"<br/>\n"
+"                        <span><font color=\"#fff\">Branch Name/Address :</font> </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid ""
+"<br/>\n"
+"                        <span><font color=\"#fff\">IFSC Code : </font></span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid ""
+"<br/>\n"
+"                        <span><font color=\"#fff\">Swift Code :</font> </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<font color=\"#fff\">Cancelled Invoice</font>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<font color=\"#fff\">Draft Invoice</font>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<font color=\"#fff\">Invoice</font>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<font color=\"#fff\">PRO-FORMA</font>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<font color=\"#fff\">Refund</font>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<font color=\"#fff\">Vendor Bill</font>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<font color=\"#fff\">Vendor Refund</font>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<span>Client Name:</span>"
+msgstr "<span>اسم العميل:</span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<span>Client's Address:</span>"
+msgstr "<span>عنوان العميل:</span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<span>Client's VAT Reg:</span>"
+msgstr "<span>الرقم الضريبي:</span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<span>Tel No:</span>"
+msgstr "<span>رقم الهاتف:</span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<span>VAT</span>"
+msgstr "<span>مبلغ VAT</span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+msgid ""
+"<strong style=\"color:#fff !important;\">Bank Account Details</strong>\n"
+"                            <br/>\n"
+"                            <span>\n"
+"                                <font color=\"#fff\">Account Id :</font>\n"
+"                            </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid ""
+"<strong style=\"color:#fff !important;\">Bank Account Details</strong><br/>\n"
+"                        <span><font color=\"#fff\">Account Id :</font> </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+msgid ""
+"<strong style=\"color:#fff !important;\">Paypal Account Details</strong>\n"
+"                            <br/>\n"
+"                            <span>\n"
+"                                <font color=\"#fff\">Paypal Id :</font>\n"
+"                            </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid ""
+"<strong style=\"color:#fff !important;\">Paypal Account Details</strong><br/>\n"
+"                        <span><font color=\"#fff\">Paypal Id :</font> </span>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<strong>\n"
+"                                    <span>Comments:</span> \n"
+"                                </strong>"
+msgstr ""
+"<strong>\n"
+"                                    <span>ملاحظات:</span> \n"
+"                                </strong>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid ""
+"<strong>Bank Account Details</strong><br/>\n"
+"                                    <span>Account Name : </span>"
+msgstr ""
+"<strong>تفاصيل الحساب البنكي</strong><br/>\n"
+"                                    <span>اسم الحساب : </span>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "<strong>Comment:</strong>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid ""
+"<strong>Customer Address</strong>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<strong>Due Date:</strong>"
+msgstr "<strong>تاريخ الاستحقاق:</strong>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>الوضع المالي:</strong>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>تاريخ الفاتورة:</strong>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<strong>Payment Term:</strong>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+msgid "<strong>SalesPerson:</strong>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>الإجمالي الفرعي</strong>"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_company__account_template
+msgid "Account"
+msgstr "الحساب"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.res_partner_bank_inherit_form_view
+msgid "Address"
+msgstr "العنوان"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_move__bank_account_id
+msgid "Bank Account"
+msgstr "حساب بنكي"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model,name:khabeer_invoice_templates.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "الحسابات البنكية"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__branch_name
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__branch_name
+msgid "Branch Name"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__city
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__city
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.res_partner_bank_inherit_form_view
+msgid "City"
+msgstr "المدينة"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields.selection,name:khabeer_invoice_templates.selection__res_company__account_template__classic
+msgid "Classic"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model,name:khabeer_invoice_templates.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model,name:khabeer_invoice_templates.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__country_id
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__country_id
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.res_partner_bank_inherit_form_view
+msgid "Country"
+msgstr "الدولة"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Customer"
+msgstr "العميل"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Delivery Address"
+msgstr "عنوان التسليم"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "Description"
+msgstr "الوصف"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "Disc.(%)"
+msgstr "خصم(%)"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Draft Invoice"
+msgstr "مسودة فاتورة"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.khabeer_external_layout_header
+msgid "Email:"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields.selection,name:khabeer_invoice_templates.selection__res_company__account_template__fency
+msgid "Fency"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__iban_number
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__iban_number
+msgid "IBAN Number"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__ifsc
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__ifsc
+msgid "IFSC"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "INVOICE"
+msgstr "فاتورة"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Invoice #"
+msgstr "فاتورة #"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Invoice Date"
+msgstr "تاريخ الفاتورة"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model,name:khabeer_invoice_templates.model_account_move
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields.selection,name:khabeer_invoice_templates.selection__res_company__account_template__modern
+msgid "Modern"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner__name
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_users__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields.selection,name:khabeer_invoice_templates.selection__res_company__account_template__odoo_standard
+msgid "Odoo Standard"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "PRO-FORMA"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.khabeer_external_layout_header
+msgid "Page: <span class=\"page\"/> / <span class=\"topage\"/>"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_company__footer_logo
+msgid "Paper Footer"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_company__paper_logo
+msgid "Paper Header"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Payment Term"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.khabeer_external_layout_header
+msgid "Phone:"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "Price"
+msgstr "السعر"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Reference/Description"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "SalesPerson"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__state_id
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__state_id
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.res_partner_bank_inherit_form_view
+msgid "State"
+msgstr "المحافظة"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__street
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.res_partner_bank_inherit_form_view
+msgid "Street 2..."
+msgstr "الشارع 2..."
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.res_partner_bank_inherit_form_view
+msgid "Street..."
+msgstr "الشارع..."
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__street2
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__street2
+msgid "Street2"
+msgstr "الشارع 2"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__swift_code
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__swift_code
+msgid "Swift Code"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Taxes"
+msgstr "الضرائب"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.classic_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.fency_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.modern_report_invoice_document
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "VAT (%)"
+msgstr "VAT"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "VAT Amount"
+msgstr "مبلغ VAT"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.odoo_std_report_invoice_document
+msgid "VAT ID:"
+msgstr "الرقم الضريبي"
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.khabeer_external_layout_header
+msgid "Web:"
+msgstr ""
+
+#. module: khabeer_invoice_templates
+#: model_terms:ir.ui.view,arch_db:khabeer_invoice_templates.res_partner_bank_inherit_form_view
+msgid "ZIP"
+msgstr "الرمز البريدي"
+
+#. module: khabeer_invoice_templates
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_account_setup_bank_manual_config__zip
+#: model:ir.model.fields,field_description:khabeer_invoice_templates.field_res_partner_bank__zip
+msgid "Zip"
+msgstr "الرمز البريدي"

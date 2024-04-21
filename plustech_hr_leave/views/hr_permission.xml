@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="permission_view_form_manager" model="ir.ui.view">
+        <field name="name">hr.leave</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='request_hour_from']" position="replace">
+                <field name="request_hour_from" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='request_hour_to']" position="replace">
+                <field name="request_hour_to" invisible="1"/>
+            </xpath>
+            <xpath expr="//label[@for='request_hour_from']" position="replace">
+                <label for="request_hour_from" string="From" invisible="1"/>
+            </xpath>
+            <xpath expr="//label[@for='request_hour_to']" position="replace">
+                <label for="request_hour_to" string="From" invisible="1"/>
+            </xpath>
+            <xpath expr="//label[@for='request_hour_to']" position="after">
+                <label for="date_from" string="From"
+                       attrs="{'invisible': [('request_unit_hours', '=', False)]}"/>
+                <field name="date_from"
+                       attrs="{'readonly': [('state', '=', 'validate')],'required': [('request_unit_hours', '=', True)], 'invisible': [('request_unit_hours', '=', False)]}"/>
+                <label for="date_to" string="To" attrs="{'invisible': [('request_unit_hours', '=', False)]}"/>
+                <field name="date_to"
+                       attrs="{'readonly': [('state', '=', 'validate')],  'required': [('request_unit_hours', '=', True)],'invisible': [('request_unit_hours', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_holidays.hr_leave_action_my" model="ir.actions.act_window">
+        <field name="name">My Time Off</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.leave</field>
+        <field name="view_mode">tree,form,kanban,activity</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="hr_holidays.hr_leave_view_search_my"/>
+        <field name="domain">[('plus_type', '=', 'leave'),('user_id', '=', uid)]</field>
+        <field name="context">{'default_plus_type': 'leave'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Keep track of your PTOs.
+            </p>
+            <p>
+                A great way to keep track on your time off requests, sick days, and approval status.
+            </p>
+        </field>
+    </record>
+    <record id="permission_hr_leave_action_my" model="ir.actions.act_window">
+        <field name="name">My Permission</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.leave</field>
+        <field name="view_mode">tree,form,kanban,activity</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="hr_holidays.hr_leave_view_search_my"/>
+        <!-- <field name="domain">[('plus_type', '=', 'permission'),('user_id', '=', uid)]</field> -->
+        <field name="domain">
+        ['|', ('employee_id.company_id', 'in', allowed_company_ids), ('multi_employee', '=', True),('plus_type', '=', 'permission')]
+        </field>
+        <field name="context">{
+            'search_default_approve': 1,
+            'search_default_my_team': 2,
+            'search_default_active_employee': 3,
+            'search_default_active_time_off': 4,
+            'default_plus_type': 'permission',
+            'default_request_unit_hours': 1,
+            'hide_employee_name': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Keep track of your PTOs.
+            </p>
+            <p>
+                A great way to keep track on your time off requests, sick days, and approval status.
+            </p>
+        </field>
+    </record>
+
+    <record id="hr_holidays.hr_leave_action_action_approve_department" model="ir.actions.act_window">
+        <field name="name">All Time Off</field>
+        <field name="res_model">hr.leave</field>
+        <field name="view_mode">tree,kanban,form,calendar,activity</field>
+        <field name="search_view_id" ref="hr_holidays.hr_leave_view_search_manager"/>
+        <field name="context">{
+            'search_default_approve': 1,
+            'search_default_my_team': 2,
+            'search_default_active_employee': 3,
+            'search_default_active_time_off': 4,
+            'default_plus_type': 'leave'
+            'hide_employee_name': 1}
+        </field>
+        <field name="domain">
+        ['|', ('employee_id.company_id', 'in', allowed_company_ids),('multi_employee', '=', True),('plus_type', '=', 'leave')]
+        </field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Meet the time off dashboard.
+            </p>
+            <p>
+                A great way to keep track on employee’s PTOs, sick days, and approval status.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+            id="hr_holidays.hr_leave_menu_my"
+            parent="hr_holidays.menu_hr_holidays_my_leaves"
+            action="hr_holidays.hr_leave_action_my"
+            sequence="2"/>
+
+    <menuitem id="permission_hr_permission_root" name="Permissions" parent="hr_holidays.menu_hr_holidays_root" sequence="3"/>
+    <menuitem id="permission_hr_leave_menu_my" parent="permission_hr_permission_root" action="permission_hr_leave_action_my" sequence="2"/>
+</odoo>

@@ -1,0 +1,28 @@
+<odoo>
+    <data noupdate="1">
+         <record id="housing_allowance" model="hr.deputation.allowance">
+            <field name="name">Housing Allowance</field>
+            <field name="code">HRA</field>
+             <field name="type">percentage</field>
+             <field name="amount">50</field>
+        </record>
+         <record id="meal_allowance" model="hr.deputation.allowance">
+            <field name="name">Meal Allowance</field>
+                <field name="code">MA</field>
+             <field name="type">percentage</field>
+             <field name="amount">20</field>
+        </record>
+         <record id="transportation_allowance" model="hr.deputation.allowance">
+            <field name="name">Transportation Allowance</field>
+                <field name="code">TRA</field>
+             <field name="type">percentage</field>
+             <field name="amount">10</field>
+        </record>
+         <record id="travel_allowance" model="hr.deputation.allowance">
+            <field name="name">Travel Allowance</field>
+                <field name="code">TLA</field>
+             <field name="type">percentage</field>
+             <field name="amount">20</field>
+        </record>
+    </data>
+</odoo>

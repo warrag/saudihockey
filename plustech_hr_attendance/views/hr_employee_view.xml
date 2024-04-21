@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_employee_inherit_form_view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+             <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                 <field name="pin" position="before">
+
+                      <label for="allowed_late_hours"/>
+                        <div class="o_row" name="allowed_late_hours">
+                            <field name="allowed_late_hours" widget="float_time"/>
+                            <span>Hours</span>
+                        </div>
+                 </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

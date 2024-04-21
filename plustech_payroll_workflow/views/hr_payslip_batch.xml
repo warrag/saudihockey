@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_payslip_run_view_form_stage" model="ir.ui.view">
+            <field name="name">hr.payslip.run.form.stage</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header/field[@name='state']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/field[@name='state']" position="after">
+                    <field name="stage_id" widget="statusbar"/>
+                    <field name="show_for_current_user" invisible="1"/>
+                    <field name="next_stage_id" invisible="1"/>
+                </xpath>
+                <xpath expr="/form/header/button[@name='action_validate']" position="before">
+                    <button name="action_forward" type="object" string="Forward" class="oe_highlight"
+                            attrs="{'invisible': ['|','|',('state', 'in', ['draft','cancel','paid']), ('show_for_current_user', '=', False), ('next_stage_id','=', False)]}"/>
+                    <button name="action_backward" type="object" string="Backward" class="oe_highlight"
+                            attrs="{'invisible': ['|','|',('state', 'in', ['draft','cancel','paid']), ('show_for_current_user', '=', False), ('backward','=', False)]}"/>
+                </xpath>
+                <field name="credit_note" position="after">
+                    <field name="generate_entry" invisible="1"/>
+                    <field name="post_entry" invisible="1"/>
+                    <field name="payment" invisible="1"/>
+                    <field name="backward" invisible="1"/>
+                    <field name="cancel" invisible="1"/>
+                    <field name="set_to_draft" invisible="1"/>
+                </field>
+                <xpath expr="//button[@name='payslip_entries_post']" position="replace">
+                    <button name="payslip_entries_post" type="object" string="Post" class="oe_highlight"
+                            attrs="{'invisible': ['|','|',('state','!=','close'),('post_entry', '=',False),('show_for_current_user', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//button[@id='payment']" position="replace">
+                    <button name="%(plustech_hr_payroll.action_emp_payslip_payment)d"
+                            type="action" string="Register Payment" id="payment"
+                            attrs="{'invisible': ['|','|',('state','!=','post'),('payment', '=',False),('show_for_current_user', '=', False)]}"
+                            class="oe_highlight o_expense_sheet_pay" context="{'default_batch_id': active_id}"
+                            groups="account.group_account_manager"/>
+                </xpath>
+                <xpath expr="//button[@name='action_batch_cancel']" position="replace">
+                    <button string="Cancel" name="action_batch_cancel" type="object"
+                            attrs="{'invisible':['|',('cancel', '=', False),('state', 'not in',('draft','close','verify'))]}"/>
+                </xpath>
+                <xpath expr="//button[@name='action_draft']" position="replace">
+                    <button string="Set to Draft" name="action_draft" type="object"
+                            attrs="{'invisible':['|',('set_to_draft', '=', False),('state', 'not in',('close','verify'))]}"/>
+                </xpath>
+
+                <xpath expr="//sheet" position="inside">
+                    <notebook>
+                        <page string="Approval Status" attrs="{'invisible': [('approval_status_ids', '=', [])]}">
+                        <group>
+                    <field name="approval_status_ids" nolabel="1" readonly="1" >
+                        <tree>
+                            <field name="user_id"/>
+                            <field name="action"/>
+                            <field name="stage_id"/>
+                            <field name="action_date"/>
+                        </tree>
+                    </field>
+                         </group>
+                        </page>
+                    </notebook>
+                </xpath>
+
+            </field>
+        </record>
+        <record id="hr_payslip_batch_account_view_form_stage" model="ir.ui.view">
+            <field name="name">hr.payslip.run.account.form.stage</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll_account.hr_payslip_run_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_validate']" position="replace">
+                    <button name="action_validate" type="object" string="Create Draft Entry"
+                            class="oe_highlight" context="{'payslip_generate_pdf': True}"
+                            attrs="{'invisible': ['|','|',('state','!=','verify'),('generate_entry', '=',False),('show_for_current_user', '=', False)]}"
+                            confirm="Are you sure you want to proceed ?"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

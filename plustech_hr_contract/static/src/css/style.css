@@ -1,0 +1,12 @@
+@font-face {font-family: "Sakkal Majalla";
+    src: url("/plustech_hr_contract/static/src/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); /* IE9*/
+    src: url("/plustech_hr_contract/static/src/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/plustech_hr_contract/static/src/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"), /* chrome、firefox */
+    url("/plustech_hr_contract/static/src/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"), /* chrome、firefox */
+    url("/plustech_hr_contract/static/src/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("/plustech_hr_contract/static/src/fonts/ce7b5754581057e6f7444e2192850cc8.svg#Sakkal Majalla") format("svg"); /* iOS 4.1- */
+  }
+  
+  .contract-font{
+      font-family:"Sakkal Majalla" !important;
+      font-size:12px;}

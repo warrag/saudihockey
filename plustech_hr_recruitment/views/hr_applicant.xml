@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_applicant_form_inherit" model="ir.ui.view">
+            <field name="name">hr.applicant.form</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+                <field name="categ_ids" position="before">
+                    <field name="birth_date"/>
+                    <field name="nationality_id"/>
+                    <field name="passport_no"/>
+                    <field name="passport_issue_place"/>
+                    <field name="passport_expire"/>
+                    <field name="religion"/>
+                </field>
+                <field name="partner_mobile" position="after">
+                    <field name="identification_id"/>
+                    <field name="id_issue_place"/>
+                    <field name="id_expire_date"/>
+                    <field name="gender"/>
+                    <field name="marital"/>
+                </field>
+                <xpath expr="//notebook" position="inside">
+                    <page name="education_info" string="Education Details">
+                  <field name="education_ids" nolabel="1">
+                      <tree editable="bottom">
+                          <field name="name"/>
+                          <field name="date_start"/>
+                          <field name="date_end"/>
+                      </tree>
+                  </field>
+                    </page>
+                    <page name="courses_details" string="Training &amp; Courses Details">
+                  <field name="training_course_ids" nolabel="1">
+                      <tree editable="bottom">
+                          <field name="name"/>
+                          <field name="date_start"/>
+                          <field name="date_end"/>
+                      </tree>
+                  </field>
+                    </page>
+                     <page name="skill_ids_details" string="Skills Details">
+                  <field name="skill_ids" nolabel="1">
+                      <tree editable="bottom">
+                          <field name="skill_id"/>
+                          <field name="skill_level_id"/>
+                          <field name="level_progress" widget="progressbar"/>
+                      </tree>
+                  </field>
+                    </page>
+                    <page name="family_details" string="Dependents">
+                  <field name="dependent_ids" nolabel="1">
+                      <tree editable="bottom">
+                          <field name="member_name"/>
+                          <field name="relation"/>
+                          <field name="age"/>
+                      </tree>
+                  </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

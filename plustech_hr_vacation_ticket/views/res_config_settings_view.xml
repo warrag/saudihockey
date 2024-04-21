@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_leave_ticket_configuration" model="ir.ui.view">
+            <field name="name">Configure Tickets</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="plustech_hr_leave.view_hr_leave_configuration" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='leave_config_block']" position="inside">
+                    <h2>Tickets</h2>
+                    <div class="row mt16 o_settings_container" name="config_ticket">
+                    <div class="col-xs-12 col-md-6 o_setting_box" name="config_leave_flight_ticket">
+                        <div class="o_setting_right_pane">
+                            <label for="default_expense_account" string="Flight Ticket"/>
+                            <div class="text-muted">
+                                Choose the expense account to post the flight tickets accounting entries
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <label for="default_expense_account" string="Expense Account"/>
+                                    <field name="default_expense_account"/>
+                                </div>
+                                 <div class="mt16">
+                                    <label for="tickets_analytic_account_id" string="Analytic Account Account"/>
+                                    <field name="tickets_analytic_account_id"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 o_setting_box" name="config_leave_ticket_deserv_settings">
+                            <div class="o_setting_right_pane">
+                                <label for="desver_ticket_after" string="Ticket Eligibility Period Conditions"/>
+                                <div class="text-muted">
+                                You can setup annual leave ticket eligibility period setting her.
+                                </div>
+                                <div class="content-group">
+                                    <div class="row mt16">
+                                        <label for="desver_ticket_after" string="Deserv After" class="col-md-3"/>
+                                        <field name="desver_ticket_after" />
+                                    </div>
+                                    <div class="row mt16">
+                                        <label for="not_deserve_ticket_after" string="Not Deserve after" class="col-md-3"/>
+                                        <field name="not_deserve_ticket_after"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

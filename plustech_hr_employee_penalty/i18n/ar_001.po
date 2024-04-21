@@ -1,0 +1,644 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_employee_penalty
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-18 07:38+0000\n"
+"PO-Revision-Date: 2023-06-18 07:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_employee_penalty
+#: model:mail.template,body_html:plustech_hr_employee_penalty.email_template_employee_penalty_inform
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <t t-out=\"object.employee_id.name or ''\">Brandon Freeman</t>\n"
+"                        <br/><br/>\n"
+"                        The Penalty Declared from <t t-out=\"object.company_id.name or ''\"/>\n"
+"                         <br/>\n"
+"                        On date <t t-out=\"object.declaration_date or ''\"/>\n"
+"                        <br/>\n"
+"                        Will be applied on date <t t-out=\"object.applied_date or ''\"/>   \n"
+"                        <br/>\n"
+"                        The penalty is:<br/>\n"
+"                        <t t-out=\"object.violation_id.name\"/>:    \n"
+"                         <t t-if=\"object.ded_amount\">\n"
+"                        The Penalty Amount is <t t-out=\"object.ded_amount or ''\"/> \n"
+"                        </t>               \n"
+"                    </p>\n"
+"                </div>"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_needaction
+msgid "Action Needed"
+msgstr "للإجراء"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__allowance_ids
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__allowance_ids
+msgid "Allowances"
+msgstr "البدلات"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__applied_date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "Applied Date"
+msgstr "تاريخ التطبيق"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__salary_type__selected_allowance
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__penalty_stage__salary_type__selected_allowance
+msgid "Basic + Selected Allowances"
+msgstr "الراتب الاساسي + بدلات مختارة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__salary_type__basic
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__penalty_stage__salary_type__basic
+msgid "Basic Salary"
+msgstr "الراتب الاساسي"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__state__chairman
+msgid "Chairman"
+msgstr "مدير العام"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Comments"
+msgstr "تعليقات"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__company_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__company_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_employee_penalty
+#: code:addons/plustech_hr_employee_penalty/models/hr_punishment.py:0
+#, python-format
+msgid "Compose Email"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__contract_termination
+msgid "Contract Termination With EOS?"
+msgstr "انهاء العقد مع صرف مكافأة نهاية الخدمة؟"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__create_uid
+msgid "Created by"
+msgstr "ادخلت بواسطة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__create_date
+msgid "Created on"
+msgstr "تاريخ الادخال"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__penalty_stage__deduction_type__days
+msgid "Days"
+msgstr "ايام عمل"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__declaration_date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "Declaration Date"
+msgstr "تاريخ الجزاء"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__deduct
+msgid "Deduct from Salary"
+msgstr "خصم من الراتب"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__deducted_amount
+msgid "Deducted Amount"
+msgstr "مبلغ المخصوم"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__state__ded
+msgid "Deducted from Salary"
+msgstr "مخصوم من الراتب"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__ded_amount
+msgid "Deduction Amount"
+msgstr "مبلغ الخصم"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__deduct_amount
+msgid "Deduction Amount/Days"
+msgstr "خصم مبلغ/ايام عمل"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Deductions"
+msgstr "خصم"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__state__done
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Done"
+msgstr "مؤكد"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__employee_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__employee_number
+msgid "Employee Number"
+msgstr "رقم الوظيفي"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model,name:plustech_hr_employee_penalty.model_hr_punishment
+msgid "Employee Penalty"
+msgstr "جزاء الموظف"
+
+#. module: plustech_hr_employee_penalty
+#: model:violation.violation,name:plustech_hr_employee_penalty.employee_behavior_violation
+msgid "Employee behavior violations"
+msgstr "مخالفات تتعلق بسلوك العامل"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.ui.menu,name:plustech_hr_employee_penalty.menu_employee_violations
+msgid "Employees Penalties"
+msgstr "جزاءات الموظفين"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__penalty_stage__deduction_type__fixed
+msgid "Fixed Amount"
+msgstr "مبلغ ثابت"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_penalty_stage__deduct_amount
+msgid ""
+"Fixed: deduct fixed amount from payslip gross\n"
+"Percentage: A percentage of the daily salary is deducted\n"
+" Days: The daily salary is deducted according to the number of days"
+msgstr ""
+"مبلغ ثابت: يتم حسم مبلغ ثابت من الراتب\n"
+"نسبة: يتم حسم نسبة المكتوبة من الراتب\n"
+" ايام: يتم حسم راتب ايام المكتوبة من الراتب"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__salary_type__gross
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__penalty_stage__salary_type__gross
+msgid "Gross Salary"
+msgstr "الراتب الاجمالي"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__state__hrm
+msgid "HRM"
+msgstr "مدير الموارد البشرية"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__history_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "History"
+msgstr "السجل"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__history_matching
+msgid "History Matching"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__hr_punishment_id
+msgid "Hr Punishment"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__message_needaction
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__message_has_error
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__job_id
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__state__dm
+msgid "Line Manager"
+msgstr "مدير المباشر"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__manager_id
+msgid "Manager"
+msgstr "مدير المباشر"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "My Penalties"
+msgstr "جزاءاتي"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "My Team"
+msgstr "فريقي"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__name
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_penalty_tree
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__note
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Notes & Comments"
+msgstr "ملاحظات وتعليقات"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__one_time
+msgid "One-time deprivation of promotion or bonus"
+msgstr "الحرمان من الترقية أو العلاوة لمرة واحدة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model,name:plustech_hr_employee_penalty.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال الرواتب للسداد"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__payslip_id
+msgid "Payslip"
+msgstr "مسير الرواتب"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.actions.act_window,name:plustech_hr_employee_penalty.action_hr_punishment
+#: model:ir.actions.act_window,name:plustech_hr_employee_penalty.action_penalty
+#: model:ir.model,name:plustech_hr_employee_penalty.model_penalty_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_payslip__penalty_ids
+#: model:ir.ui.menu,name:plustech_hr_employee_penalty.menu_penalties
+#: model:ir.ui.menu,name:plustech_hr_employee_penalty.menu_violation_punishment
+#: model:ir.ui.menu,name:plustech_hr_employee_penalty.penalties_configuration
+msgid "Penalties"
+msgstr "الجزاءات"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Penalties History"
+msgstr "سجل الجزاءات"
+
+#. module: plustech_hr_employee_penalty
+#: model:mail.template,name:plustech_hr_employee_penalty.email_template_employee_penalty_inform
+msgid "Penalties: Employee Inform"
+msgstr "الجزاءات: تنبيه الموظف"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__penalty_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__penalty_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__penalty_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_penalty_form
+msgid "Penalty"
+msgstr "الجزاء"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Penalty Info"
+msgstr "معلومات الجزاء"
+
+#. module: plustech_hr_employee_penalty
+#: code:addons/plustech_hr_employee_penalty/models/hr_punishment.py:0
+#, python-format
+msgid "Penalty Inform"
+msgstr "تنبيه"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model,name:plustech_hr_employee_penalty.model_penalty_stage
+msgid "Penalty stage"
+msgstr "مرحلة الجزاء"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__penalty_stage__deduction_type__percentage
+msgid "Percentage"
+msgstr "نسبة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__deduction_type
+msgid "Percentage Type"
+msgstr "نوع النسبة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__name
+msgid "Punish No."
+msgstr "رقم الجزاء"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__remaining_amount
+msgid "Remaining Amount"
+msgstr "مبلغ المتبقي"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__salary_deduction
+msgid "Salary Deduction?"
+msgstr "خصم من المرتب"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__salary_type
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__salary_type
+msgid "Salary Type"
+msgstr "نوع الراتب"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "Search Punishment"
+msgstr "بحث"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_form
+msgid "Send Email"
+msgstr "ارسال البريد الالكتروني"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__stage_id
+msgid "Stage"
+msgstr "مرحلة"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_penalty_form
+msgid "Stage Name"
+msgstr "اسم المرحلة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__stage_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_penalty_form
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__state
+msgid "Status"
+msgstr "الحالات"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__without_eos
+msgid "Termination Without EOS?"
+msgstr "إنهاء العقد مع عدم صرف مكافئة نهاية الخدمة؟"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__user_id
+msgid "User"
+msgstr "مستخدم"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__violation_id
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_penalty__violation_id
+msgid "Violation"
+msgstr "المخالفة"
+
+#. module: plustech_hr_employee_penalty
+#: model:hr.salary.rule,name:plustech_hr_employee_penalty.hr_violation_rule
+msgid "Violation Deduction"
+msgstr "خصم المخالفة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_payslip__violation_ded
+msgid "Violation Month Deduction"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.actions.act_window,name:plustech_hr_employee_penalty.action_hr_violation
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_violation_violation__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_penalty_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_violation_tree
+msgid "Violation Type"
+msgstr "نوع المخالفة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.ui.menu,name:plustech_hr_employee_penalty.menu_violations
+msgid "Violation Types"
+msgstr "المخالفات"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model,name:plustech_hr_employee_penalty.model_violation_violation
+msgid "Violations"
+msgstr "المخالفات"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_penalty_stage__warning
+msgid "Warning?"
+msgstr "انذار كتابي"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,help:plustech_hr_employee_penalty.field_hr_punishment__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:violation.violation,name:plustech_hr_employee_penalty.work_org_violation
+msgid "Work organization violations"
+msgstr "مخالفات تتعلق بتنظيم العمل"
+
+#. module: plustech_hr_employee_penalty
+#: model:violation.violation,name:plustech_hr_employee_penalty.working_hours_violation
+msgid "Working Hours Violations"
+msgstr "مخالفات تتعلق بمواعيد العمل"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields.selection,name:plustech_hr_employee_penalty.selection__hr_punishment__state__draft
+msgid "draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_employee_penalty
+#: model:ir.model.fields,field_description:plustech_hr_employee_penalty.field_hr_punishment__is_manager
+msgid "is_manager"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_penalty.hr_punishment_filter
+msgid "penalties of people you are manager of"
+msgstr ""
+
+#. module: plustech_hr_employee_penalty
+#: model:mail.template,subject:plustech_hr_employee_penalty.email_template_employee_penalty_inform
+msgid "{{ object.employee_id.name }} Penalty Inform"
+msgstr "{{ object.employee_id.name }} تنبيه الجزاء"

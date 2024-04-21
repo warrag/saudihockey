@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_book_flight_ticket_form" model="ir.ui.view">
+            <field name="name">hr.flight.ticket.form</field>
+            <field name="model">hr.flight.ticket</field>
+            <field name="priority" eval="2" />
+            <field name="arch" type="xml">
+                <form string="Flight Ticket" create="0">
+                    <group>
+                        <group>
+                            <field name="air_line_id" options="{'no_create': True}" />
+                            <field name="flight_class_id" options="{'no_create': True}" domain="[('partner_id', '=', air_line_id)]"  />
+                        </group>
+                        <group>
+                            <field name="ticket_no" />
+                            <field name="ticket_fare"  />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="ticket_type"  />
+                            <field name="date_start"  />
+                            <field name="date_return" attrs="{'required':[('ticket_type','=','round')]}" />
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="book_ticket" type="object" string="Book Ticket" class="btn-primary" />
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

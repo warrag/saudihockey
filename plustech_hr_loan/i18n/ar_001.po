@@ -1,0 +1,1521 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_loan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-17 13:12+0000\n"
+"PO-Revision-Date: 2023-06-17 13:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_loan
+#: model:mail.template,body_html:plustech_hr_loan.loan_skip_hr_officer_confirm
+msgid ""
+"\n"
+"\n"
+"            \t<p>Dear <i>HR Officer</i></p>\n"
+"            \t<p></p>\n"
+"            \t<p> Skip Installment request from <b><i>${object.employee_id.name}</i></b></p>\n"
+"            \t<p>\n"
+"            \t\t<b>Installment Detail:</b><br/>\n"
+"            \t\t<b>Loan :</b> ${object.loan_id.name}<br/>\n"
+"            \t\t<b>Installment: </b> ${object.installment_id.name}<br/>\n"
+"            \t\t<b>Installment Amount: </b> ${object.installment_id.amount}<br/>\n"
+"            \t</p>\n"
+"\n"
+"            \t<p>You can access Skip Installment From Bellow URL</p>\n"
+"            \t<p>${object.skip_installment_url}</p>\n"
+"\n"
+"            \t<b>Regards,</b><br/>\n"
+"            \t${object.employee_id.name}\n"
+"                "
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,body_html:plustech_hr_loan.skip_ins_hr_manager_approval
+msgid ""
+"\n"
+"            \t<p>To <b><i>HR Manager</i></b></p>\n"
+"            \t<p> Skip Installment request from <b><i>${object.employee_id.name}</i></b></p>\n"
+"            \t<p> Skip Installment Request Confirmed by <b><i>${object.hr_officer_id.name}</i></b> HR Officer</p>\n"
+"            \t<p>\n"
+"            \t\t<b>Installment Detail:</b><br/>\n"
+"            \t\t<b>Loan :</b> ${object.loan_id.name}<br/>\n"
+"            \t\t<b>Installment: </b> ${object.installment_id.name}<br/>\n"
+"            \t\t<b>Installment Amount: </b> ${object.installment_id.amount}<br/>\n"
+"            \t</p>\n"
+"            \t<p>You can access Loan From Bellow URL</p>\n"
+"            \t<p>${object.skip_installment_url}</p>\n"
+"            \t<b>Regards,</b><br/>\n"
+"            \t${object.hr_officer_id.name}\n"
+"                "
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,body_html:plustech_hr_loan.hr_manager_approved_skip_installment
+msgid ""
+"\n"
+"                \t<p>Dear <i>${object.employee_id.name}</i></p>\n"
+"                \t<p></p>\n"
+"                \t<p> Your Skip Installment <b><i>${object.name}</i></b> Request Confirm By <b><i>${object.hr_manager_id.name}</i></b></p>\n"
+"                \t<p>You can access Loan From Bellow URL</p>\n"
+"                \t<p>${object.skip_installment_url}</p>\n"
+"                \t<b>Regards,</b><br/>\n"
+"                \t${object.hr_manager_id.name}\n"
+"                    "
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,body_html:plustech_hr_loan.hr_manager_reject_skip_installment
+msgid ""
+"\n"
+"                \t<p>Dear <i>${object.employee_id.name}</i></p>\n"
+"                \t<p></p>\n"
+"                \t<p> Your Skip Installment <b><i>${object.name}</i></b> Request Rejected By <b><i>${object.hr_manager_id.name}</i></b></p>\n"
+"                \t<p>You can access Loan From Bellow URL</p>\n"
+"                \t<p>${object.skip_installment_url}</p>\n"
+"                \t<b>Regards,</b><br/>\n"
+"                \t${object.hr_manager_id.name}\n"
+"                    "
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,body_html:plustech_hr_loan.hr_officer_reject_skip_installment
+msgid ""
+"\n"
+"                \t<p>Dear <i>${object.employee_id.name}</i></p>\n"
+"                \t<p></p>\n"
+"                \t<p> Your Skip Installment <b><i>${object.name}</i></b> Request Rejected By <b><i>${object.hr_officer_id.name}</i></b></p>\n"
+"                \t<p>You can access Loan From Bellow URL</p>\n"
+"                \t<p>${object.skip_installment_url}</p>\n"
+"                \t<b>Regards,</b><br/>\n"
+"                \t${object.hr_officer_id.name}\n"
+"                    "
+msgstr ""
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "\"Payment End Date\" cannot be earlier than \"Payment Start Date\"."
+msgstr "\"نهاية تاريخ الدفع\"لايمكن أن يكون قبل\\بداية تاريخ الدفع\"."
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_policy_view_form
+msgid "<span>/ months</span>"
+msgstr "أشهر"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_policy_view_form
+msgid "<span>/ years</span>"
+msgstr "سنوات"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Accept"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Accounting"
+msgstr "بيانات الحسابات"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__acknowledgment
+msgid "Acknowledgment"
+msgstr "اقرار الموظف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_needaction
+msgid "Action Needed"
+msgstr "للإجراء"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__actual_salary
+msgid "Actual Salary"
+msgstr "الراتب الاجمالي"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan_acc.py:0
+#, python-format
+msgid "Add Salary rule for loan in salary structure"
+msgstr "اضافة قاعدة رواتب للسلف في هيكل الرواتب"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__allow_multi
+msgid "Allow Multiple Loans"
+msgstr "سماح بطلب اكثر من سلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__amount
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__analytic_account_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_company__analytic_account_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_config_settings__default_analytic_account_id
+msgid "Analytic Account"
+msgstr "حساب التحليلي"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__state__approve
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__state__approve
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__balance_amount
+msgid "Balance Amount"
+msgstr "مبلغ الرصيد"
+
+#. module: plustech_hr_loan
+#: model:ir.actions.act_window,name:plustech_hr_loan.action_other_loan_request
+msgid "Bank Loan"
+msgstr "سلف بنكي"
+
+#. module: plustech_hr_loan
+#: model:ir.ui.menu,name:plustech_hr_loan.menu_hr_other_loan
+msgid "Bank Loans"
+msgstr "سلف بنكي"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan_policy__salary_type__basic
+msgid "Basic Salary"
+msgstr "الراتب الاساسي"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__state__cancel
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.other_loan_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__employee_other_loan__state__cancel
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__state__cancel
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan_line__state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.ui.menu,name:plustech_hr_loan.menu_hr_loan_request
+msgid "Cash Loans"
+msgstr "طلبات السلف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.actions.act_window,help:plustech_hr_loan.action_hr_loan_request
+msgid "Click to create a new Loan request."
+msgstr "اضغط لانشاء طلب سلفة جديد"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.actions.act_window,help:plustech_hr_loan.action_hr_loan_type
+msgid "Click to create a new Loan type."
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.actions.act_window,help:plustech_hr_loan.action_other_loan_request
+msgid "Click to create a new Loan."
+msgstr "اضغط لانشاء سلف جديد"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.actions.act_window,help:plustech_hr_loan.action_skip_installment
+msgid "Click to define a new Skip Installment."
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.other_loan_form_view
+msgid "Close"
+msgstr "مغلق"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__company_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__company_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__company_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__company_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Compute Installment"
+msgstr "احتساب القسط"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.other_loan_form_view
+msgid "Confirm"
+msgstr "موافق عليه"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__create_uid
+msgid "Created by"
+msgstr "أدخلت بواسطة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__create_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__create_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__create_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__create_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__create_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__create_date
+msgid "Created on"
+msgstr "تاريخ الإدخال"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__current_user_id
+msgid "Current User"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.other_loan_form_view
+msgid "Dates"
+msgstr "تواريخ"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__department_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__department_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__department_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_hr_loan
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__display_name
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__display_name
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__display_name
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__display_name
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__display_name
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+msgid "Done"
+msgstr "منتهي"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+msgid "Done Loan"
+msgstr "سلف المنتهية"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__employee_other_loan__state__draft
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__state__draft
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan_line__state__draft
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__state__draft
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+msgid "Draft Loan"
+msgstr "سلف المسودة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Email"
+msgstr "بريد الالكتروني"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_hr_employee
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__employee_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_other_loan_search_form
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__employee_acknowledgment
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Employee Acknowledgment"
+msgstr "إقرار الموظف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Employee Info"
+msgstr "معلومات الموظف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Employee Info."
+msgstr "معلومات الموظف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Employee Loan"
+msgstr "السلفة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__employee_number
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__employee_number
+msgid "Employee Number"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__end_date
+msgid "End Date"
+msgstr "تاريخ الانهاء"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "Error! This loan have alrady paid installments!"
+msgstr "خطأ! هذه السلفة مدفوعة الاقساط مسبقا"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_follower_ids
+msgid "Followers"
+msgstr "التابعين"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "التابعين(الشركاء)"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan_policy__salary_type__gross
+msgid "Gross Salary"
+msgstr "الراتب الاجمالي"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_other_loan_search_form
+msgid "Group By"
+msgstr "تجيمع حسب"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__guarantor_id
+msgid "Guarantor"
+msgstr "كفيل"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__hr_manager_id
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__hr_officer_id
+msgid "HR Officer"
+msgstr "مسؤول الموارد البشرية"
+
+#. module: plustech_hr_loan
+#: model:mail.template,name:plustech_hr_loan.hr_officer_reject_skip_installment
+msgid "HR Officer Skip Installment Request Reject"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__has_message
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__has_message
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__has_message
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__has_message
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_hr_loan_policy
+msgid "Hr Loan Policy"
+msgstr "سياسات السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__message_needaction
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__message_unread
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__message_needaction
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__message_unread
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__message_needaction
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__message_unread
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__message_needaction
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__message_unread
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__message_needaction
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "اذا تم التأكيد,رسالة جديدة تتطلب اهتمامك"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__message_has_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__message_has_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__message_has_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__message_has_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__message_has_error
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التأكيد و بعض الرسائل لديها خطأ في التوصيل"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__installment_id
+msgid "Installment"
+msgstr "الاقساط"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_hr_loan_line
+msgid "Installment Line"
+msgstr "الاقساط"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "Installment amount must be grater than zero!"
+msgstr "مبلغ القسط يجب ان يكون اكبر من صفر"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Installments"
+msgstr "الاقساط"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__is_employee
+msgid "Is Employee"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_is_follower
+msgid "Is Follower"
+msgstr "هو تابع"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__job_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__job_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__job_position_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_policy_view_form
+msgid "Job Positions"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__loan_journal_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__loan_journal_id
+msgid "Journal"
+msgstr "اليومية"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+#, python-format
+msgid "Journal Items"
+msgstr " عناصر قيد اليومية"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan____last_update
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan____last_update
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line____last_update
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy____last_update
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment____last_update
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل في"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تعديل بواسطة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__write_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__write_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__write_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__write_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__write_date
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث في"
+
+#. module: plustech_hr_loan
+#: model:hr.salary.rule,name:plustech_hr_loan.hr_rule_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_account_move_line__loan_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__loan_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.other_loan_form_view
+msgid "Loan"
+msgstr "السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__max_payment_period
+msgid "Loan  Term"
+msgstr "فترة السداد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__loan_account_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_company__loan_account_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_config_settings__default_loan_account_id
+msgid "Loan Account"
+msgstr "حساب السلف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_account_config_inherit
+msgid "Loan Account &amp; Journal"
+msgstr "حساب السلفة ودفتر اليومية"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__loan_amount
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Loan Amount"
+msgstr "مبلغ السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_employee__loan_count
+msgid "Loan Count"
+msgstr "عدد السلف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Loan Info"
+msgstr "معلومات السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_config_settings__default_loan_journal_id
+msgid "Loan Journal"
+msgstr "يومية السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__loan_lines
+msgid "Loan Line"
+msgstr "السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__name
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__name
+msgid "Loan Name"
+msgstr "اسم السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.ui.menu,name:plustech_hr_loan.loan_policy_action
+msgid "Loan Policies"
+msgstr "سياسات السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.actions.act_window,name:plustech_hr_loan.hr_loan_policy_action
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__loan_policy_id
+msgid "Loan Policy"
+msgstr "سياسة السلف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "Loan Received Date"
+msgstr "تاريخ استلام السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__loan_id
+msgid "Loan Ref."
+msgstr "الرقم المرجعي للسلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.actions.report,name:plustech_hr_loan.advance_request_template_action
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Loan Request"
+msgstr "طلب سلفة"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan_acc.py:0
+#, python-format
+msgid "Loan Request must be approved"
+msgstr "طلب السلفة لابد ان يكون معتمد"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_tree_view
+msgid "Loan Requests"
+msgstr "طلبات السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_loan_type
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__loan_type_id
+#: model:ir.ui.menu,name:plustech_hr_loan.menu_hr_loan_type
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_type_form_view
+msgid "Loan Type"
+msgstr "نوع السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.actions.act_window,name:plustech_hr_loan.action_hr_loan_type
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_type_tree_view
+msgid "Loan Types"
+msgstr "انواع السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Loan received date"
+msgstr "تاريخ استلام السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__name
+msgid "Loan type"
+msgstr "نوع السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__loaner_id
+msgid "Loaner"
+msgstr "المقرض"
+
+#. module: plustech_hr_loan
+#: model:ir.actions.act_window,name:plustech_hr_loan.action_hr_loan_request
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_payslip__loan_ids
+#: model:ir.ui.menu,name:plustech_hr_loan.menu_hr_loans
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.employee_other_loan_tree_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_payslip_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_employee_form_loan_inherit
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_other_loan_search_form
+msgid "Loans"
+msgstr "طلبات السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_company__loan_journal_id
+msgid "Loans Journal"
+msgstr "دفتر يومية السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__manager_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Manager"
+msgstr "مدير المباشر"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__max_amount
+msgid "Maximum Amount Allowed"
+msgstr "اقصى مبلغ مسموح بها"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__max_payment_period
+msgid "Maximum Payment Period Allowed"
+msgstr "اقصى فترة سداد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__max_salaries
+msgid "Maximum Salary Allowed"
+msgstr "اقصى عدد رواتب"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid ""
+"Maximum payment period allowed is %s months\n"
+" Your payment period is %s months!"
+msgstr ""
+"اقصى فترة سداد مسموح بها %s اشهر\n"
+"فترة سداد الحالية %s اشهر!"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في توصيل الرسالة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_ids
+msgid "Messages"
+msgstr "الرسالة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__min_years
+msgid "Minimum Years Allowed"
+msgstr "اقل عدد سنوات"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "Minimum years allowed to get another loan is %s"
+msgstr "الحد الأدنى للسنوات المسموح بها للحصول على  %s"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__min_years
+msgid "Minimum years between employee last loan"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Mobile"
+msgstr "الهاتف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Monthly installment"
+msgstr "قسط الشهري"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "My Department"
+msgstr "إدارتي"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "My Loans"
+msgstr "سلفي"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "My Team"
+msgstr "فريقي"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__name
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__payment_status__not_paid
+msgid "Not Paid"
+msgstr "غير مدفوع"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__note
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع أخطاء في التوصيل"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_employee_other_loan
+msgid "Other Loan Request"
+msgstr "طلب قروض أخرى"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid ""
+"Page:\n"
+"                    <span class=\"page\"/>\n"
+"                    of\n"
+"                    <span class=\"topage\"/>"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__paid
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__payment_status__paid
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan_line__state__paid
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: plustech_hr_loan
+#: model:ir.model,name:plustech_hr_loan.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال الرواتب للسداد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Payment Date"
+msgstr "تاريخ السداد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__payment_end_date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Payment End Date"
+msgstr "تاريخ نهاية السداد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__payment_date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "Payment Start Date"
+msgstr "تاريخ بداية السداد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__payment_status
+msgid "Payment Status"
+msgstr "حالة الدفع"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__payslip_id
+msgid "Payslip Ref."
+msgstr "مرجع ايصال السداد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan_line__state__pending
+msgid "Pending"
+msgstr "قيد الإجراء"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan_acc.py:0
+#, python-format
+msgid "Please Update the Loans"
+msgstr "رجاء تحديث السلف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__name
+msgid "Policy Name"
+msgstr "اسم السياسة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_policy_view_form
+msgid "Policy name ..."
+msgstr "اسم السياسة ...."
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__previous_amount
+msgid "Previous Amount"
+msgstr "السلف السابقة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__notes
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Reason"
+msgstr "السبب"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Reason & Comments..."
+msgstr "الملاحظات"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__state__reject
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Request Info."
+msgstr "ملومات الطلب"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__activity_user_id
+msgid "Responsible User"
+msgstr "موظف المسؤول"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__employee_other_loan__state__confirm
+msgid "Runnig"
+msgstr "جاري"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في إيصال الرسالة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__salary_type
+msgid "Salary Type"
+msgstr "نوع الراتب"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "Search Loan"
+msgstr "بحث سلفة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+msgid "Search Skip Installment"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Set to Draft"
+msgstr "ضبط كمسودة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__skip_type__skip_all
+msgid "Skip All"
+msgstr "تأجيل الكل"
+
+#. module: plustech_hr_loan
+#: model:ir.actions.act_window,name:plustech_hr_loan.action_skip_installment
+#: model:ir.model,name:plustech_hr_loan.model_hr_skip_installment
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_tree
+msgid "Skip Installment"
+msgstr "تاجيل الخصم"
+
+#. module: plustech_hr_loan
+#: model:mail.template,subject:plustech_hr_loan.loan_skip_hr_officer_confirm
+#: model:mail.template,subject:plustech_hr_loan.skip_ins_hr_manager_approval
+msgid ""
+"Skip Installment ${object.name} Request form ${object.employee_id.name}"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,name:plustech_hr_loan.skip_ins_hr_manager_approval
+msgid "Skip Installment HR Manager Approval Request"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.ui.menu,name:plustech_hr_loan.menu_skip_installment
+msgid "Skip Installment Request"
+msgstr "طلب تاجيل خصم"
+
+#. module: plustech_hr_loan
+#: model:mail.template,name:plustech_hr_loan.hr_manager_approved_skip_installment
+msgid "Skip Installment Request Approved By Hr Manager"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,name:plustech_hr_loan.hr_manager_reject_skip_installment
+msgid "Skip Installment Request Reject By Hr Manager"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,name:plustech_hr_loan.loan_skip_hr_officer_confirm
+msgid "Skip Installment Request to Hr Officer"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_skip_installment.py:0
+#, python-format
+msgid "Skip Installment delete in draft state only !!!"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__skip_type
+msgid "Skip Type"
+msgstr "نوع التأجيل"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__skip_type__split
+msgid "Skip With Split"
+msgstr "تأجيل مع توزيع المبلغ"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__state
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__state
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_line__state
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_filter
+msgid "States"
+msgstr "الحالة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__activity_state
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_loan_form_view
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_hr_skip_installment_form
+msgid "Submit"
+msgstr "ارسال"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__state__waiting_approval_1
+msgid "Submitted"
+msgstr "مرسل"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "The employee has already a pending installment"
+msgstr "الموظف بالفعل لديه سلفة غير مسددة بالكامل"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "The installments amount can't be grate than Loan amount."
+msgstr "مبلغ القسط لا يمكن ان يكون اكبر من مبلغ السلفة"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "The maximum amount allowed is %s!"
+msgstr "اقصى مبلغ مسوح بها %s!"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "The maximum salaries allowed is %s!"
+msgstr "الحد الأقصى للرواتب المسموح به هو %s!"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "To Approve"
+msgstr "للاعتماد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__state__submit
+msgid "To Confirm"
+msgstr "للمراجعة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__skip_type__to_next
+msgid "To Next Month"
+msgstr "تأجيل للشهر القادم"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__total_amount
+msgid "Total Amount"
+msgstr "اجمالي المبلغ"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_payslip__total_paid
+msgid "Total Loan Amount"
+msgstr "اجمالي مبلغ السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__total_paid_amount
+msgid "Total Paid Amount"
+msgstr "اجمالي المبلغ المدفوع"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__treasury_account_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_company__treasury_account_id
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_res_config_settings__default_treasury_account_id
+msgid "Treasury Account"
+msgstr "حساب الخزنة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "Type"
+msgstr "نوع السلفة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__installment_type
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "Type Of Installments"
+msgstr "نوع الاقساط"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__skip_installment_url
+msgid "URL"
+msgstr "الرابط"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل غير المقروءة"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.hr_payslip_form_inherit_view
+msgid "Update Loans"
+msgstr "تحديث السلف"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.actions.act_window,help:plustech_hr_loan.action_hr_loan_request
+msgid "Use this menu to create loan requests."
+msgstr "استخدم هذه القائمة لانشاء طلب سلفة"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.actions.act_window,help:plustech_hr_loan.action_hr_loan_type
+msgid "Use this menu to create loan types."
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.actions.act_window,help:plustech_hr_loan.action_other_loan_request
+msgid "Use this menu to create loan."
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__user_id
+msgid "User"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__state__waiting_approval_2
+msgid "Waiting Approval"
+msgstr " قيد التعميد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__state__acceptance
+msgid "Waiting Employee Acceptance"
+msgstr "في انتظار موافقة الموظف"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_skip_installment__state__confirm
+msgid "Waiting For Approval"
+msgstr "قيد الاعتماد"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan_policy__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_skip_installment__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_loan_type__website_message_ids
+msgid "Website Messages"
+msgstr "رسالة صفحة ويب"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,help:plustech_hr_loan.field_employee_other_loan__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_loan_policy__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_loan.field_hr_skip_installment__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_loan.field_loan_type__website_message_ids
+msgid "Website communication history"
+msgstr "تاريخ تواصل صفحة الويب"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__installment_type__amount
+msgid "With Installments Amount"
+msgstr "مع مبلغ الاقساط"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__hr_loan__installment_type__end_date
+msgid "With Installments End Date"
+msgstr "مع تاريخ نهاية الأقساط"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/employee_other_loans.py:0
+#, python-format
+msgid "You can't delete record not in draft state"
+msgstr "لا تستطيع حذف سجل ليس مسودة"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan.py:0
+#, python-format
+msgid "You can't update non paid installment that associated with payslip."
+msgstr "لا تستطيع تحديث سجل ليس بالمسودة"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan_acc.py:0
+#, python-format
+msgid "You must Define a contract for employee"
+msgstr "لابد ان تضيف عقد للموظف"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan_acc.py:0
+#, python-format
+msgid "You must compute Loan Request before Approved"
+msgstr "لابد احتساب طلب السلفة قبل الاعتماد"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan_acc.py:0
+#, python-format
+msgid "You must compute installment before Approved"
+msgstr "لابد من احتساب القسط قبل الاعتماد"
+
+#. module: plustech_hr_loan
+#: code:addons/plustech_hr_loan/models/hr_loan_acc.py:0
+#, python-format
+msgid ""
+"You must enter employee account & Treasury account and journal to approve "
+msgstr "يجب ان تدخل حساب الخزينة بالإضافة لليومية للموافقة"
+
+#. module: plustech_hr_loan
+#: model:mail.template,subject:plustech_hr_loan.hr_manager_approved_skip_installment
+msgid "Your Skip Installment ${object.name} Request has been Confirmed"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:mail.template,subject:plustech_hr_loan.hr_manager_reject_skip_installment
+#: model:mail.template,subject:plustech_hr_loan.hr_officer_reject_skip_installment
+msgid "Your Skip Installment ${object.name} Request has been Rejected"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid ""
+"background-color:white;height:auto;margin:0;padding-top:6.2mm;\n"
+"                        padding-left:8.2mm; padding-right:8.2mm;"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields.selection,name:plustech_hr_loan.selection__employee_other_loan__state__close
+msgid "closed"
+msgstr "مغلق"
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_employee_other_loan__date
+msgid "date"
+msgstr "التاريخ"
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.print_loan
+msgid "loan Request - طلب سلفة"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model_terms:ir.ui.view,arch_db:plustech_hr_loan.view_loan_request_search_form
+msgid "loans of people you are manager of"
+msgstr ""
+
+#. module: plustech_hr_loan
+#: model:ir.model.fields,field_description:plustech_hr_loan.field_hr_loan__installment
+msgid "monthly installment"
+msgstr "قسط شهري"

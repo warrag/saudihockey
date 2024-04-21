@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_attendance_transaction,access_hr.attendance.transaction,model_attendance_transaction,,1,1,1,1
+access_attendance_exception,access_hr.attendance.exception,model_hr_attendance_exception,,1,1,1,1
+access_hr_employee_shift,hr_employee_shift,model_hr_employee_shift,hr.group_hr_manager,1,1,1,1
+access_transaction_generate_wizard,transaction.generate.wizard,model_transaction_generate_wizard,,1,1,1,1
+access_attendance_report_wizard,attendance.report.wizard,model_attendance_report_wizard,,1,1,1,1

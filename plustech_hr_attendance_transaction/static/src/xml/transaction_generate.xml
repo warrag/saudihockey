@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+	<!-- Add generate transaction button to list view -->
+	<t t-extend="ListView.buttons" t-name="AttendanceTransactionListView.buttons">
+		<t t-jquery="button.o_list_export_xlsx" t-operation="after">
+			<button type="button" class="btn btn-primary ml-1 o_button_generate_transaction">
+                Regenerate Transactions
+            </button>
+		</t>
+	</t>
+</templates>

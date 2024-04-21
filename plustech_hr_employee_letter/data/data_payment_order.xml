@@ -1,0 +1,40 @@
+<odoo>
+    <data noupdate="0">
+        <record id="payment_order_01_letter_template" model="letter.letter">
+            <field name="name">Payment Order 01</field>
+            <field name="report_xml_id">plustech_hr_employee_letter.payment_order_01_report_id</field>
+            <field name="categ_id" ref="plustech_hr_employee_letter.payment_order_letter_category"/>
+            <field name="version">V.001</field>
+        </record>
+
+        <record id="amount" model="hr.letter.fields">
+            <field name="name">Amount</field>
+            <field name="technical_name">amount</field>
+            <field name="required">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.payment_order_01_letter_template"/>
+        </record>
+
+        <record id="amount_word" model="hr.letter.fields">
+            <field name="name">Amount in Words</field>
+            <field name="technical_name">amount_word</field>
+            <field name="required">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.payment_order_01_letter_template"/>
+
+        </record>
+        <record id="organization" model="hr.letter.fields">
+            <field name="name">Organization</field>
+            <field name="technical_name">org</field>
+            <field name="required">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.payment_order_01_letter_template"/>
+
+        </record>
+        <record id="purpose" model="hr.letter.fields">
+            <field name="name">Purpose</field>
+            <field name="technical_name">purpose</field>
+            <field name="required">True</field>
+            <field name="template_id" ref="plustech_hr_employee_letter.payment_order_01_letter_template"/>
+
+        </record>
+
+    </data>
+</odoo>

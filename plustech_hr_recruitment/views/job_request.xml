@@ -1,0 +1,103 @@
+<odoo>
+    <data>
+        <record id="job_request_view_tree" model="ir.ui.view">
+            <field name="name">job_request_view_tree</field>
+            <field name="model">job.request</field>
+            <field name="arch" type="xml">
+                <tree string="job_request_tree">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="job_position_id"/>
+                    <field name="year_exp"/>
+                    <field name="salary" optional="hide"/>
+                    <field name="notes"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="job_request_view_form" model="ir.ui.view">
+            <field name="name">job_request_view_form</field>
+            <field name="model">job.request</field>
+            <field name="arch" type="xml">
+                <form string="job_request_form">
+                    <header>
+                        <button name="set_depart_approve" string="Department Approve"
+                                attrs="{'invisible': ['|',('is_depart_manger','!=',True), ('state', '!=', 'draft')]}"
+                                type="object" class="oe_highlight" groups="base.group_user"/>
+                        <button name="set_hr_approve" string="Hr Approve"
+                                attrs="{'invisible': ['|',('is_hr_user','!=',True), ('state', '!=', 'depart_approve')]}"
+                                type="object" class="oe_highlight" groups="base.group_user"/>
+                        <button name="set_ceo_approve" string="CEO Approve" states="hr_approve" type="object"
+                                class="oe_highlight" groups="base.group_user"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+
+                    <sheet>
+                        <div class="oe_title">
+                            <h1 class="mt0">
+                                <field name="name" readonly="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="user_id"/>
+                                <field name="request_date"/>
+                                <field name="department_id"/>
+                                <field name="job_position_id"/>
+                            </group>
+                            <group>
+                                <field name="academic"/>
+                                <field name="degree"/>
+                                <field name="year_exp"/>
+                                <field name="no_of_recruitment"/>
+                                <field name="salary"/>
+                            </group>
+                           
+                            <group>
+                                <field name="is_depart_manger" invisible="1"/>
+                                <field name="is_hr_user" invisible="1"/>
+                                <field name="create_job_position_id"
+                                       attrs="{'invisible':[('create_job_position_id', '=', False)]}" readonly="1"
+                                       force_save="1"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Reason">
+                                <field name="reason"/>
+                            </page>
+                            <page string="Goals">
+                                <field name="job_goal"/>
+                            </page>
+                            <page string="Competencies">
+                                <field name="competencies"/>
+                            </page>
+                            <page string="Taskes">
+                                <field name="tasks"/>
+                            </page>
+                            <page string="Qualifications">
+                                <field name="qualifications"/>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="job_request_action" model="ir.actions.act_window">
+            <field name="name">Job Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">job.request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="job_request_menu" name="Job Request" action="job_request_action"
+                  parent="hr_recruitment.menu_crm_case_categ0_act_job" sequence="0"/>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+           <record id="hr_employee_work_initiation" model="ir.sequence">
+            <field name="name">Employee work initiation Sequence</field>
+            <field name="code">employee.work.initiation</field>
+            <field name="prefix">WI</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

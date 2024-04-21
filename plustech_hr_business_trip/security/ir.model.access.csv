@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_deputation_system_user,hr.deputation system user,model_hr_deputation,group_hr_deputation_user,1,1,1,1
+access_hr_deputation_officer,hr.deputation officer,model_hr_deputation,group_hr_deputation_officer,1,1,1,1
+access_business_trip_manager,hr.business.trip  manager,model_hr_deputation,group_hr_deputation_manager,1,1,1,1
+access_hr_deputation_allowance,hr_deputation_allowance,model_hr_deputation_allowance,,1,1,1,1
+access_deputation_cities_allowance,deputation_cities_allowance,model_deputation_cities_allowance,,1,1,1,1
+access_hr_deputation_allowance_line_employee,hr_deputation_allowance_line employee,model_hr_deputation_allowance_line,group_hr_deputation_user,1,0,0,0
+access_hr_deputation_allowance_line_officer,hr_deputation_allowance_line officer,model_hr_deputation_allowance_line,group_hr_deputation_officer,1,1,1,1
+access_travel_way,travel.way,model_travel_way,,1,1,1,1
+access_deputation_cities_allowance_line,deputation.cities.allowance.line,model_deputation_cities_allowance_line,,1,1,1,1
+access_res_country_group,res.country.group,model_res_country_group,base.group_user,1,1,1,1
+access_approval_reject_wizard,approval.reject.wizard,model_approval_reject_wizard,,1,1,1,1
+access_approval_approve_wizard,approval.approve.wizard,model_approval_approve_wizard,,1,1,1,1
+access_hr_request_approvals,hr.request.approvals,model_hr_request_approvals,,1,1,1,1
+access_business_trip_activity,business.trip.activity,model_business_trip_activity,,1,1,1,1
+access_account_journal_user,account.journal.user,account.model_account_journal,group_hr_deputation_user,1,1,0,0

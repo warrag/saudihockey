@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Sequences for business.trip.request -->
+        <record id="business_trip_sequence" model="ir.sequence">
+            <field name="name">Business Trip</field>
+            <field name="code">business.trip</field>
+            <field name="prefix">TR-</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for deputation.cities.allowance -->
+        <record id="deputation_allowance_sequence" model="ir.sequence">
+            <field name="name">Deputation Allowance</field>
+            <field name="code">deputation.allowance</field>
+            <field name="prefix"></field>
+            <field name="padding">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

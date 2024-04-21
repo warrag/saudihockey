@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GESSTOW';
+    src: local('GESSTOW'), local('GESSTOW'), url(/plustech_layout_template/static/description/src/fonts/GE_SS_Two_Light.otf) format('opentype');
+}
+
+.ge_ss_tow_font {
+    font-family: GESSTOW;
+}

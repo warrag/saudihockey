@@ -1,0 +1,492 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_employee_resignation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-20 19:49+0000\n"
+"PO-Revision-Date: 2023-02-20 19:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid ""
+"<span class=\"o_stat_text text-danger\" title=\"In Contract Since\">Contract"
+" End In</span>"
+msgstr ""
+"<span class=\"o_stat_text text-danger\" title=\"In Contract Since\">ينتهي العقد في</span>"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.view_notice_period_wizard
+msgid "Apply"
+msgstr "تطبيق"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__state__approved
+msgid "Approved"
+msgstr "مُعتمد"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__approved_date
+msgid "Approved Date"
+msgstr "تاريخ الإعتماد"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.view_notice_period_wizard
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.actions.act_window,name:plustech_hr_employee_resignation.action_employee_contract_termination
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__resignation_type__termination
+msgid "Contract Termination"
+msgstr "انهاء العقد"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation__create_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__contract_id
+msgid "Current Contract"
+msgstr "العقد الحالي"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__contract_id
+msgid "Current contract of the employee"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__approved_date
+msgid "Date on which the request is approved by the manager."
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Dates"
+msgstr "التاريخ"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__department_id
+msgid "Department of the employee"
+msgstr "قسم الموظف"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__state__dm_approval
+msgid "Direct Manager Approval"
+msgstr "إعتماد المدير المباشر"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation__display_name
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "EOS"
+msgstr "نهاية الخدمة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Employee Details"
+msgstr "تفاصيل الموظف"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__employee_no
+msgid "Employee Number"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.actions.act_window,name:plustech_hr_employee_resignation.action_employee_resignation
+#: model:ir.model,name:plustech_hr_employee_resignation.model_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_tree
+msgid "Employee Resignation"
+msgstr "استقالة"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.actions.act_window,help:plustech_hr_employee_resignation.action_employee_resignation
+msgid "Employee Resignation Form"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__expected_leaving_date
+msgid "Employee requested date on which he is leaving  the company."
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__contract_end_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__notice_end
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__end_date
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__count_eos
+msgid "End Of Service Count"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__contract_end_date
+msgid "End date of the contract (if it's a fixed-term contract)."
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model,name:plustech_hr_employee_resignation.model_end_of_service_reward
+msgid "End of Service Reward"
+msgstr "مكافأة نهاية الخدمة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__resignation_type__fired
+msgid "Fired by the company"
+msgstr "طرد من الشركة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Generate EOS"
+msgstr "إنشاء نهاية خدمة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__state__hr_approval
+msgid "HR Approval"
+msgstr "إعتماد الموارد البشرية"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation__id
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__message_needaction
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__message_has_error
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__is_manager
+msgid "Is Manager"
+msgstr "مدير؟"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__expected_leaving_date
+msgid "Last Day of Employee"
+msgstr "اخير يوم للموظف"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation____last_update
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation__write_date
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_resignation__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__employee_id
+msgid "Name of the employee for whom the request is creating"
+msgstr "اسم الموظف الذي أنشئ الطلب"
+
+#. module: plustech_hr_employee_resignation
+#: code:addons/plustech_hr_employee_resignation/models/hr_resignation.py:0
+#: code:addons/plustech_hr_employee_resignation/models/hr_resignation.py:0
+#: code:addons/plustech_hr_employee_resignation/models/hr_resignation.py:0
+#: code:addons/plustech_hr_employee_resignation/models/hr_resignation.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__resignation_type__resigned
+msgid "Normal Resignation"
+msgstr "إستقالة"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Notice Period"
+msgstr "فترة الإخطار"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__reason
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Reason"
+msgstr "السبب"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__state__cancel
+msgid "Rejected"
+msgstr "مرفوضة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__manager_id
+msgid "Related user name for the resource to manage its access."
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__name
+msgid "Request Reference"
+msgstr "المرجع"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model,name:plustech_hr_employee_resignation.model_hr_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_end_of_service_reward__resignation_id
+#: model:ir.ui.menu,name:plustech_hr_employee_resignation.employee_resignation
+msgid "Resignation"
+msgstr "إستقالة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model,name:plustech_hr_employee_resignation.model_resignation_notice_period
+msgid "Resignation Notice Period Wizard"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Resignation Reason"
+msgstr "سبب الإستقالة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.ui.menu,name:plustech_hr_employee_resignation.employee_resignation_request
+msgid "Resignation Request"
+msgstr "طلب إستقالة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__resignation_type
+msgid "Resignation Type"
+msgstr "نوع الإستقالة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__resignation_type
+msgid ""
+"Select the type of resignation: normal resignation or fired by the company"
+msgstr ""
+"تحديد نوع الإستقالة: استقالة طبيعية او طرد من الشركة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.actions.act_window,name:plustech_hr_employee_resignation.notice_period_wizard_action
+msgid "Set Notice Period"
+msgstr "ضبط فترة الإخطار"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Set to Draft"
+msgstr "إرجاع الى مسودة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__reason
+msgid "Specify reason for leaving the company"
+msgstr "تحديد السبب لمغادرة الشركة"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__notice_start
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_resignation_notice_period__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "This will reject the resignation. Do you want to proceed?"
+msgstr "هذا سوف يقوم بإلغاء طلب الإستقالة. هل تريد المتابعة؟"
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.ui.view,arch_db:plustech_hr_employee_resignation.employee_resignation_form
+msgid "Type"
+msgstr "النوع"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields.selection,name:plustech_hr_employee_resignation.selection__hr_employee_resignation__resignation_type__unwillingness
+msgid "Unwillingness TO Renew Contract"
+msgstr "عدم الرغبة في تجديد العقد"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__manager_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,field_description:plustech_hr_employee_resignation.field_hr_employee_resignation__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model:ir.model.fields,help:plustech_hr_employee_resignation.field_hr_employee_resignation__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_employee_resignation
+#: model_terms:ir.actions.act_window,help:plustech_hr_employee_resignation.action_employee_contract_termination
+msgid "contract termination"
+msgstr "إنهاء العقد"

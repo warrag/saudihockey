@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="medical_records_import_wizard">
+            <field name="name">import.insurance.record</field>
+            <field name="model">import.insurance.record</field>
+            <field name="arch" type="xml">
+                <form string="Medical Insurance Import Wizard">
+                    <separator
+                            string="This wizard will import medical insurance form the selected excel file. Please select your .xls or .xlsx file."/>
+                    <group>
+                        <div>
+                            <field name="files" class="oe_inline" filename="datas_fname" required="True"/>
+                            <field name="datas_fname" class="oe_inline" invisible="0" readonly="1"/>
+                        </div>
+                    </group>
+                    <footer>
+                        <button string="Import" name="import_file" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="import_insurance_records_action">
+            <field name="name">Import Medical Insurance</field>
+            <field name="res_model">import.insurance.record</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

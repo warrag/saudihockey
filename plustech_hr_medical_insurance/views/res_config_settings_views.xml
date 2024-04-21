@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.plustech_hr_medical_insurance</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="plustech_hr_medical_insurance"
+                         string="Medical Insurance" data-key="plustech_hr_medical_insurance">
+                        <h2>Medical Insurance</h2>
+                        <div class="row mt16 o_settings_container" name="catalog_setting_container">
+
+
+                            <div class="col-12 col-lg-6 o_setting_box" id="include_family">
+                                <div class="o_setting_left_pane">
+                                    <field name="include_family"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="include_family" string="Include Family"/>
+                                    <div class="text-muted">
+                                        Add family members to medical insurance.
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="row mt8">
+                                            <label for="medical_insurance_product_id" string="Project Income Product" class="col-lg-5 o_light_label"/>
+                                            <field name="medical_insurance_product_id" options="{'no_create':1,'no_open':1,'no_edit':1}"/>
+                                        </div>
+                                       </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_medical_insurance_config_settings" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'plustech_hr_medical_insurance', 'bin_size': False}</field>
+        </record>
+
+        <menuitem id="menu_medical_insurance_general_settings" name="Settings"
+                  parent="plustech_hr_medical_insurance.medical_insurance_confugurtion" sequence="0"
+                  action="action_medical_insurance_config_settings" groups="base.group_system"/>
+
+    </data>
+</odoo>

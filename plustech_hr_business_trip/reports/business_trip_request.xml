@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="business_trip_request_doc">
+        <t t-call="web.html_container">
+                    <t t-foreach="docs" t-as="doc">
+
+                <t t-if="not o" t-set="o" t-value="doc" />
+            
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id" />
+                </t>
+                <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                    <t t-set="company" t-value="o.company_id.sudo()" />
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company" />
+                </t>
+            </t>
+            <t t-set="data_report_margin_top" t-value="40" />
+                <t t-set="data_report_header_spacing" t-value="10" />
+                <t t-set="data_report_dpi" t-value="110" />
+
+            <t t-call="plustech_layout_template.plustech_layout_template_layout">
+                <t t-set="doc" t-value="doc.with_context(lang=doc.env.user.lang)"/>
+                    <t t-set="direction" t-value="((doc.env.user.lang=='en_US' and 'ltr') or 'rtl')"/>
+                    <div class="page" t-attf-style="direction:#{direction};font-family:GESSTOW;">
+
+                        <style>
+                            td{
+                            padding:5px !important;
+                            text-align: center;
+                            border-bottom:2px solid black;
+                            border-top:2px solid black !important;
+                            border-left:2px solid black;
+                            border-right:2px solid black;
+                            }
+                            table{
+                            padding: 0px;
+                            text-align: center;
+                            }
+                            th{
+                            padding: 0px;
+                            border-bottom:2px solid black;
+                            border-top:2px solid black;
+                            border-left:2px solid black;
+                            border-right:2px solid black;
+                            }
+                            tr{
+                            padding: 0px;
+                            }
+                        </style>
+                        
+                        <table class="table table-sm">
+                            <colgroup>
+                                <col width='25%' />
+                                <col width='25%' />
+                                <col width='25%' />
+                                <col width='25%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td colspan="4" style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">
+                                        <h2 style="color:black;">
+                                            Per Diem Request Form
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Date</td>
+                                    <td scope="row" style="text-align:center;">
+                                        <span t-field="doc.request_date" />
+                                    </td>
+                                    <td>Hijri</td>
+                                    <td>
+                                        <span
+                                            t-esc="doc.convert_gregorian_to_hijri(doc.request_date)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- EMPLOYEE INFORMATION -->
+                        <table class="table table-sm">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="4"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Employee Information</td>
+                                    <td colspan="2">Name</td>
+                                    <td colspan="2" style="text-align:center;">
+                                        <span t-field="doc.employee_id" />
+                                    </td>
+
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Job No</td>
+                                    <td>
+                                        <span t-field="doc.employee_id.employee_number" />
+                                    </td>
+                                    <td>Job Title</td>
+                                    <td>
+                                        <span t-field="doc.employee_id.job_id" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td colspan="2">Departement</td>
+                                    <td colspan="2">
+                                        <span t-field="doc.department_id.name" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="9"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Description of the Per Diem</td>
+                                    <td colspan="2">Type</td>
+                                    <td colspan="2" style="text-align:center;"> 
+                                        Internal <input type="checkbox" t-att-checked="doc.deputation_type == 'internal'" id="oe_import_tracking" /> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                        External <input type="checkbox" t-att-checked="doc.deputation_type == 'external'" id="oe_import_tracking" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;" t-if="doc.deputation_type == 'external'">
+                                    <td>Country</td>
+                                    <td>
+                                        <span t-field="doc.source_country_id.name" />
+                                    </td>
+                                    <td>To Country</td>
+                                    <td>
+                                        <span t-field="doc.destination_country_id.name" />
+                                    </td>
+                                    
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>City</td>
+                                    <td>
+                                        <span t-field="doc.from_city_id" />
+                                    </td>
+                                    <td>To City</td>
+                                    <td>
+                                        <span t-field="doc.to_city_id" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Duration</td>
+                                    <td>
+                                        <span t-field="doc.days" />
+                                    </td>
+                                    <td>Travel By</td>
+                                    <td>
+                                        <span t-field="doc.travel_by.name" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>Starting Date</td>
+                                    <td>
+                                        <span t-field="doc.from_date" />
+                                    </td>
+                                    <td>Ending Date</td>
+                                    <td>
+                                        <span t-field="doc.to_date" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td>The Purpose</td>
+                                    <td colspan="3">
+                                        <span t-field="doc.description" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='80%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="1"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Employee Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                            t-if="doc.employee_id.user_id and doc.employee_id.user_id.sudo().sign_signature"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.employee_id.user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="3"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Direct Manager Approval</td>
+                                    <td colspan="2">Status</td>
+                                    <td colspan="2" style="text-align:center;"> 
+                                        Approved <input type="checkbox" id="oe_import_tracking" t-att-checked="doc.approval_ids.filtered(lambda a: a.key== 'direct_manager' and a.state == 'approved')"/> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                                        Denied <input type="checkbox" id="oe_import_tracking" t-att-checked="doc.approval_ids.filtered(lambda a: a.key== 'direct_manager' and a.state == 'reject')"/>
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td style="vertical-align: middle;">Date</td>
+                                    <td style="vertical-align: middle;">
+                                        <span t-if="doc.approval_ids.filtered(lambda a: a.key== 'direct_manager')"
+                                        t-esc="doc.approval_ids.filtered(lambda a: a.key== 'direct_manager')[0].date"/>
+                                    </td>
+                                    <td style="vertical-align: middle;">Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                        t-if="doc.approval_ids.filtered(lambda a: a.key== 'direct_manager')"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.approval_ids.filtered(lambda a: a.key== 'direct_manager')[0].user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="4"
+                                        t-if="not request.env['hr.deputation'].search([('training_request_id', '=', doc.id)])"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Human Resources Report</td>
+                                    <td>Per diem days</td>
+                                    <td>
+                                        <span t-field="doc.total_days" />
+                                    </td>
+                                    <td style="text-align:center;"> Per diem Comp</td>
+                                    <td>
+                                        <t t-set="aa" t-value="doc._get_allowance()"/>
+                                        <span t-esc="aa" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align:center;">
+                                    <td >Other Expenses</td>
+                                    <td>
+                                        <span t-field="doc.deputation_other_allowance" />
+                                    </td>
+                                    <td style="text-align:center;">Total</td>
+                                    <td>
+                                        <span t-field="doc.deputation_amount" />
+                                    </td>
+                                </tr>
+                                <tr id="signature" style="text-align:center;">
+                                    <td style="vertical-align: middle;">Date</td>
+                                    <td style="vertical-align: middle;">
+                                        <span
+                                            t-if="doc.approval_ids.filtered(lambda a: a.key== 'hrm')"
+                                            t-esc="doc.approval_ids.filtered(lambda a: a.key== 'hrm')[0].date"/>
+                                    </td>
+                                    <td style="vertical-align: middle;">Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                        t-if="doc.approval_ids.filtered(lambda a: a.key== 'hrm')"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.approval_ids.filtered(lambda a: a.key== 'hrm')[0].user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+
+
+                        </table>
+                        
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="1"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">Financial and Administrative Affairs Approval</td>
+                                    <td style="vertical-align: middle;">Date</td>
+                                    <td style="vertical-align: middle;">
+                                        <span
+                                            t-if="doc.approval_ids.filtered(lambda a: a.key== 'finance')"
+                                            t-esc="doc.approval_ids.filtered(lambda a: a.key== 'finance')[0].date" />
+                                    </td>
+                                    <td style="vertical-align: middle;">Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                        t-if="doc.approval_ids.filtered(lambda a: a.key== 'finance')"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.approval_ids.filtered(lambda a: a.key== 'finance')[0].user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table table-sm" style="margin-bottom:10px">
+                            <colgroup>
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                                <col width='20%' />
+                            </colgroup>
+                            <tbody>
+                                <tr style="text-align:center;">
+                                    <td rowspan="1"
+                                        style="text-align:center;background-color: #8DB3E2;vertical-align: middle;">CEO Approval</td>
+                                    <td style="vertical-align: middle;">Date</td>
+                                    <td style="vertical-align: middle;">
+                                        <span
+                                            t-if="doc.approval_ids.filtered(lambda a: a.key== 'ceo')"
+                                            t-esc="doc.approval_ids.filtered(lambda a: a.key== 'ceo')[0].date" />
+                                    </td>
+                                    <td style="vertical-align: middle;">Signature</td>
+                                    <td>
+                                        <img style="height: 50px;"
+                                        t-if="doc.approval_ids.filtered(lambda a: a.key== 'ceo')"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(doc.approval_ids.filtered(lambda a: a.key== 'ceo')[0].user_id.sudo().sign_signature)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="business_trip_report_action" model="ir.actions.report">
+        <field name="name">Business Trip Request</field>
+        <field name="model">hr.deputation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">plustech_hr_business_trip.business_trip_request_doc</field>
+        <field name="report_file">plustech_hr_business_trip.business_trip_request_doc</field>
+        <field name="binding_model_id" ref="model_hr_deputation" />
+    </record>
+</odoo>

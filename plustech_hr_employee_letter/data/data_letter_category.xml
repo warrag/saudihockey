@@ -1,0 +1,16 @@
+<odoo>
+    <data noupdate="0">
+        <record id="payment_order_letter_category" model="letter.letter.categ">
+            <field name="name">Payment Orders</field>
+        </record>
+
+        <record id="salary_definition_letter_category" model="letter.letter.categ">
+            <field name="name">Salary Definition</field>
+        </record>
+
+        <record id="employee_definition_letter_category" model="letter.letter.categ">
+            <field name="name">Employee Definition</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="property_category_view_tree" model="ir.ui.view">
+            <field name="name">property.category.view.tree</field>
+            <field name="model">property.category</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_property_category" model="ir.actions.act_window">
+            <field name="name">Property Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">property.category</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+          <menuitem id="menu_property_category" name="Property Categories"
+                  parent="plustech_hr_custody.config_custody_menu_action" action="action_property_category"
+                  sequence="11"/>
+
+    </data>
+</odoo>

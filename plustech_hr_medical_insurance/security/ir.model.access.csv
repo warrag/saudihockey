@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_insurance_policy_user,insurance_policy user,model_insurance_policy,base.group_user,1,0,0,0
+access_insurance_policy_officer,insurance_policy officer,model_insurance_policy,group_hr_medical_insurance_officer,1,1,0,0
+access_insurance_policy_manager,insurance_policy manager,model_insurance_policy,group_hr_medical_insurance_manager,1,1,1,1
+access_policy_category,policy_category,model_policy_category,base.group_user,1,1,1,1
+access_policy_category_line,policy_category_line,model_policy_category_line,base.group_user,1,1,1,1
+access_insurance_request,insurance_request,model_insurance_request,base.group_user,1,1,1,1
+access_policy_category_item,policy_category_item,model_policy_category_item,base.group_user,1,1,1,1
+access_upgrade_request,upgrade_request,model_upgrade_request,base.group_user,1,1,1,1
+access_cancel_request,cancel_request,model_cancel_request,base.group_user,1,1,1,1
+access_medical_insurance_record_user,medical.insurance.record user,model_medical_insurance_record,base.group_user,1,0,0,0
+access_medical_insurance_record_officer,medical.insurance.record officer,model_medical_insurance_record,group_hr_medical_insurance_officer,1,1,1,1
+access_medical_insurance_record_manager,medical.insurance.record manager,model_medical_insurance_record,group_hr_medical_insurance_manager,1,1,1,1
+access_employee_insurance_record,employee.insurance.record,model_employee_insurance_record,,1,1,1,1
+access_import_insurance_record,import.insurance.record,model_import_insurance_record,,1,1,1,1

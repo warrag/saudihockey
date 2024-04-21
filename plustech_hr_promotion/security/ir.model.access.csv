@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_employee_promation,hr_employee_promation,model_employee_promotion,base.group_user,1,1,1,1
+access_res_partner_stage,res_partner_stage,model_res_partner_stage,base.group_user,1,1,1,1

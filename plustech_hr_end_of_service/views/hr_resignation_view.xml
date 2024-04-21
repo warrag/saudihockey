@@ -1,0 +1,25 @@
+<openerp>
+    <data>
+        <record id="hr_employee_resignation_form_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.resignation.view.form.inherit</field>
+            <field name="model">hr.employee.resignation</field>
+            <field name="inherit_id" ref="plustech_hr_contract.employee_resignation_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='approve_resignation']" position="after">
+                   <button string="Generate EOS" type="object" groups="hr.group_hr_user" name="action_generate_eos"
+                                attrs="{'invisible': ['|',('state', '!=','approved'), ('count_eos', '!=', 0)]}"  class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//sheet/*" position="before">
+                     <div class="o_not_full oe_button_box">
+                        <button name="action_open_eos" class="oe_stat_button" icon="fa-book" type="object"
+                                attrs="{'invisible': [('count_eos', '=', 0)]}">
+                            <field name="count_eos" widget="statinfo" string="EOS"
+                                   options="{'reload_on_button': true}"/>
+                        </button>
+                    </div>
+                </xpath>
+               
+            </field>
+        </record>
+    </data>
+</openerp>

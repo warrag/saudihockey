@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_payslip_correction,access_hr_payslip_correction,model_hr_payslip_correction,,1,1,1,1
+access_hr_payslip_line_correction,access_hr_payslip_line_correction,model_hr_payslip_line_correction,,1,1,1,1
+access_hr_payslip_worked_correction,access_hr_payslip_worked_correction,model_hr_payslip_worked_correction,,1,1,1,1
+access_hr_payslip_input_correction,access_hr_payslip_input_correction,model_hr_payslip_input_correction,,1,1,1,1

@@ -1,0 +1,152 @@
+<odoo>
+    <!-- Mail template is done in a NOUPDATE block
+         so users can freely customize/delete them -->
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="internal_clearance_template" model="letter.letter">
+            <field name="name">أخلاء طرف داخلي</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="row" align="center">
+                    <h4 lang="ar-SA">${object.name}</h4>
+                </div>
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;">
+                    <tbody>
+                        <tr style="height:18px;">
+                            <td>اسم الموظف</td>
+                            <td colspan="3">${object.request_id.name}</td>
+                            <td>الإدارة/القسم</td>
+                            <td>${object.request_id.department_id.name}</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td>المسمى الوظيفي</td>
+                            <td>${object.request_id.job_id.name}</td>
+                            <td>الرقم الوظيفي</td>
+                            <td>${object.request_id.employee_number}</td>
+                            <td>تاريخ اخر يوم عمل</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;">
+                    <tbody>
+                        <tr style="height:18px;background-color: #33cccc;">
+
+                            <td colspan="4" style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">الإدارة التي يعمل بها الموظف</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2">البيان</td>
+                            <td>التوقيع</td>
+                            <td>الملاحظات</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr style="height:18px;background-color: #33cccc;">
+
+                            <td colspan="4" style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">قسم الدعم و المساندة</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2">البيان</td>
+                            <td>التوقيع</td>
+                            <td>الملاحظات</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="height:18px;background-color: #33cccc;">
+
+                            <td colspan="4" style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">الإدارة المالية</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2">البيان</td>
+                            <td>التوقيع</td>
+                            <td>الملاحظات</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="height:18px;background-color: #33cccc;">
+
+                            <td colspan="4" style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">إدارة الموارد البشرية</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2">البيان</td>
+                            <td>التوقيع</td>
+                            <td>الملاحظات</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <p>نفيدكم بأن الموظف الموضح بياناته أعلاه خالي الطرف من جميع البنود والالتزامات المعتمدة والمذيلة
+                        بتوقيعي كمدير إدارة وعلى هذا <br/>يتم
+                        تسليم الموظف كل مستحقاته.
+                    </p>
+                </div>
+                <table class="table" style="width:100%;float: right;">
+                    <tbody>
+                        <tr>
+                            <td>مدير المباشر</td>
+                            <td>قسم الدعم و المساندة</td>
+                            <td>الإدارة المالية</td>
+                            <td>إدارة الموارد البشرية</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

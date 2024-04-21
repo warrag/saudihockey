@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="training_request_report"
+        inherit_id="plustech_employee_training.training_request_doc">
+        <xpath expr="//tr[@id='signature']" position="before">
+            <tr style="text-align:center;">
+                <td colspan="2">Per Diem</td>
+                <td colspan="2" style="text-align:center;"> 
+                    Deserved <input type="checkbox" id="oe_import_tracking" t-att-checked="doc.deserve_perdiem"/> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    Not Deserved <input type="checkbox" id="oe_import_tracking" t-att-checked="not doc.deserve_perdiem"/>
+                </td>
+            </tr>
+            <tr
+                t-foreach="request.env['hr.deputation'].search([('training_request_id', '=', doc.id)])" t-as="trip">
+                <tr style="text-align:center;">
+                    <td style="vertical-align: middle;">Per diem days</td>
+                    <td style="vertical-align: middle;">
+                        <span t-field="trip.total_days" />
+                    </td>
+                    <td style="vertical-align: middle;">Daily Per diem Comp</td>
+                    <td>
+                        <t t-set="aa" t-value="trip._get_allowance()"/>
+                        <span t-esc="aa" />
+                    </td>
+                </tr>
+                <tr style="text-align:center;">
+                    <td style="vertical-align: middle;">Other Expenses</td>
+                    <td style="vertical-align: middle;">
+                        <span t-field="trip.deputation_other_allowance" />
+                    </td>
+                    <td style="vertical-align: middle;">Total</td>
+                    <td>
+                        <span t-field="trip.deputation_amount" />
+                    </td>
+                </tr>
+            </tr>
+        </xpath>
+    </template>
+</odoo>

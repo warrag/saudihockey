@@ -1,0 +1,17 @@
+<odoo>
+    <data noupdate="1">
+         <record id="travel_by_air" model="travel.way">
+            <field name="name">Flight</field>
+            <field name="need_ticket">True</field>
+        </record>
+         <record id="travel_by_Bus" model="travel.way">
+            <field name="name">Bus</field>
+        </record>
+         <record id="travel_by_train" model="travel.way">
+            <field name="name">Train</field>
+        </record>
+         <record id="travel_by_taxi" model="travel.way">
+            <field name="name">Taxi</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_contract_template_inherited_form_view" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherited.view</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='hr_responsible_id']" position="after">
+                <field name="is_trial_period" invisible="1"/>
+            </xpath>
+            <xpath expr="//page[@name='other']" position="after">
+               <field name="trial_date_end" invisible="1" />
+               <page string="Trial Period History" attrs="{'invisible': [('trial_date_end', '=', False)]}">
+                    <field name="period_history_ids" readonly="1">
+                 <tree>
+                     <field name="job_id"/>
+                        <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="duration"/>
+                 </tree>
+                </field>
+               </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

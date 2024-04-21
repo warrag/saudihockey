@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_duty_commencement_type_view_list" model="ir.ui.view">
+            <field name="model">duty.commencement.type</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="sequence" widget="handle" />
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_duty_commencement_type_view_form" model="ir.ui.view">
+            <field name="model">duty.commencement.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="sequence" />
+                            <field name="name" />
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_duty_commencement_type_action" model="ir.actions.act_window">
+            <field name="name">Duty Commencement Type</field>
+            <field name="res_model">duty.commencement.type</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <menuitem
+                id="menu_hr_duty_commencement_tree"
+                action="hr_duty_commencement_type_action"
+                parent="hr.menu_human_resources_configuration"
+                sequence="5"
+                groups="hr.group_hr_user"/>
+    </data>
+</odoo>

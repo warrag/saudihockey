@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_payslip_run_view_form" model="ir.ui.view">
+            <field name="name">hr.payslip.run.form</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+
+                 <xpath expr="//div[@name='button_box']" position="after">
+                     <div class="oe_title">
+                         <h2>
+                        <field name="number"/>
+                    </h2>
+                     </div>
+
+                </xpath>
+                <xpath expr="//div[@name ='button_box']" position="inside">
+                    <!-- Journal Entry  button -->
+<!--                    <button name="button_open_journal_entry" type="object" class="oe_stat_button" icon="fa-bars">-->
+<!--                        Journal Entry-->
+<!--                    </button>-->
+                     <button name="action_view_entries" class="oe_stat_button"
+                            icon="fa-bars" type="object" string="Journal Entries"
+                            attrs="{'invisible': [('move_ids', '=', [])]}"
+                     groups="account.group_account_invoice"/>
+                    <field name="move_ids" widget="many2many_tags"
+                           invisible="1"/>
+                </xpath>
+                <xpath expr="/form/header/button[@name='action_validate']" position="after">
+                    <button string="Set to Draft" name="action_batch_draft" type="object" states="cancel"/>
+                    <button name="payslip_entries_post" states="close" type="object" string="Post" class="oe_highlight"
+                            groups="account.group_account_manager"/>
+                    <button name="action_register_payment"
+                            states="post" type="object" string="Register Payment" id="payment"
+                            class="oe_highlight o_expense_sheet_pay" context="{'default_batch_id': active_id}"
+                            groups="account.group_account_manager"/>
+                    <button string="Cancel" name="action_batch_cancel" type="object" states="draft,close,verify"/>
+                </xpath>
+                <xpath expr="//button[@name='action_paid']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//form" position="inside">
+                     <!-- Chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </xpath>
+
+            </field>
+        </record>
+         <record id="hr_payslip_run_view_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.payslip.run.tree.inherit</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="number"/>
+                </field>
+            </field>
+         </record>
+    </data>
+</openerp>

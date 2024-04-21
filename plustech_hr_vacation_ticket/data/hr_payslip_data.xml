@@ -1,0 +1,18 @@
+<odoo>
+    <data noupdate="1">
+       
+        <!-- Salary Rules -->
+
+        <record id="hr_salary_rule_ticket" model="hr.salary.rule">
+            <field name="name">Ticket Allowance</field>
+            <field name="code">TALW</field>
+            <field name="struct_id" ref="plustech_hr_payroll.structure_main"/>
+            <field name="sequence" eval="90"/>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = payslip.env['hr.payslip'].compute_ticket_allowance(payslip)</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = payslip.env['hr.payslip'].compute_ticket_allowance(payslip)</field>
+        </record>
+    </data>
+</odoo>

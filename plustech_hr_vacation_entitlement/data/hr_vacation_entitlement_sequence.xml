@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Sequences for hr.vacation.entitlement -->
+        <record id="seq_hr_vacation_entitlement" model="ir.sequence">
+            <field name="name">Vacation Entitlement</field>
+            <field name="code">vacation.entitlement</field>
+            <field name="prefix">VEN</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

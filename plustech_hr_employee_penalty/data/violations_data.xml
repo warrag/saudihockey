@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="working_hours_violation" model="violation.violation">
+            <field name="name">Working Hours Violations</field>
+        </record>
+		<record id="work_org_violation" model="violation.violation">
+            <field name="name">Work organization violations</field>
+        </record>
+		<record id="employee_behavior_violation" model="violation.violation">
+            <field name="name">Employee behavior violations</field>
+        </record>
+	</data>
+</odoo>

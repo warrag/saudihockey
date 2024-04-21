@@ -1,0 +1,1774 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_business_trip
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-01 13:27+0000\n"
+"PO-Revision-Date: 2023-11-01 13:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"                                        <i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('from_date', '=', False), ('to_date', '=', False)]}\"/>"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                                                Day After\n"
+"                                            </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                                        يوم بعد\n"
+"                                    </span>"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                                                Day Before\n"
+"                                            </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                                        يوم قبل\n"
+"                                    </span>"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                                        Day After\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                                    يوم بعد\n"
+"                                </span>"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_form
+msgid ""
+"<span class=\"oe_inline\">\n"
+"                                        Day Before\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"oe_inline\">\n"
+"                                    يوم قبل\n"
+"                                </span>"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.hr_deputation_view_kanban
+msgid "<span class=\"text-muted\">-</span>"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "<span>Days</span>"
+msgstr "<span>أيام</span>"
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_abha
+msgid "Abha"
+msgstr "أبها"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Accept"
+msgstr "قبول"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__accounting_date
+msgid "Accounting Date"
+msgstr "التاريخ المحاسبي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__active
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.ui.menu,name:plustech_hr_business_trip.business_trip_activity_main_menu
+msgid "Activity"
+msgstr "الأنشطة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__activity_type_id
+msgid "Activity Type"
+msgstr "نوع النشاط"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_bahah
+msgid "Al Bahah"
+msgstr "الباحة"
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/business_trip_allowance.py:0
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__allowance_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__allowance_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_allowance_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_allowance_view_tree
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_form
+#, python-format
+msgid "Allowance"
+msgstr "البدلات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__product_id
+msgid "Allowance Product"
+msgstr "صنف البدلات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__amount_residual
+msgid "Amount Due"
+msgstr "المبلغ المستحق"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_analytic_account_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_company__deputation_analytic_account_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_config_settings__deputation_analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_approval_reject_wizard
+msgid "Approval  Reject Wizard"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.approval_wizard_action
+msgid "Approval Action"
+msgstr "ارجاء الإعتماد"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_approval_approve_wizard
+msgid "Approval Approve Wizard"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_approval_approve_wizard
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_request_approvals__state__approved
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Approved"
+msgstr "مُعتمد"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__approval_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Approver's"
+msgstr "المعتمدين"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Are you sure you want to do this?"
+msgstr "هل تريد فعل هذا بالتأكيد؟"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_allowance
+msgid "Basic Allowance"
+msgstr "إجمالي بدل الأساسي"
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#, python-format
+msgid "Book Flight Ticket"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Book Ticket"
+msgstr "حجز تذكرة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_ticket_state__booked
+msgid "Booked"
+msgstr "تم الحجز"
+
+#. module: plustech_hr_business_trip
+#: model:travel.way,name:plustech_hr_business_trip.travel_by_Bus
+msgid "Bus"
+msgstr "باص"
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/wizard/approval_approve_wizard.py:0
+#: code:addons/plustech_hr_business_trip/wizard/approval_approve_wizard.py:0
+#: model:hr.leave.type,name:plustech_hr_business_trip.holiday_status_business_trip_leave
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_flight_ticket__deputation_id
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__type__trip
+#: model:ir.module.category,description:plustech_hr_business_trip.module_category_human_resources_business_trip
+#: model:ir.module.category,name:plustech_hr_business_trip.module_category_human_resources_business_trip
+#: model:ir.ui.menu,name:plustech_hr_business_trip.business_trip_activity_menu
+#: model:ir.ui.menu,name:plustech_hr_business_trip.deputation_main_menu
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+#, python-format
+msgid "Business Trip"
+msgstr "الإنتدابات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.business_trip_activity_action
+msgid "Business Trip Activity"
+msgstr "أنشطة الإنتدابات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.deputation_cities_allowance_action
+#: model:ir.ui.menu,name:plustech_hr_business_trip.cities_deputation_allowance_menu
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_tree
+msgid "Business Trip Allowance"
+msgstr "بدل رحلات العمل"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.flight_ticket_business_trip_action_bt
+msgid "Business Trip Flight Tickets"
+msgstr "تذاكر رحلات العمل"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Business Trip Leave Type"
+msgstr "نوع اجازة رحلات العمل"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_lines_view_tree
+msgid "Business Trip Per-Diem"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.action_hr_deputation
+#: model:ir.actions.report,name:plustech_hr_business_trip.business_trip_report_action
+#: model:ir.model,name:plustech_hr_business_trip.model_hr_deputation
+#: model:ir.ui.menu,name:plustech_hr_business_trip.deputation_request_menu
+msgid "Business Trip Request"
+msgstr "طلب رحلة عمل"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__type__ticket
+msgid "Business Trip Ticket"
+msgstr "تذاكر الإنتدابات"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Business trip of people you are manager of"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__by_company_allowance
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__housing_by__by_company
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__transportation_cost__by_company
+msgid "By Company"
+msgstr "بواسطة الشركة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__by_employee_allowance
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__housing_by__by_employee
+msgid "By Employee"
+msgstr "بواسطة الموظف"
+
+#. module: plustech_hr_business_trip
+#: model:res.groups,name:plustech_hr_business_trip.group_hr_deputation_ceo
+msgid "CEO"
+msgstr "الرئيس التنفيذي"
+
+#. module: plustech_hr_business_trip
+#: model:mail.activity.type,name:plustech_hr_business_trip.notification_to_ceo
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "CEO Approval"
+msgstr "إعتماد الرئيس التنفيذي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__can_reject
+msgid "Can Reject"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_approval_approve_wizard
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_approval_reject_wizard
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__cancel
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__transportation_cost__by_employee
+msgid "Cash On Hand"
+msgstr "نقدا"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_deputation_cities_allowance_line
+msgid "Cities Allowance Lines"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "City"
+msgstr "المدينة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__code
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_country_group__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__comment
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_approval_approve_wizard
+msgid "Comments"
+msgstr "ملاحظات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_res_company
+msgid "Companies"
+msgstr "الشركات "
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__company_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__company_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Company"
+msgstr "شركة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: plustech_hr_business_trip
+#: model:ir.ui.menu,name:plustech_hr_business_trip.deputation_config_menu
+msgid "Configuration"
+msgstr "التهيئة والاعدادات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__count_allowance
+msgid "Count Allowance"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.action_res_country
+#: model:ir.ui.menu,name:plustech_hr_business_trip.menu_res_country
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_country_group_form
+msgid "Countries"
+msgstr "الدول"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_res_country
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__country_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__source_country_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Country"
+msgstr "الدولة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_res_country_group
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__country_group_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__country_group_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_country__country_group_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_country_group_tree
+msgid "Country Group"
+msgstr "مجموعات الدول"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.action_country_group
+#: model:ir.ui.menu,name:plustech_hr_business_trip.menu_view_country_group
+msgid "Country Groups"
+msgstr "مجموعات الدول"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__from_portal
+msgid "Created From Portal"
+msgstr "مُنشئ عن طريق البوابة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__create_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__current_user_id
+msgid "Current User"
+msgstr "المستخدم الحالي"
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_dammam
+msgid "Dammam"
+msgstr "الدمام"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Dates"
+msgstr "التاريخ"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__days_after
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__days_after
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_country_group__days_after
+msgid "Days After"
+msgstr "أيام بعد"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__days_before
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__days_before
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_country_group__days_before
+msgid "Days Before"
+msgstr "أيام قبل"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Define deputation request Settings"
+msgstr "تعريف اعدادات طلب انتداب"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Define deputation ticket Settings"
+msgstr "تعريف اعدادات تذاكر الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.hr_deputation_view_kanban
+msgid "Delete"
+msgstr "حذف"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Denied"
+msgstr "رفض"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Departement"
+msgstr "القسم"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__department_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__deputation_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Deputation"
+msgstr "الإنتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_hr_deputation_allowance
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Deputation Allowance"
+msgstr "بدل الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_hr_deputation_allowance_line
+msgid "Deputation Allowance Lines"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_allowance_product_id
+msgid "Deputation Allowance Product"
+msgstr "صنف بدل الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_deputation_cities_allowance
+msgid "Deputation Cities Allowance"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Deputation Configurator"
+msgstr "إعدادات الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_company__deputation_allowance_product_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_config_settings__deputation_allowance_product_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Deputation Expense Product"
+msgstr "صنف مصروف الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Deputation Info"
+msgstr "معلومات الإنتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__leave_type_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_company__deputation_leave_type_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_config_settings__leave_type_id
+msgid "Deputation Leave"
+msgstr "إجازة الإنتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_account_payment__deputation_id
+msgid "Deputation Request"
+msgstr "طلب إنتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__deputation_type
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_type
+msgid "Deputation Type"
+msgstr "نوع الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Deputations"
+msgstr "الإنتدابات"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Deputations analytic account"
+msgstr "الحساب التحليلي للإنتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Description of the Per Diem"
+msgstr "وصف رحلة العمل"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Destination City"
+msgstr "مدينة الوجهة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__dest_country_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__destination_country_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Destination Country"
+msgstr "دولة الوجهة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Direct Manager Approval"
+msgstr "إعتماد المدير المباشر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__display_name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.hr_deputation_view_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/res_country_group.py:0
+#, python-format
+msgid "Duplicate Country Group for %s"
+msgstr "مجموعة تكرار الريف لنسبة ٪ s"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__days
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Duration"
+msgstr "الفترة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.hr_deputation_view_kanban
+msgid "Edit Deputation"
+msgstr "تعديل الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__employee_id
+#: model:res.groups,name:plustech_hr_business_trip.group_hr_deputation_user
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__acceptance
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__acceptance
+#: model:mail.activity.type,name:plustech_hr_business_trip.notification_to_employee
+msgid "Employee Acceptance"
+msgstr "موافقة الموظف"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Employee Info"
+msgstr "بيانات الموظف"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Employee Information"
+msgstr "بيانات الموظف"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Employee Signature"
+msgstr "توقيع الموظف"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Ending Date"
+msgstr "تاريخ النهاية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__excluded_city_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_form
+msgid "Excluded Cities"
+msgstr "المدن المستقصاه"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__existing_allowance_ids
+msgid "Existing Allowance"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__journal_id
+msgid "Expense Journal"
+msgstr "دفتر يومية المصروف"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__deputation_cities_allowance__deputation_type__external
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__deputation_type__external
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "External"
+msgstr "خارجي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__external_per_diem
+msgid "External Per-diem Amount"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_country_group__extra_days
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.deputation_cities_allowance_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Extra Days"
+msgstr "أيام اضافية"
+
+#. module: plustech_hr_business_trip
+#: model:res.groups,name:plustech_hr_business_trip.group_financial_and_administrative_affairs
+msgid "Financial and Administrative Affairs"
+msgstr "مدير عام الشؤون المالية والإدارية"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Financial and Administrative Affairs Approval"
+msgstr "إعتماد مدير عام الشؤون المالية الادارية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation_allowance__type__fixed
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation_allowance_line__type__fixed
+msgid "Fixed Amount"
+msgstr "مبلغ ثابت"
+
+#. module: plustech_hr_business_trip
+#: model:travel.way,name:plustech_hr_business_trip.travel_by_air
+msgid "Flight"
+msgstr "طيران"
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__flight_ticket
+#, python-format
+msgid "Flight Ticket"
+msgstr "تذكرة السفر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__flight_ticket
+msgid "Flight ticket"
+msgstr "تذكرة سفر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__from_date
+msgid "From"
+msgstr "من"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__from_city_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__from_city_id
+msgid "From City"
+msgstr "من مدينة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__country_id
+msgid "From Country"
+msgstr "من دولة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Group By"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:mail.activity.type,name:plustech_hr_business_trip.notification_to_hr_officer
+msgid "HR Officer Review"
+msgstr "مراجعة موظف الموارد البشرية"
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_hafr_al_batin
+msgid "Hafr Al-Batin"
+msgstr "حفر الباطن"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__has_message
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__has_message
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__has_message
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Hijri"
+msgstr "الموافق"
+
+#. module: plustech_hr_business_trip
+#: model:hr.deputation.allowance,name:plustech_hr_business_trip.housing_allowance
+msgid "Housing Allowance"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__housing_by
+msgid "Housing By?"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:res.groups,name:plustech_hr_business_trip.group_hr_deputation_manager
+msgid "Human Resource Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: plustech_hr_business_trip
+#: model:res.groups,name:plustech_hr_business_trip.group_hr_deputation_officer
+msgid "Human Resource Officer"
+msgstr "موظف الموارد البشرية"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Human Resources Report"
+msgstr "تقرير الموارد البشرية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__message_needaction
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__message_unread
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__message_needaction
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__message_unread
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__message_needaction
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__message_unread
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__message_needaction
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__message_has_error
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__message_has_error
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__message_has_error
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__message_has_error
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__deputation_cities_allowance__deputation_type__internal
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__deputation_type__internal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__internal_per_diem
+msgid "Internal Per-diem Amount"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__is_employee
+msgid "Is Employee"
+msgstr "موظف"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__is_manager
+msgid "Is Manager"
+msgstr "مدير"
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_Jeddah
+msgid "Jeddah"
+msgstr "جدة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Job No"
+msgstr "الرقم الوظيفي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__job_position_ids
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__job_title
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__account_move_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_khobar
+msgid "Khobar"
+msgstr "الخبر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals____last_update
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__write_date
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_madinah
+msgid "Madinah"
+msgstr "المدينة المنورة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_makkah
+msgid "Makkah"
+msgstr "مكة المكرمة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__manager_id
+msgid "Manager"
+msgstr "مدير"
+
+#. module: plustech_hr_business_trip
+#: model:hr.deputation.allowance,name:plustech_hr_business_trip.meal_allowance
+msgid "Meal Allowance"
+msgstr "بدل وجبة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "My Department"
+msgstr "قسمي"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "My Team"
+msgstr "فريقي"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "My Trips"
+msgstr "رحلاتي"
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_najran
+msgid "Najran"
+msgstr "نجران"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__name
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__allowance_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_travel_way_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__need_ticket
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__need_ticket
+msgid "Need Ticket?"
+msgstr "يحتاج تذكرة؟"
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__new
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__new
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#, python-format
+msgid ""
+"No Expense account found for the product %s (or for its category), please "
+"configure one."
+msgstr "لم يتم العثور على حساب نفقات للمنتج ٪ S (أو لفئته) ، يرجى تكوين حساب."
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#, python-format
+msgid "No Home Address found for the employee %s, please configure one."
+msgstr "لم يتم العثور على عنوان المنزل للموظف ٪ s ، يرجى تكوين عنوان واحد."
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__attachment_number
+msgid "Number of Attachments"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__name
+msgid "Number#"
+msgstr "الرقم#"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.deputation_allowance_action
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_other_allowance
+#: model:ir.ui.menu,name:plustech_hr_business_trip.deputation_allowance_menu
+msgid "Other Allowance"
+msgstr "إجمالي بدلات الأخرى"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__daily_other_allowance
+msgid "Other Allowance(Daily)"
+msgstr "بدلات أخرى(يومي)"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Other Expenses"
+msgstr "مصاريف اخرى"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Other Info"
+msgstr "معلومات أخرى"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__payment_amount
+msgid "Payment Amount"
+msgstr "مبلغ الدفع"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_account_payment
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__payment_ids
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Per Diem Request Form"
+msgstr "طلب انتداب"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Per diem Comp"
+msgstr "بدل الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Per diem days"
+msgstr "أيام الانتداب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__perdiem_amount
+msgid "Per-Diem Amount"
+msgstr "بدل اليومي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__amount
+msgid "Per-diem Allowance"
+msgstr "البدل اليومي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance_line__per_diem_amount
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__amount
+msgid "Per-diem Amount"
+msgstr "المبلغ اليومي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation_allowance__type__percentage
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation_allowance_line__type__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/models/business_trip_request.py:0
+#, python-format
+msgid ""
+"Please configure Default Expense account for Category expense: "
+"`property_account_expense_categ_id`."
+msgstr ""
+"يرجى تكوين حساب المصاريف الافتراضية لنفقات الفئة: "
+"`property_account_expense_categ_id`."
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Re-Draft"
+msgstr "إعادة الى مسودة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_approve_wizard__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Register Payment"
+msgstr "تسجيل دفعة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_approval_reject_wizard
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__reject
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_request_approvals__state__reject
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.rejection_wizard_action
+msgid "Rejection Action"
+msgstr "إجراء الرفض"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_approval_reject_wizard__reason
+msgid "Rejection Reason"
+msgstr "سبب الرفض"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__request_date
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__activity_user_id
+msgid "Responsible User"
+msgstr "الشخص المسؤول"
+
+#. module: plustech_hr_business_trip
+#: model:res.city,name:plustech_hr_business_trip.res_city_riyadh
+msgid "Riyadh"
+msgstr "الرياض"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Search Business Trip"
+msgstr "بحث رحلات العمل"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.action_hr_deputations_general_config
+#: model:ir.ui.menu,name:plustech_hr_business_trip.menu_hr_deputations_global_settings
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Signature"
+msgstr "التوقيع"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Source Country"
+msgstr "بلد المصدر"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Starting Date"
+msgstr "تاريخ البداية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__business_trip_state
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__business_trip_ticket_state
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__state
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Status"
+msgstr "الحالات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__activity_state
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__activity_state
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__activity_state
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__subject
+msgid "Subject"
+msgstr "العنوان"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Task Description"
+msgstr "وصف المهمة"
+
+#. module: plustech_hr_business_trip
+#: model:travel.way,name:plustech_hr_business_trip.travel_by_taxi
+msgid "Taxi"
+msgstr "تاكسي"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "The Purpose"
+msgstr "الغرض"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.constraint,message:plustech_hr_business_trip.constraint_hr_deputation_allowance_code_uniq
+msgid "The code of the Allowance must be unique!"
+msgstr "الرمز للبدل لابد ان يكون فريد"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__journal_id
+msgid "The journal used when the deputation is done."
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_form
+msgid "Ticket"
+msgstr "تذكرة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Ticket Expense Product"
+msgstr "صنف مصروف التذاكر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.ui.menu,name:plustech_hr_business_trip.menu_deputation_flight_tickets
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_deputation_ticket_configuration
+msgid "Tickets"
+msgstr "التذاكر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__name
+msgid "Title"
+msgstr "العنوان"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__to_date
+msgid "To"
+msgstr "إلى"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "To Approve"
+msgstr "للإعتماد"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__to_city_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__to_city_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "To City"
+msgstr "إلى مدينة"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "To Country"
+msgstr "الى دولة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__to_pay
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__to_pay
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "To Pay"
+msgstr "للسداد"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Total"
+msgstr "الاجمالي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_amount
+msgid "Total Amount"
+msgstr "إجمالي المبلغ"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__total_days
+msgid "Total Days"
+msgstr "إجمالي الأيام"
+
+#. module: plustech_hr_business_trip
+#: model:travel.way,name:plustech_hr_business_trip.travel_by_train
+msgid "Train"
+msgstr "قطار"
+
+#. module: plustech_hr_business_trip
+#: model:hr.deputation.allowance,name:plustech_hr_business_trip.transportation_allowance
+msgid "Transportation Allowance"
+msgstr "بدل النقل"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__transportation_cost
+msgid "Transportation Cost?"
+msgstr "تكلفة النقل؟"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Travel"
+msgstr "طريقة السفر"
+
+#. module: plustech_hr_business_trip
+#: model:hr.deputation.allowance,name:plustech_hr_business_trip.travel_allowance
+msgid "Travel Allowance"
+msgstr "بدل سفر"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+msgid "Travel By"
+msgstr "السفر بواسطة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__deputation_ticket_product_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_company__deputation_ticket_product_id
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_res_config_settings__deputation_ticket_product_id
+msgid "Travel Ticket Product"
+msgstr "صنف تذاكر الرحلات"
+
+#. module: plustech_hr_business_trip
+#: model:ir.actions.act_window,name:plustech_hr_business_trip.action_travel_way
+#: model:ir.model,name:plustech_hr_business_trip.model_travel_way
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_travel_way_form
+msgid "Travel Way"
+msgstr "طريقة السفر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.ui.menu,name:plustech_hr_business_trip.menu_travel_way
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_travel_way_tree
+msgid "Travel Ways"
+msgstr "طريقة السفر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__travel_by
+msgid "Travel by"
+msgstr "السفر بواسطة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__trip_id
+msgid "Trip"
+msgstr "رحلة"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__type
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__type
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance_line__type
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.business_trip_request_doc
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_hr_business_trip_filter
+msgid "Type"
+msgstr "النوع"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__user_id
+msgid "User"
+msgstr "مستخدم"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_business_trip_activity__users_id
+msgid "Users"
+msgstr "المستخدمين"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__ceo
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__ceo
+msgid "Waiting CEO Approval"
+msgstr "بإنتظار إعتماد الرئيس التنفيذي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__finance
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__finance
+msgid "Waiting For  Director of Financial and Administrative Affairs Approval"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_ticket_state__report
+msgid "Waiting For Administrative Affairs Report"
+msgstr "بإنتظار تقرير الشؤون الإدارية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_ticket_state__admin
+msgid ""
+"Waiting For the Director of Financial and Administrative Affairs Approval"
+msgstr "بإنتظار إعتماد مدير عام الشؤون المالية والإدارية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__hr
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__hr
+msgid "Waiting HR Officer Approval"
+msgstr "بإنتظار إعتماد موظف الموارد البشرية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__hrm
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__hrm
+msgid "Waiting HRM Approval"
+msgstr "بإنتظار إعتماد مدير الموارد البشرية"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_state__direct_manager
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__state__direct_manager
+msgid "Waiting Manager Approval"
+msgstr "في انتظار اعتماد المدير المباشر"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__business_trip_activity__business_trip_ticket_state__ceo
+msgid "Waiting for CEO Approval"
+msgstr "بإنتظار إعتماد الرئيس التنفيذي"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_travel_way__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_deputation_cities_allowance__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_hr_deputation_allowance__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_business_trip.field_travel_way__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_deputation_cities_allowance__without_overnight_allowance
+msgid "Without Overnight"
+msgstr "بدون مبيت"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields.selection,name:plustech_hr_business_trip.selection__hr_deputation__housing_by__without_overnight
+msgid "Without overnight"
+msgstr "بدون مبيت"
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/wizard/approval_approve_wizard.py:0
+#, python-format
+msgid "approval."
+msgstr "موافقة."
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_business_trip_activity
+msgid "business.trip.activity"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.hr_deputation_view_kanban
+msgid "days"
+msgstr "أيام"
+
+#. module: plustech_hr_business_trip
+#: model_terms:ir.ui.view,arch_db:plustech_hr_business_trip.view_travel_way_form
+msgid "e.g. Bus"
+msgstr "مثال: باص"
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_hr_flight_ticket
+msgid "hr.flight.ticket"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model,name:plustech_hr_business_trip.model_hr_request_approvals
+msgid "hr.request.approvals"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: code:addons/plustech_hr_business_trip/wizard/approval_approve_wizard.py:0
+#, python-format
+msgid "is need your approval."
+msgstr "هو بحاجة إلى موافقتك."
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_request_approvals__key
+msgid "key"
+msgstr ""
+
+#. module: plustech_hr_business_trip
+#: model:ir.model.fields,field_description:plustech_hr_business_trip.field_hr_deputation_allowance__name
+msgid "name"
+msgstr "الاسم"

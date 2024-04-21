@@ -1,0 +1,383 @@
+<odoo>
+    <!-- Mail template is done in a NOUPDATE block
+         so users can freely customize/delete them -->
+    <data noupdate="1">
+        <!--Contract template -->
+        <record id="simple_contract_template" model="hr.contract.template">
+            <field name="name">Contract Template</field>
+            <field name="model_id" ref="plustech_hr_contract.model_hr_contract"/>
+            <field name="body" type="html">
+                <table cellpadding="5px;" style="width:100%;float: right;">
+                    <tbody>
+                        <tr style="height:51px;">
+                            <td dir="rtl" style="width:50%;text-align: center; height: 51px;">
+                                <span lang="ar-SA">عقد عمل</span>
+                            </td>
+                        </tr>
+                        <tr>
+                         <td dir="rtl" style="text-align:right;vertical-align: top; height: 40px;">إنه في يوم ${object.get_date_hijri()} الموافق ${object.date_start.strftime('%d/%m/%Y')}م
+                                تم الاتفاق بين كل من:-
+                            </td>
+                        </tr>
+                        <tr>
+                           <td dir="rtl" style="text-align:right;vertical-align: top; height: 120px;"><span
+                                    lang="ar-SA">اولا:</span>شركة/مؤسسة ${object.company_id.name or '............'|safe} ، سجل تجاري رقم ${object.company_id.company_registry or '..........'|safe}
+                                  و عنوانها ${object.company_id.street or '...........'|safe} ${object.company_id.street2 or ''|safe} ${object.company_id.city or '.......'|safe}  ${object.company_id.country_id.name or ''|safe}  ص.ب  الرمز البريدي ${object.company_id.zip or ''|safe}
+                                 هاتف ${object.company_id.phone or '............'|safe}  فاكس  ${object.company_id.mobile or '..........'|safe}  , البريد الالكتروني ${object.company_id.email or '..........'|safe} و يمثلها في التوقيع على هذا العقد  ${object.company_id.company_represantative_id.name or '..........'|safe}   بصفة  ${object.company_id.company_represantative_id.job_title or '........'|safe} و يشار اليها فيما بعد بالطرف الاول
+                                 ثانيا:  ${object.employee_id.name or ''|safe}  الجنسية: ${object.employee_id.country_id.name or '..........'|safe}  بطاقة الهوية ${object.employee_id.identification_id or '..........'|safe} (جواز سفر) رقم ${object.employee_id.identification_id or ''|safe}   صادر من  ${object.employee_id.passport_issue_location or ''|safe}   بتاريخ ${object.employee_id.passport_issue_date or '........'|safe}  و عنوانه   هاتف    ص.ب    الرمز البريدي     البريد الالكتروني
+                                 و يشار إليه فيما بعد بالطرف الثاني 
+                                 بعد أن أقر الطرفان بأهليتهما المعتبرة شرعاً, و نظاما  لإبرام مثل هذا العقد , فقد اتفقا على ما يلي:
+
+                            </td>
+                        </tr>                           
+                            
+                     
+                        <tr style="background-color:#33cccc;">
+                            
+                            <td style="vertical-align:top;height: 32px; background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b>
+                                        <span lang="ar-SA">أولاً: موضوع العقد</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            
+                            <td dir="rtl" style="vertical-align:top;height: 18px; text-align: right;">
+                            اتفق الطرفان على أن يعمل الطرف الثاني لدى الطرف الأول تحت إدارته، أو إشرافه بوظيفه (${object.job_id.name or '...........'|safe})،
+                            ومباشرة الأعمال التي يكلف بها بما يتناسب مع قدراته العملية، والعلمية، والفنية وفقاً لاحتياجات العمل،
+                            وبما لا يتعارض مع الضوابط المنصوص عليها في المواد (الثامنة والخمسون، التاسعة والخمسون، الستين) من نظام العمل
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                           
+                            <td dir="rtl" style="vertical-align:top;height: 18px; text-align: right;">
+                            مدة هذا العقد (${object.get_contract_period()})، تبدأ من تاريخ مباشرة الطرف الثاني للعمل في (${object.date_start.strftime('%d/%m/%Y')}) وتنتهي في (${object.date_end.strftime('%d/%m/%Y') if object.date_end else '........'|safe})،
+                            وتتجدد لمدةٍ، أو لمددٍ مماثلة، ما لم يُشعر أحد الطرفين الآخر خطياً بعدم رغبته في التجديد قبل ثلاثين يوماً
+                             من تاريخ انتهاء العقد.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+            
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            اتفق الطرفان على أن يكون هذا العقد غير محدد المدة، على أن يبدأ في تاريخ (…. /…./…) (خاص بالعامل السعودي).
+يخضع الطرف الثاني لفترة تجربة مدتها (…….) يوماً، تبدأ من تاريخ مباشرته للعمل، ولا يدخل في حسابها إجازة عيدي الفطر، والأضحى، 
+والإجازة المرضية، ويكون (للطرفين)؛ (للطرف….) الحق في إنهاء العقد في هذه الفترة وهو من البنود الاختيارية بحيث لا
+ تزيد التجربة عن 90 يومًا ويكون الحق في الإنهاء لأي من الطرفينٍ، أو كليهما.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;background-color: #33cccc;">
+                           
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b><span lang="ar-SA">ثانيًا: أيام وساعات العمل</span>:
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        % set weeks = object.employee_id.resource_calendar_id.hours_per_week/object.employee_id.resource_calendar_id.hours_per_day
+                        % set hours_per_week = object.employee_id.resource_calendar_id.hours_per_week
+                        % set hours_per_day= object.employee_id.resource_calendar_id.hours_per_day
+
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            تحدد أيام العمل ب(${"%.0f" | format(weeks)}) أيام في الأسبوع، وتحدد ساعات العمل ب (${"%.0f" | format(hours_per_day)}) يوماً أو بـ (${"%.0f" | format(hours_per_week)}) ساعات عمل أسبوعيًا، ويلزم الطرف الأول بان يدفع للطرف الثاني أجرأ إضافياً
+                             عن ساعات العمل الإضافية يوازي أجر الساعة مضاف إليه (50%) من أجره الأساسي؛ وهو من البنود الإلزامية، 
+                             بحيث لا يزيد عدد أيام العمل عن 6 أيام في الأسبوع، ولا تزيد ساعات العمل عن (48) ساعة.
+                            </td>
+                        </tr>
+                         <tr style="height:18px;background-color: #33cccc;">
+                           
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b><span lang="ar-SA">ثالثًا: التزامات الطرف الأول</span>:
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يدفع الطرف الأول للطرف الثاني أجراً أساسيًا قدره (${object.wage}) فقط ${object.amount_to_text_arabic(object.wage)}  سعودي يستحق في نهاية كل …، وهو من البنود
+                                                            الإلزامية إذا كان الأجر يدفع شهريًا أو أسبوعيًا.
+        اتفق الطرفان على أن يدفع الطرف الأول للطرف الثاني الأجر حسب الإنتاج بحيث يستحق مبلغ (…) فقط …. ريال 
+                    سعودي عن كل قطعة يتم إنتاجها، ويستحق الأجر عن مجموع القطع المنتجة في نهاية كل أسبوع.
+                                                            كما يلتزم الطرف الأول للطرف الثاني بالآتي:
+
+                                                                                ………………………………………….
+                                                                                ………………………………………….
+                                                                                ………………………………………..
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يستحق الطرف الثاني عن كل عام إجازة سنوية مدتها (${object.annual_leave_balance}) يومًا مدفوعة الأجر، ويحدد الطرف الأول تاريخها خلال سنة 
+        الاستحقاق، وفقاً لظروف العمل على أن يتم أجر الإجازة مقدمًا عند استحقاقها؛ وللطرف الأول تأجيل الإجازة
+بعد نهاية سنة استحقاقها لمدة لا تزيد عن (90) يوماً، كما له بموافقة الطرف الثاني كتابةً تأجيلها نهاية السنة
+لسنة الاستحقاق، وذلك حسب مقتضيات ظروف العمل؛ وهو من البنود إلزامية، بحيث لا تقل مدة الإجازة السنوية
+(21) يومًا، إذا كانت خدمة العامل أقل من 5 سنوات ولا تقل عن (30) يومًا إذا زادت خدمة العامل عن 5 سنوات.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يلتزم الطرف الأول بتوفير الرعاية الطبية للطرف الثاني بالتأمين الصحي، وفقاً لأحكام نظام الضمان الصحي التعاوني.
+يلتزم الطرف الأول بتسجيل الطرف الثاني لدى المؤسسة العامة للتأمينات الاجتماعية، وسداد الاشتراكات حسب أنظمتها.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يتحمل الطرف الأول رسوم (استقدام الطرف الثاني) أو (نقل خدماته إليه)، ورسوم الإقامة، رخصة العمل، وتجديدها، وما يترتب على تأخير ذلك
+من غرامات، ورسوم تغير المهنة، والخروج والعودة، وتذكرة عودة الثاني إلى موطنه بالوسيلة التي قدم بها بعد انتهاء العلاقة بين الطرفين؛ وهو من البنود
+                                                                                الإلزامية الخاصة بالعامل غير السعودي.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يلتزم الطرف الأول بنفقات تجهيز جثمان الطرف الثاني، ونقله إلى الجهة التي ابرم فيها العقد، أو استقدم العامل منها، ما لم
+                                    يُدفن بموافقة ذويه داخل المملكة، أو تلتزم المؤسسات العامة للتأمينات الاجتماعية بذلك.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+تستحق العاملة إجازة وضع بأجر كامل لمدة عشرة أسابيع توزعها كيف تشاء، تبدأ بحد أقصى بأربعة أسابيع قبل التاريخ المرجح للوضع، ويحدد
+                                            التاريخ المرجح للوضع بواسطة طبيب المنشأة، أو بناءً على شهادة طبية مصدقة من جهة صحية.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يحق للعاملة عندما تعود إلى مزاولة عملها بعد إجازة الوضع، أن تأخذ بقصد إرضاع مولودها فترة، أو فترات للاستراحة، ولا تزيد
+                        في مجموعهما على الساعة في اليوم الواحد، وتحسب هذه الفترة، أو الفترات من ساعات العمل الفعلية.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يحق للعاملة في حالة وفاة زوجها، إجازة عدة بأجر كامل لمدة لا تقل عن أربعة أشهر وعشرة أيام من تاريخ الوفاة ولها الحق في تمديد هذه الإجازة
+            دون أجر إن كانت حاملاً -خلال هذه الفترة – حتى تضع حملها، ولا يجوز لها الاستفادة من باقي إجازات العدة الممنوحة لها بعد وضع حملها.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+يحق للعاملة في حالة وفاة زوجها، إجازة بأجر كامل لمدة خمسة عشر يوماً؛ وفق ما نصت عليه الفقرة (2) من المادة
+                                                                        (الستين بعد المائة) من نظام العمل.
+                            </td>
+                        </tr>
+                         <tr style="height:18px;background-color: #33cccc;">
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b><span lang="ar-SA">رابعًا: التزامات الطرف الثاني:</span>:
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+أن ينجز العمل الموكل إليه؛ وفقًا لأصول المهنة، ووفق تعليمات الطرف الأول، إذ لم يكن في هذه التعليمات ما يخالف العقد، أو النظام،
+                                                                        أو الآداب العامة، ولم يكن في تنفيذها ما يعرضه للخطر.
+                            </td>
+                        </tr>
+
+                        <tr style="height:18px;">
+                            
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            أن يعتني عناية كافية بالأدوات، والمهمات المسندة إليه، والخامات المملوكة للطرف الأول؛ الموضوعة تحت تصرفه، أو التي تكون في عهدته، وأن يعيد للطرف الأول المواد الغير مستهلكة.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            
+                            <td dir="rtl" style="height:18px;text-align: right;">
+                            أن يقدم كل العون، ومساعدته دون أن يشترط لذلك أجرًا إضافيًا في حالات الأخطار التي تهدد سلامته مكان العمل، أو الأشخاص العاملين فيه.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            أن يخضع وفقًا لطلب الطرف الأول للفحوص الطبية التي يرغب في إجرائها عليه قبل الالتحاق في العمل، أو إثناءه للتحقق من خلوه من الأمراض المهنية، أو السارية.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            يلتزم الطرف الثاني بألا يقوم بعد انتهاء العقد بمنافسة الطرف الأول بمدة (…….) سنة، وذلك في أي مكان من (…….) فيما يتعلق في عمله (……….)، بما لا يزيد عن السنتين.
+                            </td>
+                        </tr>
+                
+                        <tr style="height:18px;">
+                            
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            يلتزم الطرف الثاني بعدم إفشاء أسرار الطرف الأول بعد انتهاء عقد العمل بمنافسة الطرف الأول لمدة (…….) سنة، وذلك في أي مكان من (……) فيما يتعلق بعمل (……….).
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                        
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            يلتزم الطرف الثاني بحسن السيرة والسلوك، والأخلاق أثناء العمل، وفي جميع الأوقات يلتزم بالأنظمة، والأعراف، والعادات، والآداب المرعية في المملكة العربية السعودية، وكذلك في القواعد، واللوائح، والتعليمات المعمول بها لدى الطرف الأول، ويتحمل كافة الغرامات المالية الناتجة عن مخالفته لتلك الأنظمة.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            الموافقة على استقطاع الطرف الأول للنسبة المقررة عليه من الأجر الشهري للاشتراك في المؤسسة العامة للتأمينات الاجتماعية.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;background-color: #33cccc;">
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b>
+                                        <span lang="ar-SA">خامسًا: انتهاء العقد أو إنهاءه</span>
+                                        <span></span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            ينتهي هذا العقد بانتهاء مدته في العقد محددة المدة، أو باتفاق الطرفين على إنهائه بشرط موافقة الطرف الثاني كتابةً.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                        
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            يلتزم أي من الطرفين عند إنهائه للعقد، إشعار الطرف الأخر كتابةً قبل الإنهاء بمدةٍ لا تقل عن (……) يومًا. وهو بند إلزامي في العقد غير محدد المدة (للعامل السعودي)، بحيث تكون مدة الأشعار لا تقل عن (60) يومًا إذا كان الأجر شهرياً، أو (30) يومًا إذا كان الأجر أسبوعيًا.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            يحق للطرف الأول فسخ العقد دون مكافأةٍ، أو إشعار للطرف الثاني أو تعويضه، شريطة إتاحة الفرصة للطرف الثاني في إبداء أسباب معارضته للفسخ، وذلك طبقاً للحالات الواردة في المادة (الثمانون) من نظام العمل.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            يحق للطرف الثاني ترك العمل، وإنهاء العقد دون إشعار الطرف الأول مع احتفاظه بحقه في الحصول على كافة مستحقاته، طبقًا للحالات الواردة للمادة (الحادي والثمانون) من نظام العمل.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            في حال إنهاء العقد من قِبل أحد الطرفين قبل انقضاء مدته دون سبب مشروع، يحق للطرف الآخر مقابل هذا الإنهاء تعويضًا قدره (….) ريال سعودي.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;background-color: #33cccc;">
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                             <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b><span lang="ar-SA"> أتفق الطرفان في حال فسخ العقد دون سبب مشروع على ما يلي</span>:
+                                        <span></span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            إذا كان فسخ العقد من قبل الطرف الأول، فيلزم بأن يدفع للطرف الثاني تعويضًا عن هذا الفسخ قدره (….) ريال سعودي.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            إذا كان فسخ العقد من قبل الطرف الثاني، فيلزم بأن يدفع للطرف الأول تعويضًا عن هذا الفسخ قدره (….) ريال سعودي.
+                            </td>
+                        </tr>
+                        
+                        <tr style="height:18px;background-color: #33cccc;">
+            
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b><span lang="ar-SA">سادسًا: مكافأة نهاية الخدمة</span>:
+                                        <span></span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            يستحق الطرف الثاني عند إنهاء العلاقة التعاقدية من قبل الطرف الأول، أو باتفاق الطرفين، أو بانتهاء مدة العقد، أو نتيجة لقوةٍ قاهرة، مكافأة قدرها أجر خمسة عشر يومًا عن كل سنة من السنوات الخمس الأولى، وأجر شهر عن كل سنة من السنوات التالية، ويستحق العامل مكافأة عن أجزاء السنة بنسبة ما قضاه منها في العمل، وتحسب المكافأة على أساس الأجر الأخير.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            إذا كان انتهاء علاقة العمل بسبب استقالة الطرف الثاني، يستحق في هذه ثُلث المكافأة، بعد خدمة لا تقل مدتها عن سنتين متتاليتين، ولا تزيد على خمس سنوات، ويستحق ثلثيها، إذا زادت مدة خدمته على خمس سنوات متتالية، ولم تبلغ عشر سنوات، ويستحق المكافأة كاملة، إذا بلغت مدة خدمته عشر سنوات فأكثر.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td dir="rtl" style="text-align:right;height: 18px;">
+                            تستحق العاملة المكافأة كاملة، إذا انهت العقد خلال ستة أشهر من تاريخ عقد زواجها، أو ثلاثة أشهر من تاريخ وضع مولودها.
+                            </td>
+                        </tr>
+                        
+                        <tr style="height:18px;background-color: #33cccc;">
+        
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b><span lang="ar-SA">سابعًا: النظام الواجب التطبيق، والاختصاص القضائي</span>:
+                                        <span></span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;text-align: right;">
+                            يخضع هذا العقد لنظام العمل، ولائحته التنفيذية، والقرارات الصادرة تنفيذًا له؛ في كل ما لم يرد به نص في هذا العقد، ويحل هذا العقد محل كافة الاتفاقيات، والعقود السابقة الشفهية منها، أو الكتابية إن وجدت.
+                            </td>
+                        </tr>
+                         <tr style="height:18px;">
+                            <td style="height:18px;text-align: right;">
+                            في حالة نشوء خلاف بين الطرفين حول هذا العقد، فإن الاختصاص القضائي ينعقد للجهة المختصة بنظر القضايا العمالية في المملكة العربية السعودية.
+                            </td>
+                            </tr>
+                         <tr style="height:18px;background-color: #33cccc;">
+        
+                            <td style="height:18px;background-color: rgb(242, 242, 242);">
+                                <p class="western" dir="rtl" style="text-align:justify;">
+                                    <b><span lang="ar-SA">ثامنًا: الإخطارات والإشعارات ونسخ العقد</span>:
+                                        <span></span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;text-align: right;">
+                            تتم الإخطارات والإشعارات بين الطرفين كتابة على عنوان الموضح بصدر هذا العقد عن طريق البريد المستعجل، أو البريد الممتاز، أو البريد الإلكتروني لكل من الطرفين، ويلتزم كل طرف بإشعار الطرف الآخر خطيًا في حال تغييره للعنوان الخاص به، أو تغيير البريد الإلكتروني، وإلا اعتبر العنوان، أو البريد الإلكتروني المدونان أعلاه، هما المعمول بهما.
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;text-align: right;">
+                            حُرر هذا العقد من نسختين أصليتين، وقد تسلم كل طرف نسخةً منه للعمل بموجبها.
+                            </td>
+                            </tr>
+                         <tr style="height:18px;">
+                            <td style="height:18px;text-align: center;">
+                                والله الموفق،،،                            
+                            </td>
+                          
+                            </tr>
+                    </tbody>
+                </table>
+                 <br/>
+                  <br/>
+                 <table  align="center" class="table table-bordered" cellpadding="1" cellspacing="1" style="width:100%;text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" dir="rtl" rowspan="1">الطرف الأول</td>
+                                            <td colspan="3" dir="rtl" rowspan="1">
+                                                الطرف الثاني
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="1" rowspan="1" style="width: 10%;">اﻷسم</td>
+                                            <td colspan="2" rowspan="1"><span lang="ar-SA">${object.employee_id.name or ''|safe}</span></td>
+                                            <td colspan="1" rowspan="1" style="width: 10%;"> الأسم</td>
+                                             <td colspan="2" rowspan="1"><span lang="ar-SA">${object.company_id.company_represantative_id.name or ''|safe}</span></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 10%;">التوقيع</td>
+                                            <td colspan="2" rowspan="1"></td>
+                                            <td style="width: 10%;">التوقيع</td>
+                                            <td colspan="2" rowspan="1"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td dir="rtl" colspan="6"  style="height:80px;text-align: right;">الختم</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+            </field>
+        </record>
+    </data>
+</odoo>

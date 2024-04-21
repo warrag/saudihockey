@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_work_entry_type_working_days_adjust" model="hr.work.entry.type">
+            <field name="name">Working Days Adjustment</field>
+            <field name="color">0</field>
+            <field name="code">DAYS-ADJUST</field>
+            <field name="is_leave" eval="False"/>
+            <field name="round_days">NO</field>
+        </record>
+         <record id="hr_work_entry_type_weekend" model="hr.work.entry.type">
+            <field name="name">Weekend Days</field>
+            <field name="color">0</field>
+            <field name="code">WEEKEND</field>
+             <field name="round_days">FULL</field>
+            <field name="round_days_type">DOWN</field>
+            <field name="is_leave" eval="True"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_trial_period_history,employee.trial.period.history,model_employee_trial_period_history,,1,1,1,1
+access_probation_evaluation,probation.evaluation,model_probation_evaluation,,1,1,1,1
+access_probation_evaluation_line,probation.evaluation.line,model_probation_evaluation_line,,1,1,1,1
+access_probation_evaluation_item,probation.evaluation.item,model_probation_evaluation_item,,1,1,1,1
+
+

@@ -1,0 +1,160 @@
+<odoo>
+    <data noupdate="1">
+        <record id="car_delivery_template_template" model="letter.letter">
+            <field name="name">نموذج تسليم سيارة</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="text-center">
+                    <p>
+                        <img src="data:image/png;base64,${object.company_id.logo}" style="width: 150px;height: 80px;"/>
+                    </p>
+
+                </div>
+                <br/>
+                <div class="row" align="center" dir="rtl">
+                    <table class="tabl" cellpadding="0" cellspacing="0"
+                           style="width:100%;text-align: center;">
+                        <tr>
+                            <td style="background:#d9d9d9;" width="25%">
+                                <span>${object.company_id.name}</span>
+                            </td>
+                            <td width="50%"></td>
+                            <td style="background:#d9d9d9;" width="25%">
+                                <span>${object.request_date}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <div class="text-center">
+                    <h4 lang="ar-SA">${object.name}</h4>
+
+
+                </div>
+                <br/>
+
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;" dir="rtl">
+                    <tbody>
+                        <tr style="height:18px;">
+                            <td class="text-right" style="background:#d9d9d9;">اسم الموظف</td>
+                            <td class="text-right">${object.request_id.name}</td>
+                            <td class="text-right" style="background:#d9d9d9;">الرقم الوظيفي</td>
+                            <td class="text-right">${object.request_id.employee_number}</td>
+                            <td class="text-right" style="background:#d9d9d9;">المسمى الوظيفي</td>
+                            <td class="text-right">${object.request_id.job_id.name}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;" dir="rtl">
+                    <tbody>
+                        <tr style="height:18px;">
+                            <td class="text-right" style="background:#d9d9d9;">نوع السيارة</td>
+                            <td class="text-right"></td>
+                            <td class="text-right" style="background:#d9d9d9;">سنة الصنع</td>
+                            <td class="text-right"></td>
+                            <td class="text-right" style="background:#d9d9d9;">رقم اللوحة</td>
+                            <td class="text-right"></td>
+                            <td class="text-right" style="background:#d9d9d9;">اللون</td>
+                            <td class="text-right"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;" dir="rtl">
+                    <tbody>
+                        <tr style="height:18px;">
+
+                            <td colspan="2" style="height:18px;">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">بيان بحالة السيارة من الداخل</span>
+                                    </b>
+                                </p>
+                            </td>
+                            <td style="height:18px;">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">ملاحظات</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td colspan="2" style="height:18px;" align="right">عدد الكيلو مترات</td>
+                            <td style="height:18px;" align="right">حالة السيارة من الداخل</td>
+                            <td style="height:18px;" align="right">العدد والإطارات الاحتياطية</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right"></td>
+                            <td align="right"></td>
+                            <td align="right"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;" dir="rtl">
+                    <tbody>
+                        <tr style="height:18px;">
+
+                            <td colspan="2" style="height:18px;">
+                                <p class="western" dir="rtl" style="text-align:center;">
+                                    <b>
+                                        <span lang="ar-SA">بيان بحالة السيارة من الخارج</span>
+                                    </b>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;" align="right" width="40%">الجهة</td>
+                            <td style="height:18px;" align="right">الملاحظات</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;" align="right">اليمنى</td>
+                            <td align="right"></td>
+
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;" align="right">اليسرى</td>
+                            <td align="right"></td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;" align="right">الأمام</td>
+                            <td align="right"></td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td style="height:18px;" align="right">الخلف</td>
+                            <td align="right"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table align="center" class="table table-bordered" cellpadding="1" cellspacing="1"
+                       style="width:100%;float: right;" dir="rtl">
+                    <tbody>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;" colspan="2">المقرر بما فيه</td>
+                            <td align="right" style="border:0;">مصادقة المدير المباشر</td>
+                            <td align="right" style="border:0;">مصادقة الرئيس التنفيذي</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;">الاسم</td>
+                            <td align="right" style="border:0;">الاسم</td>
+                            <td align="right" style="border:0;" colspan="2">الاسم</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;">التاريخ</td>
+                            <td align="right" style="border:0;">التاريخ</td>
+                            <td align="right" style="border:0;" colspan="2">التاريخ</td>
+                        </tr>
+                        <tr style="height:18px;">
+                            <td align="right" style="border:0;">التوقيع</td>
+                            <td align="right" style="border:0;">التوقيع</td>
+                            <td align="right" style="border:0;" colspan="2">التوقيع</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_overtime_configuration" model="ir.ui.view">
+            <field name="name">Configure Overtime</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Overtime"
+                         data-key="plustech_hr_overtime">
+                        <h2>Overtime</h2>
+                        <div class="row mt16 o_settings_container" name="config_hr_overtime_configurator">
+                            <div class="col-12 col-lg-6 o_setting_box" name="config_overtime_request_settings">
+                                <div class="o_setting_right_pane">
+                                    <h3>Default Expense Product And Analytic Account</h3>
+                                    <div class="text-muted">
+                                        Define overtime Settings
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="row mt8">
+                                            <label for="overtime_product_id"
+                                                   string="Overtime Expense Product" class="col-lg-5 o_light_label"/>
+                                            <field name="overtime_product_id"
+                                                   context="{'default_detailed_type': 'service'}"/>
+                                        </div>
+                                        <div class="row mt8">
+                                            <label for="overtime_analytic_account_id"
+                                                   string="Overtime analytic account"
+                                                   class="col-lg-5 o_light_label"/>
+                                            <field name="overtime_analytic_account_id"/>
+                                        </div>
+                                         <div class="row mt8">
+                                            <label for="overtime_cal_days"
+                                                   class="col-lg-5 o_light_label"/>
+                                            <field name="overtime_cal_days"/>
+                                        </div>
+                                        <div class="row mt8">
+                                            <label for="overtime_cal_hours"
+                                                   class="col-lg-5 o_light_label"/>
+                                            <field name="overtime_cal_hours"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" name="config_overtime_payment_settings">
+                                <div class="o_setting_right_pane">
+                                    <label for="overtime_payment"/>
+                                    <div class="text-muted">
+                                        Overtime Payment Option
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="overtime_payment" class="o_light_label"
+                                                   widget="radio"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_hr_overtime_general_config" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'plustech_hr_overtime','bin_size': False}</field>
+        </record>
+
+        <menuitem
+                id="overtime_config_menu"
+                parent="plustech_hr_overtime.overtime_submenu"
+                name="Configuration"
+                sequence="10" groups="group_hr_overtime_manager"/>
+
+        <menuitem id="menu_hr_overtime_global_settings" name="Settings" parent="overtime_config_menu"
+                  action="action_hr_overtime_general_config" sequence="0"
+                  groups="plustech_hr_overtime.group_hr_overtime_manager"/>
+    </data>
+</odoo>

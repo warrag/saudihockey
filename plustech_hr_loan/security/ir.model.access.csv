@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_loan_user,hr.loan.group_user,model_hr_loan,base.group_user,1,1,1,0
+access_hr_loan_line_user,hr.loan.line.group_user,model_hr_loan_line,base.group_user,1,1,0,0
+access_hr_loan_officer,hr.loan.group_hr_user,model_hr_loan,hr.group_hr_user,1,1,1,1
+access_hr_loan_line_officer,hr.loan.line.group_hr_user,model_hr_loan_line,hr.group_hr_user,1,1,1,1
+access_hr_loan_manager,hr.loan,model_hr_loan,hr.group_hr_manager,1,1,1,1
+access_hr_loan_line_manager,hr.loan.line,model_hr_loan_line,hr.group_hr_manager,1,1,1,1
+access_hr_loan_accountant,hr.loan,model_hr_loan,account.group_account_user,1,1,1,0
+access_hr_loan_line_accountant,hr.loan.line,model_hr_loan_line,account.group_account_user,1,1,1,0
+access_employee_other_loan,employee.other.loan,model_employee_other_loan,,1,1,1,1
+access_loan_type,loan_type,model_loan_type,,1,1,1,1
+access_hr_loan_policy,hr.loan.policy,model_hr_loan_policy,,1,1,1,1
+access_hr_skip_installment_employee,hr.skip.installment.employee,model_hr_skip_installment,base.group_user,1,1,1,1
+access_dev_skip_installment_officer,hr.skip.installment.officer,model_hr_skip_installment,hr.group_hr_user,1,1,1,1
+access_dev_skip_installment_manager,hr.skip.installment.manager,model_hr_skip_installment,hr.group_hr_manager,1,1,1,1

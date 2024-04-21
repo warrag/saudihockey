@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_expense_type_view_form" model="ir.ui.view">
+        <field name="name">hr.expense.type.view.form</field>
+        <field name="model">hr.expense.type</field>
+        <field name="arch" type="xml">
+            <form string="Expense Type" >
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="export_as"/>
+                            <field name="product_id"/>
+                            <field name="analytic_account_id"/>
+                            <field name="analytic_tag_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_hr_expense_type_view_tree" model="ir.ui.view">
+        <field name="name">hr.expense.type.view.tree</field>
+        <field name="model">hr.expense.type</field>
+        <field name="arch" type="xml">
+            <tree string="Expense Type" >
+                <field name="name" placeholder="Expense type"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_expense_type" model="ir.actions.act_window">
+        <field name="name">Expense Type</field>
+        <field name="res_model">hr.expense.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_expense_type"  parent="menu_employee_expense_config"
+              action="action_expense_type" sequence="2"/>
+
+</odoo>

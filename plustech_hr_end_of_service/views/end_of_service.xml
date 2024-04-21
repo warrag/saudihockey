@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_end_of_service_award_form" model="ir.ui.view">
+        <field name="name">end.of.service.reward.form</field>
+        <field name="model">end.of.service.reward</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Submit" groups="hr.group_hr_user" name="action_submit" states="draft"
+                            type="object" class="oe_highlight"/>
+                    <button string="Approve" groups="hr.group_hr_user" name="action_hro_approve" states="submit"
+                            type="object" class="oe_highlight"/>
+                    <button string="Approve" groups="hr.group_hr_user" name="action_hrm_approval" states="hro"
+                            type="object" class="oe_highlight"/>
+                    <button string="Reset to Draft" groups="hr.group_hr_user" name="action_reset_to_draft"
+                            type="object" attrs="{'invisible':[('state','in',['hrm','draft','paid'])]}"/>
+                    <button string="Generate Payslip" groups="hr.group_hr_user" name="action_generate_payslip"
+                            states="hrm"
+                            type="object" class="oe_highlight"/>
+                    <button string="Generate Payment" groups="hr.group_hr_user" name="action_generate_payment"
+                            states="hrm"
+                            type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_custody"
+                                type="object"
+                                class="oe_stat_button"
+                        >
+                            <div role="img" id="oe_hr_attendance_status"
+                                 class="fa fa-fw fa-circle o_button_icon  text-success"
+                                 attrs="{'invisible': [('custody', '!=', False)]}" aria-label="Not available"
+                                 title="Not Available"/>
+                            <div role="img" id="oe_hr_attendance_status"
+                                 class="fa fa-fw fa-circle o_button_icon text-danger"
+                                 attrs="{'invisible': [('custody', '=', False)]}" aria-label="Available"
+                                 title="Available"/>
+                            <span>Custody</span>
+                            <field name="custody" invisible="1"/>
+                        </button>
+                        <button name="action_bank_loans"
+                                type="object"
+                                class="oe_stat_button"
+                        >
+                            <div role="img" id="oe_hr_attendance_status"
+                                 class="fa fa-fw fa-circle o_button_icon  text-success"
+                                 attrs="{'invisible': [('open_bank_loan', '!=', False)]}" aria-label="Not available"
+                                 title="Not Available"/>
+                            <div role="img" id="oe_hr_attendance_status"
+                                 class="fa fa-fw fa-circle o_button_icon text-danger"
+                                 attrs="{'invisible': [('open_bank_loan', '=', False)]}" aria-label="Available"
+                                 title="Available"/>
+                            <span>Bank Loans</span>
+                            <field name="open_bank_loan" invisible="1"/>
+                        </button>
+                        <button name="action_unpaid_cash_loans"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-money"
+                        >
+                            <field name="unpaid_loans" widget="statinfo" string="Unpaid Loans"/>
+                        </button>
+                        <button name="action_view_payslip"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-book"
+                                attrs="{'invisible': [('payslip_id', '=', False)]}">
+                            <field name="slip_count" widget="statinfo" string="Payslip"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1 class="mt0">
+                            <field name="name" readonly="True"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Request Details">
+                            <field name="request_date"/>
+                            <field name="payslip_id" invisible="1"/>
+                            <field name="employee_id" attrs="{'readonly': [('state','!=','draft')]}" options="{'no_create': 1}"/>
+                            <field name="contract_id" invisible="1"/>
+                            <field name="employee_number"/>
+                            <field name="department_id"/>
+                            <field name="job_id"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="reason_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                   required="1" force_save="1"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                            <field name="include_compensation" invisible="1"/>
+                            <field name="compensation_type" attrs="{'readonly': [('state','!=','draft')], 'required': [('include_compensation', '=', True)],
+                            'invisible': [('include_compensation', '=', False)]}"
+                                   force_save="1"/>
+                        </group>
+                        <group string="Service Period Details">
+                            <field name="join_date"/>
+                            <field name="last_work_date" attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+                            <field name="last_payslip_date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="service_years" readonly="1" force_save="1"/>
+                            <field name="service_months" readonly="1" force_save="1"/>
+                            <field name="service_days" readonly="1" force_save="1"/>
+                            <!--                            <label for="number_of_days_from_join_date"/>-->
+                            <!--                            <div class="o_row col-4">-->
+                            <!--                                <div class="o_row">-->
+                            <!--                                    <field name="number_of_days_from_join_date" nolabel="1" readonly="1"-->
+                            <!--                                           class="oe_inline"/>-->
+                            <!--                                    <span>Day's</span>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <field name="total_service_year"/>
+                            <field name="unpaid_leave_month" invisible="1"/>
+                            <field name="unpaid_leave_desc" readonly="1" force_save="1"/>
+                        </group>
+                        <group string="Deductions">
+                            <field name="advances_deduction"/>
+                            <field name="attendance_deduction"/>
+                            <field name="gosi_deduction"/>
+                            <field name="other_deductions"/>
+                            <field name="total_deductions"/>
+                        </group>
+                        <group string="End Of Service Details">
+                            <field name="working_days" invisible="0"/>
+                            <field name="payslip_amount"/>
+                            <field name="net_period_reward" readonly="1" force_save="1"/>
+                            <field name="deserving" readonly="1" force_save="1"/>
+                            <field name="total_reward" invisible="1"/>
+                            <field name="salary_compensation" force_save="1"/>
+                            <field name="other_additions"/>
+                        </group>
+                        <group string="Leaves Compensation">
+                            <label for="remaining_leaves" string='Annual leave balance'/>
+                            <div name="remaining_leaves" class="o_row col-2">
+                                <div class="o_row">
+                                    <field name="remaining_leaves" nolabel="1" class="oe_inline"/>
+                                    <span>Day's</span>
+                                </div>
+                            </div>
+                            <field name="leave_balance_reward" readonly="1" force_save="1"/>
+                        </group>
+
+                    </group>
+                    <group col="4">
+                        <group class="oe_subtotal_footer oe_right">
+                            <field name="total_reward" colspan="2" readonly="1" widget="monetary"/>
+                            <field name="total_deductions" readonly="1" colspan="2" widget="monetary"/>
+                            <field name="final_deserving" class="oe_subtotal_footer_separator" readonly="1"
+                                   widget='monetary'/>
+                        </group>
+                    </group>
+
+                    <!-- <label for="reward_details_ids"/> -->
+                    <field name="reward_details_ids" readonly="1" attrs="{'invisible':[('reward_details_ids','=',[])]}">
+                        <tree>
+                            <field name="period"/>
+                            <field name="reward"/>
+                        </tree>
+                    </field>
+                    <notebook>
+                        <page string="ُExtra Additions" name="other_dues">
+                            <field name="other_dues_ids">
+                                <tree editable="bottom">
+                                    <field name="input_id"/>
+                                    <field name="amount" sum="Total Additions"/>
+                                    <field name="note"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Extra Deductions" name="other_deduction">
+                            <field name="other_deduction_ids">
+                                <tree editable="bottom">
+                                    <field name="input_id"/>
+                                    <field name="amount" sum="Total Deductions"/>
+                                    <field name="note"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_end_of_service_award_tree" model="ir.ui.view">
+        <field name="name">end.of.service.reward.tree</field>
+        <field name="model">end.of.service.reward</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employee_number"/>
+                <field name="employee_id"/>
+                <field name="contract_id"/>
+                <field name="last_work_date"/>
+                <field name="join_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+       <record id="view_hr_end_of_service_filter" model="ir.ui.view">
+        <field name="name">hr.eos.filter</field>
+        <field name="model">end.of.service.reward</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="employee_id"/>
+                <field name="department_id" operator="child_of"/>
+                <field name="reason_id"/>
+                <field name="name"/>
+                <filter domain="[('state','in',('submit','hro'))]" string="To Approve"
+                        name="approve"/>
+                <filter domain="[('state', '=', 'hrm')]" string="To Pay" name="to_pay"/>
+                <separator/>
+                <filter string="My Team" name="my_team"
+                        domain="['|', ('employee_id.parent_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                        help="end of service of people you are manager of"/>
+                <filter string="My Department" name="department"
+                        domain="['|', ('department_id.member_ids.user_id', '=', uid), ('employee_id.user_id', '=', uid)]"
+                        help="My Department"/>
+                <separator/>
+                <filter name="filter_date_request" date="request_date" string="Request Date"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_reason_id" string="Reason" context="{'group_by':'reason_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company"/>
+                    <separator/>
+                    <filter name="group_request_date" string="Request Date" context="{'group_by':'request_date'}"/>
+                </group>
+                <searchpanel>
+                    <field name="state" string="Status"/>
+                    <field name="reason_id" string="Reason"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="end_of_service_award_action" model="ir.actions.act_window">
+        <field name="name">End of Service Reward</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">end.of.service.reward</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="eos_main_menu" name="End Of Service"
+              groups="base.group_user" web_icon="plustech_hr_end_of_service,static/description/icon.png"/>
+    <menuitem id="end_of_service_award_menu"
+              name="End of Service Reward"
+              parent="eos_main_menu"
+              sequence="2"/>
+    <menuitem id="end_of_service_request_menu"
+              name="EOS Request"
+              parent="end_of_service_award_menu"
+              action="end_of_service_award_action"
+              sequence="1"/>
+    <menuitem
+            id="menu_end_service_config"
+            parent="eos_main_menu"
+            name="Configuration"
+            sequence="4"
+    />
+
+</odoo>

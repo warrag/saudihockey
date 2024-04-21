@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="plustech_hr_employee_letter.module_category_human_resources_letters_2">
+        <field name="name">Letters</field>
+        <field name="description">Letters</field>
+        <field name="sequence">20</field>
+    </record>
+    <record id="employee_letter_user" model="res.groups">
+        <field name="name">Employee</field>
+        <field name="category_id" ref="plustech_hr_employee_letter.module_category_human_resources_letters_2" />
+    </record>
+     <record id="employee_letter_manager" model="res.groups">
+        <field name="name">Human Resource Manager</field>
+        <field name="category_id" ref="plustech_hr_employee_letter.module_category_human_resources_letters_2" />
+    </record>
+    <!-- <record id="employee_letter_ceo" model="res.groups">
+        <field name="name">CEO</field>
+        <field name="category_id" ref="plustech_hr_employee_letter.module_category_human_resources_letters" />
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+    </record> -->
+
+
+    <record id="employee_letter_personal_rule" model="ir.rule">
+        <field name="name">Personal Letters</field>
+        <field ref="model_letter_request" name="model_id" />
+        <field name="domain_force">[('create_uid','=',user.id)]</field>
+        <field name="groups" eval="[(4, ref('plustech_hr_employee_letter.employee_letter_user'))]" />
+    </record>
+    <record id="employee_letter_team_rule" model="ir.rule">
+        <field name="name">Team Approver</field>
+        <field ref="model_letter_request" name="model_id" />
+        <field name="domain_force">['|', '|',
+                ('request_id.user_id', '=', user.id),
+                ('request_id.department_id.manager_id.user_id', '=', user.id),
+                ('request_id.parent_id.user_id', '=', user.id)
+               ]</field>
+        <field name="groups" eval="[(4, ref('plustech_hr_employee_letter.employee_letter_user'))]" />
+    </record>
+    <record id="employee_letter_see_all" model="ir.rule">
+        <field name="name">All Letters</field>
+        <field ref="model_letter_request" name="model_id" />
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('plustech_hr_employee_letter.employee_letter_manager'))]" />
+    </record>
+    <record model="ir.rule" id="letter_request_comp_rule">
+        <field name="name">Letter Request multi-company</field>
+        <field name="model_id" ref="model_letter_request" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

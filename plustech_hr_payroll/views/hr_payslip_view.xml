@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_payslip_view_form" model="ir.ui.view">
+            <field name="name">hr.payslip.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='refund_sheet']" position="after">
+                    <button string="Register Payment" name="action_register_payment" type="object"
+                            attrs="{'invisible': ['|',('state','!=','done'),('payslip_run_id', '!=', False)]} "
+                            class="oe_highlight"
+                            groups="account.group_account_invoice"/>
+                </xpath>
+                <xpath expr="//button[@name='action_payslip_paid']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="company_id" position="after">
+                    <field name="payslip_type" groups="base.group_no_one"/>
+                    <field name="net_wage" invisible="1"/>
+                    <field name="payslip_period" groups="base.group_no_one"/>
+                    <field name="paid_days" groups="base.group_no_one"/>
+                    <field name="out_days" groups="base.group_no_one"/>
+                    <field name="adjust_days" groups="base.group_no_one"/>
+                </field>
+
+
+            </field>
+        </record>
+    </data>
+</openerp>

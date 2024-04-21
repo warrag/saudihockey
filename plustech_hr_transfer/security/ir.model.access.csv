@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_department,hr.department,model_hr_department,,1,1,1,1
+access_hr_employee_transfer,hr.employee.transfer,model_hr_employee_transfer,,1,1,1,1
+access_employee_transfer_history,employee.transfer.history,model_employee_transfer_history,,1,1,1,1

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_payslip_correction_form" model="ir.ui.view">
+        <field name="name">hr.payslip.correction.form</field>
+        <field name="model">hr.payslip.correction</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Manager Approve" groups="hr_payslip_correction.group_manager_approve"
+                            name="action_manager_approve" states="draft"
+                            type="object" class="oe_highlight"/>
+                    <button string="Hr Approval" groups="hr_payslip_correction.group_hr_approve"
+                            name="action_hr_approve" states="manager_approved"
+                            type="object" class="oe_highlight"/>
+                    <button string="Generate New Payslip" groups="hr_payslip_correction.group_generate_payslip"
+                            name="action_generate_payslip" states="hr_approved"
+                            type="object" class="oe_highlight"/>
+<!--                    <button string="Close" groups="hr.group_hr_user"-->
+<!--                            name="action_close" states="hr_approved"-->
+<!--                            type="object" class="oe_highlight"/>-->
+                    <button string="Cancel" groups="hr_payslip_correction.group_cancel"
+                            name="action_cancel" states="draft,manager_approved,hr_approved"
+                            type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="employee_id" class="oe_edit_only"/>
+                        <h1><field name="employee_id" placeholder="Employee" attrs="{'readonly': [('state','!=','draft')]}"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="payslip_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="manager_note"/>
+                            <field name="is_hidden" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="employee_note"/>
+                            <field name="hr_note"
+                                   attrs="{'invisible': [('state','in',['draft']),('is_hidden','=',False)]}"/>
+                        </group>
+                    </group>
+                    <group>
+                            <group>
+                                <field name="reason"
+                                       attrs="{'invisible': [('state','in',['draft','manager_approved']),('is_hidden','=',False)]}"/>
+                            </group>
+                            <group>
+                                <field name="result"
+                                       attrs="{'invisible': [('state','in',['draft','manager_approved']),('is_hidden','=',False)]}"/>
+                            </group>
+                        </group>
+                    <notebook>
+                        <page  string="Worked Days ">
+                            <field name="worked_days_ids" >
+                                <tree string="Worked Days" editable="bottom">
+                                    <field name="amount" /> <!-- invisible="1"Do not remove this otherwise the amount won't be saved -->
+                                    <field name="work_entry_type_id"/>
+                                    <field name="name"/>
+                                    <field name="number_of_days" sum="Total Working Days"/>
+                                    <field name="number_of_hours"/>
+                                    <field name="amount"/>
+                                </tree>
+                                <form string="Worked Day">
+                                    <group col="4">
+                                        <field name="work_entry_type_id"/>
+                                        <field name="name"/>
+                                        <field name="number_of_days"/>
+                                        <field name="number_of_hours"/>
+                                    </group>
+                                </form>
+                            </field>
+                            <separator string="Other Inputs"/>
+                            <field name="payslip_input_ids" >
+                                <tree string="Input Data">
+                                    <field name="input_type_id"/>
+                                    <field name="amount"/>
+                                </tree>
+                                <form string="Payslip Line">
+                                    <group>
+                                        <field name="input_type_id"/>
+                                        <field name="amount"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                        <page  string="Salary Computation">
+                            <field name="salary_computation_ids">
+                                <tree string="Salary Structure" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="amount"/>
+                                    <field name="total"/>
+                                </tree>
+                                <form string="Payslip Line">
+                                    <group col="4">
+                                        <field name="name"/>
+                                        <field name="amount"/>
+                                        <field name="total"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_payslip_correction_tree" model="ir.ui.view">
+        <field name="name">hr.payslip.correction.tree</field>
+        <field name="model">hr.payslip.correction</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="employee_id"/>
+                <field name="payslip_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_payslip_correction_action" model="ir.actions.act_window">
+        <field name="name">Hr Payslip Correction</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.payslip.correction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_hr_payslip_form_inherit" model="ir.ui.view" >
+            <field name="name">hr.payslip</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='struct_id']" position="after">
+                    <field name="payslip_correction_id" />
+                </xpath>
+            </field>
+        </record>
+
+    <menuitem id="hr_payslip_correction_child_menu"
+              name="Payslip Corrections"
+              parent="hr_payroll.menu_hr_payroll_payslips"
+              action="hr_payslip_correction_action"
+              sequence="81"
+    />
+
+</odoo>

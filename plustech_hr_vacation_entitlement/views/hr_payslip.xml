@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_hr_paysli_vacation_allowance_allowance_form">
+            <field name="name">hr.payslip.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <field name="credit_note" position="after">
+                    <field name="vacation_entitlement_id" 
+                    invisible="1"
+                    />
+                </field>
+                <xpath expr="//form/sheet/notebook/page/field[@name='worked_days_line_ids']/tree/field[@name='amount']" position="after">
+                    <field name="is_leave_advance" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

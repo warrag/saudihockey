@@ -1,0 +1,1398 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plustech_hr_appraisal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-11 20:36+0000\n"
+"PO-Revision-Date: 2023-01-11 23:07+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_employee_base.py:0
+#, python-format
+msgid ""
+"<p class=\"o_view_nocontent_smiling_face\">\n"
+"                            Schedule an appraisal\n"
+"                        </p><p>\n"
+"                            Plan appraisals with your colleagues, collect "
+"and discuss feedback.\n"
+"                        </p>"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_form
+msgid "<span class=\"o_form_label oe_inline\">%</span>"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.res_config_settings_view_form
+msgid "<strong>Appraisal Type</strong>"
+msgstr "أنواع التقييم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.res_config_settings_view_form
+msgid "<strong>Create Appraisal</strong>"
+msgstr "إنشاء تقييم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_view_gantt
+msgid "<strong>Date —</strong>"
+msgstr "التاريخ"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__accept
+msgid "Accept"
+msgstr "محقق"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Achieved  -  المحقق"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_needaction
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__active
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__active
+msgid "Active"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_ids
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_exception_decoration
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_state
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_type_icon
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:res.groups,name:plustech_hr_appraisal.group_hr_appraisal_manager
+msgid "Administrator"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__annual_ids
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_line__type__annual
+msgid "Annual"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__annual_appraisal_id
+msgid "Annual Appraisal"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Annual Objective count must Bigger than Min Objectives %s lines"
+msgstr "عدد الأهداف يجب أن يكون أكبر من الحد الأدنى للأهداف %s"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Annual Objective count must Less than Max Objectives\t%s lines"
+msgstr "عدد الأهداف يجب أن يكون أقل من الحد الأقصى للأهداف %s"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__type__12
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_batch__type__12
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__res_config_settings__appraisal_type__12
+msgid "Annually"
+msgstr "كل عام"
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.action_channel_config
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.hr_appraisal_action
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.open_view_hr_appraisal_tree2
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__appraisal_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_view_activity
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_tree
+msgid "Appraisal"
+msgstr "التقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.action_view_appraisal_batch
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__batch_id
+msgid "Appraisal Batch"
+msgstr "مجموعة تقيمات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__appraisal_count
+msgid "Appraisal Count"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__date_close
+msgid "Appraisal Date"
+msgstr "تاريخ التقييم"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Appraisal Edit For Employee %s"
+msgstr "تم تعديل التقييم للموظف  %s"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_appraisal_evaluation_scale
+msgid "Appraisal Evaluation Scale"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.appraisal_history_action
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_history_view_tree
+msgid "Appraisal History"
+msgstr "سجلات التقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__appraisal_line_id
+msgid "Appraisal Line"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__appraisal_tmp_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__appraisal_tmp_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__annual_appraisal_tmp_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__competencies_appraisal_tmp_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_job__appraisal_tmp_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_tree
+msgid "Appraisal Template"
+msgstr "نماذج التقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.open_view_hr_appraisal_template
+#: model:ir.ui.menu,name:plustech_hr_appraisal.menu_open_supervisory_view_hr_appraisal_template
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_form
+msgid "Appraisal Templates"
+msgstr "نماذج التقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_appraisal_weight
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__appraisal_weight_ids
+msgid "Appraisal Weight"
+msgstr "وزن التقييم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_weight_tree
+msgid "Appraisal Weights"
+msgstr "وزن التقييم"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid "Appraisal to Confirm and Send"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.hr_appraisal_action_from_department
+msgid "Appraisal to start"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.open_view_hr_appraisal_tree
+#: model:ir.module.category,name:plustech_hr_appraisal.module_category_appraisals
+#: model:ir.ui.menu,name:plustech_hr_appraisal.menu_hr_appraisal_main
+#: model:ir.ui.menu,name:plustech_hr_appraisal.menu_open_view_hr_appraisal_tree
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_batch_view_form
+msgid "Appraisals"
+msgstr "التقييمات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.ui.menu,name:plustech_hr_appraisal.menu_appraisal_batch
+msgid "Appraisals Batch"
+msgstr "مجموعات التقييم"
+
+#. module: plustech_hr_appraisal
+#: model:res.groups,name:plustech_hr_appraisal.group_hr_appraisal_user
+msgid "Appraisals User"
+msgstr "اسم المقيم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Appraiser Approve"
+msgstr "موافقة المقيم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__approve1
+msgid "Appraiser approve"
+msgstr "موافقة المقيم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_form
+msgid "Archived"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__assignment_date
+msgid "Assignment Date"
+msgstr "تاريخ التكليف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_attachment_count
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_res_config_settings__create_appraisal
+msgid "Auto Create Appraisal?"
+msgstr "إنشاء تقييم تلقائي؟
+"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__res_config_settings__create_appraisal__automatically
+msgid "Automatically"
+msgstr "تلقائيا"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__avatar_1920
+msgid "Avatar"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__avatar_128
+msgid "Avatar 128"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__can_approve_hr1
+msgid "Can Approve Hr1"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__can_approve_hr2
+msgid "Can Approve Hr2"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__can_confirm
+msgid "Can Confirm"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__can_edit
+msgid "Can Edit"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__can_see
+msgid "Can See"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__cancel
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__child_ids
+msgid "Children"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__close
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Close"
+msgstr "مغلق"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__company_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__company_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__company_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__competencies_ids
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_evaluation__type__competencies
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Competencies"
+msgstr "الجدارات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__competencies_total
+msgid "Competencies %"
+msgstr "الجدارات %"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__competencies_appraisal_id
+msgid "Competencies Appraisal"
+msgstr "تقييم الجدارات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__competencies_percentage
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__competencies_percentage
+msgid "Competencies Percentage"
+msgstr "نسبة الجدارات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__competencies_weight_ids
+msgid "Competencies Weight"
+msgstr "وزن الجدارات"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Competencies count must Bigger than Min Objectives %s lines"
+msgstr "عدد الجدارات يجب ان يكون أكبر من الحد الأدنى للجدارات %s"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Competencies count must Less than Max Objectives %s lines"
+msgstr "عدد الجدارات يجب ان يكون أقل من الحد الأقصى للجدارات %s"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.ui.menu,name:plustech_hr_appraisal.menu_hr_appraisal_main_configuration
+msgid "Configuration"
+msgstr "الاعدادات"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__pending
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.server,name:plustech_hr_appraisal.cron_create_hr_appraisal_ir_actions_server
+#: model:ir.cron,cron_name:plustech_hr_appraisal.cron_create_hr_appraisal
+#: model:ir.cron,name:plustech_hr_appraisal.cron_create_hr_appraisal
+msgid "Create Hr Appraisal"
+msgstr "إنشاء تقييم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.actions.act_window,help:plustech_hr_appraisal.open_view_hr_appraisal_template
+msgid "Create new template"
+msgstr "إنشاء نموذج جديد"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__create_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__create_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__create_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__create_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__create_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__create_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__create_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__create_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_history_view_tree
+msgid "Date"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__date_close
+msgid ""
+"Date of the appraisal, automatically updated when the appraisal is Done or "
+"Cancelled."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__deadline_date
+msgid "تاريخ الموعد النهائي"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__deadline_reminder
+msgid "Deadline Reminder Days"
+msgstr "أيام تذكير الموعد النهائي"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_view_activity
+msgid "تاريخ الموعد النهائي:"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__department_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__description
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__display_name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__display_name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__display_name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__display_name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__display_name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__display_name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__display_name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__done
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Done"
+msgstr "إنتهى"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__new
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_batch__state__new
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Edit"
+msgstr "تعديل"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__employee_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__employee_id
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Employee"
+msgstr "موظف"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal_batch.py:0
+#, python-format
+msgid ""
+"Employee ( %s ) has not appraisal template \n"
+" you can use batch appraisal template for all employees"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_appraisal_appraisal
+msgid "Employee Appraisal"
+msgstr "تقييم الموظف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__appraiser_id
+msgid "Employee Appraiser"
+msgstr "المقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__employee_number
+msgid "Employee No#"
+msgstr "رقم الموظف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__emp_score
+msgid "Employee Score"
+msgstr "تقييم الموظف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__employee_user_id
+msgid "Employee User"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__employee_ids
+msgid "Employees"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__end_date
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__evaluation
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__evaluation_id
+msgid "Evaluation"
+msgstr "التقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__evaluation_escale_ids
+msgid "Evaluation Escale"
+msgstr "مدى التقييم"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Evaluation Objectives [ %s ] Already Exists [ %s ] times"
+msgstr "عدد تكرار الهدف [ %s ] يساوى [ %s ]"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_form
+msgid "Evaluation Scales"
+msgstr "مدى التقييم"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Evaluation in Competencies [ %s ] Already Exists [ %s ] times"
+msgstr "عدد تكرار الجدارات [ %s ] يساوى [ %s ]"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid "Exceeds expectations"
+msgstr "يفوق التوقعات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__final_classification_id
+msgid "Final Classification"
+msgstr "التصنيف النهائي"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__final_score
+msgid "Final Score %"
+msgstr "النتيجة النهائية ٪"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_follower_ids
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_partner_ids
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_type_icon
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Future Activities"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_batch_view_form
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.wizard_appraisal_batch_view_form
+msgid "Generate Batch"
+msgstr "إنشاء مجموعة تقييمات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_batch__state__generated
+msgid "Generated"
+msgstr "أنشأت"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Group by..."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_appraisal_template
+msgid "HR Appraisal Template"
+msgstr "نموذج تقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__has_message
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.module.category,description:plustech_hr_appraisal.module_category_appraisals
+msgid "Helps you manage your appraisals."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__history_ids
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "History"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Hr Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__approve2
+msgid "Hr approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__id
+msgid "ID"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_exception_icon
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_exception_icon
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_needaction
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_unread
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__message_needaction
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_has_error
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_has_sms_error
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__message_has_error
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_is_follower
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__is_generate
+msgid "Is Generate"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_job
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__job_id
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__join_date
+msgid "Joining Date"
+msgstr "تاريخ الانضمام"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__last_history_id
+msgid "Last History"
+msgstr "السجلات القديمة"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight____last_update
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal____last_update
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch____last_update
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation____last_update
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale____last_update
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history____last_update
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line____last_update
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__last_one
+msgid "Last One"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__write_uid
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__write_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__write_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__write_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__write_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__write_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__write_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__write_date
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Late"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Late Activities"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_main_attachment_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__manager_score
+msgid "Manager Score"
+msgstr "تقييم المدير"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__res_config_settings__create_appraisal__manually
+msgid "Manually"
+msgstr "يدويا"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__max_competencies
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__max_competencies
+msgid "Max Competencies"
+msgstr "الحد الأقصى للجدارات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__max_objectives
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__max_objectives
+msgid "Max Objectives"
+msgstr "الحد الأقصى للأهداف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__max_objectives
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__max_objectives
+msgid "Maximum number of annual objectives"
+msgstr "العدد الأقصى للأهداف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__max_competencies
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__max_competencies
+msgid "Maximum number of competencies"
+msgstr "العدد الأقصى للجدارات"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid "Meets expectations"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_has_error
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_ids
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__min_competencies
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__min_competencies
+msgid "Min Competencies"
+msgstr "الحد الأدنى للجدارات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__min_objectives
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__min_objectives
+msgid "Min Objectives"
+msgstr "الحد الأدنى  للأهداف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__min_objectives
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__min_objectives
+msgid "Minimum number of annual objectives"
+msgstr "الحد الأدنى لعدد الأهداف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__min_competencies
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__min_competencies
+msgid "Minimum number of competencies"
+msgstr "الحد الأدنى لعدد الجدارات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__type__1
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_batch__type__1
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__res_config_settings__appraisal_type__1
+msgid "Monthly"
+msgstr "شهرى"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.hr_appraisal_action_my
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "My Appraisals"
+msgstr "تقييماتي"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__name
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__name
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_tree
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_tree
+msgid "Name"
+msgstr "الإسم"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid "Needs improvement"
+msgstr "يحتاج الى تحسين"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__new_evaluation_id
+msgid "New Evaluation"
+msgstr "تقييم جديد"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_date_deadline
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_summary
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_type_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_template__type__non_supervisory
+msgid "Non Supervisory"
+msgstr "غير إشرافي"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__note
+msgid "Note"
+msgstr "ملاحظات"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__pin
+msgid "Number"
+msgstr "رقم الموظف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_needaction_counter
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_has_error_counter
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_needaction_counter
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_has_error_counter
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_unread_counter
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_evaluation__type__objective
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Objective"
+msgstr "الاهداف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__objective_total
+msgid "Objectives %"
+msgstr "الاهداف %"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__objectives_percentage
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__objectives_percentage
+msgid "Objectives Percentage"
+msgstr "نسبة الأهداف"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__old_evaluation_id
+msgid "Old Evaluation"
+msgstr "التقييم القديم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__old_weight_id
+msgid "Old Weight"
+msgstr "الوزن القديم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Final Score"
+msgstr "التقييم النهائي"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "People I Manage"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.actions.act_window,help:plustech_hr_appraisal.open_view_hr_appraisal_tree
+msgid "Plan appraisals with your colleagues, collect and discuss feedback."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__previous_appraisal_id
+msgid "Previous Appraisal"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__note
+msgid "Private Note"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__rate_from
+msgid "Rate From"
+msgstr "من"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__rate_to
+msgid "Rate To"
+msgstr "إلى"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal_template.py:0
+#, python-format
+msgid "Rate from must be less than rate to"
+msgstr "يجب أن يكون المعدل من أقل من المعدل إلى"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__refuse
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Refuse Appraisal Edit "
+msgstr "رفض تعديل التقييم"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__employee_user_id
+msgid "Related user name for the resource to manage its access."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_user_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_has_sms_error
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_history_view_form
+msgid "Save Edit"
+msgstr "حفظ التعديل"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.actions.act_window,help:plustech_hr_appraisal.open_view_hr_appraisal_tree
+msgid "Schedule an appraisal"
+msgstr "حدد موعدًا للتقييم"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Search Appraisal"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__type__6
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_batch__type__6
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__res_config_settings__appraisal_type__6
+msgid "Semi"
+msgstr "نصف عام"
+
+#. module: plustech_hr_appraisal
+#: model:ir.ui.menu,name:plustech_hr_appraisal.appraisal_settings_menu
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Show all records which has next action date is before today"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__state
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__state
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__annual_state
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__competencies_state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_state
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid "Strongly Exceed Expectations"
+msgstr "تجاوز التوقعات بقوة"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__submit
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_template__type__supervisory
+msgid "Supervisory"
+msgstr "إشرافي"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation_scale__template_id
+msgid "Template"
+msgstr "نموذج"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__note
+msgid "The content of this note is not visible by the Employee."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid ""
+"The employee %s arrived %s months ago. An appraisal for %s is created. You "
+"can assess %s & determinate the date for '1to1' meeting before %s."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "To Do"
+msgstr "لكى يفعل"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_search
+msgid "Today Activities"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__total
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__total_percentage
+msgid "Total %"
+msgstr "مجموع ٪"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Total Competencies Must Equal to %s"
+msgstr "يجب أن يساوي إجمالي الجدارات  %s"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/hr_appraisal.py:0
+#, python-format
+msgid "Total Objectives Must Equal to %s"
+msgstr "يجب أن تكون الأهداف الإجمالية مساوية لـ  %s"
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__type
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_batch__type
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__type
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__type
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__type
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_res_config_settings__appraisal_type
+msgid "Type"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__activity_exception_decoration
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/wizard/request_appraisal.py:0
+#, python-format
+msgid "Unable to post message, please configure the sender's email address."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_unread
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__message_unread_counter
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_evaluation__user_id
+msgid "User"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_appraisal__website_message_ids
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_appraisal__website_message_ids
+#: model:ir.model.fields,help:plustech_hr_appraisal.field_hr_appraisal_template__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_appraisal_weight__weight
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_weight_tree
+msgid "Weight"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "Weight  - الوزن"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.actions.act_window,name:plustech_hr_appraisal.open_view_hr_appraisal_weight
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__appraisal_weight_ids
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__competencies_weight_ids
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_template__appraisal_weight_ids
+#: model:ir.ui.menu,name:plustech_hr_appraisal.menu_open_view_hr_appraisal_weight
+msgid "Weights"
+msgstr "الأوزان"
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid ""
+"You arrived %s months ago. Your appraisal is created you can assess "
+"yourself here. Your manager will determinate the date for your '1to1' "
+"meeting."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid ""
+"Your employee's last appraisal was %s months ago. An appraisal for %s is "
+"created. You can assess %s & determinate the date for '1to1' meeting before "
+"%s."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: code:addons/plustech_hr_appraisal/models/res_company.py:0
+#, python-format
+msgid ""
+"Your last appraisal was %s months ago. Your appraisal is created you can "
+"assess yourself here. Your manager will determinate the date for your "
+"'1to1' meeting."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_batch_view_form
+msgid "appraisal_batch_form"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_batch_view_tree
+msgid "appraisal_batch_tree"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.appraisal_history_view_form
+msgid "appraisal_gistory_form"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.actions.act_window,help:plustech_hr_appraisal.open_view_hr_appraisal_template
+msgid "click her to create new appraisal template."
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_line__type__competencies
+msgid "competencies"
+msgstr "الجدارات"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_form
+msgid "e.g. John Doe"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.view_hr_appraisal_template_form
+msgid "e.g. non-supervisory template"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_appraisal_batch
+msgid "hr.appraisal.batch"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_appraisal_evaluation
+msgid "hr.appraisal.evaluation"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_appraisal_history
+msgid "hr.appraisal.history"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model,name:plustech_hr_appraisal.model_hr_appraisal_line
+msgid "hr.appraisal.line"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_kanban
+msgid "oe_kanban_text_red"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__type__3
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_batch__type__3
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__res_config_settings__appraisal_type__3
+msgid "quarterly"
+msgstr "ربع سنوى"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.hr_appraisal_view_activity
+msgid "text-danger"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields.selection,name:plustech_hr_appraisal.selection__hr_appraisal_appraisal__state__edit
+msgid "under modification"
+msgstr ""
+
+#. module: plustech_hr_appraisal
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_history__new_weight_id
+#: model:ir.model.fields,field_description:plustech_hr_appraisal.field_hr_appraisal_line__weight_id
+msgid "weight"
+msgstr "الوزن"
+
+#. module: plustech_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:plustech_hr_appraisal.wizard_appraisal_batch_view_form
+msgid "wizard_appraisal_batch_form"
+msgstr ""

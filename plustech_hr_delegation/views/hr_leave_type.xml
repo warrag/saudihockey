@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_leave_type_form_view" model="ir.ui.view">
+            <field name="name">Leave Type</field>
+            <field name="model">hr.leave.type</field>
+            <field name="inherit_id" ref="plustech_hr_leave.inherit_holiday_status_form"/>
+            <field name="arch" type="xml">
+                <field name="is_annual_leave" position="after">
+                <field name="need_delegation" attrs="{'invisible':[('plus_type', '=', 'permission')]}"/>
+                    </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

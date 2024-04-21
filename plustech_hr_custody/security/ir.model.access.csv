@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_plustech_hr_hr_custody_plustech_hr_hr_custody,plustech_hr_hr_custody,model_hr_custody,hr_custody_user,1,1,1,1
+access_renew_renew,renew_renew,model_renew_renew,hr_custody_user,1,1,1,1
+access_property_category,access.property.category,model_property_category,,1,1,1,1
+access_property_property,access.property.property,model_property_property,,1,1,1,1

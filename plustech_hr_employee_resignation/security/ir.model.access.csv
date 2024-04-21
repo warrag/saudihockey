@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_employee_resignation,hr.employee.resignation,model_hr_employee_resignation,,1,1,1,1
+access_resignation_notice_period,resignation.notice.period,model_resignation_notice_period,,1,1,1,1
+
+

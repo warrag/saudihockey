@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+
+    <template id="assets_mail_themes_new">
+        <link rel="stylesheet" type="text/scss" href="/custom_hr/static/src/scss/themes/theme_basic.scss"/>
+        <link rel="stylesheet" type="text/scss" href="/custom_hr/static/src/scss/themes/theme_default.scss"/>
+        <t t-call="custom_hr.custom_hr_mail_style"/>
+    </template>
+
+    <template id="assets_mail_themes_edition_new"> <!-- maybe to remove and convert into a field dumy with attr invisible if the template is not selected -->
+        <t t-call="web._assets_helpers"/>
+        <link rel="stylesheet" type="text/scss" href="/custom_hr/static/src/scss/custom_hr.ui.scss"/>
+        <link rel="stylesheet" type="text/scss" href="/web/static/src/scss/webclient.scss"/>
+    </template>
+
+    <template id="iframe_css_assets_edit_new">
+        <t t-call-assets="custom_hr.assets_mail_themes_new" t-js="false"/>
+        <t t-call-assets="custom_hr.assets_mail_themes_edition_new" t-js="false"/>
+    </template>
+
+    <!-- <template id="iframe_css_assets_readonly">
+        <link rel="stylesheet" type="text/scss" href="/custom_hr/static/src/css/basic_theme_readonly.css"/>
+    </template>
+
+    <template id="qunit_suite" inherit_id="web.qunit_suite">
+        <xpath expr="." position="inside">
+            <script type="text/javascript">
+                odoo.define('custom_hr.FieldHtml.test', function (require) {
+                    'use strict';
+                    var MassMailingFieldHtml = require('custom_hr.FieldHtml');
+                    MassMailingFieldHtml.include({jsLibs: []});
+                });
+            </script>
+            <script type="text/javascript" src="/custom_hr/static/src/js/custom_hr_snippets.js"/>
+            <script type="text/javascript" src="/custom_hr/static/tests/custom_hr_html_tests.js"/>
+        </xpath>
+    </template> -->
+
+    <template id="custom_hr_mail_style">
+        <style>
+            @media screen and (max-width: 768px) {
+                .o_mail_col_mv {
+                    display: block !important;
+                    width: auto !important;
+                }
+                .o_mail_table_styles {
+                    width: 100% !important;
+                }
+                .o_mail_col_container {
+                    margin: 0px 0px 10px 0px !important;
+                }
+            }
+        </style>
+    </template>
+</odoo>

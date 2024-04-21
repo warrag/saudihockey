@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_attendance_sheet_view_tree" model="ir.ui.view">
+        <field name="name">hr.attendance.sheet.view.tree</field>
+        <field name="model">hr.attendance.sheet</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="company_id" groups="base.group_multi_company" optional="show"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_attendance_sheet_search" model="ir.ui.view">
+        <field name="name">hr.attendance.sheet.search</field>
+        <field name="model">hr.attendance.sheet</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <separator/>
+                <filter name="Draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="Confirmed" string="Confirmed" domain="[('state', '=', 'confirm')]"/>
+                <filter name="Approved" string="Approved" domain="[('state', '=', 'approve')]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Status" name="group_by_state" domain="[]" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_attendance_sheet_view_form" model="ir.ui.view">
+        <field name="name">hr.attendance.sheet.view.form</field>
+        <field name="model">hr.attendance.sheet</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="compute_attendance" type="object" string="Compute Attendance" class="oe_highlight"
+                            attrs="{'invisible':[('state','in',('approve', 'cancel'))]}"/>
+                    <button name="action_confirm" type="object" string="Confirm" states="draft" class="oe_highlight"/>
+                    <button name="action_cancel" type="object" string="Cancel" states="draft"/>
+                    <button name="action_approve" type="object" string="Approve" states="confirm" class="oe_highlight"
+                            groups="hr.group_hr_manager,hr.group_hr_user"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,approve,cancel"/>
+                </header>
+                <sheet>
+                    <div class="oe_title" name="title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="date_from" string="Period"/>
+                            <div>
+                                <field name="date_from" class="oe_inline"/>
+                                -
+                                <field name="date_to" class="oe_inline"/>
+                            </div>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Attendance Summary">
+                            <field name="line_ids" nolabel="1">
+                                <tree editable="bottom" create="0" delete="0">
+                                    <field name="date_from" force_save="1" invisible="1"/>
+                                    <field name="state" invisible="1"/>
+                                    <field name="employee_id"/>
+                                    <field name="planned_hours" widget="float_time"/>
+                                    <field name="act_hours" widget="float_time"/>
+                                    <field name="absence_days"/>
+                                    <field name="late_in" widget="float_time"/>
+                                    <field name="early_exit" widget="float_time"/>
+                                    <field name="diff_time" widget="float_time"/>
+                                    <field name="overtime" widget="float_time" invisible="1"/>
+                                    <field name="deduction_amount" force_save="1" readonly="1" optional="show"/>
+                                    <field name="last_ded_amount" force_save="1" readonly="1" optional="show"/>
+                                    <field name="total_ded_amount" force_save="1" readonly="1" optional="show"/>
+                                    <field name="will_postpone_ded" invisible="1"/>
+                                    <button name="open_attendance" type="object" string="Attendance"
+                                            class="oe_highlight" optional="show"/>
+                                    <button name="open_postpone_deduction" type="object" string="Postpone"
+                                            class="oe_highlight" optional="show" attrs="{'invisible':['|',('total_ded_amount','=', 0),('state','not in',('draft'))]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="postpone_view_form" model="ir.ui.view">
+        <field name="name">POSTPONE</field>
+        <field name="model">hr.attendance.sheet.line</field>
+        <field name="arch" type="xml">
+            <form string="postpone">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="will_postpone_ded"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_postpone" type="object" class="oe_highlight" string="Postpone"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="attendance_sheet_action" model="ir.actions.act_window">
+        <field name="name">Attendance Sheet</field>
+        <field name="res_model">hr.attendance.sheet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem action="attendance_sheet_action" id="hr_attendance_sheet_menu"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root" sequence="70"/>
+
+</odoo>

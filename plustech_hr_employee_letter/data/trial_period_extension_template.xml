@@ -1,0 +1,51 @@
+<odoo>
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="trial_period_extension_template" model="letter.letter">
+            <field name="name">خطاب تمديد فترة التجربة</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="container" style="width:100%;">
+                    <div class="row">
+                        <span>${object.request_date}</span>
+                        <h4>${object.letter_type_id.name}</h4>
+                    </div>
+                    <div class="row">
+                        من: ${object.company_id.with_context(lang='ar_001').name}
+                        <br/>
+                        الى: الموظف/ ${object.request_id.name}
+                    </div>
+                    <div class="row">
+                        <h4>${object.name}الموضوع:</h4>
+                            <br/>
+                        <p>
+                            إشارة إلى عقد العمل الموقع بتاريخ ${object.contract_id.date_start} والمتضمن على فترة التجربة
+                            لمدة (الفترة كتابة) (الفترة رقما)
+                            يوم تبدأ من أول يوم عمل بتاريخ ${object.request_id.join_date} وبناء على نص المادة (53) من
+                            نظام العمل ولرغبة شركة ${object.company_id.with_context(lang='ar_001').name}
+                            <br/>
+                            بتمديد فترة التجربة ولموافقتكم على ذلك فإنه تم تمديد فترة التجربة لمدة (الفترة كتابة)
+                            (الفترة رقما) يوم اعتبارا
+                            من تاريخ 00/00/0000 مع استمرار العرض الوظيفي المقدم لكم مسبقًا.
+                            <br/>
+                            والله الموفق،،
+                            <br/>
+                            المقر بما فيه
+                            <br/>
+                            الاســــــــــم:
+                            <br/>
+                            التوقيع:
+                            <br/>
+                            التاريـــخ:
+                            <br/>
+                            الأصل. ملف الموظف
+                            ص. للموظف
+                            ص.المدير المباشر
+                        </p>
+                    </div>
+
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

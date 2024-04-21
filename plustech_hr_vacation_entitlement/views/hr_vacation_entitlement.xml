@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_vacation_entitlement_form" model="ir.ui.view">
+            <field name="name">hr.vacation.entitlement.form</field>
+            <field name="model">hr.vacation.entitlement</field>
+            <field name="arch" type="xml">
+                <form string="Vacation Entitlement">
+                    <header>
+                        <button name="action_submit" states="draft" string="Submit" type="object" class="oe_highlight"/>
+                        <button name="create_payslip" states="submit" string="Generate Payslip" type="object"
+                                class="oe_highlight"/>
+                        <button name="action_confirm" states="submit" string="Confirm" type="object"
+                                class="oe_highlight"/>
+                        <button name="action_validate" states="confirmed" string="Validate" type="object"
+                                class="oe_highlight"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="draft,confirmed"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,submit,completed"/>
+                    </header>
+                    <sheet>
+                        <div class="o_not_full oe_button_box">
+                            <button class="oe_stat_button" name="action_open_payslips" type="object" icon="fa-dollar"
+                                    groups="hr_payroll.group_hr_payroll_user">
+                                <field name="payslips_amount" string="Payslips" widget="statinfo"/>
+                            </button>
+
+
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id"
+                                       attrs="{'readonly': [('state','in',('confirmed','validate','completed'))]}"/>
+                                <field name="date"/>
+                                <label for="payslip_date_from" string="Payslip Period"/>
+                                <div name="dates" class="o_row">
+                                    <field name="payslip_date_from" required="1" widget="daterange"
+                                           options='{"related_end_date": "payslip_date_to"}'
+                                           attrs="{'readonly': [('state','in',('confirmed','validate','completed'))]}"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon"
+                                       title="Arrow"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon"
+                                       title="Arrow"
+                                       attrs="{'invisible': [('payslip_date_from', '=', False), ('payslip_date_to', '=', False)]}"/>
+                                    <field name="payslip_date_to" required="1" widget="daterange"
+                                           options='{"related_start_date": "payslip_date_from"}'
+                                           attrs="{'readonly': [('state','in',('confirmed','validate','completed'))]}"/>
+                                </div>
+                                <field name="working_days"/>
+                            </group>
+                            <group>
+                                <field name="leave_id"
+                                       attrs="{'readonly': [('state','in',('confirmed','validate','completed'))]}"/>
+                                <label for="date_from" string="Leave Period"/>
+                                <div name="dates" class="o_row">
+                                    <field name="date_from" required="1" widget="daterange"
+                                           options='{"related_end_date": "date_to"}'
+                                           readonly="1"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon"
+                                       title="Arrow"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon"
+                                       title="Arrow"
+                                       attrs="{'invisible': [('date_from', '=', False), ('date_to', '=', False)]}"/>
+                                    <field name="date_to" required="1" widget="daterange"
+                                           options='{"related_start_date": "date_from"}'
+                                           readonly="1"/>
+                                </div>
+                                <field name="duration"/>
+                                <field name="vacation_salary_in_advance"/>
+                                <field name="leave_salary"  attrs="{'invisible': [('vacation_salary_in_advance', '=', False)]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hr_vacation_entitlement_tree" model="ir.ui.view">
+            <field name="name">hr.vacation.entitlement.form</field>
+            <field name="model">hr.vacation.entitlement</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Vacation Entitlement">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="leave_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_hr_vacation_entitlement" model="ir.actions.act_window">
+            <field name="name">Vacation Entitlements</field>
+            <field name="res_model">hr.vacation.entitlement</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="menu_hr_vacation_entitlement" name="Vacation Entitlement"
+                  parent="hr_holidays.menu_hr_holidays_approvals" action="action_hr_vacation_entitlement"
+                  groups="hr_holidays.group_hr_holidays_manager"/>
+    </data>
+</odoo>

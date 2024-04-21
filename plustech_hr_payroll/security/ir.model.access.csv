@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_payslip_payment_wiz,payslip_payment_wiz,model_emp_payslip_payment,base.group_user,1,1,1,1
+access_payslip_payment_line_wiz,payslip_payment_line_wiz,model_emp_payslip_payment_line,base.group_user,1,1,1,1
+access_hr_employee_allowance,hr.employee.allowance,model_hr_employee_allowance,,1,1,1,1
+access_allowance_type,employee.allowance.type,model_employee_allowance_type,,1,1,1,1
+access_allowance_category,hr.allowance.category,model_hr_allowance_category,,1,1,1,1
+access_hr_employee_gosi,hr.employee.gosi,model_hr_employee_gosi,,1,1,1,1
+access_gosi_daily_contribution,gosi.daily.contribution,model_gosi_daily_contribution,,1,1,1,1
+

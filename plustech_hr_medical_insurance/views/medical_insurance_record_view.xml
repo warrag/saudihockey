@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="hr_medical_record_kanban">
+            <field name="name">hr.medical.record.kanban</field>
+            <field name="model">medical.insurance.record</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_hr_kanban">
+                    <field name="name"/>
+                    <field name="policy_number"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="member_ids"/>
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''}">
+                                <div t-attf-class="o_kanban_card_header">
+                                    <div class="o_kanban_card_header_title">
+                                        <div class="o_primary">
+                                            <field name="policy_number"/>
+                                        </div>
+                                        <div class="o_secondary">
+                                            <field name="name"/>
+                                        </div>
+                                        <div class="o_secondary">
+                                            <i class="fa fa-clock-o" role="img" aria-label="Duration" title="Duration"/>
+                                            <t t-esc="record.start_date.value"/>
+                                            <strong>-</strong>
+                                            <t t-esc="record.end_date.value"/>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_manage_button_section" t-if="!selection_mode">
+                                        <a class="o_kanban_manage_toggle_button" href="#">
+                                            <i class="fa fa-ellipsis-v" role="img" aria-label="Manage" title="Manage"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="container o_kanban_card_content" t-if="!selection_mode">
+                                    <div class="row">
+                                        <div class="col-6 o_kanban_primary_left">
+                                            <div>Annual Premium:
+                                                <field name="annual_premium"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 o_kanban_primary_right">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <a name="action_view_members" type="object">
+                                                        Members
+                                                    </a>
+                                                </div>
+                                                <div class="col-3">
+                                                    <t t-esc="record.member_ids.raw_value.length"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container o_kanban_card_manage_pane dropdown-menu" role="menu">
+                                    <div t-if="widget.editable" class="o_kanban_card_manage_settings row">
+                                        <div role="menuitem" aria-haspopup="true" class="col-8">
+                                            <ul class="oe_kanban_colorpicker" data-field="color" role="menu"/>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <a role="menuitem" type="edit">Settings</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="hr_medical_record_search" model="ir.ui.view">
+            <field name="name">medical.insurance.record.search</field>
+            <field name="model">medical.insurance.record</field>
+            <field name="arch" type="xml">
+                <search string="Insurance Policy">
+                    <field name="name"/>
+
+                    <group expand="1" string="Group By">
+                        <filter string="Company Name" name="group_company_id" context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- insurance.policy form view -->
+        <record id="medical_record_insurance_view_form" model="ir.ui.view">
+            <field name="name">medical.record.view.form</field>
+            <field name="model">medical.insurance.record</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button string="Import Records" name="%(import_insurance_records_action)d" type="action"
+                                class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" string="Members" name="action_view_members" type="object"
+                                    icon="fa-user-plus" attrs="{'invisible':[('member_count','=',0)]}">
+                                <field name="member_count"/>
+                            </button>
+
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Insurance Company name ..."/>
+                            </h1>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="policy_number" placeholder="Policy Number ..."/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <label for="start_date" string="Duration"/>
+                                <div name="dates" class="o_row">
+                                    <field name="start_date" widget="daterange"
+                                           options='{"related_end_date": "end_date"}'/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon"
+                                       title="Arrow"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon"
+                                       title="Arrow"
+                                       attrs="{'invisible': [('start_date', '=', False), ('end_date', '=', False)]}"/>
+                                    <field name="end_date" widget="daterange"
+                                           options='{"related_start_date": "start_date"}'/>
+                                </div>
+                                <field name="annual_premium"/>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                        <group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- insurance.policy tree view -->
+        <record id="medical_insurance_record_view_tree" model="ir.ui.view">
+            <field name="name">medical.insurance.record.view.tree</field>
+            <field name="model">medical.insurance.record</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="policy_number"/>
+                    <field name="name"/>
+                    <field name="annual_premium"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="act_medical_record_view" model="ir.actions.act_window">
+            <field name="name">Medical Insurance Records</field>
+            <field name="res_model">medical.insurance.record</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <menuitem id="medical_insurance_record_menu" parent="medical_insurance_menu_root"
+                  action="act_medical_record_view" name="Insurance Records" sequence="3"
+        groups="plustech_hr_medical_insurance.group_hr_medical_insurance_officer,plustech_hr_medical_insurance.group_hr_medical_insurance_manager"/>
+
+
+        <record id="employee_insurance_record_view_tree" model="ir.ui.view">
+            <field name="name">employee.insurance.record.view.tree</field>
+            <field name="model">employee.insurance.record</field>
+            <field name="arch" type="xml">
+                <tree string="Members" create="0" expand="1">
+                    <field name="name" string="Member Name"/>
+                    <field name="member_type"/>
+                    <field name="relation" attrs="{'invisible': [('member_type', '=', 'employee')]}"/>
+                    <field name="age"/>
+                    <field name="insurance_class"/>
+                    <field name="amount" sum="Total Cost"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_insurance_record_search" model="ir.ui.view">
+            <field name="name">employee.insurance.record.search</field>
+            <field name="model">employee.insurance.record</field>
+            <field name="arch" type="xml">
+                <search string="Employee Insurance Record">
+                    <field name="employee_id"/>
+                    <field name="name"/>
+                    <field name="member_type"/>
+                    <filter name="filter_member_type_employee" string="Employees" domain="[('member_type','=','employee')]"/>
+                    <filter name="filter_member_type_dependent" string="Dependents" domain="[('member_type','=','dependent')]"/>
+                    <separator/>
+                    <group expand="1" string="Group By">
+                        <filter string="Employee" name="group_employee_id" context="{'group_by':'employee_id'}"/>
+                        <filter string="member_type" name="group_member_type" context="{'group_by':'member_type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

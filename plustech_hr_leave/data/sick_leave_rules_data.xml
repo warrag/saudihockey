@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+          <record id="sick_leave_rule_first_30" model="sick.leave.rule">
+            <field name="name">First 30 days full pay</field>
+            <field name="days">30</field>
+              <field name="deduction">0</field>
+          </record>
+        <record id="sick_leave_rule_next_60" model="sick.leave.rule">
+            <field name="name">The next 60 days 1/4 of the salary</field>
+            <field name="days">60</field>
+              <field name="deduction">25</field>
+          </record>
+        <record id="sick_leave_rule_next_30" model="sick.leave.rule">
+            <field name="name">The next 30 days without pay</field>
+            <field name="days">30</field>
+              <field name="deduction">100</field>
+          </record>
+         <record id="sick_leave_configuration" model="sick.leave.configuration">
+            <field name="name">Sick Deduction Rules</field>
+            <field name="leave_type" ref="hr_holidays.holiday_status_sl"/>
+             <field name="active">1</field>
+            <field name="rule_ids"
+                   eval="[(4, ref('sick_leave_rule_first_30')),(4, ref('sick_leave_rule_next_60')),
+                    (4, ref('sick_leave_rule_next_30'))]"/>
+        </record>
+
+    </data>
+
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report 
+            id="action_report_payslip_batch"
+            string="Payslip Batch TXT"
+            model="hr.payslip.run"
+            report_type="qweb-text"
+            file="plustech_payroll_xlsx.report_payslip_text"
+            name="plustech_payroll_xlsx.report_payslip_text"
+            print_report_name="'%s' % (object.name)"
+        />
+              
+
+<template id="report_payslip_text"> <t t-esc="'WPS'"/>,<t t-esc="docs.company_id.partner_id.bank_ids[0].cif"/>,<t t-esc="docs.company_id.partner_id.bank_ids[0].acc_number"/>,<t t-esc="docs.company_id.partner_id.name"/>,<t t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y%m%d')"/>,<t t-esc="docs.date_start.strftime('%Y%m%d')"/>,<t t-esc="len(docs.slip_ids)"/>,<t t-esc="sum(docs.slip_ids.mapped('net_wage'))"/>,<t t-esc="docs.company_id.currency_id.symbol"/>,<t t-esc="docs.company_id.company_registry"/>
+ <t t-set="sequence" t-value="1"/><t t-esc="'1,1,1'"/><t t-foreach="docs.slip_ids" t-as="doc">,<t t-esc="doc.employee_id.name"/>,<t t-esc="doc.employee_id.bank_account_id.acc_number"/>,<t t-if="docs.company_id.partner_id.bank_ids[0].bank_id==doc.employee_id.bank_account_id.bank_id"><t t-esc="'NO'"/></t><t t-else=""><t t-esc="'Yes'"/></t>,<t t-esc="doc.employee_id.bank_account_id.bank_id.bic"/>,<t t-esc="doc.employee_id.bank_account_id.bank_id.country.code"/>,<t t-esc="doc.net_wage"/>,<t t-esc="doc.employee_id.identification_id"/><t t-set="sequence" t-value="sequence+1"/>
+ <t t-esc="1"/>,<t t-esc="sequence"/>,<t t-esc="sequence"/></t></template></data></odoo>

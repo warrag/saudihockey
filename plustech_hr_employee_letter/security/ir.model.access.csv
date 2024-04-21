@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_letter_letter,access_letter_letter,model_letter_letter,,1,1,1,1
+access_letter_request,access_letter_request,model_letter_request,,1,1,1,1
+access_letter_stages,letter.stages,model_letter_stages,,1,1,1,1
+access_letter_approval,letter.approval,model_letter_approval,,1,1,1,1
+access_letter_temp_stage,letter_temp_stage,model_letter_temp_stage,,1,1,1,1
+access_letter_request_history,letter_request_history,model_letter_request_history,,1,1,1,1
+access_letter_letter_categ,letter_letter_categ,model_letter_letter_categ,,1,1,1,1
+access_hr_letter_fields,hr.letter.fields,model_hr_letter_fields,,1,1,1,1
+access_letter_fields_line,letter.fields.line,model_letter_fields_line,,1,1,1,1

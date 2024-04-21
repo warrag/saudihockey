@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_res_country" model="ir.actions.act_window">
+            <field name="name">Countries</field>
+            <field name="res_model">res.country</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_res_country"
+            name="Countries"
+            parent="deputation_config_menu"
+            action="action_res_country"
+            sequence="13"/>
+    </data>
+</odoo>

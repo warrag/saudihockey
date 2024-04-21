@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="hr_violation_rule" model="hr.salary.rule">
+			<field name="name">Violation Deduction</field>
+			<field name="sequence" eval="11"/>
+			<field name="code">VIOLATION</field>
+			<field name="category_id" ref="hr_payroll.DED"/>
+			<field name="struct_id" ref="plustech_hr_payroll.structure_main"/>
+			<field name="condition_select">none</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = -payslip.violation_ded</field>
+		</record>
+
+		<record id="seq_violation" model="ir.sequence">
+            <field name="name">Violation</field>
+            <field name="code">violation.violation</field>
+            <field name="prefix">VP</field>
+            <field name="padding">3</field>
+        </record>
+	</data>
+</odoo>

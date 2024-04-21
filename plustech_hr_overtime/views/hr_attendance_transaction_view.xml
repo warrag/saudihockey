@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="attendance_transaction_tree_view_inherit" model="ir.ui.view">
+        <field name="name">attendance.transaction.tree.view.inherit</field>
+        <field name="model">attendance.transaction</field>
+        <field name="inherit_id" ref="plustech_hr_attendance_transaction.attendance_transaction_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='deducted_amount']" position="after">
+
+                <field name="overtime"
+                       widget="float_time"
+                       optional="show"
+                       sum="Total"/>
+                <field name="overtime_amount"
+                       optional="hide"
+                       sum="Total"/>
+            </xpath>
+
+
+        </field>
+    </record>
+
+
+</odoo>

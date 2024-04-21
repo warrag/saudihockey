@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_deputation_ticket_configuration" model="ir.ui.view">
+            <field name="name">Configure Deputation Tickets</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="30"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Deputation"
+                         data-key="plustech_hr_business_trip">
+                        <h2>Deputation Configurator</h2>
+                        <div class="row mt16 o_settings_container" name="config__hr_deputations_configurator">
+                            <div class="col-12 col-lg-6 o_setting_box" name="config_deputation_request_settings">
+                                <div class="o_setting_right_pane">
+                                    <h3>Tickets</h3>
+                                    <div class="text-muted">
+                                        Define deputation ticket Settings
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="row mt8">
+                                            <label for="deputation_ticket_product_id"
+                                                   string="Ticket Expense Product" class="col-lg-5 o_light_label"/>
+                                            <field name="deputation_ticket_product_id" context="{'default_detailed_type': 'service'}"/>
+                                        </div>
+                                        <div class="row mt8">
+                                            <label for="deputation_analytic_account_id"
+                                                   string="Deputations analytic account"
+                                                   class="col-lg-5 o_light_label"/>
+                                            <field name="deputation_analytic_account_id"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box" name="config_deputation_request_settings">
+                                <div class="o_setting_right_pane">
+                                    <h3>Deputations</h3>
+                                    <div class="text-muted">
+                                        Define deputation request Settings
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="row mt8">
+                                            <label for="leave_type_id"
+                                                   string="Business Trip Leave Type" class="col-lg-5 o_light_label"/>
+                                            <field name="leave_type_id"/>
+                                        </div>
+                                        <div class="row mt8">
+                                            <label for="deputation_allowance_product_id"
+                                                   string="Deputation Expense Product" class="col-lg-5 o_light_label"/>
+                                            <field name="deputation_allowance_product_id" context="{'default_detailed_type': 'service'}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_hr_deputations_general_config" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'plustech_hr_business_trip','bin_size': False}</field>
+        </record>
+
+        <menuitem id="menu_hr_deputations_global_settings" name="Settings" parent="deputation_config_menu"
+                  action="action_hr_deputations_general_config" sequence="0" groups="plustech_hr_business_trip.group_hr_deputation_manager,"/>
+    </data>
+</odoo>

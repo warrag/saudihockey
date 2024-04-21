@@ -1,0 +1,16 @@
+<odoo>
+    <!-- Mail template is done in a NOUPDATE block
+         so users can freely customize/delete them -->
+    <data noupdate="0">
+        <!--Contract template -->
+        <record id="simple_letter_template" model="letter.letter">
+            <field name="name">Letter Template</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+               <div>
+                   ffffffffffffffffffff
+               </div>
+            </field>
+        </record>
+    </data>
+</odoo>

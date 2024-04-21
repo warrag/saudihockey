@@ -1,0 +1,52 @@
+.grey_cells {
+ background:#BFBFBF;
+}
+.salary td,.salary th {border:1.5px  solid black;}
+
+
+@font-face {
+    font-family: 'barcodefont';
+    src: local('barcodefont'), local('barcodefont'), url(/plustech_hr_employee_letter/static/description/src/fonts/Khalid.ttf) format('opentype');
+}
+
+.mabco_font {
+    font-family: barcodefont;
+}
+
+@font-face {
+    font-family: 'barcodefontbold';
+    src: local('barcodefontbold'), local('barcodefontbold'), url(/plustech_hr_employee_letter/static/description/src/fonts/PFDinTextUniversal-XBlack.otf) format('opentype');
+}
+@font-face {
+    font-family: 'barcodefontb';
+    src: local('barcodefontb'), local('barcodefontb'), url(/plustech_hr_employee_letter/static/description/src/fonts/PFDinTextUniversal-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'AcuminVariableConcept';
+    src: local('AcuminVariableConcept'), local('AcuminVariableConcept'), url(/plustech_hr_employee_letter/static/description/src/fonts/AcuminVariableConcept.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'AdobeArabic';
+    src: local('AdobeArabic'), local('AdobeArabic'), url(/plustech_hr_employee_letter/static/description/src/fonts/AdobeArabic-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'uiarabic';
+    src: local('uiarabic'), local('uiarabic'), url(/plustech_hr_employee_letter/static/description/src/fonts/alfont_com_AlFont_com_ArabicUITextSemiBold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'marai';
+    src: local('marai'), local('marai'), url(/plustech_hr_employee_letter/static/description/src/fonts/PFDinTextUniversal-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Almohanad';
+    src: local('Almohanad'), local('Almohanad'), url(/plustech_hr_employee_letter/static/description/src/fonts/Almohanad-Long-KAF.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ariblk_2';
+    src: local('ariblk_2'), local('ariblk_2'), url(/plustech_hr_employee_letter/static/description/src/fonts/ariblk_2.ttf) format('truetype');
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="recruitment_plan_approval" model="hr.approval.category">
+            <field name="name">Recruitment Plan</field>
+            <field name="description">department recruitment plan approval</field>
+            <field name="model_name">recruitment.plan</field>
+        </record>
+
+    </data>
+</odoo>

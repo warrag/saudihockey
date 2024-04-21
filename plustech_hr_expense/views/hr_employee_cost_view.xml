@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_cost_tree_view" model="ir.ui.view">
+        <field name="name">hr.employee.cost.tree.view</field>
+        <field name="model">hr.employee.cost</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="emp_number" />
+                <field name="employee_id" />
+                <field name="analytic_account" />
+                <field name="date" />
+                <field name="ref" />
+                <field name="cost" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_cost_filter" model="ir.ui.view">
+        <field name="name">hr.employee.cost.filter</field>
+        <field name="model">hr.employee.cost</field>
+        <field name="arch" type="xml">
+            <search string="Search Employee Cost">
+                <filter name="today" string="Today"
+                    domain="[('date','=',time.strftime('%%Y-%%m-%%d'))]" />
+                <filter name="date_filter" string="Date" date="date" />
+                <filter name="current_month" string="Current Month"
+                    domain="[('date', '&gt;=', (context_today()).strftime('%Y-%m-01')),                     ('date', '&lt;', (context_today() + relativedelta(months=1)).strftime('%Y-%m-01'))]" />
+                <separator />
+                <field name="employee_id" />
+                <field name="department_id" />
+                <group expand="0" string="Group By">
+                    <filter name="group_employee" string="Employee"
+                        context="{'group_by':'employee_id'}" />
+                    <filter name="group_department_id" string="Department"
+                        context="{'group_by':'department_id'}" />
+                    <filter name="group_work_location" string="Work Location"
+                        context="{'group_by':'work_location_id'}" />
+                    <filter name="group_ref" string="Reference"
+                        context="{'group_by':'ref'}" />
+                    <separator />
+                    <filter name="group_date_from" string="Date" context="{'group_by':'date'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+
+    <record id="action_hr_employee_cost" model="ir.actions.act_window">
+        <field name="name">Employee Cost</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.employee.cost</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{"search_default_today":1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                There's no employee cost to showing up!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_hr_employee_cost" name="Employee Cost"
+        parent="menu_employee_expense_main"
+        sequence="2" action="action_hr_employee_cost" />
+
+
+</odoo>

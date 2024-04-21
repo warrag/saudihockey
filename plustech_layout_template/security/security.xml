@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_view_line_fields" model="res.groups">
+            <field name="name">Invoice line fields</field>
+            <!-- <field name="category_id" ref="category_real_estate_project_budget_adjustment"/> -->
+        </record>
+    </data>
+</odoo>

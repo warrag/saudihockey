@@ -1,0 +1,90 @@
+<odoo>
+    <data noupdate="1">
+        <!--Contract template -->
+        <record id="administrative_decision_template" model="letter.letter">
+            <field name="name">Administrative Decision</field>
+            <field name="model_id" ref="plustech_hr_employee_letter.model_letter_request"/>
+            <field name="body" type="html">
+                <div class="container"  style="width:100%;">
+                <div class="row">
+                    <h4>قرار إداري</h4>
+                </div>
+                <div class="row">
+                    <div class="col-1" style="border: 1px solid black;">تاريخ التفعيل</div>&#160;
+                    <div class="col-1" style="border: 1px solid black;">${object.request_date or ''|safe}</div>&#160;
+                    <div class="col-1" style="border: 1px solid black;">الجنسية</div>&#160;
+                    <div class="col-1" style="border: 1px solid black;">${object.request_id.country_id.name or ''|safe}</div>&#160;
+                    <div class="col-1" style="border: 1px solid black;">رقم البطاقة</div>&#160;
+                    <div class="col-4" style="border: 1px solid black;">${object.request_id.identification_id or ''|safe}</div>
+                </div>
+                <div class="row">
+                    <div class="col-2" style="border: 1px solid black;">اسم الموظف</div>
+                    <div class="col-4" style="border: 1px solid black;">${object.request_id.name or ''|safe}</div>
+                    <div class="col-2" style="border: 1px solid black;">الرقم الوظيفي</div>
+                    <div class="col-4" style="border: 1px solid black;">${object.request_id.employee_number or ''|safe}</div>
+                </div>
+                <div class="row">
+                   <div class="col-4" style="border: 1px solid black;">تعيين جديد</div>
+                    <div class="col-4" style="border: 1px solid black;">عدم تجديد العقد</div>
+                    <div class="col-4" style="border: 1px solid black;">تعديل مسمى الوظيفة</div>
+                </div>
+                 <div class="row">
+                   <div class="col-4" style="border: 1px solid black;">فصل حسب المادة رقم()</div>
+                    <div class="col-4" style="border: 1px solid black;">استقالة</div>
+                    <div class="col-4" style="border: 1px solid black;">إنهاء خدمات</div>
+                </div>
+                 <div class="row">
+                   <div class="col-4" style="border: 1px solid black;">ترقية</div>
+                    <div class="col-4" style="border: 1px solid black;">علاوة سنوية</div>
+                    <div class="col-4" style="border: 1px solid black;">علاوة استثنائية</div>
+                </div>
+                <div class="row">
+                    <table style="border: 1px solid black;">
+                        <tr>
+                            <th style="border: 1px solid black;">بيان</th>
+                            <th style="border: 1px solid black;">الوضع الحالي</th>
+                            <th style="border: 1px solid black;">الوضع بعد القرار</th>
+                        </tr>
+                        <tr>
+                            <th style="border: 1px solid black;">الراتب الأساسي</th>
+                            <td style="border: 1px solid black;">${object.contract_id.wage or '0.0'|safe}</td>
+                            <td style="border: 1px solid black;"></td>
+                        </tr>
+                         <tr>
+                            <th style="border: 1px solid black;">المسمى الوظيفي</th>
+                            <td style="border: 1px solid black;">${object.request_id.job_id.name or ''|safe}</td>
+                            <td style="border: 1px solid black;"></td>
+                        </tr>
+                          % for line in object.contract_id.allowance_ids:
+                     <tr>
+                        <th style="border: 1px solid black;">${line.allowance_type.name or ''|safe}</th>
+                        <td style="border: 1px solid black;">${line.allowance_amount or '0.0'|safe}</td>
+                        <td style="border: 1px solid black;"></td>
+                    </tr>
+                    % endfor
+                    </table>
+                </div>
+                <div class="row">
+                     <div class="col-6">
+                       <p>
+                        <br/>   بناءً على الصلاحيات المخولة لنا و مصلحة العمل يقرر ما يلي:
+                        <br/>   1- اعتماد القرار الإداري أعلاه.
+                          <br/> 2- يعمل بهذا القرار اعتبارا من تاريخ لمباشرة.
+                         <br/>  واللّه الموفق ،،،،
+                           <p>
+                               الأصل لقسم الموارد البشرية يضاف مع أصل العقد.
+                               صز للحسابات.
+                               صز للموظف.
+                           </p>
+                       </p>
+                    </div>
+                    <div class="col-6">
+                     <h6>قسم الموارد البشرية</h6>
+                        <h5>الرئيس التنفيذي</h5>
+                    </div>
+                </div>
+             </div>
+            </field>
+        </record>
+    </data>
+</odoo>

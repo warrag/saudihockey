@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_end_service_reason_tree" model="ir.ui.view">
+        <field name="name">end.service.reason.tree</field>
+        <field name="model">end.service.reason</field>
+        <field name="arch" type="xml">
+            <tree string="EOS Reason">
+                <field name="name"/>
+                <field name="reason_type" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_end_service_reason_filter" model="ir.ui.view">
+        <field name="name">end.service.reason.search</field>
+        <field name="model">end.service.reason</field>
+        <field name="arch" type="xml">
+            <search string="EOS Reason">
+                <field name="name" string="EOS Reason"/>
+                <group col="8" colspan="4" expand="0" string="Group By">
+                    <filter string="Reason Type" name="type" context="{'group_by':'reason_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="hr_end_service_reason_form" model="ir.ui.view">
+        <field name="name">end.service.reason.form</field>
+        <field name="model">end.service.reason</field>
+        <field name="arch" type="xml">
+            <form string="EOS Reason">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="reason_type" invisible="1"/>
+                            <field name="includ_allowance"/>
+                            <field name="include_compensation"/>
+                            <field name="provision_calculatation"/>
+                            <field name="allowance_ids" widget="many2many_tags"
+                                   attrs="{'invisible':[('includ_allowance','=',True)]}"/>
+                            <field name="journal_id"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="rules" string="Rules">
+                            <field name="rule_id">
+                                <tree string="Rules" editable="bottom">
+                                    <field name="reason_id" invisible="1"/>
+                                    <field name="no" force_save="1"/>
+                                    <field name="period_from"/>
+                                    <field name="period_to"/>
+                                    <field name="eos_award"/>
+                                    <field name="calculate_factor"/>
+                                </tree>
+
+                            </field>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_end_service_reason_form" model="ir.actions.act_window">
+        <field name="name">EOS Reasons</field>
+        <field name="res_model">end.service.reason</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new EOS Reason.
+            </p>
+        </field>
+    </record>
+    <menuitem
+            id="menu_action_hr_end_service_reason_form"
+            action="action_end_service_reason_form"
+            parent="menu_end_service_config"
+            sequence="1"
+    />
+
+
+</odoo>
